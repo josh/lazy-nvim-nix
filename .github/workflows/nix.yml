@@ -22,9 +22,19 @@ jobs:
       - name: Run nvim chechhealth
         run: |
           nix build .#checks.x86_64-linux.health
-          tee "$GITHUB_STEP_SUMMARY" <result
+          (
+            echo "# checkhealth"
+            echo '```'
+            cat result
+            echo '```'
+          ) | tee "$GITHUB_STEP_SUMMARY"
 
       - name: Run nvim startuptime
         run: |
-          nix build .#checks.x86_64-linux.startuptime 
-          tee "$GITHUB_STEP_SUMMARY" <result
+          nix build .#checks.x86_64-linux.startuptime
+          (
+            echo "# startuptime"
+            echo '```'
+            cat result
+            echo '```'
+          ) | tee "$GITHUB_STEP_SUMMARY"
