@@ -30,6 +30,12 @@ let
     })
   '';
 
+  makeLazyNeovimPackage =
+    { pkgs }:
+    pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (makeLazyNeovimConfig {
+      inherit pkgs;
+    });
+
   makeLazyNeovimConfig =
     { pkgs }:
     let
@@ -70,5 +76,5 @@ let
 
 in
 {
-  inherit makeLazyNeovimConfig;
+  inherit makeLazyNeovimPackage makeLazyNeovimConfig;
 }

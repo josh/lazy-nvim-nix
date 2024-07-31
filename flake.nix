@@ -30,12 +30,9 @@
       inherit lib;
 
       packages = eachSystem (pkgs: {
-        inherit (pkgs) hello;
-        default = self.packages.${pkgs.system}.hello;
+        default = self.packages.${pkgs.system}.lazy-nvim;
 
-        lazy-nvim = pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (
-          lib.makeLazyNeovimConfig { inherit pkgs; }
-        );
+        lazy-nvim = lib.makeLazyNeovimPackage { inherit pkgs; };
       });
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
