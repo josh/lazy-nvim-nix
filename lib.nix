@@ -20,6 +20,12 @@ let
       enabled = false;
       notify = false;
     };
+    performance = {
+      reset_packpath = false;
+      rtp = {
+        reset = false;
+      };
+    };
   };
 
   setupLazyLua =
