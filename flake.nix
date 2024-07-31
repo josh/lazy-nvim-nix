@@ -30,30 +30,30 @@
       inherit lib;
 
       packages = eachSystem (pkgs: {
-        default = self.packages.${pkgs.system}.lazy-nvim;
+        default = self.packages.${pkgs.system}.nvim;
 
-        lazy-nvim = lib.makeLazyNeovimPackage { inherit pkgs; };
+        nvim = lib.makeLazyNeovimPackage { inherit pkgs; };
       });
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
       checks = eachSystem (
         pkgs:
         let
-          inherit (self.packages.${pkgs.system}) lazy-nvim;
+          inherit (self.packages.${pkgs.system}) nvim;
         in
         {
           formatting = treefmtEval.${pkgs.system}.config.build.check self;
 
           help = pkgs.runCommandLocal "nvim-help" { } ''
-            ${lazy-nvim}/bin/nvim --help 2>&1 >$out 
+            ${nvim}/bin/nvim --help 2>&1 >$out 
           '';
 
           health = pkgs.runCommandLocal "nvim-chechhealth" { } ''
-            ${lazy-nvim}/bin/nvim --headless "+lua require('lazy').health():wait()" +checkhealth "+w!$out" +qa
+            ${nvim}/bin/nvim --headless "+lua require('lazy').health():wait()" +checkhealth "+w!$out" +qa
           '';
 
           startuptime = pkgs.runCommandLocal "nvim-startuptime" { } ''
-            ${lazy-nvim}/bin/nvim --headless "+lua require('lazy').health():wait()" --startuptime "$out" +q
+            ${nvim}/bin/nvim --headless "+lua require('lazy').health():wait()" --startuptime "$out" +q
           '';
         }
       );
