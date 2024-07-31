@@ -64,7 +64,7 @@
             ${nvim}/bin/nvim --help 2>&1 >$out 
           '';
 
-          health = pkgs.runCommandLocal "nvim-chechhealth" { } ''
+          checkhealth = pkgs.runCommandLocal "nvim-checkhealth" { } ''
             ${nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
           '';
 
