@@ -71,6 +71,10 @@
           startuptime = pkgs.runCommandLocal "nvim-startuptime" { } ''
             ${nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
           '';
+
+          lazyvim-packages-json = pkgs.runCommandLocal "lazyvim-packages-json" { } ''
+            ${pkgs.jq}/bin/jq <${lib.extractLazyVimPackageNamesJSON { inherit pkgs; }} >$out
+          '';
         }
       );
     };
