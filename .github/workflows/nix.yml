@@ -1,0 +1,24 @@
+name: Nix
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - uses: DeterminateSystems/flake-checker-action@v8
+
+      - name: Check flake
+        run: |
+          nix flake check --all-systems
+
+      - name: Test hello
+        run: |
+          nix run .#hello -- --help
