@@ -1,43 +1,43 @@
 let
-  initLua = ''
-    vim.g.mapleader = " "
-    vim.g.maplocalleader = "\\"
+  lua = import (
+    builtins.fetchurl {
+      # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
+      url = "https://raw.githubusercontent.com/nix-community/nixvim/6dc0bda459bcfb2a38cf7b6ed1d6a5d6a8105f00/lib/to-lua.nix";
+      sha256 = "sha256:19a22zp89d1xiff7zpzk016z8dv3jsvfnzsyl53b3i7apz75c2yr";
+    }
+  );
+  toLua = lib: value: (lua { inherit lib; }).toLua value;
 
-    require("lazy").setup({
-      root = vim.fn.stdpath("data") .. "/lazy",
-      spec = {
-        -- { import = "plugins" },
-      },
-      lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json",
-      install = {
-        missing = false,
-        colorscheme = { "habamax" }
-      },
-      checker = {
-        enabled = false,
-        notify = false
-      },
-      change_detection = {
-        enabled = false,
-        notify = false
-      },
-      performance = {
-        rtp = {
-          reset = true
-        }
-      },
-      state = vim.fn.stdpath("state") .. "/lazy/state.json"
-    })
-  '';
+  lazyOpts = {
+    root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
+    lockfile.__raw = ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
+    state.__raw = ''vim.fn.stdpath("state") .. "/lazy/state.json"'';
+    install = {
+      missing = false;
+      colorscheme = [ "habamax" ];
+    };
+    checker = {
+      enabled = false;
+      notify = false;
+    };
+  };
+
+  setupLazyLua =
+    {
+      lib,
+      spec ? [ ],
+      opts ? { },
+    }:
+    ''require("lazy").setup(${toLua lib spec}, ${toLua lib opts})'';
 
   makeLazyNeovimPackage =
-    { pkgs }:
-    pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (makeLazyNeovimConfig {
-      inherit pkgs;
-    });
+    { pkgs, ... }@args: pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (makeLazyNeovimConfig args);
 
   makeLazyNeovimConfig =
-    { pkgs }:
+    {
+      pkgs,
+      spec ? [ ],
+    }:
     let
       inherit (pkgs) lib;
 
@@ -57,10 +57,14 @@ let
         # Extra config to pass to
         # pkgs/applications/editors/neovim/wrapper.nix
 
-        luaRcContent = initLua;
+        luaRcContent = setupLazyLua {
+          inherit (pkgs) lib;
+          inherit spec;
+          opts = lazyOpts;
+        };
       };
 
-      # Unfortunatelly can't pass extraWrapperArgs to makeNeovimConfig
+      # Unfortunately can't pass extraWrapperArgs to makeNeovimConfig
       configExtra =
         let
           binPath = lib.makeBinPath extraPackages;
@@ -76,5 +80,5 @@ let
 
 in
 {
-  inherit makeLazyNeovimPackage makeLazyNeovimConfig;
+  inherit makeLazyNeovimPackage makeLazyNeovimConfig toLua;
 }

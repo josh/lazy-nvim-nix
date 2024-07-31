@@ -32,7 +32,23 @@
       packages = eachSystem (pkgs: {
         default = self.packages.${pkgs.system}.nvim;
 
-        nvim = lib.makeLazyNeovimPackage { inherit pkgs; };
+        nvim = lib.makeLazyNeovimPackage {
+          inherit pkgs;
+
+          spec = [
+            {
+              name = "tokyonight.nvim";
+              dir = pkgs.vimPlugins.tokyonight-nvim;
+              lazy = false;
+              priority = 1000;
+              config.__raw = ''
+                function()
+                  vim.cmd([[colorscheme tokyonight]])
+                end
+              '';
+            }
+          ];
+        };
       });
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
