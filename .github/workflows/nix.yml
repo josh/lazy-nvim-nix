@@ -19,6 +19,12 @@ jobs:
         run: |
           nix flake check --all-systems
 
-      - name: Test hello
+      - name: Run nvim chechhealth
         run: |
-          nix run .#hello -- --help
+          nix build .#checks.x86_64-linux.health
+          cat result
+
+      - name: Run nvim startuptime
+        run: |
+          nix build .#checks.x86_64-linux.startuptime 
+          cat result
