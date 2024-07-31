@@ -52,11 +52,11 @@
           '';
 
           health = pkgs.runCommandLocal "nvim-chechhealth" { } ''
-            ${lazy-nvim}/bin/nvim --headless "+lua require('lazy').check():wait()" +checkhealth "+w!$out" +qa
+            ${lazy-nvim}/bin/nvim --headless "+lua require('lazy').health():wait()" +checkhealth "+w!$out" +qa
           '';
 
           startuptime = pkgs.runCommandLocal "nvim-startuptime" { } ''
-            ${lazy-nvim}/bin/nvim --headless "+lua require('lazy').check():wait()" --startuptime "$out" +q
+            ${lazy-nvim}/bin/nvim --headless "+lua require('lazy').health():wait()" --startuptime "$out" +q
           '';
         }
       );
