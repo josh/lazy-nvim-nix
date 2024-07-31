@@ -86,5 +86,10 @@ let
 
 in
 {
-  inherit makeLazyNeovimPackage makeLazyNeovimConfig toLua;
+  inherit
+    makeLazyNeovimConfig
+    makeLazyNeovimPackage
+    setupLazyLua
+    toLua
+    ;
 }
