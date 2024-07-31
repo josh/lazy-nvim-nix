@@ -1,0 +1,11 @@
+{
+  "name": "Nix",
+  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {
+      "extraNixConfig": "experimental-features = nix-command flakes"
+    }
+  },
+  "postCreateCommand": "sudo apk --no-cache add acl",
+  "postStartCommand": "sudo setfacl -k /tmp"
+}
