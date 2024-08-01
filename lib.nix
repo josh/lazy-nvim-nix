@@ -154,7 +154,7 @@ let
         in
         if nwo != null then
           {
-            name = nwo.name;
+            inherit (nwo) name;
             dir = pkg;
           }
         else
@@ -171,7 +171,7 @@ let
       in
       if nwo.name != null && pkg != null then
         {
-          name = nwo.name;
+          inherit (nwo) name;
           dir = pkg;
         }
       else
