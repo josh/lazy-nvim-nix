@@ -43,7 +43,6 @@ jobs:
       - name: Add to summary
         run: |
           (
-            echo "# ${{ matrix.check }}"
             echo '```'
             cat result
             echo '```'
