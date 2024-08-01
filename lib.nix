@@ -36,59 +36,146 @@ let
     }:
     ''require("lazy").setup(${toLua lib spec}, ${toLua lib opts})'';
 
-  # Look up nixpkgs.vimPlugins for GitHub repo name.
-  # Return null if the package is not found.
-  lookupPackage =
-    { pkgs, repo }:
+  tryFilter =
+    fn: lst:
+    builtins.filter (
+      pkg:
+      let
+        result = builtins.tryEval (fn pkg);
+      in
+      result.success && result.value
+    ) lst;
+
+  tryFind =
+    fn: lst:
     let
-      inherit (pkgs) vimPlugins;
-      pluginName = builtins.replaceStrings [ "." ] [ "-" ] repo;
-      ok = builtins.hasAttr pluginName vimPlugins;
-      notFound = builtins.trace "pkgs.vimPlugins.${pluginName} not found" null;
+      results = tryFilter fn lst;
     in
-    if ok then vimPlugins."${pluginName}" else notFound;
+    if results == [ ] then null else builtins.head results;
+
+  isDerivation = value: value.type or null == "derivation";
+
+  # Extract GitHub name with owner info from string.
+  #
+  # Examples
+  #
+  #  githubNameWithOwner "https://github.com/folke/lazy.nvim/"
+  #  # => { owner = "folke"; name = "lazy.nvim"; }
+  #
+  #  githubNameWithOwner "github:folke/lazy.nvim"
+  #  # => { owner = "folke"; name = "lazy.nvim"; }
+  #
+  #  githubNameWithOwner "folke/lazy.nvim"
+  #  # => { owner = "folke"; name = "lazy.nvim"; }
+  #
+  #  githubNameWithOwner "lazy.nvim"
+  #  # => { owner = null; name = "lazy.nvim"; }
+  #
+  #  githubNameWithOwner pkgs.vimPlugins.lazy-nvim
+  #  # => { owner = null; name = "lazy.nvim"; }
+  #
+  githubNameWithOwner =
+    path:
+    if isDerivation path then
+      let
+        pkg = path;
+        hasMeta = builtins.hasAttr "meta" pkg;
+        hasHomepage = builtins.hasAttr "homepage" pkg.meta;
+      in
+      if hasMeta && hasHomepage then githubNameWithOwner pkg.meta.homepage else null
+    else if builtins.isString path then
+      let
+        fullMatches = builtins.match "(https://github.com/|github:)?([^/]+)/([^/]+)/?" path;
+        repoMatches = builtins.match "([^/]+)" path;
+      in
+      if builtins.isList fullMatches then
+        {
+          owner = builtins.elemAt fullMatches 1;
+          name = builtins.elemAt fullMatches 2;
+        }
+      else if builtins.isList repoMatches then
+        {
+          owner = null;
+          name = builtins.elemAt repoMatches 0;
+        }
+      else
+        null
+    else
+      null;
+
+  # Look up nixpkgs.vimPlugins by GitHub owner and name.
+  # Returns null if not found.
+  #
+  #   lookupVimPluginByGitHub {
+  #     pkgs = pkgs;
+  #     owner = "folke";
+  #     name = "lazy.nvim";
+  #   }
+  #
+  lookupVimPluginByGitHub =
+    {
+      pkgs,
+      owner ? null,
+      name,
+    }:
+    let
+      didMatch =
+        pkg:
+        let
+          nwo = githubNameWithOwner pkg;
+        in
+        nwo != null && (owner == null || nwo.owner == owner) && (nwo.name == name);
+    in
+    tryFind didMatch (builtins.attrValues pkgs.vimPlugins);
 
   # 
   #
   # Examples
   #
-  #   lib.makeLazyPluginSpec pkgs "tokyonight.nvim"
-  #   lib.makeLazyPluginSpec pkgs "folke/tokyonight.nvim"
+  #   makeLazyPluginSpec pkgs "tokyonight.nvim"
+  #   makeLazyPluginSpec pkgs "folke/tokyonight.nvim"
   #
-  #   lib.makeLazyPluginSpec pkgs pkgs.vimPlugins.tokyonight-nvim
+  #   makeLazyPluginSpec pkgs pkgs.vimPlugins.tokyonight-nvim
   #
-  #   lib.makeLazyPluginSpec pkgs {
+  #   makeLazyPluginSpec pkgs {
   #     name = "tokyonight.nvim";
   #     dir = pkgs.vimPlugins.tokyonight-nvim;
   #   }
   #
   makeLazyPluginSpec =
     pkgs: spec:
-    let
-      githubMatches = builtins.match "https://github.com/[^/]+/([^/]+)/?" spec.meta.homepage;
-      pluginName = builtins.replaceStrings [ "." ] [ "-" ] spec;
-    in
     if builtins.isAttrs spec then
       if (builtins.hasAttr "name" spec) && (builtins.hasAttr "dir" spec) then
         spec
-      else if pkgs.lib.attrsets.isDerivation spec then
-        if githubMatches != [ ] then
+      else if isDerivation spec then
+        let
+          pkg = spec;
+          nwo = githubNameWithOwner pkg;
+        in
+        if nwo != null then
           {
-            name = builtins.head githubMatches;
-            dir = spec;
+            name = nwo.name;
+            dir = pkg;
           }
         else
           throw "Package must have a GitHub homepage"
       else
         throw "Invalid plugin spec"
     else if builtins.isString spec then
-      if builtins.hasAttr pluginName pkgs.vimPlugins then
+      let
+        nwo = githubNameWithOwner spec;
+        pkg = lookupVimPluginByGitHub {
+          inherit pkgs;
+          inherit (nwo) owner name;
+        };
+      in
+      if nwo.name != null && pkg != null then
         {
-          name = spec;
-          dir = pkgs.vimPlugins."${pluginName}";
+          name = nwo.name;
+          dir = pkg;
         }
       else
-        builtins.trace "pkgs.vimPlugins.${pluginName} not found" { name = spec; }
+        builtins.trace "${spec} plugin not found" { name = spec; }
     else
       throw "Invalid plugin spec";
 
@@ -170,7 +257,13 @@ let
       mapWithPkgs =
         _: repos:
         pkgs.lib.filterAttrs packageFound (
-          pkgs.lib.attrsets.genAttrs repos (repo: lookupPackage { inherit pkgs repo; })
+          pkgs.lib.attrsets.genAttrs repos (
+            repo:
+            lookupVimPluginByGitHub {
+              inherit pkgs;
+              name = repo;
+            }
+          )
         );
     in
     builtins.mapAttrs mapWithPkgs packageNames;
@@ -181,6 +274,8 @@ in
     extractLazyVimPackageNames
     extractLazyVimPackageNamesJSON
     extractLazyVimPackages
+    githubNameWithOwner
+    lookupVimPluginByGitHub
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     makeLazyPluginSpec
