@@ -35,19 +35,15 @@
         nvim = lib.makeLazyNeovimPackage {
           inherit pkgs;
 
-          spec = [
-            {
-              name = "tokyonight.nvim";
-              dir = pkgs.vimPlugins.tokyonight-nvim;
-              lazy = false;
-              priority = 1000;
-              config.__raw = ''
-                function()
-                  vim.cmd([[colorscheme tokyonight]])
-                end
-              '';
-            }
-          ];
+          spec =
+            let
+              makeLazyPluginSpec = lib.makeLazyPluginSpec pkgs;
+              plugins = [
+                "bufferline.nvim"
+                "lualine.nvim"
+              ];
+            in
+            builtins.map makeLazyPluginSpec plugins;
         };
       });
 

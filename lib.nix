@@ -36,6 +36,62 @@ let
     }:
     ''require("lazy").setup(${toLua lib spec}, ${toLua lib opts})'';
 
+  # Look up nixpkgs.vimPlugins for GitHub repo name.
+  # Return null if the package is not found.
+  lookupPackage =
+    { pkgs, repo }:
+    let
+      inherit (pkgs) vimPlugins;
+      pluginName = builtins.replaceStrings [ "." ] [ "-" ] repo;
+      ok = builtins.hasAttr pluginName vimPlugins;
+      notFound = builtins.trace "pkgs.vimPlugins.${pluginName} not found" null;
+    in
+    if ok then vimPlugins."${pluginName}" else notFound;
+
+  # 
+  #
+  # Examples
+  #
+  #   lib.makeLazyPluginSpec pkgs "tokyonight.nvim"
+  #   lib.makeLazyPluginSpec pkgs "folke/tokyonight.nvim"
+  #
+  #   lib.makeLazyPluginSpec pkgs pkgs.vimPlugins.tokyonight-nvim
+  #
+  #   lib.makeLazyPluginSpec pkgs {
+  #     name = "tokyonight.nvim";
+  #     dir = pkgs.vimPlugins.tokyonight-nvim;
+  #   }
+  #
+  makeLazyPluginSpec =
+    pkgs: spec:
+    let
+      githubMatches = builtins.match "https://github.com/[^/]+/([^/]+)/?" spec.meta.homepage;
+      pluginName = builtins.replaceStrings [ "." ] [ "-" ] spec;
+    in
+    if builtins.isAttrs spec then
+      if (builtins.hasAttr "name" spec) && (builtins.hasAttr "dir" spec) then
+        spec
+      else if pkgs.lib.attrsets.isDerivation spec then
+        if githubMatches != [ ] then
+          {
+            name = builtins.head githubMatches;
+            dir = spec;
+          }
+        else
+          throw "Package must have a GitHub homepage"
+      else
+        throw "Invalid plugin spec"
+    else if builtins.isString spec then
+      if builtins.hasAttr pluginName pkgs.vimPlugins then
+        {
+          name = spec;
+          dir = pkgs.vimPlugins."${pluginName}";
+        }
+      else
+        builtins.trace "pkgs.vimPlugins.${pluginName} not found" { name = spec; }
+    else
+      throw "Invalid plugin spec";
+
   makeLazyNeovimPackage =
     { pkgs, ... }@args: pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (makeLazyNeovimConfig args);
 
@@ -106,18 +162,6 @@ let
     in
     jsonSet;
 
-  # Look up nixpkgs.vimPlugins for GitHub repo name.
-  # Return null if the package is not found.
-  lookupPackage =
-    { pkgs, repo }:
-    let
-      inherit (pkgs) vimPlugins;
-      pluginName = builtins.replaceStrings [ "." ] [ "-" ] repo;
-      ok = builtins.hasAttr pluginName vimPlugins;
-      notFound = builtins.trace "pkgs.vimPlugins.${pluginName} not found" null;
-    in
-    if ok then vimPlugins."${pluginName}" else notFound;
-
   extractLazyVimPackages =
     { pkgs }:
     let
@@ -139,6 +183,7 @@ in
     extractLazyVimPackages
     makeLazyNeovimConfig
     makeLazyNeovimPackage
+    makeLazyPluginSpec
     setupLazyLua
     toLua
     ;
