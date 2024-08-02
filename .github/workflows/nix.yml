@@ -24,7 +24,8 @@ jobs:
 
       - name: Check flake
         run: |
-          nix flake check --all-systems
+          nix --no-allow-import-from-derivation \
+            flake check --all-systems
 
   checks:
     runs-on: ubuntu-latest
