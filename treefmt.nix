@@ -1,5 +1,4 @@
 {
-
   projectRootFile = "flake.nix";
   programs = {
     actionlint.enable = true;
