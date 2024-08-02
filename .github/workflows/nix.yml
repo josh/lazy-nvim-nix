@@ -16,6 +16,9 @@ jobs:
           extra-conf: |
             allow-import-from-derivation = false
 
+      - run: |
+          nix config show | grep allow-import-from-derivation
+
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: DeterminateSystems/flake-checker-action@v8
 
