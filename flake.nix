@@ -29,20 +29,6 @@
     {
       inherit lib;
 
-      bad =
-        let
-          drv = derivation {
-            name = "hello";
-            builder = "/bin/sh";
-            args = [
-              "-c"
-              "echo -n hello >$out"
-            ];
-            system = "x86_64-linux";
-          };
-        in
-        "${builtins.readFile drv} world";
-
       packages = eachSystem (pkgs: {
         default = self.packages.${pkgs.system}.nvim;
 
