@@ -227,32 +227,45 @@ let
     in
     finalConfig;
 
-  extractLazyVimPackageNamesJSON =
+  extractLazyVimPluginsJSON =
     { pkgs }:
     derivation {
       inherit (pkgs) system;
-      name = "LazyVim-packages.json";
+      name = "lazyvim-plugins.json";
       builder = "${pkgs.neovim}/bin/nvim";
       args = [
         "-l"
-        ./lazyvim-packages.lua
+        ./lazyvim-plugins.lua
       ];
       LAZY_PATH = pkgs.vimPlugins.lazy-nvim;
       LAZYVIM_PATH = pkgs.vimPlugins.LazyVim;
     };
-  extractLazyVimPackageNames =
+
+  # Plugin mapping:
+  #
+  #   "lazyvim.plugins" = {
+  #     "bufferline.nvim" = "https://github.com/askinsho/bufferline.nvim.git";
+  #   };
+  #   "lazyvim.plugins.extras.coding.copilot" = {
+  #     "copilot.lua" = "https://github.com/zbirenbaum/copilot.lua.git";
+  #   };
+  #
+  #
+  # WARN: requires allow-import-from-derivation
+  extractLazyVimPluginNames =
     { pkgs }:
     let
-      jsonFile = extractLazyVimPackageNamesJSON { inherit pkgs; };
+      jsonFile = extractLazyVimPluginsJSON { inherit pkgs; };
       jsonData = builtins.readFile jsonFile;
       jsonSet = builtins.fromJSON jsonData;
     in
     jsonSet;
 
+  # FIXME: Busted after plugins.json format change
   extractLazyVimPackages =
     { pkgs }:
     let
-      packageNames = extractLazyVimPackageNames { inherit pkgs; };
+      packageNames = extractLazyVimPluginNames { inherit pkgs; };
       packageFound = _name: src: src != null;
       mapWithPkgs =
         _: repos:
@@ -271,9 +284,9 @@ let
 in
 {
   inherit
-    extractLazyVimPackageNames
-    extractLazyVimPackageNamesJSON
     extractLazyVimPackages
+    extractLazyVimPluginNames
+    extractLazyVimPluginsJSON
     githubNameWithOwner
     lookupVimPluginByGitHub
     makeLazyNeovimConfig

@@ -50,7 +50,7 @@ let
 
   # Evaluate a Nix expression string.
   #
-  # NOTE: requires allow-import-from-derivation
+  # WARN: requires allow-import-from-derivation
   #
   # Example:
   #

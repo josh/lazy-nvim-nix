@@ -68,8 +68,8 @@
             ${nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
           '';
 
-          lazyvim-packages-json = pkgs.runCommandLocal "lazyvim-packages-json" { } ''
-            ${pkgs.jq}/bin/jq <${lib.extractLazyVimPackageNamesJSON { inherit pkgs; }} >$out
+          lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
+            ${pkgs.jq}/bin/jq <${lib.extractLazyVimPluginsJSON { inherit pkgs; }} >$out
           '';
         }
       );
