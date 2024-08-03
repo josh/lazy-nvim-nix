@@ -230,15 +230,15 @@ let
   extractLazyVimPackageNamesJSON =
     { pkgs }:
     derivation {
+      inherit (pkgs) system;
       name = "LazyVim-packages.json";
       builder = "${pkgs.neovim}/bin/nvim";
       args = [
         "-l"
         ./lazyvim-packages.lua
-        pkgs.vimPlugins.lazy-nvim
-        pkgs.vimPlugins.LazyVim
       ];
-      inherit (pkgs) system;
+      LAZY_PATH = pkgs.vimPlugins.lazy-nvim;
+      LAZYVIM_PATH = pkgs.vimPlugins.LazyVim;
     };
   extractLazyVimPackageNames =
     { pkgs }:

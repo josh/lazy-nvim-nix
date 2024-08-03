@@ -1,3 +1,5 @@
+-- usage: LAZY_PATH=./lazy.vim LAZYVIM_PATH=./LazyVim nvim -l lazyvim-packages.lua
+
 local function load_dir(result, path)
 	if vim.fn.isdirectory(path) == 1 then
 		for _, name in pairs(vim.fn.readdir(path)) do
@@ -14,20 +16,18 @@ local function module_path(filename)
 	return filename:sub(1, -5):gsub("/", "."):gsub("%.init$", "")
 end
 
-local lazypath = arg[1]
-local lazyvimpath = arg[2]
-
 vim.env["XDG_CONFIG_HOME"] = vim.env["TMPDIR"] .. "/config"
 vim.env["XDG_DATA_HOME"] = vim.env["TMPDIR"] .. "/data"
 vim.env["XDG_STATE_HOME"] = vim.env["TMPDIR"] .. "/state"
 vim.env["XDG_CACHE_HOME"] = vim.env["TMPDIR"] .. "/cache"
 
 -- Init lazy
-vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(vim.env["LAZY_PATH"])
 local lazy = require("lazy.minit")
 lazy.setup({})
 
 -- defines LazyVim global
+local lazyvimpath = vim.env["LAZYVIM_PATH"]
 vim.opt.rtp:append(lazyvimpath)
 require("lazyvim.types")
 
