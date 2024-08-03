@@ -36,7 +36,7 @@ jobs:
         check:
           - checkhealth
           - startuptime
-          - lazyvim-packages-json
+          - lazyvim-plugins-json
 
     steps:
       - uses: actions/checkout@v4
