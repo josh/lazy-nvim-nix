@@ -20,7 +20,10 @@ jobs:
           nix config show | grep allow-import-from-derivation
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
+
       - uses: DeterminateSystems/flake-checker-action@v8
+        with:
+          flake-lock-path: flake-dev.lock
 
       - name: Check flake
         run: |
