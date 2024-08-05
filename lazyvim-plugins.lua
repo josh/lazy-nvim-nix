@@ -40,12 +40,10 @@ end
 
 local output = {}
 
--- Discover plugin extras
-utils.walkmods(lazyvimpath .. "/lua/lazyvim/plugins/extras", function(modname)
+-- Discover plugins
+utils.walkmods(lazyvimpath .. "/lua/lazyvim/plugins", function(modname)
 	output[modname] = import_plugins(modname)
-end, "lazyvim.plugins.extras")
-
-output["lazyvim.plugins"] = import_plugins("lazyvim.plugins")
+end, "lazyvim.plugins")
 
 local file = io.open(vim.env["out"], "w")
 assert(file)
