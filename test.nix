@@ -132,4 +132,26 @@ in
         # FIXME: testName not possible, "nvim" is too generic
       };
     };
+
+  extractLazyVimPluginRepos =
+    let
+      pluginRepos = lib.extractLazyVimPluginRepos { inherit pkgs; };
+    in
+    {
+      testCorePluginCount = {
+        expr = builtins.length (builtins.attrValues pluginRepos."lazyvim.plugins") >= 10;
+        expected = true;
+      };
+
+      testCorePluginIncludesTokyonight = {
+        expr = pluginRepos."lazyvim.plugins"."tokyonight.nvim";
+        expected = "folke/tokyonight.nvim";
+      };
+
+      testCopilotPluginExtraCount = {
+        expr =
+          builtins.length (builtins.attrValues pluginRepos."lazyvim.plugins.extras.coding.copilot") >= 1;
+        expected = true;
+      };
+    };
 }

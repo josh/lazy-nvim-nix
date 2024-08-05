@@ -18,7 +18,12 @@ vim.opt.rtp:prepend(lazyvimpath)
 
 -- Init lazy
 local lazy = require("lazy.minit")
-lazy.setup({})
+lazy.setup({
+	git = {
+		-- Make GitHub URLs easier to parse
+		url_format = "github:%s",
+	},
+})
 
 local Plugin = require("lazy.core.plugin")
 local utils = require("lazy.core.util")
@@ -33,7 +38,15 @@ function import_plugins(modname)
 
 	local plugins = {}
 	for name, plugin in pairs(spec.plugins) do
-		plugins[name] = plugin.url
+		if name == "LazyVim" then
+			-- skip
+		elseif plugin.url == nil then
+			print(modname .. ":" .. name .. " has no URL")
+		elseif plugin.url:sub(1, 7) == "github:" then
+			plugins[name] = plugin.url:sub(8)
+		else
+			print(modname .. ":" .. name .. " has an invalid URL: " .. plugin.url)
+		end
 	end
 	return plugins
 end

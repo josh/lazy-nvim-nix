@@ -244,15 +244,15 @@ let
   # Plugin mapping:
   #
   #   "lazyvim.plugins" = {
-  #     "bufferline.nvim" = "https://github.com/askinsho/bufferline.nvim.git";
+  #     "bufferline.nvim" = "askinsho/bufferline.nvim";
   #   };
   #   "lazyvim.plugins.extras.coding.copilot" = {
-  #     "copilot.lua" = "https://github.com/zbirenbaum/copilot.lua.git";
+  #     "copilot.lua" = "zbirenbaum/copilot.lua";
   #   };
   #
   #
   # WARN: requires allow-import-from-derivation
-  extractLazyVimPluginNames =
+  extractLazyVimPluginRepos =
     { pkgs }:
     let
       jsonFile = extractLazyVimPluginsJSON { inherit pkgs; };
@@ -265,7 +265,7 @@ let
   extractLazyVimPackages =
     { pkgs }:
     let
-      packageNames = extractLazyVimPluginNames { inherit pkgs; };
+      packageNames = extractLazyVimPluginRepos { inherit pkgs; };
       packageFound = _name: src: src != null;
       mapWithPkgs =
         _: repos:
@@ -285,7 +285,7 @@ in
 {
   inherit
     extractLazyVimPackages
-    extractLazyVimPluginNames
+    extractLazyVimPluginRepos
     extractLazyVimPluginsJSON
     githubNameWithOwner
     lookupVimPluginByGitHub
