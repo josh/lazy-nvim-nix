@@ -6,15 +6,12 @@
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      follows = "";
     };
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      treefmt-nix,
-    }:
+    { self, nixpkgs, ... }:
     let
       systems = [
         "aarch64-darwin"
@@ -23,7 +20,8 @@
         "x86_64-linux"
       ];
       eachSystem = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
-      treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
+      treefmt-nix = import ./treefmt-nix.nix;
+      treefmtEval = eachSystem (pkgs: treefmt-nix.evalModule pkgs ./treefmt.nix);
       lib = import ./lib.nix;
     in
     {
