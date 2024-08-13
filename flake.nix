@@ -45,6 +45,20 @@
             in
             builtins.map makeLazyPluginSpec plugins;
         };
+
+        LazyVim = lib.makeLazyNeovimPackage {
+          inherit pkgs;
+
+          spec = [
+            {
+              name = "LazyVim";
+              dir = pkgs.vimPlugins.LazyVim;
+              "import" = "lazyvim.plugins";
+            }
+          ];
+
+          extraPackages = with pkgs; [ lazygit ];
+        };
       });
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);

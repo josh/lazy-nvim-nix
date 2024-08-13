@@ -16,7 +16,7 @@ let
     lockfile.__raw = ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
     state.__raw = ''vim.fn.stdpath("state") .. "/lazy/state.json"'';
     install = {
-      missing = false;
+      missing = true;
       colorscheme = [ "habamax" ];
     };
     checker = {
@@ -189,14 +189,15 @@ let
     {
       pkgs,
       spec ? [ ],
+      extraPackages ? [ ],
     }:
     let
       inherit (pkgs) lib;
 
-      extraPackages = [
+      moreExtraPackages = [
         pkgs.git
         pkgs.luajitPackages.luarocks
-      ];
+      ] ++ extraPackages;
 
       config = pkgs.neovimUtils.makeNeovimConfig {
         # See pkgs/applications/editors/neovim/utils.nix # makeNeovimConfig
@@ -219,7 +220,7 @@ let
       # Unfortunately can't pass extraWrapperArgs to makeNeovimConfig
       configExtra =
         let
-          binPath = lib.makeBinPath extraPackages;
+          binPath = lib.makeBinPath moreExtraPackages;
         in
         {
           wrapperArgs = lib.escapeShellArgs config.wrapperArgs + " '--prefix' 'PATH' : '${binPath}' ";
