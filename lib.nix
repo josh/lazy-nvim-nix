@@ -8,6 +8,9 @@ let
   );
   toLua = lib: value: (lua { inherit lib; }).toLua value;
 
+  libEval = import ./eval.nix;
+  mkNixEvalFile = libEval.mkNixEvalFile;
+
   lazyOpts = {
     root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
     lockfile.__raw = ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
@@ -261,6 +264,30 @@ let
     in
     jsonSet;
 
+  mkNixpkgsVimPluginsJSON =
+    { nixpkgs, pkgs }:
+    mkNixEvalFile {
+      name = "nixpkgs-vim-plugins.json";
+      nixpkgs = nixpkgs;
+      pkgs = pkgs;
+      file = ./vimplugin-index.nix;
+    };
+
+  # Nixpkgs Vim Plugins mapped from GitHub name with owner to nixpkg name.
+  #
+  #   "akinsho/bufferline.nvim" = "bufferline-nvim";
+  #   "folke/noice.nvim" = "noice-nvim";
+  #
+  # WARN: requires allow-import-from-derivation
+  nixpkgsVimPlugins =
+    { nixpkgs, pkgs }:
+    let
+      jsonFile = mkNixpkgsVimPluginsJSON { inherit nixpkgs pkgs; };
+      jsonData = builtins.readFile jsonFile;
+      jsonSet = builtins.fromJSON jsonData;
+    in
+    jsonSet;
+
   # FIXME: Busted after plugins.json format change
   extractLazyVimPackages =
     { pkgs }:
@@ -292,6 +319,8 @@ in
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     makeLazyPluginSpec
+    mkNixpkgsVimPluginsJSON
+    nixpkgsVimPlugins
     setupLazyLua
     toLua
     ;

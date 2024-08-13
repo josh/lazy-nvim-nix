@@ -16,15 +16,37 @@ let
       src,
       env ? { },
     }:
-    let
-      nixpkgs = builtins.storePath pkgs.path;
+    mkNixEvalFile {
+      inherit pkgs env;
       file = builtins.toFile "default.nix" src;
+    };
+
+  # Build Nix evaluation derivation from a file.
+  # 
+  # Output will be a serialized as JSON.
+  #
+  # Example:
+  #
+  #   mkNixEvalFile {
+  #     inherit pkgs;
+  #     file = ./foo.nix;
+  #   }
+  #
+  mkNixEvalFile =
+    {
+      file,
+      pkgs,
+      name ? "nix-eval",
+      nixpkgs ? (builtins.storePath pkgs.path),
+      system ? pkgs.system,
+      env ? { },
+    }:
+    let
       out = builtins.placeholder "out";
     in
     derivation (
       {
-        name = "nix-eval";
-        inherit (pkgs) system;
+        inherit name system;
         builder = "${pkgs.nix}/bin/nix";
         NIX_PATH = "nixpkgs=${nixpkgs}";
         args = [
@@ -70,5 +92,5 @@ let
   nixEval = inputs: builtins.fromJSON (builtins.readFile (mkNixEval inputs));
 in
 {
-  inherit mkNixEval nixEval;
+  inherit mkNixEvalFile mkNixEval nixEval;
 }

@@ -1,6 +1,7 @@
 let
   system = builtins.currentSystem;
   pkgs = import ./nixpkgs.nix { inherit system; };
+  nixpkgs = builtins.storePath pkgs.path;
   lib = import ./lib.nix;
 in
 {
@@ -152,6 +153,27 @@ in
         expr =
           builtins.length (builtins.attrValues pluginRepos."lazyvim.plugins.extras.coding.copilot") >= 1;
         expected = true;
+      };
+    };
+
+  nixpkgsVimPlugins =
+    let
+      nixpkgsVimPlugins = lib.nixpkgsVimPlugins { inherit nixpkgs pkgs; };
+    in
+    {
+      testBufferline = {
+        expr = nixpkgsVimPlugins."akinsho/bufferline.nvim";
+        expected = "bufferline-nvim";
+      };
+
+      testNoice = {
+        expr = nixpkgsVimPlugins."folke/noice.nvim";
+        expected = "noice-nvim";
+      };
+
+      testOrgmode = {
+        expr = nixpkgsVimPlugins."nvim-orgmode/orgmode";
+        expected = "orgmode";
       };
     };
 }
