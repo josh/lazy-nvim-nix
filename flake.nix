@@ -51,6 +51,14 @@
 
           spec = [
             {
+              name = "bufferline.nvim";
+              dir = pkgs.vimPlugins.bufferline-nvim;
+            }
+            {
+              name = "lualine.nvim";
+              dir = pkgs.vimPlugins.lualine-nvim;
+            }
+            {
               name = "LazyVim";
               dir = pkgs.vimPlugins.LazyVim;
               "import" = "lazyvim.plugins";
