@@ -120,7 +120,7 @@ let
             --file ${./lazyvim-spec.nix} \
             --raw >out.lua
           ${pkgs.stylua}/bin/stylua out.lua
-          /bin/cp out.lua $out
+          ${pkgs.coreutils}/bin/cp out.lua "$out"
         ''
       ];
     };
