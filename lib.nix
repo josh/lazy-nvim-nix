@@ -1,15 +1,11 @@
 let
-  lua = import (
-    builtins.fetchurl {
-      # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
-      url = "https://raw.githubusercontent.com/nix-community/nixvim/6dc0bda459bcfb2a38cf7b6ed1d6a5d6a8105f00/lib/to-lua.nix";
-      sha256 = "sha256:19a22zp89d1xiff7zpzk016z8dv3jsvfnzsyl53b3i7apz75c2yr";
-    }
-  );
+  toLuaSrc = builtins.fetchurl {
+    # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
+    url = "https://raw.githubusercontent.com/nix-community/nixvim/6dc0bda459bcfb2a38cf7b6ed1d6a5d6a8105f00/lib/to-lua.nix";
+    sha256 = "sha256:19a22zp89d1xiff7zpzk016z8dv3jsvfnzsyl53b3i7apz75c2yr";
+  };
+  lua = import toLuaSrc;
   toLua = lib: value: (lua { inherit lib; }).toLua value;
-
-  libEval = import ./eval.nix;
-  mkNixEvalFile = libEval.mkNixEvalFile;
 
   defaultLazyOpts = {
     root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
@@ -38,165 +34,6 @@ let
       opts ? { },
     }:
     ''require("lazy").setup(${toLua lib spec}, ${toLua lib opts})'';
-
-  tryFilter =
-    fn: lst:
-    builtins.filter (
-      pkg:
-      let
-        result = builtins.tryEval (fn pkg);
-      in
-      result.success && result.value
-    ) lst;
-
-  tryFind =
-    fn: lst:
-    let
-      results = tryFilter fn lst;
-    in
-    if results == [ ] then null else builtins.head results;
-
-  isDerivation = value: value.type or null == "derivation";
-
-  # Extract GitHub name with owner info from string.
-  #
-  # Examples
-  #
-  #  githubNameWithOwner "https://github.com/folke/lazy.nvim/"
-  #  # => { owner = "folke"; name = "lazy.nvim"; }
-  #
-  #  githubNameWithOwner "github:folke/lazy.nvim"
-  #  # => { owner = "folke"; name = "lazy.nvim"; }
-  #
-  #  githubNameWithOwner "folke/lazy.nvim"
-  #  # => { owner = "folke"; name = "lazy.nvim"; }
-  #
-  #  githubNameWithOwner "lazy.nvim"
-  #  # => { owner = null; name = "lazy.nvim"; }
-  #
-  #  githubNameWithOwner pkgs.vimPlugins.lazy-nvim
-  #  # => { owner = null; name = "lazy.nvim"; }
-  #
-  githubNameWithOwner =
-    path:
-    if isDerivation path then
-      let
-        pkg = path;
-        hasMeta = builtins.hasAttr "meta" pkg;
-        hasHomepage = builtins.hasAttr "homepage" pkg.meta;
-      in
-      if hasMeta && hasHomepage then githubNameWithOwner pkg.meta.homepage else null
-    else if builtins.isString path then
-      let
-        fullMatches = builtins.match "(https://github.com/|github:)?([^/]+)/([^/]+)/?" path;
-        repoMatches = builtins.match "([^/]+)" path;
-      in
-      if builtins.isList fullMatches then
-        {
-          owner = builtins.elemAt fullMatches 1;
-          name = builtins.elemAt fullMatches 2;
-        }
-      else if builtins.isList repoMatches then
-        {
-          owner = null;
-          name = builtins.elemAt repoMatches 0;
-        }
-      else
-        null
-    else
-      null;
-
-  # Look up nixpkgs.vimPlugins by GitHub owner and name.
-  # Returns null if not found.
-  #
-  #   lookupVimPluginByGitHub {
-  #     pkgs = pkgs;
-  #     owner = "folke";
-  #     name = "lazy.nvim";
-  #   }
-  #
-  lookupVimPluginByGitHub =
-    {
-      pkgs,
-      owner ? null,
-      name,
-    }:
-    let
-      didMatch =
-        pkg:
-        let
-          nwo = githubNameWithOwner pkg;
-        in
-        nwo != null && (owner == null || nwo.owner == owner) && (nwo.name == name);
-    in
-    tryFind didMatch (builtins.attrValues pkgs.vimPlugins);
-
-  # Look up nixpkgs.vimPlugins by GitHub owner and name.
-  # Returns null if not found.
-  #
-  #   lookupVimPluginByGitHubNameWithOwner pkgs "folke/lazy.nvim"
-  #
-  lookupVimPluginByGitHubNameWithOwner =
-    pkgs: path:
-    let
-      nwo = githubNameWithOwner path;
-    in
-    lookupVimPluginByGitHub {
-      pkgs = pkgs;
-      owner = nwo.owner;
-      name = nwo.name;
-    };
-
-  # 
-  #
-  # Examples
-  #
-  #   makeLazyPluginSpec pkgs "tokyonight.nvim"
-  #   makeLazyPluginSpec pkgs "folke/tokyonight.nvim"
-  #
-  #   makeLazyPluginSpec pkgs pkgs.vimPlugins.tokyonight-nvim
-  #
-  #   makeLazyPluginSpec pkgs {
-  #     name = "tokyonight.nvim";
-  #     dir = pkgs.vimPlugins.tokyonight-nvim;
-  #   }
-  #
-  makeLazyPluginSpec =
-    pkgs: spec:
-    if builtins.isAttrs spec then
-      if (builtins.hasAttr "name" spec) && (builtins.hasAttr "dir" spec) then
-        spec
-      else if isDerivation spec then
-        let
-          pkg = spec;
-          nwo = githubNameWithOwner pkg;
-        in
-        if nwo != null then
-          {
-            inherit (nwo) name;
-            dir = pkg;
-          }
-        else
-          throw "Package must have a GitHub homepage"
-      else
-        throw "Invalid plugin spec"
-    else if builtins.isString spec then
-      let
-        nwo = githubNameWithOwner spec;
-        pkg = lookupVimPluginByGitHub {
-          inherit pkgs;
-          inherit (nwo) owner name;
-        };
-      in
-      if nwo.name != null && pkg != null then
-        {
-          inherit (nwo) name;
-          dir = pkg;
-        }
-      else
-        builtins.trace "${spec} plugin not found" { name = spec; }
-    else
-      throw "Invalid plugin spec";
 
   makeLazyNeovimPackage =
     { pkgs, ... }@args: pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (makeLazyNeovimConfig args);
@@ -247,7 +84,7 @@ let
     in
     finalConfig;
 
-  extractLazyVimPluginsJSON =
+  extractLazyVimPluginImportsJSON =
     { pkgs }:
     derivation {
       inherit (pkgs) system;
@@ -261,89 +98,29 @@ let
       LAZYVIM_PATH = pkgs.vimPlugins.LazyVim;
     };
 
-  # Plugin mapping:
-  #
-  #   "lazyvim.plugins" = {
-  #     "bufferline.nvim" = "askinsho/bufferline.nvim";
-  #   };
-  #   "lazyvim.plugins.extras.coding.copilot" = {
-  #     "copilot.lua" = "zbirenbaum/copilot.lua";
-  #   };
-  #
-  #
-  # WARN: requires allow-import-from-derivation
-  extractLazyVimPluginRepos =
-    { pkgs }:
-    let
-      jsonFile = extractLazyVimPluginsJSON { inherit pkgs; };
-      jsonData = builtins.readFile jsonFile;
-      jsonSet = builtins.fromJSON jsonData;
-    in
-    jsonSet;
-
-  mkNixpkgsVimPluginsJSON =
-    { nixpkgs, pkgs }:
-    mkNixEvalFile {
-      name = "nixpkgs-vim-plugins.json";
-      nixpkgs = nixpkgs;
-      pkgs = pkgs;
-      file = ./vimplugin-index.nix;
-    };
-
-  # Nixpkgs Vim Plugins mapped from GitHub name with owner to nixpkg name.
-  #
-  #   "akinsho/bufferline.nvim" = "bufferline-nvim";
-  #   "folke/noice.nvim" = "noice-nvim";
-  #
-  # WARN: requires allow-import-from-derivation
-  nixpkgsVimPlugins =
-    { nixpkgs, pkgs }:
-    let
-      jsonFile = mkNixpkgsVimPluginsJSON { inherit nixpkgs pkgs; };
-      jsonData = builtins.readFile jsonFile;
-      jsonSet = builtins.fromJSON jsonData;
-    in
-    jsonSet;
-
-  # WARN: requires allow-import-from-derivation
-  extractLazyVimPackages =
-    { pkgs }:
-    let
-      packageNames = extractLazyVimPluginRepos { inherit pkgs; };
-      packageFound = _: value: value != null;
-      mapWithPkgs =
-        _: deps:
-        (pkgs.lib.filterAttrs packageFound (
-          builtins.mapAttrs (_: path: lookupVimPluginByGitHubNameWithOwner pkgs path) deps
-        ));
-    in
-    builtins.mapAttrs mapWithPkgs packageNames;
-
-  # WARN: requires allow-import-from-derivation
   mkLazyVimSpecFile =
-    { pkgs }:
-    let
-      lazyvim-pkgs = extractLazyVimPackages { inherit pkgs; };
-      plugins = lazyvim-pkgs."lazyvim.plugins";
-      store-spec = pkgs.lib.attrsets.mapAttrsToList (name: dir: { inherit name dir; }) plugins;
-      spec = store-spec ++ [
-        {
-          name = "LazyVim";
-          dir = pkgs.vimPlugins.LazyVim;
-          import = "lazyvim.plugins";
-        }
-      ];
-    in
+    { nixpkgs, pkgs }:
     derivation {
       inherit (pkgs) system;
       name = "lazyvim.lua";
       builder = "/bin/sh";
-      passAsFile = [ "contents" ];
-      contents = ''return ${toLua pkgs.lib spec}'';
+      LAZYVIM_PLUGINS = extractLazyVimPluginImportsJSON { inherit pkgs; };
+      NIX_PATH = "nixpkgs=${nixpkgs}:to-lua=${toLuaSrc}";
       args = [
         "-c"
         ''
-          /bin/cat "$contentsPath" | ${pkgs.stylua}/bin/stylua - >"$out"
+          set -e
+          ${pkgs.nix}/bin/nix \
+            --extra-experimental-features nix-command \
+            eval \
+            --store dummy:// \
+            --eval-store dummy:// \
+            --read-only \
+            --show-trace \
+            --file ${./lazyvim-spec.nix} \
+            --raw >out.lua
+          ${pkgs.stylua}/bin/stylua out.lua
+          /bin/cp out.lua $out
         ''
       ];
     };
@@ -352,22 +129,11 @@ in
 {
   inherit
     defaultLazyOpts
-    extractLazyVimPackages
-    extractLazyVimPluginRepos
-    extractLazyVimPluginsJSON
-    githubNameWithOwner
-    lookupVimPluginByGitHub
-    lookupVimPluginByGitHubNameWithOwner
+    extractLazyVimPluginImportsJSON
     makeLazyNeovimConfig
     makeLazyNeovimPackage
-    makeLazyPluginSpec
     mkLazyVimSpecFile
-    mkNixpkgsVimPluginsJSON
-    nixpkgsVimPlugins
     setupLazyLua
     toLua
     ;
-
-  # TODO: Remove debug line
-  # pkgs = import <nixpkgs> { };
 }

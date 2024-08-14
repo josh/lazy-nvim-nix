@@ -23,15 +23,10 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: DeterminateSystems/flake-checker-action@v8
 
-      # TODO: lazyvim-spec-lua check requires import-from-derivation for now
-      # - name: Check flake
-      #   run: |
-      #     nix --no-allow-import-from-derivation \
-      #       flake check
-
       - name: Check flake
         run: |
-          nix flake check
+          nix --no-allow-import-from-derivation \
+            flake check
 
   checks:
     runs-on: ubuntu-latest

@@ -34,21 +34,6 @@
 
         nvim = lib.makeLazyNeovimPackage {
           inherit pkgs;
-
-          spec =
-            let
-              makeLazyPluginSpec = lib.makeLazyPluginSpec pkgs;
-              plugins = [
-                "bufferline.nvim"
-                "lualine.nvim"
-              ];
-            in
-            builtins.map makeLazyPluginSpec plugins;
-        };
-
-        LazyVim = lib.makeLazyNeovimPackage {
-          inherit pkgs;
-
           spec = [
             {
               name = "bufferline.nvim";
@@ -58,6 +43,14 @@
               name = "lualine.nvim";
               dir = pkgs.vimPlugins.lualine-nvim;
             }
+          ];
+        };
+
+        LazyVim = lib.makeLazyNeovimPackage {
+          inherit pkgs;
+          spec = [
+            # TODO: Add LazyVim plugin module derivation
+            # { "import" = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; }; }
             {
               name = "LazyVim";
               dir = pkgs.vimPlugins.LazyVim;
@@ -91,10 +84,10 @@
           '';
 
           lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
-            ${pkgs.jq}/bin/jq <${lib.extractLazyVimPluginsJSON { inherit pkgs; }} >$out
+            ${pkgs.jq}/bin/jq <${lib.extractLazyVimPluginImportsJSON { inherit pkgs; }} >$out
           '';
 
-          lazyvim-spec-lua = lib.mkLazyVimSpecFile { inherit pkgs; };
+          lazyvim-spec-lua = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; };
         }
       );
     };
