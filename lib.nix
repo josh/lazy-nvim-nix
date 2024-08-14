@@ -119,7 +119,11 @@ let
             --show-trace \
             --file ${./lazyvim-spec.nix} \
             --raw >out.lua
-          ${pkgs.stylua}/bin/stylua out.lua
+          ${pkgs.stylua}/bin/stylua \
+            --indent-type Spaces \
+            --indent-width 2 \
+            --column-width 120 \
+            out.lua
           ${pkgs.coreutils}/bin/cp out.lua "$out"
         ''
       ];
