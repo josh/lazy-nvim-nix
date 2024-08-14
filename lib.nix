@@ -337,5 +337,6 @@ in
     toLua
     ;
 
-  pkgs = import <nixpkgs> { };
+  # TODO: Remove debug line
+  # pkgs = import <nixpkgs> { };
 }
