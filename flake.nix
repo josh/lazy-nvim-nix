@@ -93,6 +93,8 @@
           lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
             ${pkgs.jq}/bin/jq <${lib.extractLazyVimPluginsJSON { inherit pkgs; }} >$out
           '';
+
+          lazyvim-spec-lua = lib.mkLazyVimSpecFile { inherit pkgs; };
         }
       );
     };

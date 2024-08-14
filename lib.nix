@@ -305,6 +305,7 @@ let
     in
     jsonSet;
 
+  # WARN: requires allow-import-from-derivation
   extractLazyVimPackages =
     { pkgs }:
     let
@@ -317,6 +318,35 @@ let
         ));
     in
     builtins.mapAttrs mapWithPkgs packageNames;
+
+  # WARN: requires allow-import-from-derivation
+  mkLazyVimSpecFile =
+    { pkgs }:
+    let
+      lazyvim-pkgs = extractLazyVimPackages { inherit pkgs; };
+      plugins = lazyvim-pkgs."lazyvim.plugins";
+      store-spec = pkgs.lib.attrsets.mapAttrsToList (name: dir: { inherit name dir; }) plugins;
+      spec = store-spec ++ [
+        {
+          name = "LazyVim";
+          dir = pkgs.vimPlugins.LazyVim;
+          import = "lazyvim.plugins";
+        }
+      ];
+    in
+    derivation {
+      inherit (pkgs) system;
+      name = "lazyvim.lua";
+      builder = "/bin/sh";
+      passAsFile = [ "contents" ];
+      contents = ''return ${toLua pkgs.lib spec}'';
+      args = [
+        "-c"
+        ''
+          /bin/cat "$contentsPath" | ${pkgs.stylua}/bin/stylua - >"$out"
+        ''
+      ];
+    };
 
 in
 {
@@ -331,6 +361,7 @@ in
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     makeLazyPluginSpec
+    mkLazyVimSpecFile
     mkNixpkgsVimPluginsJSON
     nixpkgsVimPlugins
     setupLazyLua
