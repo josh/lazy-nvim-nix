@@ -36,7 +36,7 @@ function import_plugins(modname)
 	})
 	spec:import(spec)
 
-	local plugins = {}
+	local plugins = vim.empty_dict()
 	for name, plugin in pairs(spec.plugins) do
 		if name == "LazyVim" then
 			-- skip
@@ -51,7 +51,7 @@ function import_plugins(modname)
 	return plugins
 end
 
-local output = {}
+local output = vim.empty_dict()
 
 -- Discover plugins
 utils.walkmods(lazyvimpath .. "/lua/lazyvim/plugins", function(modname)

@@ -11,7 +11,7 @@ let
   libEval = import ./eval.nix;
   mkNixEvalFile = libEval.mkNixEvalFile;
 
-  lazyOpts = {
+  defaultLazyOpts = {
     root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
     lockfile.__raw = ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
     state.__raw = ''vim.fn.stdpath("state") .. "/lazy/state.json"'';
@@ -131,6 +131,22 @@ let
     in
     tryFind didMatch (builtins.attrValues pkgs.vimPlugins);
 
+  # Look up nixpkgs.vimPlugins by GitHub owner and name.
+  # Returns null if not found.
+  #
+  #   lookupVimPluginByGitHubNameWithOwner pkgs "folke/lazy.nvim"
+  #
+  lookupVimPluginByGitHubNameWithOwner =
+    pkgs: path:
+    let
+      nwo = githubNameWithOwner path;
+    in
+    lookupVimPluginByGitHub {
+      pkgs = pkgs;
+      owner = nwo.owner;
+      name = nwo.name;
+    };
+
   # 
   #
   # Examples
@@ -213,7 +229,7 @@ let
         luaRcContent = setupLazyLua {
           inherit (pkgs) lib;
           inherit spec;
-          opts = lazyOpts;
+          opts = defaultLazyOpts;
         };
       };
 
@@ -289,34 +305,29 @@ let
     in
     jsonSet;
 
-  # FIXME: Busted after plugins.json format change
   extractLazyVimPackages =
     { pkgs }:
     let
       packageNames = extractLazyVimPluginRepos { inherit pkgs; };
-      packageFound = _name: src: src != null;
+      packageFound = _: value: value != null;
       mapWithPkgs =
-        _: repos:
-        pkgs.lib.filterAttrs packageFound (
-          pkgs.lib.attrsets.genAttrs repos (
-            repo:
-            lookupVimPluginByGitHub {
-              inherit pkgs;
-              name = repo;
-            }
-          )
-        );
+        _: deps:
+        (pkgs.lib.filterAttrs packageFound (
+          builtins.mapAttrs (_: path: lookupVimPluginByGitHubNameWithOwner pkgs path) deps
+        ));
     in
     builtins.mapAttrs mapWithPkgs packageNames;
 
 in
 {
   inherit
+    defaultLazyOpts
     extractLazyVimPackages
     extractLazyVimPluginRepos
     extractLazyVimPluginsJSON
     githubNameWithOwner
     lookupVimPluginByGitHub
+    lookupVimPluginByGitHubNameWithOwner
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     makeLazyPluginSpec
@@ -325,4 +336,6 @@ in
     setupLazyLua
     toLua
     ;
+
+  pkgs = import <nixpkgs> { };
 }
