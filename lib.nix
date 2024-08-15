@@ -99,12 +99,13 @@ let
     };
 
   mkLazyVimSpecFile =
-    { nixpkgs, pkgs }:
+    { nixpkgs, pkgs, extras ? [] }:
     derivation {
       inherit (pkgs) system;
       name = "lazyvim.lua";
       builder = "/bin/sh";
       LAZYVIM_PLUGINS = extractLazyVimPluginImportsJSON { inherit pkgs; };
+      LAZYVIM_EXTRAS = builtins.toJSON extras;
       NIX_PATH = "nixpkgs=${nixpkgs}:to-lua=${toLuaSrc}";
       args = [
         "-c"

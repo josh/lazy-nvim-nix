@@ -76,6 +76,18 @@ let
     builtins.readFile (builtins.getEnv "LAZYVIM_PLUGINS")
   );
 
+  # List of LazyVim extra import modules.
+  #
+  #   [
+  #     "lazyvim.plugins.extras.coding.copilot"
+  #     "lazyvim.plugins.extras.editor.telescope"
+  #   ]
+  #
+  lazyvimPluginImportExtras = builtins.fromJSON (builtins.getEnv "LAZYVIM_EXTRAS");
+
+  # Always import core plugins.
+  lazyvimPluginImports = [ "lazyvim.plugins" ] ++ lazyvimPluginImportExtras;
+
   # Nested set of LazyVim plugin imports to it's nixpkgs vim plugin.
   #
   #   "lazyvim.plugins" = {
@@ -88,15 +100,15 @@ let
     _: deps: (compactAttrs (builtins.mapAttrs (_: getVimPluginByGitHub) deps))
   ) lazyvimPluginImportRepos;
 
-  corePlugins = lazyvimPluginImportPkgs."lazyvim.plugins";
+  flatPlugins = builtins.foldl' (a: b: a // lazyvimPluginImportPkgs.${b}) { } lazyvimPluginImports;
+  lockSpec = lib.attrsets.mapAttrsToList (name: dir: { inherit name dir; }) flatPlugins;
 
-  pluginsSpec = lib.attrsets.mapAttrsToList (name: dir: { inherit name dir; }) corePlugins;
-  spec = pluginsSpec ++ [
+  spec = [
     {
       name = "LazyVim";
       dir = pkgs.vimPlugins.LazyVim;
       import = "lazyvim.plugins";
     }
-  ];
+  ] ++ lockSpec;
 in
 ''return ${(toLua { inherit lib; }).toLua spec}''
