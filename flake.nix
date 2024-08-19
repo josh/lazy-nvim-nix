@@ -24,15 +24,14 @@
       ];
       eachSystem = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
-      lib = import ./lib.nix;
     in
     {
-      inherit lib;
+      lib = (import ./lib.nix).withNixpkgs nixpkgs;
 
       packages = eachSystem (pkgs: {
         default = self.packages.${pkgs.system}.nvim;
 
-        nvim = lib.makeLazyNeovimPackage {
+        nvim = self.lib.makeLazyNeovimPackage {
           inherit pkgs;
           spec = [
             {
@@ -46,7 +45,7 @@
           ];
         };
 
-        LazyVim = lib.makeLazyNeovimPackage {
+        LazyVim = self.lib.makeLazyNeovimPackage {
           inherit pkgs;
           spec = [
             # TODO: Add LazyVim plugin module derivation
@@ -84,10 +83,10 @@
           '';
 
           lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
-            ${pkgs.jq}/bin/jq <${lib.extractLazyVimPluginImportsJSON { inherit pkgs; }} >$out
+            ${pkgs.jq}/bin/jq <${self.lib.extractLazyVimPluginImportsJSON { inherit pkgs; }} >$out
           '';
 
-          lazyvim-spec-lua = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; };
+          lazyvim-spec-lua = self.lib.mkLazyVimSpecFile { inherit pkgs; };
         }
       );
     };

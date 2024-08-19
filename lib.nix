@@ -99,7 +99,11 @@ let
     };
 
   mkLazyVimSpecFile =
-    { nixpkgs, pkgs, extras ? [] }:
+    {
+      nixpkgs,
+      pkgs,
+      extras ? [ ],
+    }:
     derivation {
       inherit (pkgs) system;
       name = "lazyvim.lua";
@@ -141,4 +145,14 @@ in
     setupLazyLua
     toLua
     ;
+
+  withNixpkgs = nixpkgs: {
+    defaultLazyOpts = defaultLazyOpts;
+    extractLazyVimPluginImportsJSON = extractLazyVimPluginImportsJSON;
+    makeLazyNeovimConfig = makeLazyNeovimConfig;
+    makeLazyNeovimPackage = makeLazyNeovimPackage;
+    mkLazyVimSpecFile = args: mkLazyVimSpecFile ({ nixpkgs = nixpkgs; } // args);
+    setupLazyLua = args: setupLazyLua ({ lib = nixpkgs.lib; } // args);
+    toLua = toLua nixpkgs.lib;
+  };
 }
