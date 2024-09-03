@@ -147,12 +147,12 @@ in
     ;
 
   withNixpkgs = nixpkgs: {
-    defaultLazyOpts = defaultLazyOpts;
-    extractLazyVimPluginImportsJSON = extractLazyVimPluginImportsJSON;
-    makeLazyNeovimConfig = makeLazyNeovimConfig;
-    makeLazyNeovimPackage = makeLazyNeovimPackage;
-    mkLazyVimSpecFile = args: mkLazyVimSpecFile ({ nixpkgs = nixpkgs; } // args);
-    setupLazyLua = args: setupLazyLua ({ lib = nixpkgs.lib; } // args);
+    inherit defaultLazyOpts;
+    inherit extractLazyVimPluginImportsJSON;
+    inherit makeLazyNeovimConfig;
+    inherit makeLazyNeovimPackage;
+    mkLazyVimSpecFile = args: mkLazyVimSpecFile ({ inherit nixpkgs; } // args);
+    setupLazyLua = args: setupLazyLua ({ inherit (nixpkgs) lib; } // args);
     toLua = toLua nixpkgs.lib;
   };
 }
