@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+env:
+  NIX_ABORT_ON_WARN: "1"
+
 jobs:
   build:
     runs-on: ubuntu-latest
