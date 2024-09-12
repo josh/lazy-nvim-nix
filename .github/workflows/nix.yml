@@ -24,7 +24,7 @@ jobs:
           nix config show | grep allow-import-from-derivation
 
       - uses: DeterminateSystems/magic-nix-cache-action@main
-      - uses: DeterminateSystems/flake-checker-action@v8
+      - uses: DeterminateSystems/flake-checker-action@v9
 
       - name: Check flake
         run: |
