@@ -28,38 +28,55 @@
     {
       lib = (import ./lib.nix).withNixpkgs nixpkgs;
 
-      packages = eachSystem (pkgs: {
-        default = self.packages.${pkgs.system}.nvim;
-
-        nvim = self.lib.makeLazyNeovimPackage {
-          inherit pkgs;
-          spec = [
-            {
-              name = "bufferline.nvim";
-              dir = pkgs.vimPlugins.bufferline-nvim;
-            }
-            {
-              name = "lualine.nvim";
-              dir = pkgs.vimPlugins.lualine-nvim;
-            }
-          ];
-        };
-
-        LazyVim = self.lib.makeLazyNeovimPackage {
-          inherit pkgs;
-          spec = [
-            # TODO: Add LazyVim plugin module derivation
-            # { "import" = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; }; }
-            {
-              name = "LazyVim";
-              dir = pkgs.vimPlugins.LazyVim;
-              "import" = "lazyvim.plugins";
-            }
-          ];
-
-          extraPackages = with pkgs; [ lazygit ];
+      legacyPackages = eachSystem (pkgs: {
+        lazyNvimPlugins = {
+          "bufferline.nvim" = self.lib.buildVimPlugin pkgs "bufferline.nvim";
+          "catppuccin" = self.lib.buildVimPlugin pkgs "catppuccin";
+          "lazy.nvim" = self.lib.buildVimPlugin pkgs "lazy.nvim";
+          "LazyVim" = self.lib.buildVimPlugin pkgs "LazyVim";
+          "lualine.nvim" = self.lib.buildVimPlugin pkgs "lualine.nvim";
         };
       });
+
+      packages = eachSystem (
+        pkgs:
+        let
+          plugins = self.legacyPackages.${pkgs.system}.lazyNvimPlugins;
+        in
+        {
+          default = self.packages.${pkgs.system}.nvim;
+
+          nvim = self.lib.makeLazyNeovimPackage {
+            inherit pkgs;
+            spec = [
+              # TODO: my wrapped plugin derivation should provide this spec
+              {
+                name = "bufferline.nvim";
+                dir = plugins."bufferline.nvim";
+              }
+              {
+                name = "lualine.nvim";
+                dir = plugins."lualine.nvim";
+              }
+            ];
+          };
+
+          LazyVim = self.lib.makeLazyNeovimPackage {
+            inherit pkgs;
+            spec = [
+              # TODO: Add LazyVim plugin module derivation
+              # { "import" = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; }; }
+              {
+                name = "LazyVim";
+                dir = plugins."LazyVim";
+                "import" = "lazyvim.plugins";
+              }
+            ];
+
+            extraPackages = with pkgs; [ lazygit ];
+          };
+        }
+      );
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
       checks = eachSystem (

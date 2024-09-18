@@ -7,6 +7,52 @@ let
   lua = import toLuaSrc;
   toLua = lib: value: (lua { inherit lib; }).toLua value;
 
+  pad = s: if builtins.stringLength s < 2 then "0" + s else s;
+  dateFromUnix =
+    t:
+    let
+      days = t / 86400;
+      z = days + 719468;
+      era = z / 146097;
+      doe = z - era * 146097;
+      yoe = (doe - doe / 1460 + doe / 36524 - doe / 146096) / 365;
+      y = yoe + era * 400;
+      doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+      mp = (5 * doy + 2) / 153;
+      d = doy - (153 * mp + 2) / 5 + 1;
+      m = mp + (if mp < 10 then 3 else -9);
+      y' = y + (if m <= 2 then 1 else 0);
+    in
+    "${toString y'}-${pad (toString m)}-${pad (toString d)}";
+
+  flakeNodeHomepage =
+    node:
+    assert node.type == "github";
+    "https://github.com/${node.owner}/${node.repo}";
+
+  fetchFlakeLockedNode =
+    node:
+    assert node.type == "github";
+    builtins.fetchTarball {
+      url = "https://github.com/${node.owner}/${node.repo}/archive/${node.rev}.tar.gz";
+      sha256 = node.narHash;
+    };
+
+  buildVimPlugin =
+    pkgs: name:
+    let
+      node = sourcesLock.nodes.${name}.locked;
+    in
+    # TODO: Why do I need vimPlugin wrapper?
+    pkgs.vimUtils.buildVimPlugin {
+      pname = name;
+      version = dateFromUnix node.lastModified;
+      src = fetchFlakeLockedNode node;
+      meta.homepage = flakeNodeHomepage node;
+    };
+
+  sourcesLock = builtins.fromJSON (builtins.readFile ./sources/flake.lock);
+
   defaultLazyOpts = {
     root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
     lockfile.__raw = ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
@@ -137,20 +183,28 @@ let
 in
 {
   inherit
+    buildVimPlugin
     defaultLazyOpts
     extractLazyVimPluginImportsJSON
+    fetchFlakeLockedNode
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     mkLazyVimSpecFile
     setupLazyLua
+    sourcesLock
     toLua
     ;
 
   withNixpkgs = nixpkgs: {
-    inherit defaultLazyOpts;
-    inherit extractLazyVimPluginImportsJSON;
-    inherit makeLazyNeovimConfig;
-    inherit makeLazyNeovimPackage;
+    inherit
+      buildVimPlugin
+      defaultLazyOpts
+      extractLazyVimPluginImportsJSON
+      fetchFlakeLockedNode
+      makeLazyNeovimConfig
+      makeLazyNeovimPackage
+      sourcesLock
+      ;
     mkLazyVimSpecFile = args: mkLazyVimSpecFile ({ inherit nixpkgs; } // args);
     setupLazyLua = args: setupLazyLua ({ inherit (nixpkgs) lib; } // args);
     toLua = toLua nixpkgs.lib;
