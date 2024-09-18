@@ -5,7 +5,8 @@
     "enabled": true
   },
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "automerge": true
   },
   "timezone": "America/Los_Angeles",
   "schedule": ["before 4am on Monday"]
