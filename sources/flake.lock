@@ -12,6 +12,7 @@
       },
       "original": {
         "owner": "LazyVim",
+        "ref": "main",
         "repo": "LazyVim",
         "type": "github"
       }
@@ -28,6 +29,7 @@
       },
       "original": {
         "owner": "akinsho",
+        "ref": "main",
         "repo": "bufferline.nvim",
         "type": "github"
       }
@@ -44,6 +46,7 @@
       },
       "original": {
         "owner": "catppuccin",
+        "ref": "main",
         "repo": "nvim",
         "type": "github"
       }
@@ -60,6 +63,7 @@
       },
       "original": {
         "owner": "folke",
+        "ref": "main",
         "repo": "lazy.nvim",
         "type": "github"
       }
@@ -76,6 +80,7 @@
       },
       "original": {
         "owner": "nvim-lualine",
+        "ref": "master",
         "repo": "lualine.nvim",
         "type": "github"
       }
