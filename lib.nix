@@ -1,8 +1,8 @@
 let
   toLuaSrc = builtins.fetchurl {
     # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
-    url = "https://raw.githubusercontent.com/nix-community/nixvim/6dc0bda459bcfb2a38cf7b6ed1d6a5d6a8105f00/lib/to-lua.nix";
-    sha256 = "sha256:19a22zp89d1xiff7zpzk016z8dv3jsvfnzsyl53b3i7apz75c2yr";
+    url = "https://raw.githubusercontent.com/nix-community/nixvim/35788bbc5ab247563e13bad3ce64acd897bca043/lib/to-lua.nix";
+    sha256 = "sha256:01kj9z5sp82n6r863jxzszs0qpn30p9c4ws0p84qgw5wr2j4jp17";
   };
   lua = import toLuaSrc;
   toLua = lib: value: (lua { inherit lib; }).toLua value;
