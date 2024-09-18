@@ -1,3 +1,6 @@
+# Renovate bug
+# https://github.com/renovatebot/renovate/issues/29721
+# "github:NixOS/nixpkgs/nixpkgs-unstable"
 {
   inputs = {
     "lazy.nvim" = {
