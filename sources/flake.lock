@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "LazyVim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726469273,
+        "narHash": "sha256-iJQ2VzVK80i3B+4stItkliv/3fCMJfSFdFIYc9r6ryc=",
+        "owner": "LazyVim",
+        "repo": "LazyVim",
+        "rev": "4cb12312cfa39b38760aab6c060eefca651ab83f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LazyVim",
+        "repo": "LazyVim",
+        "type": "github"
+      }
+    },
+    "lazy.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726474661,
+        "narHash": "sha256-Atu3GTH7HAH5TnOFn8Ew6n/XqLgaVZgi+SCaHHsa7HU=",
+        "owner": "folke",
+        "repo": "lazy.nvim",
+        "rev": "460e1cd8f24e364d54543a4b0e83f6f4ec1f65fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "lazy.nvim",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "LazyVim": "LazyVim",
+        "lazy.nvim": "lazy.nvim"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
