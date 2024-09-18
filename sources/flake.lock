@@ -32,6 +32,22 @@
         "type": "github"
       }
     },
+    "catppuccin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726377217,
+        "narHash": "sha256-9fEESnT8KSlng+naqVlyrRJnnbRGE0RxTSSGO0gcSKw=",
+        "owner": "catppuccin",
+        "repo": "nvim",
+        "rev": "63685e1562ef53873c9764b483d7ac5c7a608922",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nvim",
+        "type": "github"
+      }
+    },
     "lazy.nvim": {
       "flake": false,
       "locked": {
@@ -68,6 +84,7 @@
       "inputs": {
         "LazyVim": "LazyVim",
         "bufferline.nvim": "bufferline.nvim",
+        "catppuccin": "catppuccin",
         "lazy.nvim": "lazy.nvim",
         "lualine.nvim": "lualine.nvim"
       }

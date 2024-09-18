@@ -7,6 +7,10 @@
       url = "github:akinsho/bufferline.nvim";
       flake = false;
     };
+    "catppuccin" = {
+      url = "github:catppuccin/nvim";
+      flake = false;
+    };
     "lazy.nvim" = {
       url = "github:folke/lazy.nvim";
       flake = false;
