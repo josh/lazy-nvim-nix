@@ -32,9 +32,7 @@ let
       opts ? { },
     }:
     let
-      # TODO: Something is messed up with the docs dir
-      # lazypath = buildLazyNeovimPlugin pkgs "lazy.nvim" pluginsLock.nodes."lazy.nvim";
-      lazypath = pkgs.vimPlugins.lazy-nvim;
+      lazypath = (import ./plugins.nix { inherit pkgs; })."lazy.nvim";
     in
     ''
       vim.opt.rtp:prepend("${lazypath}");
@@ -56,6 +54,7 @@ let
       moreExtraPackages = [
         pkgs.git
         pkgs.luajitPackages.luarocks
+        pkgs.ripgrep
       ] ++ extraPackages;
 
       config = pkgs.neovimUtils.makeNeovimConfig {

@@ -36,6 +36,39 @@ let
     "${toString y'}-${pad (toString m)}-${pad (toString d)}";
 
   /*
+    Formats a derivation name from a plugin name and version.
+
+    Type: formatDerivationName :: { name: string, version: string } -> string
+    Example:
+      formatDerivationName { name = "lazy.nvim", version = "0.0.1" }
+      => "lazyvim-plugin-lazy-nvim-0.0.1"
+  */
+  formatDerivationName =
+    { name, version }:
+    let
+      pname = builtins.replaceStrings [ "." ] [ "-" ] name;
+    in
+    "lazyvim-plugin-${pname}-${version}";
+
+  /*
+    Apply list of patches to derivation, returning a new one.
+
+    Type: applyPatches :: drv -> [ string ] -> drv
+  */
+  applyPatches =
+    src: patches:
+    pkgs.stdenv.mkDerivation {
+      name = formatDerivationName { inherit (src.meta) name version; };
+      inherit src patches;
+      inherit (src) meta;
+      installPhase = ''
+        runHook preInstall
+        cp -r . $out
+        runHook postInstall
+      '';
+    };
+
+  /*
     Make a lazy.nvim plugin spec.
     See <https://lazy.folke.io/spec>
   */
@@ -55,16 +88,14 @@ let
   buildPlugin =
     name: node:
     let
-      pname = builtins.replaceStrings [ "." ] [ "-" ] name;
       version = dateFromUnix node.locked.lastModified;
-      srcName = "lazynvimplugin-${pname}-${version}";
       src = pkgs.fetchFromGitHub {
-        name = srcName;
+        name = formatDerivationName { inherit name version; };
         inherit (node.locked) owner repo rev;
         sha256 = node.locked.narHash;
       };
       meta = src.meta // {
-        inherit version;
+        inherit name version;
       };
       spec = makeLazySpec name node src;
     in
@@ -75,13 +106,12 @@ let
   pluginNodes = builtins.removeAttrs lockfile.nodes [ "root" ];
 
   plugins = builtins.mapAttrs buildPlugin pluginNodes;
-in
-plugins
-// {
-  "lazy.nvim" = pkgs.vimUtils.buildVimPlugin {
-    pname = "lazy.nvim";
-    inherit (plugins."lazy.nvim".meta) version;
-    src = plugins."lazy.nvim";
-    meta.homepage = plugins."lazy.nvim".meta.homepage;
+
+  pluginOverrides = {
+    "lazy.nvim" = applyPatches plugins."lazy.nvim" [
+      "${pkgs.path}/pkgs/applications/editors/vim/plugins/patches/lazy-nvim/no-helptags.patch"
+    ];
   };
-}
+
+in
+plugins // pluginOverrides
