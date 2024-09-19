@@ -47,12 +47,12 @@ let
     assert node.original.type == "github";
     drv // { inherit spec; };
 
-  sourcesLock = builtins.fromJSON (builtins.readFile ./sources/flake.lock);
+  pluginsLock = builtins.fromJSON (builtins.readFile ./plugins/flake.lock);
 
   buildLazyNeovimPlugins =
     pkgs:
     builtins.mapAttrs (buildLazyNeovimPlugin pkgs) (
-      builtins.removeAttrs sourcesLock.nodes [
+      builtins.removeAttrs pluginsLock.nodes [
         "root"
         "lazy.nvim"
       ]
@@ -60,7 +60,7 @@ let
     // {
       "lazy.nvim" =
         let
-          node = sourcesLock.nodes."lazy.nvim";
+          node = pluginsLock.nodes."lazy.nvim";
         in
         pkgs.vimUtils.buildVimPlugin {
           pname = "lazy.nvim";
@@ -104,7 +104,7 @@ let
     }:
     let
       # TODO: Something is messed up with the docs dir
-      # lazypath = buildLazyNeovimPlugin pkgs "lazy.nvim" sourcesLock.nodes."lazy.nvim";
+      # lazypath = buildLazyNeovimPlugin pkgs "lazy.nvim" pluginsLock.nodes."lazy.nvim";
       lazypath = pkgs.vimPlugins.lazy-nvim;
     in
     ''
@@ -184,7 +184,7 @@ in
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     setupLazyLua
-    sourcesLock
+    pluginsLock
     toLua
     ;
 
@@ -195,7 +195,7 @@ in
       extractLazyVimPluginImportsJSON
       makeLazyNeovimConfig
       makeLazyNeovimPackage
-      sourcesLock
+      pluginsLock
       ;
     setupLazyLua = args: setupLazyLua ({ inherit (nixpkgs) lib; } // args);
     toLua = toLua nixpkgs.lib;
