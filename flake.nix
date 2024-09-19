@@ -1,6 +1,13 @@
 {
   description = "Lazy Neovim on Nix";
 
+  nixConfig = {
+    extra-substituters = [ "https://lazy-nvim-nix.cachix.org" ];
+    extra-trusted-public-keys = [
+      "lazy-nvim-nix.cachix.org-1:hVfO46ldDlMsuON1A44DpCdZmtBOH6SCMXIPKmsVSGA="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     treefmt-nix = {
