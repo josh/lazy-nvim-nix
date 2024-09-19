@@ -38,7 +38,7 @@ let
       sha256 = node.narHash;
     };
 
-  buildVimPlugin =
+  buildLazyNeovimPlugin =
     pkgs: name:
     let
       node = sourcesLock.nodes.${name}.locked;
@@ -183,7 +183,7 @@ let
 in
 {
   inherit
-    buildVimPlugin
+    buildLazyNeovimPlugin
     defaultLazyOpts
     extractLazyVimPluginImportsJSON
     fetchFlakeLockedNode
@@ -197,7 +197,7 @@ in
 
   withNixpkgs = nixpkgs: {
     inherit
-      buildVimPlugin
+      buildLazyNeovimPlugin
       defaultLazyOpts
       extractLazyVimPluginImportsJSON
       fetchFlakeLockedNode

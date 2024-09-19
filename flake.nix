@@ -25,11 +25,11 @@
       eachSystem = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
       mkLazynvimPlugins = pkgs: {
-        "bufferline.nvim" = self.lib.buildVimPlugin pkgs "bufferline.nvim";
-        "catppuccin" = self.lib.buildVimPlugin pkgs "catppuccin";
-        "lazy.nvim" = self.lib.buildVimPlugin pkgs "lazy.nvim";
-        "LazyVim" = self.lib.buildVimPlugin pkgs "LazyVim";
-        "lualine.nvim" = self.lib.buildVimPlugin pkgs "lualine.nvim";
+        "bufferline.nvim" = self.lib.buildLazyNeovimPlugin pkgs "bufferline.nvim";
+        "catppuccin" = self.lib.buildLazyNeovimPlugin pkgs "catppuccin";
+        "lazy.nvim" = self.lib.buildLazyNeovimPlugin pkgs "lazy.nvim";
+        "LazyVim" = self.lib.buildLazyNeovimPlugin pkgs "LazyVim";
+        "lualine.nvim" = self.lib.buildLazyNeovimPlugin pkgs "lualine.nvim";
       };
     in
     {
