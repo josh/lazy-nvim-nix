@@ -561,6 +561,23 @@
         "type": "github"
       }
     },
+    "persistance.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721651155,
+        "narHash": "sha256-QRmvGnwFSlyhquYLbTSZcSZ5G7Wow5AcTiPNgX0DVQc=",
+        "owner": "folke",
+        "repo": "persistence.nvim",
+        "rev": "f6aad7dde7fcf54148ccfc5f622c6d5badd0cc3d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "ref": "main",
+        "repo": "persistence.nvim",
+        "type": "github"
+      }
+    },
     "persistence.nvim": {
       "flake": false,
       "locked": {
@@ -630,13 +647,50 @@
         "nvim-treesitter": "nvim-treesitter",
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
         "nvim-ts-autotag": "nvim-ts-autotag",
+        "persistance.nvim": "persistance.nvim",
         "persistence.nvim": "persistence.nvim",
         "plenary.nvim": "plenary.nvim",
+        "telescope-fzf-native.nvim": "telescope-fzf-native.nvim",
+        "telescope.nvim": "telescope.nvim",
         "todo-comments.nvim": "todo-comments.nvim",
         "tokyonight.nvim": "tokyonight.nvim",
         "trouble.nvim": "trouble.nvim",
         "ts-comments.nvim": "ts-comments.nvim",
         "which-key.nvim": "which-key.nvim"
+      }
+    },
+    "telescope-fzf-native.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719928246,
+        "narHash": "sha256-GEhPf1f0jkEuDlHNuxVko0ChvuF/zoQroLNUlk8N5EA=",
+        "owner": "nvim-telescope",
+        "repo": "telescope-fzf-native.nvim",
+        "rev": "cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "ref": "main",
+        "repo": "telescope-fzf-native.nvim",
+        "type": "github"
+      }
+    },
+    "telescope.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726712810,
+        "narHash": "sha256-3gFcpdzRPAeGrB69FbCLYO16BWnkAb0hRawi9//t7QM=",
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
+        "rev": "b5fd7f7ae0ea4537511077ed8ef4a6021cedba2f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "ref": "master",
+        "repo": "telescope.nvim",
+        "type": "github"
       }
     },
     "todo-comments.nvim": {

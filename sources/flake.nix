@@ -69,10 +69,16 @@
     "nvim-treesitter".url = "github:nvim-treesitter/nvim-treesitter/master";
     "nvim-ts-autotag".flake = false;
     "nvim-ts-autotag".url = "github:windwp/nvim-ts-autotag/main";
+    "persistance.nvim".flake = false;
+    "persistance.nvim".url = "github:folke/persistence.nvim/main";
     "persistence.nvim".flake = false;
     "persistence.nvim".url = "github:folke/persistence.nvim/main";
     "plenary.nvim".flake = false;
     "plenary.nvim".url = "github:nvim-lua/plenary.nvim/master";
+    "telescope-fzf-native.nvim".flake = false;
+    "telescope-fzf-native.nvim".url = "github:nvim-telescope/telescope-fzf-native.nvim/main";
+    "telescope.nvim".flake = false;
+    "telescope.nvim".url = "github:nvim-telescope/telescope.nvim/master";
     "todo-comments.nvim".flake = false;
     "todo-comments.nvim".url = "github:folke/todo-comments.nvim/main";
     "tokyonight.nvim".flake = false;
