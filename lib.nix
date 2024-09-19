@@ -175,42 +175,6 @@ let
       LAZYVIM_PATH = pkgs.vimPlugins.LazyVim;
     };
 
-  mkLazyVimSpecFile =
-    {
-      nixpkgs,
-      pkgs,
-      extras ? [ ],
-    }:
-    derivation {
-      inherit (pkgs) system;
-      name = "lazyvim.lua";
-      builder = "/bin/sh";
-      LAZYVIM_PLUGINS = extractLazyVimPluginImportsJSON { inherit pkgs; };
-      LAZYVIM_EXTRAS = builtins.toJSON extras;
-      NIX_PATH = "nixpkgs=${nixpkgs}:to-lua=${toLuaSrc}";
-      args = [
-        "-c"
-        ''
-          set -e
-          ${pkgs.nix}/bin/nix \
-            --extra-experimental-features nix-command \
-            eval \
-            --store dummy:// \
-            --eval-store dummy:// \
-            --read-only \
-            --show-trace \
-            --file ${./lazyvim-spec.nix} \
-            --raw >out.lua
-          ${pkgs.stylua}/bin/stylua \
-            --indent-type Spaces \
-            --indent-width 2 \
-            --column-width 120 \
-            out.lua
-          ${pkgs.coreutils}/bin/cp out.lua "$out"
-        ''
-      ];
-    };
-
 in
 {
   inherit
@@ -219,7 +183,6 @@ in
     extractLazyVimPluginImportsJSON
     makeLazyNeovimConfig
     makeLazyNeovimPackage
-    mkLazyVimSpecFile
     setupLazyLua
     sourcesLock
     toLua
@@ -234,7 +197,6 @@ in
       makeLazyNeovimPackage
       sourcesLock
       ;
-    mkLazyVimSpecFile = args: mkLazyVimSpecFile ({ inherit nixpkgs; } // args);
     setupLazyLua = args: setupLazyLua ({ inherit (nixpkgs) lib; } // args);
     toLua = toLua nixpkgs.lib;
   };

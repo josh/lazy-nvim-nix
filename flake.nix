@@ -54,8 +54,6 @@
           LazyVim = self.lib.makeLazyNeovimPackage {
             inherit pkgs;
             spec = [
-              # TODO: Add LazyVim plugin module derivation
-              # { "import" = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; }; }
               (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
               # plugins."nvim-treesitter-textobjects".spec
@@ -129,8 +127,6 @@
           lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
             ${pkgs.jq}/bin/jq <${self.lib.extractLazyVimPluginImportsJSON { inherit pkgs; }} >$out
           '';
-
-          lazyvim-spec-lua = self.lib.mkLazyVimSpecFile { inherit pkgs; };
         }
       );
     };
