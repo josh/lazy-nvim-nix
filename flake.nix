@@ -10,11 +10,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    to-lua = {
-      # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
-      url = "https://raw.githubusercontent.com/nix-community/nixvim/35788bbc5ab247563e13bad3ce64acd897bca043/lib/to-lua.nix";
-      flake = false;
-    };
+    # to-lua = {
+    #   url = "https://raw.githubusercontent.com/nix-community/nixvim/abcd123/lib/to-lua.nix";
+    #   flake = false;
+    # };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,11 +24,10 @@
     {
       self,
       nixpkgs,
-      to-lua,
       treefmt-nix,
     }:
     let
-      lib = import ./lib.nix { inherit nixpkgs to-lua; };
+      lib = import ./lib.nix { inherit nixpkgs; };
       systems = [
         "aarch64-darwin"
         "aarch64-linux"
