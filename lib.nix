@@ -26,9 +26,8 @@ let
     "${toString y'}-${pad (toString m)}-${pad (toString d)}";
 
   buildLazyNeovimPlugin =
-    pkgs: name:
+    pkgs: name: node:
     let
-      node = sourcesLock.nodes.${name};
       cleanName = builtins.replaceStrings [ "." ] [ "-" ] name;
       version = dateFromUnix node.locked.lastModified;
       drv = pkgs.fetchFromGitHub {
@@ -49,6 +48,10 @@ let
     drv // { inherit spec; };
 
   sourcesLock = builtins.fromJSON (builtins.readFile ./sources/flake.lock);
+
+  buildLazyNeovimPlugins =
+    pkgs:
+    builtins.mapAttrs (buildLazyNeovimPlugin pkgs) (builtins.removeAttrs sourcesLock.nodes [ "root" ]);
 
   defaultLazyOpts = {
     root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
@@ -183,7 +186,7 @@ let
 in
 {
   inherit
-    buildLazyNeovimPlugin
+    buildLazyNeovimPlugins
     defaultLazyOpts
     extractLazyVimPluginImportsJSON
     makeLazyNeovimConfig
@@ -196,7 +199,7 @@ in
 
   withNixpkgs = nixpkgs: {
     inherit
-      buildLazyNeovimPlugin
+      buildLazyNeovimPlugins
       defaultLazyOpts
       extractLazyVimPluginImportsJSON
       makeLazyNeovimConfig

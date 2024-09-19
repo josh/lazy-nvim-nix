@@ -31,27 +31,6 @@
       ];
       eachSystem = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
-      # TODO: Generate this mapping instead of hardcoding it
-      mkLazynvimPlugins = pkgs: {
-        "bufferline.nvim" = self.lib.buildLazyNeovimPlugin pkgs "bufferline.nvim";
-        "catppuccin" = self.lib.buildLazyNeovimPlugin pkgs "catppuccin";
-        "dashboard-nvim" = self.lib.buildLazyNeovimPlugin pkgs "dashboard-nvim";
-        "flash.nvim" = self.lib.buildLazyNeovimPlugin pkgs "flash.nvim";
-        "lazy.nvim" = self.lib.buildLazyNeovimPlugin pkgs "lazy.nvim";
-        "LazyVim" = self.lib.buildLazyNeovimPlugin pkgs "LazyVim";
-        "lualine.nvim" = self.lib.buildLazyNeovimPlugin pkgs "lualine.nvim";
-        "mini.ai" = self.lib.buildLazyNeovimPlugin pkgs "mini.ai";
-        "mini.icons" = self.lib.buildLazyNeovimPlugin pkgs "mini.icons";
-        "mini.pairs" = self.lib.buildLazyNeovimPlugin pkgs "mini.pairs";
-        "noice.nvim" = self.lib.buildLazyNeovimPlugin pkgs "noice.nvim";
-        "nui.nvim" = self.lib.buildLazyNeovimPlugin pkgs "nui.nvim";
-        "nvim-treesitter-textobjects" = self.lib.buildLazyNeovimPlugin pkgs "nvim-treesitter-textobjects";
-        "nvim-treesitter" = self.lib.buildLazyNeovimPlugin pkgs "nvim-treesitter";
-        "tokyonight.nvim" = self.lib.buildLazyNeovimPlugin pkgs "tokyonight.nvim";
-        "trouble.nvim" = self.lib.buildLazyNeovimPlugin pkgs "trouble.nvim";
-        "ts-comments.nvim" = self.lib.buildLazyNeovimPlugin pkgs "ts-comments.nvim";
-        "which-key.nvim" = self.lib.buildLazyNeovimPlugin pkgs "which-key.nvim";
-      };
     in
     {
       lib = (import ./lib.nix).withNixpkgs nixpkgs;
@@ -102,10 +81,10 @@
       );
 
       legacyPackages = eachSystem (pkgs: {
-        lazynvimPlugins = mkLazynvimPlugins pkgs;
+        lazynvimPlugins = self.lib.buildLazyNeovimPlugins pkgs;
       });
 
-      overlays.default = _final: prev: { lazynvimPlugins = mkLazynvimPlugins prev; };
+      overlays.default = _final: prev: { lazynvimPlugins = self.lib.buildLazyNeovimPlugins prev; };
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
       checks = eachSystem (
@@ -115,6 +94,10 @@
         in
         {
           formatting = treefmtEval.${pkgs.system}.config.build.check self;
+
+          plugins = pkgs.runCommandLocal "plugins" {
+            buildInputs = builtins.attrValues self.legacyPackages.${pkgs.system}.lazynvimPlugins;
+          } ''echo "ok" >$out'';
 
           help = pkgs.runCommandLocal "nvim-help" { } ''
             ${nvim}/bin/nvim --help 2>&1 >$out 
