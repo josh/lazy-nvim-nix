@@ -51,7 +51,29 @@ let
 
   buildLazyNeovimPlugins =
     pkgs:
-    builtins.mapAttrs (buildLazyNeovimPlugin pkgs) (builtins.removeAttrs sourcesLock.nodes [ "root" ]);
+    builtins.mapAttrs (buildLazyNeovimPlugin pkgs) (
+      builtins.removeAttrs sourcesLock.nodes [
+        "root"
+        "lazy.nvim"
+      ]
+    )
+    // {
+      "lazy.nvim" =
+        let
+          node = sourcesLock.nodes."lazy.nvim";
+        in
+        pkgs.vimUtils.buildVimPlugin {
+          pname = "lazy.nvim";
+          version = dateFromUnix node.locked.lastModified;
+          src = pkgs.fetchFromGitHub {
+            owner = "folke";
+            repo = "lazy.nvim";
+            inherit (node.locked) rev;
+            sha256 = node.locked.narHash;
+          };
+          meta.homepage = "https://github.com/folke/lazy.nvim";
+        };
+    };
 
   defaultLazyOpts = {
     root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
