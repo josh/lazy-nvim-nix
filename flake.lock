@@ -19,7 +19,20 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
+        "to-lua": "to-lua",
         "treefmt-nix": "treefmt-nix"
+      }
+    },
+    "to-lua": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-ypFfntQsRmieulsKcNe4nXCzpwb5cwTQEnz4WE5s5cE=",
+        "type": "file",
+        "url": "https://raw.githubusercontent.com/nix-community/nixvim/35788bbc5ab247563e13bad3ce64acd897bca043/lib/to-lua.nix"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://raw.githubusercontent.com/nix-community/nixvim/35788bbc5ab247563e13bad3ce64acd897bca043/lib/to-lua.nix"
       }
     },
     "treefmt-nix": {

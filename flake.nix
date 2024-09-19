@@ -10,6 +10,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    to-lua = {
+      # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
+      url = "https://raw.githubusercontent.com/nix-community/nixvim/35788bbc5ab247563e13bad3ce64acd897bca043/lib/to-lua.nix";
+      flake = false;
+    };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,9 +25,11 @@
     {
       self,
       nixpkgs,
+      to-lua,
       treefmt-nix,
     }:
     let
+      lib = import ./lib.nix { inherit nixpkgs to-lua; };
       systems = [
         "aarch64-darwin"
         "aarch64-linux"
@@ -33,7 +40,7 @@
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
     in
     {
-      lib = (import ./lib.nix).withNixpkgs nixpkgs;
+      inherit lib;
 
       packages = eachSystem (
         pkgs:
@@ -94,11 +101,11 @@
       );
 
       legacyPackages = eachSystem (pkgs: {
-        lazynvimPlugins = self.lib.buildLazyNeovimPlugins pkgs;
+        lazynvimPlugins = import ./plugins.nix { inherit pkgs; };
       });
 
       overlays.default = _final: prev: {
-        lazynvimPlugins = self.lib.buildLazyNeovimPlugins prev;
+        lazynvimPlugins = import ./plugins.nix { pkgs = prev; };
         lazynvimUtils = self.lib;
       };
 
