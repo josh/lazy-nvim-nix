@@ -105,6 +105,7 @@ let
 in
 {
   inherit
+    defaultLazyOpts
     extractLazyVimPluginImportsJSON
     makeLazyNeovimConfig
     makeLazyNeovimPackage
