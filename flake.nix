@@ -46,15 +46,8 @@
           nvim = self.lib.makeLazyNeovimPackage {
             inherit pkgs;
             spec = [
-              # TODO: my wrapped plugin derivation should provide this spec
-              {
-                name = "bufferline.nvim";
-                dir = plugins."bufferline.nvim";
-              }
-              {
-                name = "lualine.nvim";
-                dir = plugins."lualine.nvim";
-              }
+              plugins."bufferline.nvim".spec
+              plugins."lualine.nvim".spec
             ];
           };
 
@@ -63,11 +56,11 @@
             spec = [
               # TODO: Add LazyVim plugin module derivation
               # { "import" = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; }; }
-              {
-                name = "LazyVim";
-                dir = plugins."LazyVim";
-                "import" = "lazyvim.plugins";
-              }
+              (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
+
+              plugins."bufferline.nvim".spec
+              plugins."lualine.nvim".spec
+              plugins."catppuccin".spec
             ];
 
             extraPackages = with pkgs; [ lazygit ];

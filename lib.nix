@@ -30,26 +30,41 @@ let
     assert node.type == "github";
     "https://github.com/${node.owner}/${node.repo}";
 
-  fetchFlakeLockedNode =
-    node:
-    assert node.type == "github";
-    builtins.fetchTarball {
-      url = "https://github.com/${node.owner}/${node.repo}/archive/${node.rev}.tar.gz";
-      sha256 = node.narHash;
-    };
-
   buildLazyNeovimPlugin =
     pkgs: name:
     let
-      node = sourcesLock.nodes.${name}.locked;
+      node = sourcesLock.nodes.${name};
+      cleanName = builtins.replaceStrings [ "." ] [ "-" ] name;
+      version = dateFromUnix node.locked.lastModified;
+      homepage = flakeNodeHomepage node.original;
+      src = builtins.fetchTarball {
+        url = "https://github.com/${node.locked.owner}/${node.locked.repo}/archive/${node.locked.rev}.tar.gz";
+        sha256 = node.locked.narHash;
+      };
+      der = derivation {
+        inherit (pkgs) system;
+        name = "lazynvimplugin-${cleanName}-${version}";
+        builder = "${pkgs.coreutils}/bin/cp";
+        args = [
+          "-r"
+          src
+          (builtins.placeholder "out")
+        ];
+      };
+      meta = {
+        inherit homepage;
+      };
+      spec = {
+        inherit name;
+        dir = "${der}";
+        url = "https://github.com/${node.original.owner}/${node.original.repo}";
+        branch = node.original.ref;
+        commit = node.locked.rev;
+        pin = true;
+      };
     in
-    # TODO: Why do I need vimPlugin wrapper?
-    pkgs.vimUtils.buildVimPlugin {
-      pname = name;
-      version = dateFromUnix node.lastModified;
-      src = fetchFlakeLockedNode node;
-      meta.homepage = flakeNodeHomepage node;
-    };
+    assert node.original.type == "github";
+    der // { inherit meta spec; };
 
   sourcesLock = builtins.fromJSON (builtins.readFile ./sources/flake.lock);
 
@@ -104,7 +119,10 @@ let
         withPython3 = false;
         withNodeJs = false;
         withRuby = false;
-        plugins = [ { plugin = pkgs.vimPlugins.lazy-nvim; } ];
+        plugins = [
+          # TODO: Use my own lazy-nvim plugin
+          { plugin = pkgs.vimPlugins.lazy-nvim; }
+        ];
 
         # Extra config to pass to
         # pkgs/applications/editors/neovim/wrapper.nix
@@ -186,7 +204,6 @@ in
     buildLazyNeovimPlugin
     defaultLazyOpts
     extractLazyVimPluginImportsJSON
-    fetchFlakeLockedNode
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     mkLazyVimSpecFile
@@ -200,7 +217,6 @@ in
       buildLazyNeovimPlugin
       defaultLazyOpts
       extractLazyVimPluginImportsJSON
-      fetchFlakeLockedNode
       makeLazyNeovimConfig
       makeLazyNeovimPackage
       sourcesLock
