@@ -97,7 +97,10 @@
         lazynvimPlugins = self.lib.buildLazyNeovimPlugins pkgs;
       });
 
-      overlays.default = _final: prev: { lazynvimPlugins = self.lib.buildLazyNeovimPlugins prev; };
+      overlays.default = _final: prev: {
+        lazynvimPlugins = self.lib.buildLazyNeovimPlugins prev;
+        lazynvimUtils = self.lib;
+      };
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
       checks = eachSystem (
