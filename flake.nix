@@ -24,19 +24,16 @@
       ];
       eachSystem = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
+      mkLazyNvimPlugins = pkgs: {
+        "bufferline.nvim" = self.lib.buildVimPlugin pkgs "bufferline.nvim";
+        "catppuccin" = self.lib.buildVimPlugin pkgs "catppuccin";
+        "lazy.nvim" = self.lib.buildVimPlugin pkgs "lazy.nvim";
+        "LazyVim" = self.lib.buildVimPlugin pkgs "LazyVim";
+        "lualine.nvim" = self.lib.buildVimPlugin pkgs "lualine.nvim";
+      };
     in
     {
       lib = (import ./lib.nix).withNixpkgs nixpkgs;
-
-      legacyPackages = eachSystem (pkgs: {
-        lazyNvimPlugins = {
-          "bufferline.nvim" = self.lib.buildVimPlugin pkgs "bufferline.nvim";
-          "catppuccin" = self.lib.buildVimPlugin pkgs "catppuccin";
-          "lazy.nvim" = self.lib.buildVimPlugin pkgs "lazy.nvim";
-          "LazyVim" = self.lib.buildVimPlugin pkgs "LazyVim";
-          "lualine.nvim" = self.lib.buildVimPlugin pkgs "lualine.nvim";
-        };
-      });
 
       packages = eachSystem (
         pkgs:
@@ -77,6 +74,12 @@
           };
         }
       );
+
+      legacyPackages = eachSystem (pkgs: {
+        lazyNvimPlugins = mkLazyNvimPlugins pkgs;
+      });
+
+      overlays.default = _final: prev: { lazyNvimPlugins = mkLazyNvimPlugins prev; };
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
       checks = eachSystem (
