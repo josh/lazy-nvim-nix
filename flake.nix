@@ -70,15 +70,20 @@
               plugins."bufferline.nvim".spec
               plugins."catppuccin".spec
               plugins."cmp-nvim-lsp".spec
+              plugins."conform.nvim".spec
               plugins."dashboard-nvim".spec
               plugins."flash.nvim".spec
               plugins."friendly-snippets".spec
               plugins."gitsigns.nvim".spec
+              plugins."grug-far.nvim".spec
               plugins."indent-blankline.nvim".spec
+              plugins."lazydev.nvim".spec
               plugins."lualine.nvim".spec
+              plugins."luvit-meta".spec
               plugins."mini.ai".spec
               plugins."mini.icons".spec
               plugins."mini.pairs".spec
+              plugins."neo-tree.nvim".spec
               plugins."noice.nvim".spec
               plugins."nui.nvim".spec
               plugins."nvim-cmp".spec
