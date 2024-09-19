@@ -75,11 +75,18 @@ let
 
   setupLazyLua =
     {
+      pkgs,
       lib,
       spec ? [ ],
       opts ? { },
     }:
-    ''require("lazy").setup(${toLua lib spec}, ${toLua lib opts})'';
+    let
+      lazypath = buildLazyNeovimPlugin pkgs "lazy.nvim" sourcesLock.nodes."lazy.nvim";
+    in
+    ''
+      vim.opt.rtp:prepend("${lazypath}");
+      require("lazy").setup(${toLua lib spec}, ${toLua lib opts})
+    '';
 
   makeLazyNeovimPackage =
     { pkgs, ... }@args: pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (makeLazyNeovimConfig args);
@@ -104,15 +111,12 @@ let
         withPython3 = false;
         withNodeJs = false;
         withRuby = false;
-        plugins = [
-          # TODO: Use my own lazy-nvim plugin
-          { plugin = pkgs.vimPlugins.lazy-nvim; }
-        ];
 
         # Extra config to pass to
         # pkgs/applications/editors/neovim/wrapper.nix
 
         luaRcContent = setupLazyLua {
+          inherit pkgs;
           inherit (pkgs) lib;
           inherit spec;
           opts = defaultLazyOpts;
