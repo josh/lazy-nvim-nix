@@ -58,12 +58,21 @@
               # { "import" = lib.mkLazyVimSpecFile { inherit nixpkgs pkgs; }; }
               (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
+              # plugins."nvim-treesitter-textobjects".spec
+              # plugins."nvim-treesitter".spec
+              # plugins."persistance.nvim".spec
+              # plugins."trouble.nvim".spec
               plugins."bufferline.nvim".spec
               plugins."catppuccin".spec
+              plugins."cmp-nvim-lsp".spec
               plugins."dashboard-nvim".spec
               plugins."flash.nvim".spec
+              plugins."friendly-snippets".spec
+              plugins."gitsigns.nvim".spec
+              plugins."indent-blankline.nvim".spec
               plugins."lualine.nvim".spec
               plugins."mini.ai".spec
+              plugins."mini.icons".spec
               plugins."mini.pairs".spec
               plugins."noice.nvim".spec
               plugins."nui.nvim".spec
@@ -71,16 +80,12 @@
               plugins."nvim-lint".spec
               plugins."nvim-notify".spec
               plugins."nvim-snippets".spec
-              # plugins."nvim-treesitter-textobjects".spec
-              # plugins."nvim-treesitter".spec
               plugins."nvim-ts-autotag".spec
-              plugins."persistance.nvim".spec
               plugins."plenary.nvim".spec
               plugins."telescope-fzf-native.nvim".spec
               plugins."telescope.nvim".spec
               plugins."todo-comments.nvim".spec
               plugins."tokyonight.nvim".spec
-              # plugins."trouble.nvim".spec
               plugins."ts-comments.nvim".spec
               plugins."which-key.nvim".spec
             ];
