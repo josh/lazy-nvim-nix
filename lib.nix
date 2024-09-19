@@ -25,34 +25,16 @@ let
     in
     "${toString y'}-${pad (toString m)}-${pad (toString d)}";
 
-  flakeNodeHomepage =
-    node:
-    assert node.type == "github";
-    "https://github.com/${node.owner}/${node.repo}";
-
   buildLazyNeovimPlugin =
     pkgs: name:
     let
       node = sourcesLock.nodes.${name};
       cleanName = builtins.replaceStrings [ "." ] [ "-" ] name;
       version = dateFromUnix node.locked.lastModified;
-      homepage = flakeNodeHomepage node.original;
-      src = builtins.fetchTarball {
-        url = "https://github.com/${node.locked.owner}/${node.locked.repo}/archive/${node.locked.rev}.tar.gz";
-        sha256 = node.locked.narHash;
-      };
-      drv = derivation {
-        inherit (pkgs) system;
+      drv = pkgs.fetchFromGitHub {
         name = "lazynvimplugin-${cleanName}-${version}";
-        builder = "${pkgs.coreutils}/bin/cp";
-        args = [
-          "-r"
-          src
-          (builtins.placeholder "out")
-        ];
-      };
-      meta = {
-        inherit homepage;
+        inherit (node.locked) owner repo rev;
+        sha256 = node.locked.narHash;
       };
       spec = {
         inherit name;
@@ -64,7 +46,7 @@ let
       };
     in
     assert node.original.type == "github";
-    drv // { inherit meta spec; };
+    drv // { inherit spec; };
 
   sourcesLock = builtins.fromJSON (builtins.readFile ./sources/flake.lock);
 
