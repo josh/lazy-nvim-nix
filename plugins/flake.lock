@@ -275,11 +275,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1726767237,
-        "narHash": "sha256-Tb36BPkyTjceU7mImRTU8Ux6VBXxa2W/IqeBdQE3c4M=",
+        "lastModified": 1726784547,
+        "narHash": "sha256-G0esnkYPeVe/Wy4KMVga4lvCM+yTTOfPtfJLP2VcWlI=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "8b570edb3dee2fd5f7723c4b2c6d161d5c55cbac",
+        "rev": "d9d6834096fc6f35905242e3e4947c4e2d2c4118",
         "type": "github"
       },
       "original": {
@@ -830,6 +830,7 @@
         "copilot-cmp": "copilot-cmp",
         "copilot.lua": "copilot.lua",
         "dashboard-nvim": "dashboard-nvim",
+        "dressing.nvim": "dressing.nvim",
         "flash.nvim": "flash.nvim",
         "friendly-snippets": "friendly-snippets",
         "gitsigns.nvim": "gitsigns.nvim",
