@@ -65,7 +65,6 @@
 
               # plugins."nvim-treesitter-textobjects".spec
               # plugins."nvim-treesitter".spec
-              # plugins."persistance.nvim".spec
               # plugins."trouble.nvim".spec
               plugins."bufferline.nvim".spec
               plugins."catppuccin".spec
@@ -94,6 +93,7 @@
               plugins."nvim-notify".spec
               plugins."nvim-snippets".spec
               plugins."nvim-ts-autotag".spec
+              plugins."persistence.nvim".spec
               plugins."plenary.nvim".spec
               plugins."telescope-fzf-native.nvim".spec
               plugins."telescope.nvim".spec

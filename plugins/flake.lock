@@ -748,23 +748,6 @@
         "type": "github"
       }
     },
-    "persistance.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1721651155,
-        "narHash": "sha256-QRmvGnwFSlyhquYLbTSZcSZ5G7Wow5AcTiPNgX0DVQc=",
-        "owner": "folke",
-        "repo": "persistence.nvim",
-        "rev": "f6aad7dde7fcf54148ccfc5f622c6d5badd0cc3d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "folke",
-        "ref": "main",
-        "repo": "persistence.nvim",
-        "type": "github"
-      }
-    },
     "persistence.nvim": {
       "flake": false,
       "locked": {
@@ -862,7 +845,6 @@
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
         "nvim-ts-autotag": "nvim-ts-autotag",
         "octo.nvim": "octo.nvim",
-        "persistance.nvim": "persistance.nvim",
         "persistence.nvim": "persistence.nvim",
         "plenary.nvim": "plenary.nvim",
         "refactoring.nvim": "refactoring.nvim",

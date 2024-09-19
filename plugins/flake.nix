@@ -91,8 +91,6 @@
     "nvim-ts-autotag".url = "github:windwp/nvim-ts-autotag/main";
     "octo.nvim".flake = false;
     "octo.nvim".url = "github:pwntester/octo.nvim/master";
-    "persistance.nvim".flake = false;
-    "persistance.nvim".url = "github:folke/persistence.nvim/main";
     "persistence.nvim".flake = false;
     "persistence.nvim".url = "github:folke/persistence.nvim/main";
     "plenary.nvim".flake = false;
