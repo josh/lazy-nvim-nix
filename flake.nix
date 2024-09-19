@@ -69,9 +69,12 @@
               # plugins."trouble.nvim".spec
               plugins."bufferline.nvim".spec
               plugins."catppuccin".spec
+              plugins."cmp-buffer".spec
               plugins."cmp-nvim-lsp".spec
+              plugins."cmp-path".spec
               plugins."conform.nvim".spec
               plugins."dashboard-nvim".spec
+              plugins."dressing.nvim".spec
               plugins."flash.nvim".spec
               plugins."friendly-snippets".spec
               plugins."gitsigns.nvim".spec

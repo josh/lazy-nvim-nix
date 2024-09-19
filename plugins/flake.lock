@@ -204,6 +204,23 @@
         "type": "github"
       }
     },
+    "dressing.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726594554,
+        "narHash": "sha256-EtLYhAwoSoHyGiGrHAVYL4/CqcgO4rSbV6otO3V08hM=",
+        "owner": "stevearc",
+        "repo": "dressing.nvim",
+        "rev": "1b7921eecc65af1baf8ac1dc06f0794934cbcfb2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "ref": "master",
+        "repo": "dressing.nvim",
+        "type": "github"
+      }
+    },
     "flash.nvim": {
       "flake": false,
       "locked": {
