@@ -103,7 +103,9 @@ let
       opts ? { },
     }:
     let
-      lazypath = buildLazyNeovimPlugin pkgs "lazy.nvim" sourcesLock.nodes."lazy.nvim";
+      # TODO: Something is messed up with the docs dir
+      # lazypath = buildLazyNeovimPlugin pkgs "lazy.nvim" sourcesLock.nodes."lazy.nvim";
+      lazypath = pkgs.vimPlugins.lazy-nvim;
     in
     ''
       vim.opt.rtp:prepend("${lazypath}");

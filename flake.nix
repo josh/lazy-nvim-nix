@@ -60,15 +60,25 @@
 
               plugins."bufferline.nvim".spec
               plugins."catppuccin".spec
-              # plugins."dashboard-nvim".spec
+              plugins."dashboard-nvim".spec
               plugins."flash.nvim".spec
-              # plugins."lualine.nvim".spec
+              plugins."lualine.nvim".spec
               plugins."mini.ai".spec
               plugins."mini.pairs".spec
               plugins."noice.nvim".spec
               plugins."nui.nvim".spec
-              plugins."nvim-treesitter-textobjects".spec
+              plugins."nvim-cmp".spec
+              plugins."nvim-lint".spec
+              plugins."nvim-notify".spec
+              plugins."nvim-snippets".spec
+              # plugins."nvim-treesitter-textobjects".spec
               # plugins."nvim-treesitter".spec
+              plugins."nvim-ts-autotag".spec
+              plugins."persistance.nvim".spec
+              plugins."plenary.nvim".spec
+              plugins."telescope-fzf-native.nvim".spec
+              plugins."telescope.nvim".spec
+              plugins."todo-comments.nvim".spec
               plugins."tokyonight.nvim".spec
               # plugins."trouble.nvim".spec
               plugins."ts-comments.nvim".spec
