@@ -41,7 +41,7 @@ let
         url = "https://github.com/${node.locked.owner}/${node.locked.repo}/archive/${node.locked.rev}.tar.gz";
         sha256 = node.locked.narHash;
       };
-      der = derivation {
+      drv = derivation {
         inherit (pkgs) system;
         name = "lazynvimplugin-${cleanName}-${version}";
         builder = "${pkgs.coreutils}/bin/cp";
@@ -56,7 +56,7 @@ let
       };
       spec = {
         inherit name;
-        dir = "${der}";
+        dir = "${drv}";
         url = "https://github.com/${node.original.owner}/${node.original.repo}";
         branch = node.original.ref;
         commit = node.locked.rev;
@@ -64,7 +64,7 @@ let
       };
     in
     assert node.original.type == "github";
-    der // { inherit meta spec; };
+    drv // { inherit meta spec; };
 
   sourcesLock = builtins.fromJSON (builtins.readFile ./sources/flake.lock);
 
