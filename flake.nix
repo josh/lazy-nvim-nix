@@ -24,12 +24,26 @@
       ];
       eachSystem = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
+      # TODO: Generate this mapping instead of hardcoding it
       mkLazynvimPlugins = pkgs: {
         "bufferline.nvim" = self.lib.buildLazyNeovimPlugin pkgs "bufferline.nvim";
         "catppuccin" = self.lib.buildLazyNeovimPlugin pkgs "catppuccin";
+        "dashboard-nvim" = self.lib.buildLazyNeovimPlugin pkgs "dashboard-nvim";
+        "flash.nvim" = self.lib.buildLazyNeovimPlugin pkgs "flash.nvim";
         "lazy.nvim" = self.lib.buildLazyNeovimPlugin pkgs "lazy.nvim";
         "LazyVim" = self.lib.buildLazyNeovimPlugin pkgs "LazyVim";
         "lualine.nvim" = self.lib.buildLazyNeovimPlugin pkgs "lualine.nvim";
+        "mini.ai" = self.lib.buildLazyNeovimPlugin pkgs "mini.ai";
+        "mini.icons" = self.lib.buildLazyNeovimPlugin pkgs "mini.icons";
+        "mini.pairs" = self.lib.buildLazyNeovimPlugin pkgs "mini.pairs";
+        "noice.nvim" = self.lib.buildLazyNeovimPlugin pkgs "noice.nvim";
+        "nui.nvim" = self.lib.buildLazyNeovimPlugin pkgs "nui.nvim";
+        "nvim-treesitter-textobjects" = self.lib.buildLazyNeovimPlugin pkgs "nvim-treesitter-textobjects";
+        "nvim-treesitter" = self.lib.buildLazyNeovimPlugin pkgs "nvim-treesitter";
+        "tokyonight.nvim" = self.lib.buildLazyNeovimPlugin pkgs "tokyonight.nvim";
+        "trouble.nvim" = self.lib.buildLazyNeovimPlugin pkgs "trouble.nvim";
+        "ts-comments.nvim" = self.lib.buildLazyNeovimPlugin pkgs "ts-comments.nvim";
+        "which-key.nvim" = self.lib.buildLazyNeovimPlugin pkgs "which-key.nvim";
       };
     in
     {
@@ -59,8 +73,20 @@
               (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
               plugins."bufferline.nvim".spec
-              plugins."lualine.nvim".spec
               plugins."catppuccin".spec
+              # plugins."dashboard-nvim".spec
+              plugins."flash.nvim".spec
+              # plugins."lualine.nvim".spec
+              plugins."mini.ai".spec
+              plugins."mini.pairs".spec
+              plugins."noice.nvim".spec
+              plugins."nui.nvim".spec
+              plugins."nvim-treesitter-textobjects".spec
+              # plugins."nvim-treesitter".spec
+              plugins."tokyonight.nvim".spec
+              # plugins."trouble.nvim".spec
+              plugins."ts-comments.nvim".spec
+              plugins."which-key.nvim".spec
             ];
 
             extraPackages = with pkgs; [ lazygit ];
