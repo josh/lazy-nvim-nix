@@ -108,6 +108,7 @@ in
     extractLazyVimPluginImportsJSON
     makeLazyNeovimConfig
     makeLazyNeovimPackage
+    setupLazyLua
     toLua
     ;
 }
