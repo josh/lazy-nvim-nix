@@ -63,7 +63,6 @@
             spec = [
               (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
-              # plugins."nvim-treesitter-textobjects".spec
               # plugins."nvim-treesitter".spec
               # plugins."trouble.nvim".spec
               plugins."bufferline.nvim".spec
@@ -92,6 +91,7 @@
               plugins."nvim-lint".spec
               plugins."nvim-notify".spec
               plugins."nvim-snippets".spec
+              plugins."nvim-treesitter-textobjects".spec
               plugins."nvim-ts-autotag".spec
               plugins."persistence.nvim".spec
               plugins."plenary.nvim".spec
