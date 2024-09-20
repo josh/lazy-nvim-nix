@@ -50,7 +50,7 @@
 
           nvim = self.lib.makeLazyNeovimPackage {
             inherit pkgs;
-            spec = [];
+            spec = [ ];
           };
 
           LazyVim = self.lib.makeLazyNeovimPackage {
