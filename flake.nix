@@ -58,7 +58,6 @@
             spec = [
               (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
-              # plugins."nvim-treesitter".spec
               plugins."bufferline.nvim".spec
               plugins."catppuccin".spec
               plugins."cmp-buffer".spec
@@ -75,6 +74,8 @@
               plugins."lazydev.nvim".spec
               plugins."lualine.nvim".spec
               plugins."luvit-meta".spec
+              plugins."mason-lspconfig.nvim".spec
+              plugins."mason.nvim".spec
               plugins."mini.ai".spec
               plugins."mini.icons".spec
               plugins."mini.pairs".spec
@@ -83,9 +84,9 @@
               plugins."nui.nvim".spec
               plugins."nvim-cmp".spec
               plugins."nvim-lint".spec
+              plugins."nvim-lspconfig".spec
               plugins."nvim-notify".spec
               plugins."nvim-snippets".spec
-              plugins."nvim-treesitter-textobjects".spec
               plugins."nvim-ts-autotag".spec
               plugins."persistence.nvim".spec
               plugins."plenary.nvim".spec
@@ -93,11 +94,28 @@
               plugins."telescope.nvim".spec
               plugins."todo-comments.nvim".spec
               plugins."tokyonight.nvim".spec
+              plugins."trouble.nvim".spec
               plugins."ts-comments.nvim".spec
               plugins."which-key.nvim".spec
 
+              # FIXME: Tries to write to /nix/store/.../parser directory
+              {
+                name = "nvim-treesitter";
+                url = "https://github.com/nvim-treesitter/nvim-treesitter";
+                enabled = false;
+              }
+              {
+                name = "nvim-treesitter-textobjects";
+                url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects";
+                enabled = false;
+              }
+
               # FIXME: trouble.nvim doesn't like be loaded from /nix/store
-              (plugins."trouble.nvim".spec // { enabled = false; })
+              {
+                name = "trouble.nvim";
+                url = "https://github.com/folke/trouble.nvim";
+                enabled = false;
+              }
             ];
 
             extraPackages = with pkgs; [ lazygit ];
