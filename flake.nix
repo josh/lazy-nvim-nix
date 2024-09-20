@@ -50,10 +50,7 @@
 
           nvim = self.lib.makeLazyNeovimPackage {
             inherit pkgs;
-            spec = [
-              plugins."bufferline.nvim".spec
-              plugins."lualine.nvim".spec
-            ];
+            spec = [];
           };
 
           LazyVim = self.lib.makeLazyNeovimPackage {
@@ -62,7 +59,6 @@
               (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
               # plugins."nvim-treesitter".spec
-              # plugins."trouble.nvim".spec
               plugins."bufferline.nvim".spec
               plugins."catppuccin".spec
               plugins."cmp-buffer".spec
@@ -99,6 +95,9 @@
               plugins."tokyonight.nvim".spec
               plugins."ts-comments.nvim".spec
               plugins."which-key.nvim".spec
+
+              # FIXME: trouble.nvim doesn't like be loaded from /nix/store
+              (plugins."trouble.nvim".spec // { enabled = false; })
             ];
 
             extraPackages = with pkgs; [ lazygit ];
