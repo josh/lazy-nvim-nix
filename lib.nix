@@ -26,6 +26,10 @@ let
       enabled = false;
       notify = false;
     };
+    change_detection = {
+      enabled = false;
+      notify = false;
+    };
     performance = {
       reset_packpath = true;
       rtp = {
