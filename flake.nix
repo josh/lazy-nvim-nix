@@ -130,11 +130,11 @@
       );
 
       legacyPackages = eachSystem (pkgs: {
-        lazynvimPlugins = import ./plugins.nix { inherit pkgs; };
+        lazynvimPlugins = pkgs.callPackage ./plugins.nix { };
       });
 
       overlays.default = _final: prev: {
-        lazynvimPlugins = import ./plugins.nix { pkgs = prev; };
+        lazynvimPlugins = prev.callPackage ./plugins.nix { };
         lazynvimUtils = self.lib;
       };
 
@@ -149,7 +149,7 @@
           formatting = treefmtEval.${pkgs.system}.config.build.check self;
 
           plugins = pkgs.runCommandLocal "plugins" {
-            buildInputs = builtins.attrValues self.legacyPackages.${system}.lazynvimPlugins;
+            buildInputs = lib.attrDerivations self.legacyPackages.${system}.lazynvimPlugins;
           } ''echo "ok" >$out'';
 
           help = pkgs.runCommandLocal "nvim-help" { } ''

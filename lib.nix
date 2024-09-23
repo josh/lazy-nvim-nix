@@ -2,6 +2,9 @@
 let
   inherit (nixpkgs) lib;
 
+  # attrDerivations :: AttrSet -> [ Derivation ]
+  attrDerivations = attrset: builtins.filter lib.attrsets.isDerivation (builtins.attrValues attrset);
+
   # lua = import to-lua.outPath { inherit (nixpkgs) lib; };
   toLuaSrc = builtins.fetchurl {
     # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
@@ -38,7 +41,7 @@ let
       opts ? { },
     }:
     let
-      lazypath = (import ./plugins.nix { inherit pkgs; })."lazy.nvim";
+      lazypath = (pkgs.callPackage ./plugins.nix { })."lazy.nvim";
     in
     ''
       vim.opt.rtp:prepend("${lazypath}");
@@ -97,6 +100,7 @@ let
 in
 {
   inherit
+    attrDerivations
     defaultLazyOpts
     makeLazyNeovimConfig
     makeLazyNeovimPackage

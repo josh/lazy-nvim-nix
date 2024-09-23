@@ -1,4 +1,9 @@
-{ pkgs }:
+{
+  lib,
+  path,
+  stdenv,
+  fetchFromGitHub,
+}:
 let
   /*
     Pads a string with a leading zero if it is less than two characters long.
@@ -57,7 +62,7 @@ let
   */
   applyPatches =
     src: patches:
-    pkgs.stdenv.mkDerivation {
+    stdenv.mkDerivation {
       name = formatDerivationName { inherit (src.meta) name version; };
       inherit src patches;
       inherit (src) meta;
@@ -89,7 +94,7 @@ let
     name: node:
     let
       version = dateFromUnix node.locked.lastModified;
-      src = pkgs.fetchFromGitHub {
+      src = fetchFromGitHub {
         name = formatDerivationName { inherit name version; };
         inherit (node.locked) owner repo rev;
         sha256 = node.locked.narHash;
@@ -109,9 +114,9 @@ let
 
   pluginOverrides = {
     "lazy.nvim" = applyPatches plugins."lazy.nvim" [
-      "${pkgs.path}/pkgs/applications/editors/vim/plugins/patches/lazy-nvim/no-helptags.patch"
+      "${path}/pkgs/applications/editors/vim/plugins/patches/lazy-nvim/no-helptags.patch"
     ];
   };
 
 in
-plugins // pluginOverrides
+lib.recurseIntoAttrs (plugins // pluginOverrides)
