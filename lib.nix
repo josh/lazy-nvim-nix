@@ -94,25 +94,10 @@ let
     in
     finalConfig;
 
-  extractLazyVimPluginImportsJSON =
-    { pkgs }:
-    derivation {
-      inherit (pkgs) system;
-      name = "lazyvim-plugins.json";
-      builder = "${pkgs.neovim}/bin/nvim";
-      args = [
-        "-l"
-        ./lazyvim-plugins.lua
-      ];
-      LAZY_PATH = pkgs.vimPlugins.lazy-nvim;
-      LAZYVIM_PATH = pkgs.vimPlugins.LazyVim;
-    };
-
 in
 {
   inherit
     defaultLazyOpts
-    extractLazyVimPluginImportsJSON
     makeLazyNeovimConfig
     makeLazyNeovimPackage
     setupLazyLua

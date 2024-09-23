@@ -65,8 +65,6 @@ Alias for `packages.${system}.nvim`.
 
 ### `lib.defaultLazyOpts`
 
-### `lib.extractLazyVimPluginImportsJSON :: pkgs -> drv`
-
 ### `lib.makeLazyNeovimConfig :: { pkgs, spec, extraPackages } -> attrs`
 
 ### `lib.makeLazyNeovimPackage :: { pkgs } -> drv`

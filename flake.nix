@@ -43,10 +43,16 @@
       packages = eachSystem (
         pkgs:
         let
+          inherit (pkgs) system;
           plugins = self.legacyPackages.${pkgs.system}.lazynvimPlugins;
         in
         {
-          default = self.packages.${pkgs.system}.nvim;
+          default = self.packages.${system}.nvim;
+
+          LazyVimPlugins = pkgs.callPackage ./lazyvim-plugins.nix {
+            lazy-nvim = plugins."lazy.nvim";
+            LazyVim = plugins."LazyVim";
+          };
 
           nvim = self.lib.makeLazyNeovimPackage {
             inherit pkgs;
@@ -136,13 +142,14 @@
       checks = eachSystem (
         pkgs:
         let
-          inherit (self.packages.${pkgs.system}) nvim;
+          inherit (pkgs) system;
+          inherit (self.packages.${system}) nvim;
         in
         {
           formatting = treefmtEval.${pkgs.system}.config.build.check self;
 
           plugins = pkgs.runCommandLocal "plugins" {
-            buildInputs = builtins.attrValues self.legacyPackages.${pkgs.system}.lazynvimPlugins;
+            buildInputs = builtins.attrValues self.legacyPackages.${system}.lazynvimPlugins;
           } ''echo "ok" >$out'';
 
           help = pkgs.runCommandLocal "nvim-help" { } ''
@@ -158,7 +165,7 @@
           '';
 
           lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
-            ${pkgs.jq}/bin/jq <${self.lib.extractLazyVimPluginImportsJSON { inherit pkgs; }} >$out
+            ${pkgs.jq}/bin/jq <${self.packages.${system}.LazyVimPlugins} >$out
           '';
         }
       );
