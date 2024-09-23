@@ -19,7 +19,7 @@ let
     lockfile.__raw = ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
     state.__raw = ''vim.fn.stdpath("state") .. "/lazy/state.json"'';
     install = {
-      missing = true;
+      missing = false;
       colorscheme = [ "habamax" ];
     };
     checker = {
