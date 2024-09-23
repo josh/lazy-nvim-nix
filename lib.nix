@@ -5,6 +5,21 @@ let
   # attrDerivations :: AttrSet -> [ Derivation ]
   attrDerivations = attrset: builtins.filter lib.attrsets.isDerivation (builtins.attrValues attrset);
 
+  # flattenDerivations :: AttrSet -> [ Derivation ]
+  flattenDerivations =
+    attrset:
+    lib.lists.flatten (
+      lib.mapAttrsToList (
+        _name: value:
+        if lib.attrsets.isDerivation value then
+          [ value ]
+        else if builtins.isAttrs value then
+          flattenDerivations value
+        else
+          [ ]
+      ) attrset
+    );
+
   # lua = import to-lua.outPath { inherit (nixpkgs) lib; };
   toLuaSrc = builtins.fetchurl {
     # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
@@ -108,6 +123,7 @@ in
 {
   inherit
     attrDerivations
+    flattenDerivations
     defaultLazyOpts
     makeLazyNeovimConfig
     makeLazyNeovimPackage
