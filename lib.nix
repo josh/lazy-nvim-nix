@@ -27,9 +27,9 @@ let
       notify = false;
     };
     performance = {
-      reset_packpath = false;
+      reset_packpath = true;
       rtp = {
-        reset = false;
+        reset = true;
       };
     };
     readme = {
