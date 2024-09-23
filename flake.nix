@@ -44,7 +44,8 @@
         pkgs:
         let
           inherit (pkgs) system;
-          plugins = self.legacyPackages.${pkgs.system}.lazynvimPlugins;
+          legacyPackages = self.legacyPackages.${system};
+          plugins = legacyPackages.lazynvimPlugins;
         in
         {
           default = self.packages.${system}.nvim;
@@ -143,30 +144,34 @@
         pkgs:
         let
           inherit (pkgs) system;
-          inherit (self.packages.${system}) nvim;
+          packages = self.packages.${system};
+          legacyPackages = self.legacyPackages.${system};
+          plugins = legacyPackages.lazynvimPlugins;
         in
         {
           formatting = treefmtEval.${pkgs.system}.config.build.check self;
 
           plugins = pkgs.runCommandLocal "plugins" {
-            buildInputs = lib.attrDerivations self.legacyPackages.${system}.lazynvimPlugins;
+            buildInputs = lib.attrDerivations plugins;
           } ''echo "ok" >$out'';
 
           help = pkgs.runCommandLocal "nvim-help" { } ''
-            ${nvim}/bin/nvim --help 2>&1 >$out 
+            ${packages.nvim}/bin/nvim --help 2>&1 >$out 
           '';
 
           checkhealth = pkgs.runCommandLocal "nvim-checkhealth" { } ''
-            ${nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
+            ${packages.nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
           '';
 
           startuptime = pkgs.runCommandLocal "nvim-startuptime" { } ''
-            ${nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
+            ${packages.nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
           '';
 
           lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
-            ${pkgs.jq}/bin/jq <${self.packages.${system}.LazyVimPlugins} >$out
+            ${pkgs.jq}/bin/jq <${packages.LazyVimPlugins} >$out
           '';
+
+          LazyVim-extras-catppuccin = plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
         }
       );
     };

@@ -112,10 +112,22 @@ let
 
   plugins = builtins.mapAttrs buildPlugin pluginNodes;
 
+  LazyVim-deps = builtins.fromJSON (builtins.readFile ./plugins/LazyVim.json);
+
+  mapNestedAttrs =
+    f: attrset:
+    lib.recurseIntoAttrs (
+      builtins.mapAttrs (_a: bs: lib.recurseIntoAttrs (builtins.mapAttrs (b: _c: (f b)) bs)) attrset
+    );
+
   pluginOverrides = {
     "lazy.nvim" = applyPatches plugins."lazy.nvim" [
       "${path}/pkgs/applications/editors/vim/plugins/patches/lazy-nvim/no-helptags.patch"
     ];
+
+    "LazyVim" = plugins."LazyVim" // {
+      extras = mapNestedAttrs (repo: builtins.getAttr repo plugins) LazyVim-deps;
+    };
   };
 
 in
