@@ -32,6 +32,9 @@ let
         reset = false;
       };
     };
+    readme = {
+      enabled = false;
+    };
   };
 
   setupLazyLua =
