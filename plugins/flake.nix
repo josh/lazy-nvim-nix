@@ -53,6 +53,8 @@
     "mason-lspconfig.nvim".url = "github:williamboman/mason-lspconfig.nvim/main";
     "mason.nvim".flake = false;
     "mason.nvim".url = "github:williamboman/mason.nvim/main";
+    "mini.comment".flake = false;
+    "mini.comment".url = "github:echasnovski/mini.comment/main";
     "mini.ai".flake = false;
     "mini.ai".url = "github:echasnovski/mini.ai/main";
     "mini.animate".flake = false;
