@@ -21,6 +21,7 @@ Add as an input to your flake:
   };
 }
 ```
+
 ## Usage
 
 ### `packages.${system}.nvim`
