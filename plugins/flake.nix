@@ -67,6 +67,8 @@
     "mini.pairs".url = "github:echasnovski/mini.pairs/main";
     "mini.starter".flake = false;
     "mini.starter".url = "github:echasnovski/mini.starter/main";
+    "mini.surround".flake = false;
+    "mini.surround".url = "github:echasnovski/mini.surround/main";
     "neo-tree.nvim".flake = false;
     "neo-tree.nvim".url = "github:nvim-neo-tree/neo-tree.nvim/main";
     "neodev.nvim".flake = false;

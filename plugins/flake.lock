@@ -544,6 +544,23 @@
         "type": "github"
       }
     },
+    "mini.surround": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725613928,
+        "narHash": "sha256-glR9BMYPIrXDAmJaCTsJ2df8n43+Flzgy1W3eNbc6fM=",
+        "owner": "echasnovski",
+        "repo": "mini.surround",
+        "rev": "0e67c4bc147f2a15cee94e7c94dcc0e115b9f55e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.surround",
+        "type": "github"
+      }
+    },
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
@@ -901,6 +918,7 @@
         "mini.icons": "mini.icons",
         "mini.pairs": "mini.pairs",
         "mini.starter": "mini.starter",
+        "mini.surround": "mini.surround",
         "neo-tree.nvim": "neo-tree.nvim",
         "neodev.nvim": "neodev.nvim",
         "noice.nvim": "noice.nvim",
