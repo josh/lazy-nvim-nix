@@ -3,6 +3,8 @@
 # "github:NixOS/nixpkgs/nixpkgs-unstable"
 {
   inputs = {
+    "aerial.nvim".flake = false;
+    "aerial.nvim".url = "github:stevearc/aerial.nvim/master";
     "bufferline.nvim".flake = false;
     "bufferline.nvim".url = "github:akinsho/bufferline.nvim/main";
     "catppuccin".flake = false;

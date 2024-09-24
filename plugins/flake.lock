@@ -34,6 +34,23 @@
         "type": "github"
       }
     },
+    "aerial.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726602889,
+        "narHash": "sha256-7Sj7Z5blJ6Qk/99EV4EBv4vdK1dHDGFL3WRYLEnrRC0=",
+        "owner": "stevearc",
+        "repo": "aerial.nvim",
+        "rev": "140f48fb068d21c02e753c63f7443649e55576f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "ref": "master",
+        "repo": "aerial.nvim",
+        "type": "github"
+      }
+    },
     "bufferline.nvim": {
       "flake": false,
       "locked": {
@@ -1007,6 +1024,7 @@
       "inputs": {
         "CopilotChat.nvim": "CopilotChat.nvim",
         "LazyVim": "LazyVim",
+        "aerial.nvim": "aerial.nvim",
         "bufferline.nvim": "bufferline.nvim",
         "catppuccin": "catppuccin",
         "cmp-buffer": "cmp-buffer",
