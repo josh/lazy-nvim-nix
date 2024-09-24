@@ -595,6 +595,23 @@
         "type": "github"
       }
     },
+    "neogen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724316066,
+        "narHash": "sha256-0/XTVOzcWuFwz/UgEhGJwmSYloBgU8DVl2cauR0Qitc=",
+        "owner": "danymat",
+        "repo": "neogen",
+        "rev": "e932ba918b56723436b77aa3efb844a11b2851ab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "danymat",
+        "ref": "main",
+        "repo": "neogen",
+        "type": "github"
+      }
+    },
     "noice.nvim": {
       "flake": false,
       "locked": {
@@ -921,6 +938,7 @@
         "mini.surround": "mini.surround",
         "neo-tree.nvim": "neo-tree.nvim",
         "neodev.nvim": "neodev.nvim",
+        "neogen": "neogen",
         "noice.nvim": "noice.nvim",
         "none-ls.nvim": "none-ls.nvim",
         "nui.nvim": "nui.nvim",

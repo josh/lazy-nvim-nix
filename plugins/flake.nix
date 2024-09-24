@@ -73,6 +73,8 @@
     "neo-tree.nvim".url = "github:nvim-neo-tree/neo-tree.nvim/main";
     "neodev.nvim".flake = false;
     "neodev.nvim".url = "github:folke/neodev.nvim/main";
+    "neogen".flake = false;
+    "neogen".url = "github:danymat/neogen/main";
     "noice.nvim".flake = false;
     "noice.nvim".url = "github:folke/noice.nvim/main";
     "none-ls.nvim".flake = false;
