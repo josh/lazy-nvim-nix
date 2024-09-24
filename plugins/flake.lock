@@ -765,6 +765,23 @@
         "type": "github"
       }
     },
+    "nvim-ts-context-commentstring": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723704684,
+        "narHash": "sha256-Cpl2SXpOIO7Gz99MM0u4pSCl1RNQTZjF+biNIcZv8lw=",
+        "owner": "JoosepAlviste",
+        "repo": "nvim-ts-context-commentstring",
+        "rev": "375c2d86cee6674afd75b4f727ce3a80065552f7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JoosepAlviste",
+        "ref": "main",
+        "repo": "nvim-ts-context-commentstring",
+        "type": "github"
+      }
+    },
     "octo.nvim": {
       "flake": false,
       "locked": {
@@ -880,6 +897,7 @@
         "nvim-treesitter-context": "nvim-treesitter-context",
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
         "nvim-ts-autotag": "nvim-ts-autotag",
+        "nvim-ts-context-commentstring": "nvim-ts-context-commentstring",
         "octo.nvim": "octo.nvim",
         "persistence.nvim": "persistence.nvim",
         "plenary.nvim": "plenary.nvim",
