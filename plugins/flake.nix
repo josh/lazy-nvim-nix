@@ -53,6 +53,8 @@
     "luvit-meta".url = "github:Bilal2453/luvit-meta/main";
     "mason-lspconfig.nvim".flake = false;
     "mason-lspconfig.nvim".url = "github:williamboman/mason-lspconfig.nvim/main";
+    "mason-nvim-dap.nvim".flake = false;
+    "mason-nvim-dap.nvim".url = "github:jay-babu/mason-nvim-dap.nvim/main";
     "mason.nvim".flake = false;
     "mason.nvim".url = "github:williamboman/mason.nvim/main";
     "mini.ai".flake = false;

@@ -425,6 +425,23 @@
         "type": "github"
       }
     },
+    "mason-nvim-dap.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722791789,
+        "narHash": "sha256-dDx82FvxH9F7NSbOq4bcTarovZoRVyDx9tdmeoKYV2A=",
+        "owner": "jay-babu",
+        "repo": "mason-nvim-dap.nvim",
+        "rev": "8b9363d83b5d779813cdd2819b8308651cec2a09",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jay-babu",
+        "ref": "main",
+        "repo": "mason-nvim-dap.nvim",
+        "type": "github"
+      }
+    },
     "mason.nvim": {
       "flake": false,
       "locked": {
@@ -928,6 +945,7 @@
         "lualine.nvim": "lualine.nvim",
         "luvit-meta": "luvit-meta",
         "mason-lspconfig.nvim": "mason-lspconfig.nvim",
+        "mason-nvim-dap.nvim": "mason-nvim-dap.nvim",
         "mason.nvim": "mason.nvim",
         "mini.ai": "mini.ai",
         "mini.animate": "mini.animate",
