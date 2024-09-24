@@ -35,6 +35,8 @@
     "dressing.nvim".url = "github:stevearc/dressing.nvim/master";
     "flash.nvim".flake = false;
     "flash.nvim".url = "github:folke/flash.nvim/main";
+    "flit.nvim".flake = false;
+    "flit.nvim".url = "github:ggandor/flit.nvim/main";
     "friendly-snippets".flake = false;
     "friendly-snippets".url = "github:rafamadriz/friendly-snippets/main";
     "gitsigns.nvim".flake = false;
@@ -43,6 +45,8 @@
     "grug-far.nvim".url = "github:MagicDuck/grug-far.nvim/main";
     "harpoon".flake = false;
     "harpoon".url = "github:ThePrimeagen/harpoon/master";
+    "inc-rename.nvim".flake = false;
+    "inc-rename.nvim".url = "github:smjonas/inc-rename.nvim/main";
     "indent-blankline.nvim".flake = false;
     "indent-blankline.nvim".url = "github:lukas-reineke/indent-blankline.nvim/master";
     "lazy.nvim".flake = false;
@@ -51,6 +55,8 @@
     "lazydev.nvim".url = "github:folke/lazydev.nvim/main";
     "LazyVim".flake = false;
     "LazyVim".url = "github:LazyVim/LazyVim/main";
+    "leap.nvim".flake = false;
+    "leap.nvim".url = "github:ggandor/leap.nvim/main";
     "lualine.nvim".flake = false;
     "lualine.nvim".url = "github:nvim-lualine/lualine.nvim/master";
     "luvit-meta".flake = false;
@@ -67,8 +73,14 @@
     "mini.animate".url = "github:echasnovski/mini.animate/main";
     "mini.comment".flake = false;
     "mini.comment".url = "github:echasnovski/mini.comment/main";
+    "mini.diff".flake = false;
+    "mini.diff".url = "github:echasnovski/mini.diff/main";
+    "mini.files".flake = false;
+    "mini.files".url = "github:echasnovski/mini.files/main";
     "mini.icons".flake = false;
     "mini.icons".url = "github:echasnovski/mini.icons/main";
+    "mini.move".flake = false;
+    "mini.move".url = "github:echasnovski/mini.move/main";
     "mini.pairs".flake = false;
     "mini.pairs".url = "github:echasnovski/mini.pairs/main";
     "mini.starter".flake = false;
@@ -141,6 +153,8 @@
     "vim-helm".url = "github:towolf/vim-helm/master";
     "vim-illuminate".flake = false;
     "vim-illuminate".url = "github:RRethy/vim-illuminate/master";
+    "vim-repeat".flake = false;
+    "vim-repeat".url = "github:tpope/vim-repeat/master";
     "vim-startuptime".flake = false;
     "vim-startuptime".url = "github:dstein64/vim-startuptime/master";
     "which-key.nvim".flake = false;

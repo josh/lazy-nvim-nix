@@ -156,11 +156,11 @@
     "codeium.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1727068561,
-        "narHash": "sha256-7VRjA4H07E4BNf3ODDtJo7ujfuSddsWCSqTqz5rVgMw=",
+        "lastModified": 1727138414,
+        "narHash": "sha256-8ENjnMOazyBYWt3DogSQhN6uZlP9IzWC0NRnWupjlh0=",
         "owner": "Exafunction",
         "repo": "codeium.nvim",
-        "rev": "aa06fa21dd518a81b84aa468e2f52051cbd45f12",
+        "rev": "f74f999ec5b383dc7a67c0298051ec2be2b17cab",
         "type": "github"
       },
       "original": {
@@ -289,6 +289,23 @@
         "type": "github"
       }
     },
+    "flit.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718795547,
+        "narHash": "sha256-lLlad/kbrjwPE8ZdzebJMhA06AqpmEI+PJCWz12LYRM=",
+        "owner": "ggandor",
+        "repo": "flit.nvim",
+        "rev": "1ef72de6a02458d31b10039372c8a15ab8989e0d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ggandor",
+        "ref": "main",
+        "repo": "flit.nvim",
+        "type": "github"
+      }
+    },
     "friendly-snippets": {
       "flake": false,
       "locked": {
@@ -357,6 +374,23 @@
         "type": "github"
       }
     },
+    "inc-rename.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720039098,
+        "narHash": "sha256-qbiBvmVCJrqNKmSzRaCHZXpr87YSj9zJ6/AFRLK+Kgc=",
+        "owner": "smjonas",
+        "repo": "inc-rename.nvim",
+        "rev": "8ba77017ca468f3029bf88ef409c2d20476ea66b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "smjonas",
+        "ref": "main",
+        "repo": "inc-rename.nvim",
+        "type": "github"
+      }
+    },
     "indent-blankline.nvim": {
       "flake": false,
       "locked": {
@@ -405,6 +439,23 @@
         "owner": "folke",
         "ref": "main",
         "repo": "lazydev.nvim",
+        "type": "github"
+      }
+    },
+    "leap.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722337962,
+        "narHash": "sha256-PFD/UliAHKk2ga+7p/GmoZGqZFWenIVLkzmO+FkhvrY=",
+        "owner": "ggandor",
+        "repo": "leap.nvim",
+        "rev": "c6bfb191f1161fbabace1f36f578a20ac6c7642c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ggandor",
+        "ref": "main",
+        "repo": "leap.nvim",
         "type": "github"
       }
     },
@@ -544,6 +595,40 @@
         "type": "github"
       }
     },
+    "mini.diff": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725613926,
+        "narHash": "sha256-OYwBALQ+qmuky1SC1mMKqXHNnZlYQwoyxEapcrQZeUE=",
+        "owner": "echasnovski",
+        "repo": "mini.diff",
+        "rev": "24d46798be8a358d38d3adc92c7ebcbb2d6f67e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.diff",
+        "type": "github"
+      }
+    },
+    "mini.files": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725613926,
+        "narHash": "sha256-xorRDxNFFIzDdfjI51Uir7/pTED78yoc8BPrBaxj638=",
+        "owner": "echasnovski",
+        "repo": "mini.files",
+        "rev": "a3a9cce82115a69dba161ac45bda16f4e606f73b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.files",
+        "type": "github"
+      }
+    },
     "mini.icons": {
       "flake": false,
       "locked": {
@@ -558,6 +643,23 @@
         "owner": "echasnovski",
         "ref": "main",
         "repo": "mini.icons",
+        "type": "github"
+      }
+    },
+    "mini.move": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723711319,
+        "narHash": "sha256-nX0eAlhMnKhAftgM6qeHUuawagumLQMPKDkqZNPLljg=",
+        "owner": "echasnovski",
+        "repo": "mini.move",
+        "rev": "4caa1c212f5ca3d1633d21cfb184808090ed74b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.move",
         "type": "github"
       }
     },
@@ -1056,13 +1158,16 @@
         "dial.nvim": "dial.nvim",
         "dressing.nvim": "dressing.nvim",
         "flash.nvim": "flash.nvim",
+        "flit.nvim": "flit.nvim",
         "friendly-snippets": "friendly-snippets",
         "gitsigns.nvim": "gitsigns.nvim",
         "grug-far.nvim": "grug-far.nvim",
         "harpoon": "harpoon",
+        "inc-rename.nvim": "inc-rename.nvim",
         "indent-blankline.nvim": "indent-blankline.nvim",
         "lazy.nvim": "lazy.nvim",
         "lazydev.nvim": "lazydev.nvim",
+        "leap.nvim": "leap.nvim",
         "lualine.nvim": "lualine.nvim",
         "luvit-meta": "luvit-meta",
         "mason-lspconfig.nvim": "mason-lspconfig.nvim",
@@ -1071,7 +1176,10 @@
         "mini.ai": "mini.ai",
         "mini.animate": "mini.animate",
         "mini.comment": "mini.comment",
+        "mini.diff": "mini.diff",
+        "mini.files": "mini.files",
         "mini.icons": "mini.icons",
+        "mini.move": "mini.move",
         "mini.pairs": "mini.pairs",
         "mini.starter": "mini.starter",
         "mini.surround": "mini.surround",
@@ -1108,6 +1216,7 @@
         "ts-comments.nvim": "ts-comments.nvim",
         "vim-helm": "vim-helm",
         "vim-illuminate": "vim-illuminate",
+        "vim-repeat": "vim-repeat",
         "vim-startuptime": "vim-startuptime",
         "which-key.nvim": "which-key.nvim",
         "yanky.nvim": "yanky.nvim"
@@ -1246,6 +1355,23 @@
         "owner": "RRethy",
         "ref": "master",
         "repo": "vim-illuminate",
+        "type": "github"
+      }
+    },
+    "vim-repeat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720473942,
+        "narHash": "sha256-G/dmkq1KtSHIl+I5p3LfO6mGPS3eyLRbEEsuLbTpGlk=",
+        "owner": "tpope",
+        "repo": "vim-repeat",
+        "rev": "65846025c15494983dafe5e3b46c8f88ab2e9635",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tpope",
+        "ref": "master",
+        "repo": "vim-repeat",
         "type": "github"
       }
     },
