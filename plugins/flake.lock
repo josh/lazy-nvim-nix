@@ -935,6 +935,23 @@
         "type": "github"
       }
     },
+    "one-small-step-for-vimkind": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723370447,
+        "narHash": "sha256-8z4uKZV1mFWL7JGnVZPd76AMA272/I27BchUQx/Vj/w=",
+        "owner": "jbyuki",
+        "repo": "one-small-step-for-vimkind",
+        "rev": "0f0d5bc67786c36edc2cb6fb5faa5c09dd1a6e10",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jbyuki",
+        "ref": "main",
+        "repo": "one-small-step-for-vimkind",
+        "type": "github"
+      }
+    },
     "persistence.nvim": {
       "flake": false,
       "locked": {
@@ -1043,6 +1060,7 @@
         "nvim-ts-autotag": "nvim-ts-autotag",
         "nvim-ts-context-commentstring": "nvim-ts-context-commentstring",
         "octo.nvim": "octo.nvim",
+        "one-small-step-for-vimkind": "one-small-step-for-vimkind",
         "persistence.nvim": "persistence.nvim",
         "plenary.nvim": "plenary.nvim",
         "refactoring.nvim": "refactoring.nvim",

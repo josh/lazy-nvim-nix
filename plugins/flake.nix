@@ -113,6 +113,8 @@
     "nvim-ts-context-commentstring".url = "github:JoosepAlviste/nvim-ts-context-commentstring/main";
     "octo.nvim".flake = false;
     "octo.nvim".url = "github:pwntester/octo.nvim/master";
+    "one-small-step-for-vimkind".flake = false;
+    "one-small-step-for-vimkind".url = "github:jbyuki/one-small-step-for-vimkind/main";
     "persistence.nvim".flake = false;
     "persistence.nvim".url = "github:folke/persistence.nvim/main";
     "plenary.nvim".flake = false;
