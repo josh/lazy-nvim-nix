@@ -136,6 +136,23 @@
         "type": "github"
       }
     },
+    "codeium.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1727068561,
+        "narHash": "sha256-7VRjA4H07E4BNf3ODDtJo7ujfuSddsWCSqTqz5rVgMw=",
+        "owner": "Exafunction",
+        "repo": "codeium.nvim",
+        "rev": "aa06fa21dd518a81b84aa468e2f52051cbd45f12",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Exafunction",
+        "ref": "main",
+        "repo": "codeium.nvim",
+        "type": "github"
+      }
+    },
     "conform.nvim": {
       "flake": false,
       "locked": {
@@ -860,6 +877,7 @@
         "cmp-git": "cmp-git",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp-path": "cmp-path",
+        "codeium.nvim": "codeium.nvim",
         "conform.nvim": "conform.nvim",
         "copilot-cmp": "copilot-cmp",
         "copilot.lua": "copilot.lua",

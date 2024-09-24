@@ -15,6 +15,8 @@
     "cmp-nvim-lsp".url = "github:hrsh7th/cmp-nvim-lsp/main";
     "cmp-path".flake = false;
     "cmp-path".url = "github:hrsh7th/cmp-path/main";
+    "codeium.nvim".flake = false;
+    "codeium.nvim".url = "github:Exafunction/codeium.nvim/main";
     "conform.nvim".flake = false;
     "conform.nvim".url = "github:stevearc/conform.nvim/master";
     "copilot-cmp".flake = false;
