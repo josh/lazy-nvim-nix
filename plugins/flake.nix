@@ -93,6 +93,8 @@
     "nvim-treesitter".url = "github:nvim-treesitter/nvim-treesitter/master";
     "nvim-ts-autotag".flake = false;
     "nvim-ts-autotag".url = "github:windwp/nvim-ts-autotag/main";
+    "nvim-ts-context-commentstring".flake = false;
+    "nvim-ts-context-commentstring".url = "github:JoosepAlviste/nvim-ts-context-commentstring/main";
     "octo.nvim".flake = false;
     "octo.nvim".url = "github:pwntester/octo.nvim/master";
     "persistence.nvim".flake = false;
