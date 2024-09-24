@@ -544,6 +544,23 @@
         "type": "github"
       }
     },
+    "neodev.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720260306,
+        "narHash": "sha256-hOjzlo/IqmV8tYjGwfmcCPEmHYsWnEIwtHZdhpwA1kM=",
+        "owner": "folke",
+        "repo": "neodev.nvim",
+        "rev": "46aa467dca16cf3dfe27098042402066d2ae242d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "ref": "main",
+        "repo": "neodev.nvim",
+        "type": "github"
+      }
+    },
     "noice.nvim": {
       "flake": false,
       "locked": {
@@ -850,6 +867,7 @@
         "mini.pairs": "mini.pairs",
         "mini.starter": "mini.starter",
         "neo-tree.nvim": "neo-tree.nvim",
+        "neodev.nvim": "neodev.nvim",
         "noice.nvim": "noice.nvim",
         "none-ls.nvim": "none-ls.nvim",
         "nui.nvim": "nui.nvim",
