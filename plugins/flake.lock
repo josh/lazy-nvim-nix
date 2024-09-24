@@ -697,6 +697,57 @@
         "type": "github"
       }
     },
+    "nvim-dap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726145318,
+        "narHash": "sha256-4Mp787VTH5Vfg+Ox/MkMUHJ+GL/qzpmqUy1Sc0/FpR8=",
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "rev": "90616ae6ae40053103dc66872886fc26b94c70c8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfussenegger",
+        "ref": "master",
+        "repo": "nvim-dap",
+        "type": "github"
+      }
+    },
+    "nvim-dap-ui": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724694165,
+        "narHash": "sha256-2ysLTiX2664QhFtEmpqM/sdao1+MLSTukxmaRTQv6UE=",
+        "owner": "rcarriga",
+        "repo": "nvim-dap-ui",
+        "rev": "1c351e4e417d4691da12948b6ecf966936a56d28",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rcarriga",
+        "ref": "master",
+        "repo": "nvim-dap-ui",
+        "type": "github"
+      }
+    },
+    "nvim-dap-virtual-text": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725956655,
+        "narHash": "sha256-pIEPv55+xWGhrLPiZNAYEFj4p9GnzXAj42t2VnRDZds=",
+        "owner": "theHamsta",
+        "repo": "nvim-dap-virtual-text",
+        "rev": "3497eb39bf413a57ab5b7e7e2e192683e462148c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "theHamsta",
+        "ref": "master",
+        "repo": "nvim-dap-virtual-text",
+        "type": "github"
+      }
+    },
     "nvim-lint": {
       "flake": false,
       "locked": {
@@ -728,6 +779,23 @@
         "owner": "neovim",
         "ref": "master",
         "repo": "nvim-lspconfig",
+        "type": "github"
+      }
+    },
+    "nvim-nio": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720707425,
+        "narHash": "sha256-i6imNTb1xrfBlaeOyxyIwAZ/+o6ew9C4/z34a7/BgFg=",
+        "owner": "nvim-neotest",
+        "repo": "nvim-nio",
+        "rev": "a428f309119086dc78dd4b19306d2d67be884eee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neotest",
+        "ref": "master",
+        "repo": "nvim-nio",
         "type": "github"
       }
     },
@@ -961,8 +1029,12 @@
         "none-ls.nvim": "none-ls.nvim",
         "nui.nvim": "nui.nvim",
         "nvim-cmp": "nvim-cmp",
+        "nvim-dap": "nvim-dap",
+        "nvim-dap-ui": "nvim-dap-ui",
+        "nvim-dap-virtual-text": "nvim-dap-virtual-text",
         "nvim-lint": "nvim-lint",
         "nvim-lspconfig": "nvim-lspconfig",
+        "nvim-nio": "nvim-nio",
         "nvim-notify": "nvim-notify",
         "nvim-snippets": "nvim-snippets",
         "nvim-treesitter": "nvim-treesitter",
