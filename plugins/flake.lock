@@ -459,6 +459,23 @@
         "type": "github"
       }
     },
+    "mini.comment": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721581170,
+        "narHash": "sha256-7l7I4GBB48f/lQTIZ0yHpf6KM+Lx9+WOKl0ScNgBsUE=",
+        "owner": "echasnovski",
+        "repo": "mini.comment",
+        "rev": "03c13e37318bdb18481311c0ac1adc9ed731caf1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.comment",
+        "type": "github"
+      }
+    },
     "mini.icons": {
       "flake": false,
       "locked": {
@@ -828,6 +845,7 @@
         "mason.nvim": "mason.nvim",
         "mini.ai": "mini.ai",
         "mini.animate": "mini.animate",
+        "mini.comment": "mini.comment",
         "mini.icons": "mini.icons",
         "mini.pairs": "mini.pairs",
         "mini.starter": "mini.starter",
