@@ -238,6 +238,23 @@
         "type": "github"
       }
     },
+    "dial.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721027830,
+        "narHash": "sha256-tTrmSqLFvCOqItHsHqirj9iQevWCk+RNi4bE9iIaEJc=",
+        "owner": "monaqa",
+        "repo": "dial.nvim",
+        "rev": "ed4d6a5bbd5e479b4c4a3019d148561a2e6c1490",
+        "type": "github"
+      },
+      "original": {
+        "owner": "monaqa",
+        "ref": "master",
+        "repo": "dial.nvim",
+        "type": "github"
+      }
+    },
     "dressing.nvim": {
       "flake": false,
       "locked": {
@@ -1036,6 +1053,7 @@
         "copilot-cmp": "copilot-cmp",
         "copilot.lua": "copilot.lua",
         "dashboard-nvim": "dashboard-nvim",
+        "dial.nvim": "dial.nvim",
         "dressing.nvim": "dressing.nvim",
         "flash.nvim": "flash.nvim",
         "friendly-snippets": "friendly-snippets",

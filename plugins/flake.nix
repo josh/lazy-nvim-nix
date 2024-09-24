@@ -29,6 +29,8 @@
     "CopilotChat.nvim".url = "github:CopilotC-Nvim/CopilotChat.nvim/main";
     "dashboard-nvim".flake = false;
     "dashboard-nvim".url = "github:nvimdev/dashboard-nvim/master";
+    "dial.nvim".flake = false;
+    "dial.nvim".url = "github:monaqa/dial.nvim/master";
     "dressing.nvim".flake = false;
     "dressing.nvim".url = "github:stevearc/dressing.nvim/master";
     "flash.nvim".flake = false;
