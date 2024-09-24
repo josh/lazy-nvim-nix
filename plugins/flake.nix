@@ -49,6 +49,8 @@
     "dial.nvim".url = "github:monaqa/dial.nvim/master";
     "dressing.nvim".flake = false;
     "dressing.nvim".url = "github:stevearc/dressing.nvim/master";
+    "edgy.nvim".flake = false;
+    "edgy.nvim".url = "github:folke/edgy.nvim/main";
     "flash.nvim".flake = false;
     "flash.nvim".url = "github:folke/flash.nvim/main";
     "flit.nvim".flake = false;
@@ -69,6 +71,8 @@
     "inc-rename.nvim".url = "github:smjonas/inc-rename.nvim/main";
     "indent-blankline.nvim".flake = false;
     "indent-blankline.nvim".url = "github:lukas-reineke/indent-blankline.nvim/master";
+    "kulala.nvim".flake = false;
+    "kulala.nvim".url = "github:mistweaverco/kulala.nvim/main";
     "lazy.nvim".flake = false;
     "lazy.nvim".url = "github:folke/lazy.nvim/main";
     "lazydev.nvim".flake = false;
@@ -105,6 +109,8 @@
     "mini.hipatterns".url = "github:echasnovski/mini.hipatterns/main";
     "mini.icons".flake = false;
     "mini.icons".url = "github:echasnovski/mini.icons/main";
+    "mini.indentscope".flake = false;
+    "mini.indentscope".url = "github:echasnovski/mini.indentscope/main";
     "mini.move".flake = false;
     "mini.move".url = "github:echasnovski/mini.move/main";
     "mini.pairs".flake = false;
@@ -115,10 +121,14 @@
     "mini.surround".url = "github:echasnovski/mini.surround/main";
     "neo-tree.nvim".flake = false;
     "neo-tree.nvim".url = "github:nvim-neo-tree/neo-tree.nvim/main";
+    "neoconf.nvim".flake = false;
+    "neoconf.nvim".url = "github:folke/neoconf.nvim/main";
     "neodev.nvim".flake = false;
     "neodev.nvim".url = "github:folke/neodev.nvim/main";
     "neogen".flake = false;
     "neogen".url = "github:danymat/neogen/main";
+    "neotest".flake = false;
+    "neotest".url = "github:nvim-neotest/neotest/master";
     "noice.nvim".flake = false;
     "noice.nvim".url = "github:folke/noice.nvim/main";
     "none-ls.nvim".flake = false;
@@ -175,6 +185,8 @@
     "persistence.nvim".url = "github:folke/persistence.nvim/main";
     "plenary.nvim".flake = false;
     "plenary.nvim".url = "github:nvim-lua/plenary.nvim/master";
+    "project.nvim".flake = false;
+    "project.nvim".url = "github:ahmedkhalf/project.nvim/main";
     "R.nvim".flake = false;
     "R.nvim".url = "github:R-nvim/R.nvim/main";
     "refactoring.nvim".flake = false;

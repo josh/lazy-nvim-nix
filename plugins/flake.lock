@@ -459,6 +459,23 @@
         "type": "github"
       }
     },
+    "edgy.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725089082,
+        "narHash": "sha256-KP8lA+HU3xtX5gOigROva65bf7YH+12EVPM185riJTk=",
+        "owner": "folke",
+        "repo": "edgy.nvim",
+        "rev": "7e8dedc39abebe40c289b8012cc89b11c69aa7a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "ref": "main",
+        "repo": "edgy.nvim",
+        "type": "github"
+      }
+    },
     "flash.nvim": {
       "flake": false,
       "locked": {
@@ -626,6 +643,23 @@
         "owner": "lukas-reineke",
         "ref": "master",
         "repo": "indent-blankline.nvim",
+        "type": "github"
+      }
+    },
+    "kulala.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726663785,
+        "narHash": "sha256-hLfnn94MkIR7ZUCjNLtZkuBHOWPHyDvBR6XkalphvX8=",
+        "owner": "mistweaverco",
+        "repo": "kulala.nvim",
+        "rev": "f373b48b62fe0da8a6bff1ed64452d27313d568b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mistweaverco",
+        "ref": "main",
+        "repo": "kulala.nvim",
         "type": "github"
       }
     },
@@ -901,6 +935,23 @@
         "type": "github"
       }
     },
+    "mini.indentscope": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725613926,
+        "narHash": "sha256-zzD+RFSA9YHNWJO1030G7k6vCI0X0l3ra2vGhAmLcN0=",
+        "owner": "echasnovski",
+        "repo": "mini.indentscope",
+        "rev": "da9af64649e114aa79480c238fd23f6524bc0903",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.indentscope",
+        "type": "github"
+      }
+    },
     "mini.move": {
       "flake": false,
       "locked": {
@@ -986,6 +1037,23 @@
         "type": "github"
       }
     },
+    "neoconf.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726968602,
+        "narHash": "sha256-KmIAbDjupqs7ex7EN5Fe7iEy1VPOXTRV1YlfUrEeIGY=",
+        "owner": "folke",
+        "repo": "neoconf.nvim",
+        "rev": "61b10cd334dc8f693e391c5ef8c5832093a46cf5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "ref": "main",
+        "repo": "neoconf.nvim",
+        "type": "github"
+      }
+    },
     "neodev.nvim": {
       "flake": false,
       "locked": {
@@ -1017,6 +1085,23 @@
         "owner": "danymat",
         "ref": "main",
         "repo": "neogen",
+        "type": "github"
+      }
+    },
+    "neotest": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1727005850,
+        "narHash": "sha256-N04+pWIzzacyrgHRYr78L5qNyoFORaWaXb68o9vCIzM=",
+        "owner": "nvim-neotest",
+        "repo": "neotest",
+        "rev": "48f8b5fce704594eb0ff94338e080defca14f0dc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neotest",
+        "ref": "master",
+        "repo": "neotest",
         "type": "github"
       }
     },
@@ -1496,6 +1581,23 @@
         "type": "github"
       }
     },
+    "project.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1680567592,
+        "narHash": "sha256-avV3wMiDbraxW4mqlEsKy0oeewaRj9Q33K8NzWoaptU=",
+        "owner": "ahmedkhalf",
+        "repo": "project.nvim",
+        "rev": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ahmedkhalf",
+        "ref": "main",
+        "repo": "project.nvim",
+        "type": "github"
+      }
+    },
     "refactoring.nvim": {
       "flake": false,
       "locked": {
@@ -1542,6 +1644,7 @@
         "dashboard-nvim": "dashboard-nvim",
         "dial.nvim": "dial.nvim",
         "dressing.nvim": "dressing.nvim",
+        "edgy.nvim": "edgy.nvim",
         "flash.nvim": "flash.nvim",
         "flit.nvim": "flit.nvim",
         "friendly-snippets": "friendly-snippets",
@@ -1552,6 +1655,7 @@
         "haskell-tools.nvim": "haskell-tools.nvim",
         "inc-rename.nvim": "inc-rename.nvim",
         "indent-blankline.nvim": "indent-blankline.nvim",
+        "kulala.nvim": "kulala.nvim",
         "lazy.nvim": "lazy.nvim",
         "lazydev.nvim": "lazydev.nvim",
         "lean.nvim": "lean.nvim",
@@ -1568,13 +1672,16 @@
         "mini.files": "mini.files",
         "mini.hipatterns": "mini.hipatterns",
         "mini.icons": "mini.icons",
+        "mini.indentscope": "mini.indentscope",
         "mini.move": "mini.move",
         "mini.pairs": "mini.pairs",
         "mini.starter": "mini.starter",
         "mini.surround": "mini.surround",
         "neo-tree.nvim": "neo-tree.nvim",
+        "neoconf.nvim": "neoconf.nvim",
         "neodev.nvim": "neodev.nvim",
         "neogen": "neogen",
+        "neotest": "neotest",
         "noice.nvim": "noice.nvim",
         "none-ls.nvim": "none-ls.nvim",
         "nui.nvim": "nui.nvim",
@@ -1603,6 +1710,7 @@
         "overseer.nvim": "overseer.nvim",
         "persistence.nvim": "persistence.nvim",
         "plenary.nvim": "plenary.nvim",
+        "project.nvim": "project.nvim",
         "refactoring.nvim": "refactoring.nvim",
         "rustaceanvim": "rustaceanvim",
         "tailwindcss-colorizer-cmp.nvim": "tailwindcss-colorizer-cmp.nvim",
