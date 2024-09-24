@@ -2,9 +2,6 @@
 let
   inherit (nixpkgs) lib;
 
-  # attrDerivations :: AttrSet -> [ Derivation ]
-  attrDerivations = attrset: builtins.filter lib.attrsets.isDerivation (builtins.attrValues attrset);
-
   # flattenDerivations :: AttrSet -> [ Derivation ]
   flattenDerivations =
     attrset:
@@ -122,7 +119,6 @@ let
 in
 {
   inherit
-    attrDerivations
     flattenDerivations
     defaultLazyOpts
     makeLazyNeovimConfig

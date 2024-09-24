@@ -152,7 +152,7 @@
           formatting = treefmtEval.${pkgs.system}.config.build.check self;
 
           plugins = pkgs.runCommandLocal "plugins" {
-            buildInputs = lib.attrDerivations plugins;
+            buildInputs = lib.flattenDerivations plugins;
           } ''echo "ok" >$out'';
 
           help = pkgs.runCommandLocal "nvim-help" { } ''
@@ -172,6 +172,9 @@
           '';
 
           LazyVim-extras-catppuccin = plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
+          # LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
+          #   buildInputs = lib.flattenDerivations plugins.LazyVim.extras;
+          # } ''echo "ok" >$out'';
         }
       );
     };
