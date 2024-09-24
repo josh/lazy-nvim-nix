@@ -53,12 +53,12 @@
     "mason-lspconfig.nvim".url = "github:williamboman/mason-lspconfig.nvim/main";
     "mason.nvim".flake = false;
     "mason.nvim".url = "github:williamboman/mason.nvim/main";
-    "mini.comment".flake = false;
-    "mini.comment".url = "github:echasnovski/mini.comment/main";
     "mini.ai".flake = false;
     "mini.ai".url = "github:echasnovski/mini.ai/main";
     "mini.animate".flake = false;
     "mini.animate".url = "github:echasnovski/mini.animate/main";
+    "mini.comment".flake = false;
+    "mini.comment".url = "github:echasnovski/mini.comment/main";
     "mini.icons".flake = false;
     "mini.icons".url = "github:echasnovski/mini.icons/main";
     "mini.pairs".flake = false;
@@ -67,6 +67,8 @@
     "mini.starter".url = "github:echasnovski/mini.starter/main";
     "neo-tree.nvim".flake = false;
     "neo-tree.nvim".url = "github:nvim-neo-tree/neo-tree.nvim/main";
+    "neodev.nvim".flake = false;
+    "neodev.nvim".url = "github:folke/neodev.nvim/main";
     "noice.nvim".flake = false;
     "noice.nvim".url = "github:folke/noice.nvim/main";
     "none-ls.nvim".flake = false;
