@@ -1107,6 +1107,7 @@
         "trouble.nvim": "trouble.nvim",
         "ts-comments.nvim": "ts-comments.nvim",
         "vim-helm": "vim-helm",
+        "vim-illuminate": "vim-illuminate",
         "vim-startuptime": "vim-startuptime",
         "which-key.nvim": "which-key.nvim",
         "yanky.nvim": "yanky.nvim"
@@ -1228,6 +1229,23 @@
         "owner": "towolf",
         "ref": "master",
         "repo": "vim-helm",
+        "type": "github"
+      }
+    },
+    "vim-illuminate": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715960194,
+        "narHash": "sha256-DdJzTHxoOv+vjFymETa2MgXpM/qDwvZjpoo1W8OOBj0=",
+        "owner": "RRethy",
+        "repo": "vim-illuminate",
+        "rev": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RRethy",
+        "ref": "master",
+        "repo": "vim-illuminate",
         "type": "github"
       }
     },

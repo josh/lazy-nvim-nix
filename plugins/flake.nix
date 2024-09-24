@@ -139,6 +139,8 @@
     "ts-comments.nvim".url = "github:folke/ts-comments.nvim/main";
     "vim-helm".flake = false;
     "vim-helm".url = "github:towolf/vim-helm/master";
+    "vim-illuminate".flake = false;
+    "vim-illuminate".url = "github:RRethy/vim-illuminate/master";
     "vim-startuptime".flake = false;
     "vim-startuptime".url = "github:dstein64/vim-startuptime/master";
     "which-key.nvim".flake = false;
