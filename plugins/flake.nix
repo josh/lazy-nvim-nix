@@ -9,6 +9,8 @@
     "bufferline.nvim".url = "github:akinsho/bufferline.nvim/main";
     "catppuccin".flake = false;
     "catppuccin".url = "github:catppuccin/nvim/main";
+    "clangd_extensions.nvim".flake = false;
+    "clangd_extensions.nvim".url = "github:p00f/clangd_extensions.nvim/main";
     "cmp-buffer".flake = false;
     "cmp-buffer".url = "github:hrsh7th/cmp-buffer/main";
     "cmp-git".flake = false;
@@ -111,6 +113,8 @@
     "nvim-lint".url = "github:mfussenegger/nvim-lint/master";
     "nvim-lspconfig".flake = false;
     "nvim-lspconfig".url = "github:neovim/nvim-lspconfig/master";
+    "nvim-navic".flake = false;
+    "nvim-navic".url = "github:SmiteshP/nvim-navic/master";
     "nvim-nio".flake = false;
     "nvim-nio".url = "github:nvim-neotest/nvim-nio/master";
     "nvim-notify".flake = false;
@@ -131,6 +135,10 @@
     "octo.nvim".url = "github:pwntester/octo.nvim/master";
     "one-small-step-for-vimkind".flake = false;
     "one-small-step-for-vimkind".url = "github:jbyuki/one-small-step-for-vimkind/main";
+    "outline.nvim".flake = false;
+    "outline.nvim".url = "github:hedyhli/outline.nvim/main";
+    "overseer.nvim".flake = false;
+    "overseer.nvim".url = "github:stevearc/overseer.nvim/master";
     "persistence.nvim".flake = false;
     "persistence.nvim".url = "github:folke/persistence.nvim/main";
     "plenary.nvim".flake = false;
