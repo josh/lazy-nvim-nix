@@ -172,9 +172,9 @@
           '';
 
           LazyVim-extras-catppuccin = plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
-          # LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
-          #   buildInputs = lib.flattenDerivations plugins.LazyVim.extras;
-          # } ''echo "ok" >$out'';
+          LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
+            buildInputs = lib.flattenDerivations plugins.LazyVim.extras;
+          } ''echo "ok" >$out'';
         }
       );
     };
