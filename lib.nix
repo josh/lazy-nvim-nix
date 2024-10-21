@@ -67,9 +67,6 @@ let
       require("lazy").setup(${lua.toLua spec}, ${lua.toLua opts})
     '';
 
-  makeLazyNeovimPackage =
-    { pkgs, ... }@args: pkgs.wrapNeovimUnstable pkgs.neovim-unwrapped (makeLazyNeovimConfig args);
-
   makeLazyNeovimConfig =
     {
       pkgs,
@@ -122,7 +119,6 @@ in
     flattenDerivations
     defaultLazyOpts
     makeLazyNeovimConfig
-    makeLazyNeovimPackage
     setupLazyLua
     toLua
     ;

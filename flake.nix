@@ -49,10 +49,10 @@
           inherit (pkgs) system callPackage;
         in
         {
-          default = self.packages.${system}.nvim;
+          default = self.packages.${system}.lazy-nvim;
           LazyVimPlugins = callPackage ./pkgs/lazyvim-plugins.nix { };
-          nvim = callPackage ./pkgs/nvim.nix { };
-          LazyVim = callPackage ./pkgs/LazyVim.nix { };
+          lazy-nvim = callPackage ./pkgs/lazy-nvim.nix { };
+          LazyVim = callPackage ./pkgs/LazyVim.nix { inherit (self.packages.${system}) lazy-nvim; };
         }
       );
 
@@ -89,15 +89,15 @@
           } ''echo "ok" >$out'';
 
           help = pkgs.runCommandLocal "nvim-help" { } ''
-            ${packages.nvim}/bin/nvim --help 2>&1 >$out 
+            ${packages.lazy-nvim}/bin/nvim --help 2>&1 >$out 
           '';
 
           checkhealth = pkgs.runCommandLocal "nvim-checkhealth" { } ''
-            ${packages.nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
+            ${packages.lazy-nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
           '';
 
           startuptime = pkgs.runCommandLocal "nvim-startuptime" { } ''
-            ${packages.nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
+            ${packages.lazy-nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
           '';
 
           lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''

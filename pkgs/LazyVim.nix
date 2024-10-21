@@ -1,14 +1,12 @@
 {
-  pkgs,
+  lazy-nvim,
   lazynvimPlugins,
-  lazynvimUtils,
   lazygit,
 }:
 let
   plugins = lazynvimPlugins;
 in
-lazynvimUtils.makeLazyNeovimPackage {
-  inherit pkgs;
+lazy-nvim.override {
   spec = [
     (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
@@ -72,5 +70,5 @@ lazynvimUtils.makeLazyNeovimPackage {
     }
   ];
 
-  extraPackages = with pkgs; [ lazygit ];
+  extraPackages = [ lazygit ];
 }

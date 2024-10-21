@@ -24,13 +24,13 @@ Add as an input to your flake:
 
 ## Usage
 
-### `packages.${system}.nvim`
+### `packages.${system}.lazy-nvim`
 
 ```nix
 {
   environment.systemPackages = [
-    pkgs.lazynvimPlugins.nvim.override {
-      plugins = [ "lualine.nvim" ];
+    pkgs.lazy-nvim.override {
+      spec = [ "lualine.nvim" ];
     };
   ];
 }
@@ -41,7 +41,7 @@ Add as an input to your flake:
 ```nix
 {
   home.packages = [
-    pkgs.lazynvimPlugins.LazyVim.override {
+    pkgs.LazyVim.override {
       lazyVimExtras = [ "lazyvim.plugins.extras.coding.copilot" ];
     };
   ];
@@ -50,7 +50,7 @@ Add as an input to your flake:
 
 ### `packages.${system}.default`
 
-Alias for `packages.${system}.nvim`.
+Alias for `packages.${system}.lazy-nvim`.
 
 ### `overlays.default`
 
@@ -66,7 +66,5 @@ Alias for `packages.${system}.nvim`.
 ### `lib.defaultLazyOpts`
 
 ### `lib.makeLazyNeovimConfig :: { pkgs, spec, extraPackages } -> attrs`
-
-### `lib.makeLazyNeovimPackage :: { pkgs } -> drv`
 
 ### `lib.setupLazyLua :: { pkgs, spec, opts } -> string`
