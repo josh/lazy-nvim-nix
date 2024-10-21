@@ -134,9 +134,17 @@
         lazynvimPlugins = pkgs.callPackage ./plugins.nix { };
       });
 
-      overlays.default = _final: prev: {
-        lazynvimPlugins = prev.callPackage ./plugins.nix { };
+      overlays.default = final: prev: {
+        lazynvimPlugins = final.callPackage ./plugins.nix { };
         lazynvimUtils = self.lib;
+
+        writers = prev.writers // {
+          writeLuaTable =
+            name: obj:
+            final.writers.writeText name ''
+              return ${lib.toLua obj}
+            '';
+        };
       };
 
       formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
