@@ -71,11 +71,11 @@
     "SchemaStore.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1729274451,
-        "narHash": "sha256-ntCpce1FBvcPHTxOzMH057tbLw/xdQc3Wpag5wbF5WA=",
+        "lastModified": 1729504843,
+        "narHash": "sha256-iU+7XEDJJmYMFLruOTFCTW6IFNHVdTIwOpE4lfPP7D4=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "30eacb81f0202c0d5718fb27e3ec0b03945a03c7",
+        "rev": "3c1db9e0fdb648c0dd6663ed11c6b261bfed22eb",
         "type": "github"
       },
       "original": {
@@ -1380,11 +1380,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1729446825,
-        "narHash": "sha256-KPojAOg9DwPDbig+oUBReq5SzHzQu8CDn75Fq3SRNSY=",
+        "lastModified": 1729493675,
+        "narHash": "sha256-HwjTrZCpYtuco+UIqLi1AIYPEaMNmoovBGLKq+ykvt4=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "18cf02f5efe677d992fe7f96f395ef40a2f329d2",
+        "rev": "df20c049694474021cffb2cc8687c809adc1cbba",
         "type": "github"
       },
       "original": {
