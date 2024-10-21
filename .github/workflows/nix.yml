@@ -42,7 +42,7 @@ jobs:
 
       - name: Check flake
         run: |
-          nix flake check
+          nix flake check --verbose --print-build-logs
 
   checks:
     runs-on: ubuntu-latest
