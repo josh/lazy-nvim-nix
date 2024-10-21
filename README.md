@@ -65,6 +65,4 @@ Alias for `packages.${system}.lazy-nvim`.
 
 ### `lib.defaultLazyOpts`
 
-### `lib.makeLazyNeovimConfig :: { pkgs, spec, extraPackages } -> attrs`
-
 ### `lib.setupLazyLua :: { pkgs, spec, opts } -> string`

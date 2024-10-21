@@ -67,58 +67,11 @@ let
       require("lazy").setup(${lua.toLua spec}, ${lua.toLua opts})
     '';
 
-  makeLazyNeovimConfig =
-    {
-      pkgs,
-      spec ? [ ],
-      extraPackages ? [ ],
-    }:
-    let
-      inherit (pkgs) lib;
-
-      moreExtraPackages = [
-        pkgs.git
-        pkgs.luajitPackages.luarocks
-        pkgs.ripgrep
-      ] ++ extraPackages;
-
-      config = pkgs.neovimUtils.makeNeovimConfig {
-        # See pkgs/applications/editors/neovim/utils.nix # makeNeovimConfig
-
-        withPython3 = false;
-        withNodeJs = false;
-        withRuby = false;
-
-        # Extra config to pass to
-        # pkgs/applications/editors/neovim/wrapper.nix
-
-        luaRcContent = setupLazyLua {
-          inherit pkgs;
-          inherit spec;
-          opts = defaultLazyOpts;
-        };
-      };
-
-      # Unfortunately can't pass extraWrapperArgs to makeNeovimConfig
-      configExtra =
-        let
-          binPath = pkgs.lib.makeBinPath moreExtraPackages;
-        in
-        {
-          wrapperArgs = pkgs.lib.escapeShellArgs config.wrapperArgs + " '--prefix' 'PATH' : '${binPath}' ";
-        };
-
-      finalConfig = config // configExtra;
-
-    in
-    finalConfig;
-
 in
 {
   inherit
     flattenDerivations
     defaultLazyOpts
-    makeLazyNeovimConfig
     setupLazyLua
     toLua
     ;
