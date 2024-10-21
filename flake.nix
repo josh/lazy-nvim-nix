@@ -51,6 +51,9 @@
         {
           default = self.packages.${system}.lazy-nvim;
           LazyVimPlugins = callPackage ./pkgs/lazyvim-plugins.nix { };
+          lazy-nvim-config = callPackage ./pkgs/lazy-nvim-config.nix {
+            inherit (self.packages.${system}) lazy-nvim-config;
+          };
           lazy-nvim = callPackage ./pkgs/lazy-nvim.nix { };
           LazyVim = callPackage ./pkgs/LazyVim.nix { inherit (self.packages.${system}) lazy-nvim; };
         }
@@ -87,6 +90,9 @@
           plugins = pkgs.runCommandLocal "plugins" {
             buildInputs = lib.flattenDerivations plugins;
           } ''echo "ok" >$out'';
+
+          # TODO: Automatically expose all tests
+          lazy-nvim-config = packages.lazy-nvim-config.passthru.tests.example;
 
           help = pkgs.runCommandLocal "nvim-help" { } ''
             ${packages.lazy-nvim}/bin/nvim --help 2>&1 >$out 
