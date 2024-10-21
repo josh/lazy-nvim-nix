@@ -1,7 +1,7 @@
 {
   lib,
   path,
-  stdenv,
+  stdenvNoCC,
   fetchFromGitHub,
 }:
 let
@@ -62,7 +62,7 @@ let
   */
   applyPatches =
     src: patches:
-    stdenv.mkDerivation {
+    stdenvNoCC.mkDerivation {
       name = formatDerivationName { inherit (src.meta) name version; };
       inherit src patches;
       inherit (src) meta;
