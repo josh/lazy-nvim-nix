@@ -81,39 +81,44 @@
         pkgs:
         let
           inherit (pkgs) system;
+          inherit (pkgs) lib;
+          lib' = self.lib;
           packages = self.packages.${system};
           plugins = pkgs.lazynvimPlugins;
+
+          localPkgs = lib'.flattenDerivations (
+            self.packages.${system} // { inherit (pkgs) lazynvimPlugins; }
+          );
+          localTests = lib.concatMap (
+            pkg:
+            if (builtins.hasAttr "passthru" pkg) && (builtins.hasAttr "tests" pkg.passthru) then
+              (builtins.attrValues pkg.passthru.tests)
+            else
+              [ ]
+          ) localPkgs;
         in
         {
           formatting = treefmtEval.${system}.config.build.check self;
 
-          plugins = pkgs.runCommandLocal "plugins" {
-            buildInputs = lib.flattenDerivations plugins;
-          } ''echo "ok" >$out'';
+          build = pkgs.runCommandLocal "build-packages" { inherit localPkgs; } "touch $out";
+          tests = pkgs.runCommandLocal "run-tests" { inherit localTests; } "touch $out";
 
-          # TODO: Automatically expose all tests
-          lazy-nvim-config = packages.lazy-nvim-config.passthru.tests.example;
-
-          help = pkgs.runCommandLocal "nvim-help" { } ''
-            ${packages.lazy-nvim}/bin/nvim --help 2>&1 >$out 
-          '';
-
-          checkhealth = pkgs.runCommandLocal "nvim-checkhealth" { } ''
+          checkhealth = pkgs.runCommand "nvim-checkhealth" { } ''
             ${packages.lazy-nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
           '';
 
-          startuptime = pkgs.runCommandLocal "nvim-startuptime" { } ''
+          startuptime = pkgs.runCommand "nvim-startuptime" { } ''
             ${packages.lazy-nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
           '';
 
-          lazyvim-plugins-json = pkgs.runCommandLocal "lazyvim-plugins-json" { } ''
+          lazyvim-plugins-json = pkgs.runCommand "lazyvim-plugins-json" { } ''
             ${pkgs.jq}/bin/jq <${packages.LazyVimPlugins} >$out
           '';
 
           LazyVim-extras-catppuccin = plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
-            buildInputs = lib.flattenDerivations plugins.LazyVim.extras;
-          } ''echo "ok" >$out'';
+            buildInputs = lib'.flattenDerivations plugins.LazyVim.extras;
+          } "touch $out";
         }
       );
     };

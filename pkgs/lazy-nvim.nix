@@ -1,5 +1,6 @@
 {
   lib,
+  runCommand,
   wrapNeovimUnstable,
   neovim-unwrapped,
   lazynvimPlugins,
@@ -44,9 +45,26 @@ let
 
   # Unfortunately can't pass extraWrapperArgs to makeNeovimConfig
   configExtra = {
+    mainProgram = "nvim";
     wrapperArgs = lib.escapeShellArgs config.wrapperArgs + " '--prefix' 'PATH' : '${extrasBinPath}' ";
   };
 
   finalConfig = config // configExtra;
 in
-wrapNeovimUnstable neovim-unwrapped finalConfig
+(wrapNeovimUnstable neovim-unwrapped finalConfig).overrideAttrs (
+  finalAttrs: _previousAttrs: {
+    passthru.tests = {
+      help = runCommand "nvim-help" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
+        nvim --help 2>&1 >$out 
+      '';
+
+      checkhealth = runCommand "nvim-checkhealth" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
+        nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
+      '';
+
+      startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
+        nvim --headless "+Lazy! home" --startuptime "$out" +q
+      '';
+    };
+  }
+)
