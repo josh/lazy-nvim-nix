@@ -20,8 +20,8 @@ let
   # lua = import to-lua.outPath { inherit (nixpkgs) lib; };
   toLuaSrc = builtins.fetchurl {
     # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
-    url = "https://raw.githubusercontent.com/nix-community/nixvim/35788bbc5ab247563e13bad3ce64acd897bca043/lib/to-lua.nix";
-    sha256 = "sha256:01kj9z5sp82n6r863jxzszs0qpn30p9c4ws0p84qgw5wr2j4jp17";
+    url = "https://raw.githubusercontent.com/nix-community/nixvim/4e2a0221653da2e541dd1197d2afdf87b1c14255/lib/to-lua.nix";
+    sha256 = "1wwh106s6dna9jyhi7qmqn8zr2b32lfj9xns927apnxdwygl7a4v";
   };
   lua = import toLuaSrc { inherit lib; };
   inherit (lua) toLua;
