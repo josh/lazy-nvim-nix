@@ -2,9 +2,9 @@
   lib,
   wrapNeovimUnstable,
   neovim-unwrapped,
+  lazynvimPlugins,
   lazynvimUtils,
   neovimUtils,
-  pkgs,
   git,
   luajitPackages,
   ripgrep,
@@ -12,6 +12,10 @@
   extraPackages ? [ ],
 }:
 let
+  lazypath = lazynvimPlugins."lazy.nvim";
+
+  opts = lazynvimUtils.defaultLazyOpts;
+
   moreExtraPackages = [
     git
     luajitPackages.luarocks
@@ -20,10 +24,10 @@ let
 
   extrasBinPath = lib.makeBinPath moreExtraPackages;
 
-  luaRcContent = lazynvimUtils.setupLazyLua {
-    inherit pkgs spec;
-    opts = lazynvimUtils.defaultLazyOpts;
-  };
+  luaRcContent = ''
+    vim.opt.rtp:prepend("${lazypath}");
+    require("lazy").setup(${lazynvimUtils.toLua spec}, ${lazynvimUtils.toLua opts})
+  '';
 
   config = neovimUtils.makeNeovimConfig {
     # See pkgs/applications/editors/neovim/utils.nix # makeNeovimConfig
