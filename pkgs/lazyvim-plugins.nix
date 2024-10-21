@@ -1,9 +1,9 @@
 {
   system,
   neovim,
-  vimPlugins,
-  lazy-nvim ? vimPlugins.lazy-nvim,
-  LazyVim ? vimPlugins.LazyVim,
+  lazynvimPlugins,
+  lazy-nvim ? lazynvimPlugins."lazy.nvim",
+  LazyVim ? lazynvimPlugins."LazyVim",
 }:
 derivation {
   inherit system;
