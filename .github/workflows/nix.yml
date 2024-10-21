@@ -33,9 +33,6 @@ jobs:
             accept-flake-config = true
             allow-import-from-derivation = false
 
-      - run: |
-          nix config show | grep allow-import-from-derivation
-
       - uses: cachix/cachix-action@v15
         with:
           name: lazy-nvim-nix
