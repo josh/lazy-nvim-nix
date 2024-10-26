@@ -700,11 +700,11 @@
     "lean.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1729781460,
-        "narHash": "sha256-yv2iywHFkzTR1Ntog9W3hXtLaQnLrb4MM91mjOvw8uY=",
+        "lastModified": 1729969759,
+        "narHash": "sha256-iTCOkmterLmvvofYiscPtDq6Sbo+HPEE8S+fStGYtno=",
         "owner": "Julian",
         "repo": "lean.nvim",
-        "rev": "f6d640ca48fae9fd6fdbcdc7039ceecf0b95fe48",
+        "rev": "464f6adf5c239e74e370d6b94cf961af9b355296",
         "type": "github"
       },
       "original": {
@@ -2026,11 +2026,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1729720437,
-        "narHash": "sha256-gAxVFsuXUa08S5bl3k5QHF0+pqj2TofHPhhcy7XIV+w=",
+        "lastModified": 1729974473,
+        "narHash": "sha256-f4n3t8XqaQbbMDkMtjCoJj8tfq1Nmcl3Z2YFSIsFBLw=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "f59b2784e8e4a2cce741cc697b403428af4cf131",
+        "rev": "0785fd98af20f308ce6856f75a70a4ece9abab29",
         "type": "github"
       },
       "original": {
