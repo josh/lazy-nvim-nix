@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1729097381,
-        "narHash": "sha256-fEOzuiD+qc/agwmX5+US1L0y1JNw7/4KAB5E7cahNEc=",
+        "lastModified": 1730665716,
+        "narHash": "sha256-VaEiJ1K8mqOrkgT7vZPTjTxHEYmIKTsSaDHiAehHc9U=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "60a784614acb1d7695bd9ae0fee8ada1bf7b0c28",
+        "rev": "247df216704cbe3cfa68e2ae5515c3485e281364",
         "type": "github"
       },
       "original": {
@@ -445,11 +445,11 @@
     "dressing.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1726594554,
-        "narHash": "sha256-EtLYhAwoSoHyGiGrHAVYL4/CqcgO4rSbV6otO3V08hM=",
+        "lastModified": 1730665202,
+        "narHash": "sha256-zjrDz/tzYLNom+WfaPY+il10HhuKDHO0vrjLAV4ttkc=",
         "owner": "stevearc",
         "repo": "dressing.nvim",
-        "rev": "1b7921eecc65af1baf8ac1dc06f0794934cbcfb2",
+        "rev": "c334ac73e031f0dc93d6d91f3658ee75b8be1d3b",
         "type": "github"
       },
       "original": {
