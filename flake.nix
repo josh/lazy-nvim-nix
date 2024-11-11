@@ -103,15 +103,15 @@
           tests = pkgs.runCommandLocal "run-tests" { inherit localTests; } "touch $out";
 
           checkhealth = pkgs.runCommand "nvim-checkhealth" { } ''
-            ${packages.lazy-nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
+            ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" +checkhealth "+w!$out" +qa
           '';
 
           checkhealth-LazyVim = pkgs.runCommand "nvim-checkhealth" { } ''
-            ${packages.LazyVim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
+            ${lib.getExe packages.LazyVim} --headless "+Lazy! home" +checkhealth "+w!$out" +qa
           '';
 
           startuptime = pkgs.runCommand "nvim-startuptime" { } ''
-            ${packages.lazy-nvim}/bin/nvim --headless "+Lazy! home" --startuptime "$out" +q
+            ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime "$out" +q
           '';
 
           LazyVimPlugins-outdated = pkgs.testers.testEqualContents {
