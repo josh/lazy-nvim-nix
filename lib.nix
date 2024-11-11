@@ -17,19 +17,13 @@ let
       ) attrset
     );
 
-  # lua = import to-lua.outPath { inherit (nixpkgs) lib; };
-  toLuaSrc = builtins.fetchurl {
-    # Get latest commit from https://github.com/nix-community/nixvim/commits/main/lib/to-lua.nix
-    url = "https://raw.githubusercontent.com/nix-community/nixvim/4e2a0221653da2e541dd1197d2afdf87b1c14255/lib/to-lua.nix";
-    sha256 = "1wwh106s6dna9jyhi7qmqn8zr2b32lfj9xns927apnxdwygl7a4v";
-  };
-  lua = import toLuaSrc { inherit lib; };
-  inherit (lua) toLua;
+  toLua = lib.generators.toLua { };
+  inherit (lib.generators) mkLuaInline;
 
   defaultLazyOpts = {
-    root.__raw = ''vim.fn.stdpath("data") .. "/lazy"'';
-    lockfile.__raw = ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
-    state.__raw = ''vim.fn.stdpath("state") .. "/lazy/state.json"'';
+    root = mkLuaInline ''vim.fn.stdpath("data") .. "/lazy"'';
+    lockfile = mkLuaInline ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
+    state = mkLuaInline ''vim.fn.stdpath("state") .. "/lazy/state.json"'';
     install = {
       missing = false;
       colorscheme = [ "habamax" ];
@@ -64,14 +58,15 @@ let
     in
     ''
       vim.opt.rtp:prepend("${lazypath}");
-      require("lazy").setup(${lua.toLua spec}, ${lua.toLua opts})
+      require("lazy").setup(${toLua spec}, ${toLua opts})
     '';
 
 in
 {
   inherit
-    flattenDerivations
     defaultLazyOpts
+    flattenDerivations
+    mkLuaInline
     setupLazyLua
     toLua
     ;

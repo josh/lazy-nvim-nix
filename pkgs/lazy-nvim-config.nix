@@ -1,4 +1,5 @@
 {
+  lib,
   writeTextFile,
   lazynvimPlugins,
   lazynvimUtils,
@@ -32,7 +33,7 @@ writeTextFile {
           url = "folke/tokyonight.nvim";
           lazy = false;
           priority = 1000;
-          config.__raw = ''
+          config = lib.generators.mkLuaInline ''
             function()
               -- load the colorscheme here
               vim.cmd([[colorscheme tokyonight]])
