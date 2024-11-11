@@ -26,7 +26,6 @@
     "nvim-cmp": "hrsh7th/nvim-cmp",
     "nvim-lint": "mfussenegger/nvim-lint",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
-    "nvim-notify": "rcarriga/nvim-notify",
     "nvim-snippets": "garymjr/nvim-snippets",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter-textobjects": "nvim-treesitter/nvim-treesitter-textobjects",
@@ -72,16 +71,18 @@
     "trouble.nvim": "folke/trouble.nvim",
     "which-key.nvim": "folke/which-key.nvim"
   },
-  "lazyvim.plugins.extras.coding.codeium": {
+  "lazyvim.plugins.extras.ai.codeium": {
     "codeium.nvim": "Exafunction/codeium.nvim"
   },
-  "lazyvim.plugins.extras.coding.copilot": {
+  "lazyvim.plugins.extras.ai.copilot": {
     "copilot-cmp": "zbirenbaum/copilot-cmp",
     "copilot.lua": "zbirenbaum/copilot.lua"
   },
-  "lazyvim.plugins.extras.coding.copilot-chat": {
+  "lazyvim.plugins.extras.ai.copilot-chat": {
     "CopilotChat.nvim": "CopilotC-Nvim/CopilotChat.nvim"
   },
+  "lazyvim.plugins.extras.ai.tabnine": {},
+  "lazyvim.plugins.extras.coding.blink": {},
   "lazyvim.plugins.extras.coding.luasnip": {},
   "lazyvim.plugins.extras.coding.mini-comment": {
     "mini.comment": "echasnovski/mini.comment",
@@ -93,7 +94,6 @@
   "lazyvim.plugins.extras.coding.neogen": {
     "neogen": "danymat/neogen"
   },
-  "lazyvim.plugins.extras.coding.tabnine": {},
   "lazyvim.plugins.extras.coding.yanky": {
     "yanky.nvim": "gbprod/yanky.nvim"
   },
@@ -261,8 +261,7 @@
   },
   "lazyvim.plugins.extras.lang.nushell": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
-    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
-    "tree-sitter-nu": "nushell/tree-sitter-nu"
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.ocaml": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
@@ -284,6 +283,10 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
+  "lazyvim.plugins.extras.lang.rego": {
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
+  },
   "lazyvim.plugins.extras.lang.ruby": {
     "mason.nvim": "williamboman/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
@@ -291,7 +294,6 @@
   },
   "lazyvim.plugins.extras.lang.rust": {
     "crates.nvim": "Saecki/crates.nvim",
-    "nvim-cmp": "hrsh7th/nvim-cmp",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
     "rustaceanvim": "mrcjkb/rustaceanvim"
@@ -309,9 +311,7 @@
   },
   "lazyvim.plugins.extras.lang.svelte": {},
   "lazyvim.plugins.extras.lang.tailwind": {
-    "nvim-cmp": "hrsh7th/nvim-cmp",
-    "nvim-lspconfig": "neovim/nvim-lspconfig",
-    "tailwindcss-colorizer-cmp.nvim": "roobert/tailwindcss-colorizer-cmp.nvim"
+    "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.lang.terraform": {
     "mason.nvim": "williamboman/mason.nvim",
@@ -334,6 +334,10 @@
   "lazyvim.plugins.extras.lang.yaml": {
     "SchemaStore.nvim": "b0o/SchemaStore.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig"
+  },
+  "lazyvim.plugins.extras.lang.zig": {
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.linting.eslint": {
     "nvim-lspconfig": "neovim/nvim-lspconfig"
