@@ -112,8 +112,16 @@
           '';
 
           lazyvim-plugins-json = pkgs.runCommand "lazyvim-plugins-json" { } ''
-            ${pkgs.jq}/bin/jq <${packages.LazyVimPlugins} >$out
+            ${pkgs.jq}/bin/jq --sort-keys <${packages.LazyVimPlugins} >$out
           '';
+
+          LazyVim-json-outdated = pkgs.testers.testEqualContents {
+            assertion = "plugins/LazyVim.json out of date";
+            expected = self.checks.${system}.lazyvim-plugins-json;
+            actual = pkgs.runCommandLocal "git-LazyVim-json" { } ''
+              cp ${./plugins/LazyVim.json} $out
+            '';
+          };
 
           LazyVim-extras-catppuccin = plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
