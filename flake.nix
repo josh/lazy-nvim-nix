@@ -27,21 +27,22 @@
       treefmt-nix,
     }:
     let
-      lib = import ./lib.nix { inherit nixpkgs; };
+      inherit (nixpkgs) lib;
+      lib' = import ./lib.nix { inherit nixpkgs; };
       systems = [
         "aarch64-darwin"
         "aarch64-linux"
         "x86_64-darwin"
         "x86_64-linux"
       ];
-      nixpkgs' = nixpkgs.lib.genAttrs systems (
+      nixpkgs' = lib.genAttrs systems (
         system: nixpkgs.legacyPackages.${system}.extend self.overlays.default
       );
-      eachSystem = f: nixpkgs.lib.genAttrs systems (system: f nixpkgs'.${system});
+      eachSystem = f: lib.genAttrs systems (system: f nixpkgs'.${system});
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
     in
     {
-      inherit lib;
+      lib = lib';
 
       packages = eachSystem (
         pkgs:
@@ -65,13 +66,13 @@
 
       overlays.default = final: prev: {
         lazynvimPlugins = final.callPackage ./plugins.nix { };
-        lazynvimUtils = self.lib;
+        lazynvimUtils = lib';
 
         writers = prev.writers // {
           writeLuaTable =
             name: obj:
             final.writers.writeText name ''
-              return ${lib.toLua obj}
+              return ${lib'.toLua obj}
             '';
         };
       };
@@ -81,8 +82,6 @@
         pkgs:
         let
           inherit (pkgs) system;
-          inherit (pkgs) lib;
-          lib' = self.lib;
           packages = self.packages.${system};
           plugins = pkgs.lazynvimPlugins;
 
@@ -105,6 +104,10 @@
 
           checkhealth = pkgs.runCommand "nvim-checkhealth" { } ''
             ${packages.lazy-nvim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
+          '';
+
+          checkhealth-LazyVim = pkgs.runCommand "nvim-checkhealth" { } ''
+            ${packages.LazyVim}/bin/nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
           '';
 
           startuptime = pkgs.runCommand "nvim-startuptime" { } ''
