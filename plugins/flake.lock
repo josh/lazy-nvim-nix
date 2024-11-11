@@ -1713,6 +1713,7 @@
         "project.nvim": "project.nvim",
         "refactoring.nvim": "refactoring.nvim",
         "rustaceanvim": "rustaceanvim",
+        "snacks.nvim": "snacks.nvim",
         "tailwindcss-colorizer-cmp.nvim": "tailwindcss-colorizer-cmp.nvim",
         "telescope-fzf-native.nvim": "telescope-fzf-native.nvim",
         "telescope.nvim": "telescope.nvim",
@@ -1748,6 +1749,23 @@
         "owner": "mrcjkb",
         "ref": "master",
         "repo": "rustaceanvim",
+        "type": "github"
+      }
+    },
+    "snacks.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731319755,
+        "narHash": "sha256-WkYz09wtfBn6QoWkWCAPldMveuLCRUdjG5BxTgXatB4=",
+        "owner": "folke",
+        "repo": "snacks.nvim",
+        "rev": "bc0cf370915ac4e8d5b1bd8188b5091a4a0ee22c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "ref": "main",
+        "repo": "snacks.nvim",
         "type": "github"
       }
     },

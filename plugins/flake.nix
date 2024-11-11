@@ -195,6 +195,8 @@
     "rustaceanvim".url = "github:mrcjkb/rustaceanvim/master";
     "SchemaStore.nvim".flake = false;
     "SchemaStore.nvim".url = "github:b0o/SchemaStore.nvim/main";
+    "snacks.nvim".flake = false;
+    "snacks.nvim".url = "github:folke/snacks.nvim/main";
     "tailwindcss-colorizer-cmp.nvim".flake = false;
     "tailwindcss-colorizer-cmp.nvim".url = "github:roobert/tailwindcss-colorizer-cmp.nvim/main";
     "telescope_hoogle".flake = false;

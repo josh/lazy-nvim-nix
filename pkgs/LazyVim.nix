@@ -42,6 +42,7 @@ lazy-nvim.override {
     plugins."nvim-ts-autotag".spec
     plugins."persistence.nvim".spec
     plugins."plenary.nvim".spec
+    plugins."snacks.nvim".spec
     plugins."telescope-fzf-native.nvim".spec
     plugins."telescope.nvim".spec
     plugins."todo-comments.nvim".spec
