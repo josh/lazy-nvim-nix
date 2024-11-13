@@ -7,6 +7,7 @@
   lazynvimUtils,
   neovimUtils,
   git,
+  fd,
   luajitPackages,
   ripgrep,
   spec ? [ ],
