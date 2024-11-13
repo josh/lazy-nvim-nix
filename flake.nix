@@ -110,13 +110,17 @@
             ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime "$out" +q
           '';
 
-          LazyVimPlugins-outdated = pkgs.testers.testEqualContents {
-            assertion = "plugins/LazyVim.json out of date";
-            expected = self.packages.${system}.LazyVimPlugins;
-            actual = pkgs.runCommandLocal "git-LazyVim-json" { } ''
-              cp ${./plugins/LazyVim.json} $out
-            '';
-          };
+          LazyVimPlugins-outdated =
+            pkgs.runCommand "LazyVimPlugins-outdated"
+              {
+                buildInputs = [ pkgs.diffutils ];
+                actual = self.packages.${system}.LazyVimPlugins;
+                expected = ./plugins/LazyVim.json;
+              }
+              ''
+                diff --unified $actual $expected
+                touch "$out"
+              '';
 
           LazyVim-extras-catppuccin = plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
