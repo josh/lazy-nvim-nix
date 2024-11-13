@@ -19,6 +19,7 @@ let
 
   moreExtraPackages = [
     git
+    fd
     luajitPackages.luarocks
     ripgrep
   ] ++ extraPackages;
