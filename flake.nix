@@ -48,9 +48,7 @@
         {
           default = self.packages.${system}.lazy-nvim;
           LazyVimPlugins = callPackage ./pkgs/lazyvim-plugins.nix { };
-          lazy-nvim-config = callPackage ./pkgs/lazy-nvim-config.nix {
-            inherit (self.packages.${system}) lazy-nvim-config;
-          };
+          lazy-nvim-config = callPackage ./pkgs/lazy-nvim-config.nix { };
           lazy-nvim = callPackage ./pkgs/lazy-nvim.nix { };
           LazyVim = callPackage ./pkgs/LazyVim.nix { inherit (self.packages.${system}) lazy-nvim; };
         }

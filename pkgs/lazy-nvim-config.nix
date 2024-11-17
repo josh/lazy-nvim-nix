@@ -1,12 +1,12 @@
 {
   lib,
+  callPackage,
   writeTextFile,
   lazynvimPlugins,
   lazynvimUtils,
   luaRcContent ? "",
   spec ? [ ],
   opts ? { },
-  lazy-nvim-config,
 }:
 writeTextFile {
   name = "lazy-nvim-init.lua";
@@ -20,7 +20,7 @@ writeTextFile {
   '';
 
   passthru.tests = {
-    example = lazy-nvim-config.override {
+    example = callPackage ./lazy-nvim-config.nix {
       luaRcContent = ''
         vim.g.mapleader = " "
         vim.g.maplocalleader = "\\"
