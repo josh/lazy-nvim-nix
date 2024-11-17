@@ -18,8 +18,7 @@ writeTextFile {
       lazynvimUtils.toLua (lazynvimUtils.defaultLazyOpts // opts)
     })
   '';
-}
-// {
+
   passthru.tests = {
     example = lazy-nvim-config.override {
       luaRcContent = ''
