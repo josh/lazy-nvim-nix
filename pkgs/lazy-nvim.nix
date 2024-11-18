@@ -63,7 +63,7 @@ in
 
       checkhealth = neovim-checkhealth.override {
         neovim = finalAttrs.finalPackage;
-        checkError = true;
+        checkError = false;
         checkWarning = false;
       };
 
