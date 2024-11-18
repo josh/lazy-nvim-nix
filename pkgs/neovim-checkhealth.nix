@@ -40,10 +40,13 @@ runCommand "checkhealth-${pluginName}"
     echo "$ok_count ok, $error_count errors, $warning_count warnings"
 
     if [[ -n "$CHECK_OK" && "$ok_count" -eq 0 ]]; then
+      echo "Expected at least one OK" >&2
       return 1
     elif [[ -n "$CHECK_ERROR" && "$error_count" -gt 0 ]]; then
+      echo "Expected no errors, but were $error_count" >&2
       return 1
     elif [[ -n "$CHECK_WARNING" && "$warning_count" -gt 0 ]]; then
+      echo "Expected no warnings, but were $warning_count" >&2
       return 1
     else
       mv out.txt "$out"
