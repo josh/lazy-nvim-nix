@@ -6,6 +6,7 @@
   lazynvimPlugins,
   lazynvimUtils,
   neovimUtils,
+  neovim-checkhealth,
   git,
   fd,
   luajitPackages,
@@ -60,9 +61,11 @@ in
         nvim --help 2>&1 >$out 
       '';
 
-      checkhealth = runCommand "nvim-checkhealth" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
-        nvim --headless "+Lazy! home" +checkhealth "+w!$out" +qa
-      '';
+      checkhealth = neovim-checkhealth.override {
+        neovim = finalAttrs.finalPackage;
+        checkError = true;
+        checkWarning = false;
+      };
 
       startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
         nvim --headless "+Lazy! home" --startuptime "$out" +q

@@ -2,11 +2,12 @@
   lazy-nvim,
   lazynvimPlugins,
   lazygit,
+  neovim-checkhealth,
 }:
 let
   plugins = lazynvimPlugins;
 in
-lazy-nvim.override {
+(lazy-nvim.override {
   spec = [
     (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
@@ -72,4 +73,15 @@ lazy-nvim.override {
   ];
 
   extraPackages = [ lazygit ];
-}
+}).overrideAttrs
+  (
+    finalAttrs: previousAttrs: {
+      passthru.tests = previousAttrs.passthru.tests // {
+        checkhealth = neovim-checkhealth.override {
+          neovim = finalAttrs.finalPackage;
+          checkError = false;
+          checkWarning = false;
+        };
+      };
+    }
+  )

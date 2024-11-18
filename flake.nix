@@ -49,8 +49,14 @@
           default = self.packages.${system}.lazy-nvim;
           LazyVimPlugins = callPackage ./pkgs/lazyvim-plugins.nix { };
           lazy-nvim-config = callPackage ./pkgs/lazy-nvim-config.nix { };
-          lazy-nvim = callPackage ./pkgs/lazy-nvim.nix { };
-          LazyVim = callPackage ./pkgs/LazyVim.nix { inherit (self.packages.${system}) lazy-nvim; };
+          lazy-nvim = callPackage ./pkgs/lazy-nvim.nix {
+            inherit (self.packages.${system}) neovim-checkhealth;
+          };
+          LazyVim = callPackage ./pkgs/LazyVim.nix {
+            inherit (self.packages.${system}) lazy-nvim;
+            inherit (self.packages.${system}) neovim-checkhealth;
+          };
+          neovim-checkhealth = callPackage ./pkgs/neovim-checkhealth.nix { };
         }
       );
 
@@ -95,14 +101,6 @@
 
           build = pkgs.runCommandLocal "build-packages" { inherit localPkgs; } "touch $out";
           tests = pkgs.runCommandLocal "run-tests" { inherit localTests; } "touch $out";
-
-          checkhealth = pkgs.runCommand "nvim-checkhealth" { } ''
-            ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" +checkhealth "+w!$out" +qa
-          '';
-
-          checkhealth-LazyVim = pkgs.runCommand "nvim-checkhealth" { } ''
-            ${lib.getExe packages.LazyVim} --headless "+Lazy! home" +checkhealth "+w!$out" +qa
-          '';
 
           startuptime = pkgs.runCommand "nvim-startuptime" { } ''
             ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime "$out" +q
