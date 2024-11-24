@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1731336248,
-        "narHash": "sha256-VrEf+NXBrcDS05wekPQ8UYvV98s9SnmUdO8g856D5R0=",
+        "lastModified": 1732316743,
+        "narHash": "sha256-RUImEy9qQnrSInlwpPG8uTkPkG0rDnhtjCRAQc3CVMk=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "ea266e73265e32183acbec0bd39f8108e213770f",
+        "rev": "ecfaed3cc1cbe3013f1201594adde2ea0022c455",
         "type": "github"
       },
       "original": {
@@ -1714,6 +1714,7 @@
         "refactoring.nvim": "refactoring.nvim",
         "rustaceanvim": "rustaceanvim",
         "snacks.nvim": "snacks.nvim",
+        "supermaven-nvim": "supermaven-nvim",
         "tailwindcss-colorizer-cmp.nvim": "tailwindcss-colorizer-cmp.nvim",
         "telescope-fzf-native.nvim": "telescope-fzf-native.nvim",
         "telescope.nvim": "telescope.nvim",
@@ -1766,6 +1767,23 @@
         "owner": "folke",
         "ref": "main",
         "repo": "snacks.nvim",
+        "type": "github"
+      }
+    },
+    "supermaven-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1728314930,
+        "narHash": "sha256-1z3WKIiikQqoweReUyK5O8MWSRN5y95qcxM6qzlKMME=",
+        "owner": "supermaven-inc",
+        "repo": "supermaven-nvim",
+        "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "supermaven-inc",
+        "ref": "main",
+        "repo": "supermaven-nvim",
         "type": "github"
       }
     },

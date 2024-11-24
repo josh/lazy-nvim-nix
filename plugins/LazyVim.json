@@ -6,7 +6,6 @@
     "cmp-nvim-lsp": "hrsh7th/cmp-nvim-lsp",
     "cmp-path": "hrsh7th/cmp-path",
     "conform.nvim": "stevearc/conform.nvim",
-    "dashboard-nvim": "nvimdev/dashboard-nvim",
     "flash.nvim": "folke/flash.nvim",
     "friendly-snippets": "rafamadriz/friendly-snippets",
     "gitsigns.nvim": "lewis6991/gitsigns.nvim",
@@ -32,6 +31,7 @@
     "nvim-ts-autotag": "windwp/nvim-ts-autotag",
     "persistence.nvim": "folke/persistence.nvim",
     "plenary.nvim": "nvim-lua/plenary.nvim",
+    "snacks.nvim": "folke/snacks.nvim",
     "todo-comments.nvim": "folke/todo-comments.nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim",
     "trouble.nvim": "folke/trouble.nvim",
@@ -75,11 +75,13 @@
     "codeium.nvim": "Exafunction/codeium.nvim"
   },
   "lazyvim.plugins.extras.ai.copilot": {
-    "copilot-cmp": "zbirenbaum/copilot-cmp",
     "copilot.lua": "zbirenbaum/copilot.lua"
   },
   "lazyvim.plugins.extras.ai.copilot-chat": {
     "CopilotChat.nvim": "CopilotC-Nvim/CopilotChat.nvim"
+  },
+  "lazyvim.plugins.extras.ai.supermaven": {
+    "supermaven-nvim": "supermaven-inc/supermaven-nvim"
   },
   "lazyvim.plugins.extras.ai.tabnine": {},
   "lazyvim.plugins.extras.coding.blink": {},
@@ -156,6 +158,9 @@
     "refactoring.nvim": "ThePrimeagen/refactoring.nvim"
   },
   "lazyvim.plugins.extras.editor.telescope": {},
+  "lazyvim.plugins.extras.formatting.biome": {
+    "mason.nvim": "williamboman/mason.nvim"
+  },
   "lazyvim.plugins.extras.formatting.black": {
     "mason.nvim": "williamboman/mason.nvim"
   },
@@ -354,7 +359,12 @@
     "nvim-nio": "nvim-neotest/nvim-nio"
   },
   "lazyvim.plugins.extras.ui.alpha": {
-    "alpha-nvim": "goolord/alpha-nvim"
+    "alpha-nvim": "goolord/alpha-nvim",
+    "snacks.nvim": "folke/snacks.nvim"
+  },
+  "lazyvim.plugins.extras.ui.dashboard-nvim": {
+    "dashboard-nvim": "nvimdev/dashboard-nvim",
+    "snacks.nvim": "folke/snacks.nvim"
   },
   "lazyvim.plugins.extras.ui.edgy": {
     "edgy.nvim": "folke/edgy.nvim"
@@ -367,7 +377,8 @@
     "mini.indentscope": "echasnovski/mini.indentscope"
   },
   "lazyvim.plugins.extras.ui.mini-starter": {
-    "mini.starter": "echasnovski/mini.starter"
+    "mini.starter": "echasnovski/mini.starter",
+    "snacks.nvim": "folke/snacks.nvim"
   },
   "lazyvim.plugins.extras.ui.treesitter-context": {
     "nvim-treesitter-context": "nvim-treesitter/nvim-treesitter-context"
