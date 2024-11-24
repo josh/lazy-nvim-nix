@@ -85,22 +85,17 @@
           packages = self.packages.${system};
           plugins = pkgs.lazynvimPlugins;
 
-          localPkgs = lib'.flattenDerivations (
-            self.packages.${system} // { inherit (pkgs) lazynvimPlugins; }
-          );
-          localTests = lib.concatMap (
-            pkg:
-            if (builtins.hasAttr "passthru" pkg) && (builtins.hasAttr "tests" pkg.passthru) then
-              (builtins.attrValues pkg.passthru.tests)
+          addAttrsetPrefix = prefix: lib.attrsets.concatMapAttrs (n: v: { "${prefix}${n}" = v; });
+          localTests = lib.attrsets.concatMapAttrs (
+            pkgName: pkg:
+            if (builtins.hasAttr "tests" pkg) then
+              ({ "${pkgName}-build" = pkg; } // (addAttrsetPrefix "${pkgName}-tests-" pkg.tests))
             else
-              [ ]
-          ) localPkgs;
+              { "${pkgName}-build" = pkg; }
+          ) self.packages.${system};
         in
         {
           formatting = treefmtEval.${system}.config.build.check self;
-
-          build = pkgs.runCommandLocal "build-packages" { inherit localPkgs; } "touch $out";
-          tests = pkgs.runCommandLocal "run-tests" { inherit localTests; } "touch $out";
 
           startuptime = pkgs.runCommand "nvim-startuptime" { } ''
             ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime "$out" +q
@@ -123,6 +118,7 @@
             buildInputs = lib'.flattenDerivations plugins.LazyVim.extras;
           } "touch $out";
         }
+        // localTests
       );
     };
 }
