@@ -67,6 +67,28 @@ in
         checkWarning = false;
       };
 
+      checkhealth-nvim = neovim-checkhealth.override {
+        neovim = finalAttrs.finalPackage;
+        pluginName = "nvim";
+        checkError = true;
+        checkWarning = true;
+      };
+
+      checkhealth-lazy = neovim-checkhealth.override {
+        neovim = finalAttrs.finalPackage;
+        pluginName = "lazy";
+        checkError = true;
+        # WARNING {lua5.1} or {lua} or {lua-5.1} version `5.1` not installed
+        checkWarning = false;
+      };
+
+      checkhealth-vim-treesitter = neovim-checkhealth.override {
+        neovim = finalAttrs.finalPackage;
+        pluginName = "vim.treesitter";
+        checkError = true;
+        checkWarning = true;
+      };
+
       startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
         nvim --headless "+Lazy! home" --startuptime "$out" +q
       '';
