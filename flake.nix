@@ -44,19 +44,25 @@
         pkgs:
         let
           inherit (pkgs) system callPackage;
+          packages = self.packages.${system};
         in
         {
-          default = self.packages.${system}.lazy-nvim;
+          default = packages.lazy-nvim;
           LazyVimPlugins = callPackage ./pkgs/lazyvim-plugins.nix { };
           lazy-nvim-config = callPackage ./pkgs/lazy-nvim-config.nix { };
           lazy-nvim = callPackage ./pkgs/lazy-nvim.nix {
-            inherit (self.packages.${system}) neovim-checkhealth;
+            inherit (packages) neovim-checkhealth;
           };
           LazyVim = callPackage ./pkgs/LazyVim.nix {
-            inherit (self.packages.${system}) lazy-nvim;
-            inherit (self.packages.${system}) neovim-checkhealth;
+            inherit (packages) lazy-nvim neovim-checkhealth;
           };
           neovim-checkhealth = callPackage ./pkgs/neovim-checkhealth.nix { };
+          lazy-neovide = callPackage ./pkgs/lazy-neovide.nix {
+            neovim = packages.lazy-nvim;
+          };
+          LazyVim-neovide = callPackage ./pkgs/lazy-neovide.nix {
+            neovim = packages.LazyVim;
+          };
         }
       );
 
