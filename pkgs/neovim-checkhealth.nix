@@ -1,7 +1,9 @@
 {
   lib,
+  stdenv,
   runCommand,
   neovim,
+  glibcLocales,
   pluginName ? "all",
   loadLazyPluginName ? null,
   checkOk ? true,
@@ -16,6 +18,8 @@ runCommand "checkhealth-${pluginName}"
     CHECK_OK = if checkOk then "1" else "";
     CHECK_ERROR = if checkError then "1" else "";
     CHECK_WARNING = if checkWarning then "1" else "";
+    LOCALE_ARCHIVE = lib.optionalString stdenv.isLinux "${glibcLocales}/lib/locale/locale-archive";
+    LANG = "en_US.UTF-8";
   }
   ''
     mkdir -p .config/nvim
