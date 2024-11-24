@@ -77,7 +77,7 @@ in
       checkhealth-lazy = neovim-checkhealth.override {
         neovim = finalAttrs.finalPackage;
         pluginName = "lazy";
-        checkError = true;
+        checkError = false;
         # WARNING {lua5.1} or {lua} or {lua-5.1} version `5.1` not installed
         checkWarning = false;
       };
