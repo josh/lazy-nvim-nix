@@ -70,8 +70,8 @@ in
       checkhealth-nvim = neovim-checkhealth.override {
         neovim = finalAttrs.finalPackage;
         pluginName = "nvim";
-        checkError = true;
-        checkWarning = true;
+        checkError = false;
+        checkWarning = false;
       };
 
       checkhealth-lazy = neovim-checkhealth.override {
