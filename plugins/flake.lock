@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1732316743,
-        "narHash": "sha256-RUImEy9qQnrSInlwpPG8uTkPkG0rDnhtjCRAQc3CVMk=",
+        "lastModified": 1732723877,
+        "narHash": "sha256-4FAHqlkguF1l1dzj5bhmFfP2FzIy6C8791FyPLgpAuE=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "ecfaed3cc1cbe3013f1201594adde2ea0022c455",
+        "rev": "13dc88a3173bf7313a2510b8927c1fe78cfaa35e",
         "type": "github"
       },
       "original": {
@@ -1713,6 +1713,7 @@
         "project.nvim": "project.nvim",
         "refactoring.nvim": "refactoring.nvim",
         "rustaceanvim": "rustaceanvim",
+        "smear-cursor.nvim": "smear-cursor.nvim",
         "snacks.nvim": "snacks.nvim",
         "supermaven-nvim": "supermaven-nvim",
         "tailwindcss-colorizer-cmp.nvim": "tailwindcss-colorizer-cmp.nvim",
@@ -1750,6 +1751,23 @@
         "owner": "mrcjkb",
         "ref": "master",
         "repo": "rustaceanvim",
+        "type": "github"
+      }
+    },
+    "smear-cursor.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732750778,
+        "narHash": "sha256-uBAj3WxOGtrrLuKst5AfwarBGPUxklD0sT7lwlbRQI4=",
+        "owner": "sphamba",
+        "repo": "smear-cursor.nvim",
+        "rev": "5e31ab1c47e464b17e685ec6f6210d78bb73c3e7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sphamba",
+        "ref": "main",
+        "repo": "smear-cursor.nvim",
         "type": "github"
       }
     },

@@ -13,7 +13,6 @@
     "indent-blankline.nvim": "lukas-reineke/indent-blankline.nvim",
     "lazydev.nvim": "folke/lazydev.nvim",
     "lualine.nvim": "nvim-lualine/lualine.nvim",
-    "luvit-meta": "Bilal2453/luvit-meta",
     "mason-lspconfig.nvim": "williamboman/mason-lspconfig.nvim",
     "mason.nvim": "williamboman/mason.nvim",
     "mini.ai": "echasnovski/mini.ai",
@@ -44,7 +43,6 @@
     "cmp-path": "hrsh7th/cmp-path",
     "friendly-snippets": "rafamadriz/friendly-snippets",
     "lazydev.nvim": "folke/lazydev.nvim",
-    "luvit-meta": "Bilal2453/luvit-meta",
     "mini.ai": "echasnovski/mini.ai",
     "mini.pairs": "echasnovski/mini.pairs",
     "nvim-cmp": "hrsh7th/nvim-cmp",
@@ -379,6 +377,9 @@
   "lazyvim.plugins.extras.ui.mini-starter": {
     "mini.starter": "echasnovski/mini.starter",
     "snacks.nvim": "folke/snacks.nvim"
+  },
+  "lazyvim.plugins.extras.ui.smear-cursor": {
+    "smear-cursor.nvim": "sphamba/smear-cursor.nvim"
   },
   "lazyvim.plugins.extras.ui.treesitter-context": {
     "nvim-treesitter-context": "nvim-treesitter/nvim-treesitter-context"

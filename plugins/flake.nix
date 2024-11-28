@@ -195,6 +195,8 @@
     "refactoring.nvim".url = "github:ThePrimeagen/refactoring.nvim/master";
     "rustaceanvim".flake = false;
     "rustaceanvim".url = "github:mrcjkb/rustaceanvim/master";
+    "smear-cursor.nvim".flake = false;
+    "smear-cursor.nvim".url = "github:sphamba/smear-cursor.nvim/main";
     "snacks.nvim".flake = false;
     "snacks.nvim".url = "github:folke/snacks.nvim/main";
     "supermaven-nvim".flake = false;
