@@ -9,5 +9,5 @@
     "automerge": true
   },
   "timezone": "America/Los_Angeles",
-  "schedule": ["before 4am"]
+  "schedule": ["at any time"]
 }
