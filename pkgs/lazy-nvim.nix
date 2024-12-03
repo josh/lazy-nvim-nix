@@ -70,14 +70,14 @@ in
         checkhealth = neovim-checkhealth.override {
           inherit neovim;
           checkError = true;
-          checkWarning = false;
+          checkWarning = true;
         };
 
         checkhealth-nvim = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "nvim";
           checkError = true;
-          checkWarning = false;
+          checkWarning = true;
         };
 
         checkhealth-lazy = neovim-checkhealth.override {
