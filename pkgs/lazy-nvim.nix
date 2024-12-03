@@ -56,50 +56,54 @@ let
 in
 (wrapNeovimUnstable neovim-unwrapped finalConfig).overrideAttrs (
   finalAttrs: _previousAttrs: {
-    passthru.tests = {
-      help = runCommand "nvim-help" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
-        nvim --help 2>&1 >$out
-      '';
-
-      checkhealth = neovim-checkhealth.override {
+    passthru.tests =
+      let
         neovim = finalAttrs.finalPackage;
-        checkError = true;
-        checkWarning = false;
-      };
+      in
+      {
+        help = runCommand "nvim-help" { nativeBuildInputs = [ neovim ]; } ''
+          nvim --help 2>&1 >$out
+        '';
 
-      checkhealth-nvim = neovim-checkhealth.override {
-        neovim = finalAttrs.finalPackage;
-        pluginName = "nvim";
-        checkError = true;
-        checkWarning = false;
-      };
+        checkhealth = neovim-checkhealth.override {
+          inherit neovim;
+          checkError = true;
+          checkWarning = false;
+        };
 
-      checkhealth-lazy = neovim-checkhealth.override {
-        neovim = finalAttrs.finalPackage;
-        pluginName = "lazy";
-        checkError = true;
-        # WARNING {lua5.1} or {lua} or {lua-5.1} version `5.1` not installed
-        checkWarning = false;
-      };
+        checkhealth-nvim = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "nvim";
+          checkError = true;
+          checkWarning = false;
+        };
 
-      checkhealth-vim-lsp = neovim-checkhealth.override {
-        neovim = finalAttrs.finalPackage;
-        pluginName = "vim.lsp";
-        checkError = true;
-        checkWarning = true;
-        checkOk = false;
-      };
+        checkhealth-lazy = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "lazy";
+          checkError = true;
+          # WARNING {lua5.1} or {lua} or {lua-5.1} version `5.1` not installed
+          checkWarning = false;
+        };
 
-      checkhealth-vim-treesitter = neovim-checkhealth.override {
-        neovim = finalAttrs.finalPackage;
-        pluginName = "vim.treesitter";
-        checkError = true;
-        checkWarning = true;
-      };
+        checkhealth-vim-lsp = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "vim.lsp";
+          checkError = true;
+          checkWarning = true;
+          checkOk = false;
+        };
 
-      startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
-        nvim --headless "+Lazy! home" --startuptime "$out" +q
-      '';
-    };
+        checkhealth-vim-treesitter = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "vim.treesitter";
+          checkError = true;
+          checkWarning = true;
+        };
+
+        startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ neovim ]; } ''
+          nvim --headless "+Lazy! home" --startuptime "$out" +q
+        '';
+      };
   }
 )
