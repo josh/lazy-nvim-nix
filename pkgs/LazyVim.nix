@@ -75,12 +75,71 @@ in
   extraPackages = [ lazygit ];
 }).overrideAttrs
   (
-    finalAttrs: previousAttrs: {
+    finalAttrs: previousAttrs:
+    let
+      neovim = finalAttrs.finalPackage;
+    in
+    {
       passthru.tests = previousAttrs.passthru.tests // {
         checkhealth = neovim-checkhealth.override {
-          neovim = finalAttrs.finalPackage;
+          inherit neovim;
           checkError = false;
           checkWarning = false;
+        };
+
+        checkhealth-lazyvim = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "lazyvim";
+          checkError = true;
+          checkWarning = true;
+        };
+
+        checkhealth-lspconfig = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "lspconfig";
+          loadLazyPluginName = "nvim-lspconfig";
+          checkError = true;
+          checkWarning = true;
+        };
+
+        checkhealth-mason = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "mason";
+          loadLazyPluginName = "mason.nvim";
+          checkError = false;
+          checkWarning = false;
+        };
+
+        checkhealth-noice = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "noice";
+          loadLazyPluginName = "noice.nvim";
+          checkError = true;
+          checkWarning = false;
+        };
+
+        checkhealth-snacks = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "snacks";
+          loadLazyPluginName = "snacks.nvim";
+          checkError = false;
+          checkWarning = false;
+        };
+
+        checkhealth-telescope = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "telescope";
+          loadLazyPluginName = "telescope.nvim";
+          checkError = true;
+          checkWarning = false;
+        };
+
+        checkhealth-which-key = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "which-key";
+          loadLazyPluginName = "which-key.nvim";
+          checkError = true;
+          checkWarning = true;
         };
       };
     }
