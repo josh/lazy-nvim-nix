@@ -70,7 +70,8 @@ in
         checkhealth = neovim-checkhealth.override {
           inherit neovim;
           checkError = true;
-          checkWarning = true;
+          # WARNING No clipboard tool found. Clipboard registers (`"+` and `"*`) will not work.
+          checkWarning = false;
         };
 
         checkhealth-nvim = neovim-checkhealth.override {
