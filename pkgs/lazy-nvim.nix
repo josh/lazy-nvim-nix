@@ -9,6 +9,7 @@
   neovim-checkhealth,
   git,
   fd,
+  lua5_1,
   luajitPackages,
   ripgrep,
   spec ? [ ],
@@ -20,8 +21,9 @@ let
   opts = lazynvimUtils.defaultLazyOpts;
 
   moreExtraPackages = [
-    git
     fd
+    git
+    lua5_1
     luajitPackages.luarocks
     ripgrep
   ] ++ extraPackages;
@@ -82,8 +84,7 @@ in
           inherit neovim;
           pluginName = "lazy";
           checkError = true;
-          # WARNING {lua5.1} or {lua} or {lua-5.1} version `5.1` not installed
-          checkWarning = false;
+          checkWarning = true;
         };
 
         checkhealth-vim-lsp = neovim-checkhealth.override {
