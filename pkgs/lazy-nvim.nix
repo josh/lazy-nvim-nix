@@ -58,7 +58,7 @@ in
   finalAttrs: _previousAttrs: {
     passthru.tests = {
       help = runCommand "nvim-help" { nativeBuildInputs = [ finalAttrs.finalPackage ]; } ''
-        nvim --help 2>&1 >$out 
+        nvim --help 2>&1 >$out
       '';
 
       checkhealth = neovim-checkhealth.override {
@@ -70,14 +70,14 @@ in
       checkhealth-nvim = neovim-checkhealth.override {
         neovim = finalAttrs.finalPackage;
         pluginName = "nvim";
-        checkError = false;
+        checkError = true;
         checkWarning = false;
       };
 
       checkhealth-lazy = neovim-checkhealth.override {
         neovim = finalAttrs.finalPackage;
         pluginName = "lazy";
-        checkError = false;
+        checkError = true;
         # WARNING {lua5.1} or {lua} or {lua-5.1} version `5.1` not installed
         checkWarning = false;
       };
