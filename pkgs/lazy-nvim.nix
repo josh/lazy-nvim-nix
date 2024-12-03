@@ -82,6 +82,14 @@ in
         checkWarning = false;
       };
 
+      checkhealth-vim-lsp = neovim-checkhealth.override {
+        neovim = finalAttrs.finalPackage;
+        pluginName = "vim.lsp";
+        checkError = true;
+        checkWarning = true;
+        checkOk = false;
+      };
+
       checkhealth-vim-treesitter = neovim-checkhealth.override {
         neovim = finalAttrs.finalPackage;
         pluginName = "vim.treesitter";
