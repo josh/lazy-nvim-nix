@@ -106,7 +106,15 @@ in
           inherit neovim;
           pluginName = "mason";
           loadLazyPluginName = "mason.nvim";
+          # ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed.
+          # ERROR curl: not available
           checkError = false;
+          # WARNING unzip: not available
+          # WARNING wget: not available
+          # WARNING pip: not available
+          # WARNING python venv: not available
+          # WARNING cargo: not available
+          # WARNING Ruby: not available
           checkWarning = false;
         };
 
@@ -115,6 +123,9 @@ in
           pluginName = "noice";
           loadLazyPluginName = "noice.nvim";
           checkError = true;
+          # WARNING *Neovim* >= 0.11 is highly recommended
+          # WARNING {TreeSitter} `regex` parser is not installed
+          # WARNING {TreeSitter} `bash` parser is not installed
           checkWarning = false;
         };
 
@@ -122,7 +133,9 @@ in
           inherit neovim;
           pluginName = "snacks";
           loadLazyPluginName = "snacks.nvim";
+          # Snacks.notifier: ERROR is not ready
           checkError = false;
+          # Snacks.statuscolumn: WARNING setup {disabled}
           checkWarning = false;
         };
 
@@ -131,6 +144,7 @@ in
           pluginName = "telescope";
           loadLazyPluginName = "telescope.nvim";
           checkError = true;
+          # WARNING nvim-treesitter not found. (Required for `:Telescope treesitter`.)
           checkWarning = false;
         };
 
