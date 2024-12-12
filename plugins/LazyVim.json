@@ -2,15 +2,10 @@
   "lazyvim.plugins": {
     "bufferline.nvim": "akinsho/bufferline.nvim",
     "catppuccin": "catppuccin/nvim",
-    "cmp-buffer": "hrsh7th/cmp-buffer",
-    "cmp-nvim-lsp": "hrsh7th/cmp-nvim-lsp",
-    "cmp-path": "hrsh7th/cmp-path",
     "conform.nvim": "stevearc/conform.nvim",
     "flash.nvim": "folke/flash.nvim",
-    "friendly-snippets": "rafamadriz/friendly-snippets",
     "gitsigns.nvim": "lewis6991/gitsigns.nvim",
     "grug-far.nvim": "MagicDuck/grug-far.nvim",
-    "indent-blankline.nvim": "lukas-reineke/indent-blankline.nvim",
     "lazydev.nvim": "folke/lazydev.nvim",
     "lualine.nvim": "nvim-lualine/lualine.nvim",
     "mason-lspconfig.nvim": "williamboman/mason-lspconfig.nvim",
@@ -21,42 +16,32 @@
     "neo-tree.nvim": "nvim-neo-tree/neo-tree.nvim",
     "noice.nvim": "folke/noice.nvim",
     "nui.nvim": "MunifTanjim/nui.nvim",
-    "nvim-cmp": "hrsh7th/nvim-cmp",
     "nvim-lint": "mfussenegger/nvim-lint",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
-    "nvim-snippets": "garymjr/nvim-snippets",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter-textobjects": "nvim-treesitter/nvim-treesitter-textobjects",
     "nvim-ts-autotag": "windwp/nvim-ts-autotag",
     "persistence.nvim": "folke/persistence.nvim",
     "plenary.nvim": "nvim-lua/plenary.nvim",
-    "snacks.nvim": "folke/snacks.nvim",
     "todo-comments.nvim": "folke/todo-comments.nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim",
     "trouble.nvim": "folke/trouble.nvim",
     "ts-comments.nvim": "folke/ts-comments.nvim",
     "which-key.nvim": "folke/which-key.nvim"
   },
-  "lazyvim.plugins.coding": {
-    "cmp-buffer": "hrsh7th/cmp-buffer",
-    "cmp-nvim-lsp": "hrsh7th/cmp-nvim-lsp",
-    "cmp-path": "hrsh7th/cmp-path",
-    "friendly-snippets": "rafamadriz/friendly-snippets",
-    "lazydev.nvim": "folke/lazydev.nvim",
-    "mini.ai": "echasnovski/mini.ai",
-    "mini.pairs": "echasnovski/mini.pairs",
-    "nvim-cmp": "hrsh7th/nvim-cmp",
-    "nvim-snippets": "garymjr/nvim-snippets",
-    "ts-comments.nvim": "folke/ts-comments.nvim"
-  },
+  "lazyvim.plugins.coding": {},
   "lazyvim.plugins.colorscheme": {
     "catppuccin": "catppuccin/nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim"
   },
   "lazyvim.plugins.compat.nvim-0_9": {
+    "cmp-buffer": "hrsh7th/cmp-buffer",
+    "cmp-nvim-lsp": "hrsh7th/cmp-nvim-lsp",
+    "cmp-path": "hrsh7th/cmp-path",
     "lazydev.nvim": "folke/lazydev.nvim",
     "mini.comment": "echasnovski/mini.comment",
     "neodev.nvim": "folke/neodev.nvim",
+    "nvim-cmp": "hrsh7th/nvim-cmp",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-ts-context-commentstring": "JoosepAlviste/nvim-ts-context-commentstring"
   },
@@ -93,6 +78,14 @@
   },
   "lazyvim.plugins.extras.coding.neogen": {
     "neogen": "danymat/neogen"
+  },
+  "lazyvim.plugins.extras.coding.nvim-cmp": {
+    "cmp-buffer": "hrsh7th/cmp-buffer",
+    "cmp-nvim-lsp": "hrsh7th/cmp-nvim-lsp",
+    "cmp-path": "hrsh7th/cmp-path",
+    "friendly-snippets": "rafamadriz/friendly-snippets",
+    "nvim-cmp": "hrsh7th/nvim-cmp",
+    "nvim-snippets": "garymjr/nvim-snippets"
   },
   "lazyvim.plugins.extras.coding.yanky": {
     "yanky.nvim": "gbprod/yanky.nvim"
@@ -209,7 +202,6 @@
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.git": {
-    "cmp-git": "petertriho/cmp-git",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.gleam": {
@@ -367,11 +359,13 @@
   "lazyvim.plugins.extras.ui.edgy": {
     "edgy.nvim": "folke/edgy.nvim"
   },
+  "lazyvim.plugins.extras.ui.indent-blankline": {
+    "indent-blankline.nvim": "lukas-reineke/indent-blankline.nvim"
+  },
   "lazyvim.plugins.extras.ui.mini-animate": {
     "mini.animate": "echasnovski/mini.animate"
   },
   "lazyvim.plugins.extras.ui.mini-indentscope": {
-    "indent-blankline.nvim": "lukas-reineke/indent-blankline.nvim",
     "mini.indentscope": "echasnovski/mini.indentscope"
   },
   "lazyvim.plugins.extras.ui.mini-starter": {
@@ -401,7 +395,6 @@
     "mini.hipatterns": "echasnovski/mini.hipatterns"
   },
   "lazyvim.plugins.extras.util.octo": {
-    "cmp-git": "petertriho/cmp-git",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
     "octo.nvim": "pwntester/octo.nvim"
   },
