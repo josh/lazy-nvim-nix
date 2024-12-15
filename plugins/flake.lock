@@ -136,6 +136,23 @@
         "type": "github"
       }
     },
+    "blink.cmp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734301222,
+        "narHash": "sha256-JiJi/qf+3OBAMF01FNEwAhnRiB6k5bFl9zX0e6c5G+s=",
+        "owner": "saghen",
+        "repo": "blink.cmp",
+        "rev": "12ffc10c6283ac148a89d72b5540d819fc80e2ff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "saghen",
+        "ref": "main",
+        "repo": "blink.cmp",
+        "type": "github"
+      }
+    },
     "bufferline.nvim": {
       "flake": false,
       "locked": {
@@ -1625,6 +1642,7 @@
         "aerial.nvim": "aerial.nvim",
         "alpha-nvim": "alpha-nvim",
         "baleia.nvim": "baleia.nvim",
+        "blink.cmp": "blink.cmp",
         "bufferline.nvim": "bufferline.nvim",
         "catppuccin": "catppuccin",
         "chezmoi.nvim": "chezmoi.nvim",

@@ -19,6 +19,8 @@
     "alpha-nvim".url = "github:goolord/alpha-nvim/main";
     "baleia.nvim".flake = false;
     "baleia.nvim".url = "github:m00qek/baleia.nvim/main";
+    "blink.cmp".flake = false;
+    "blink.cmp".url = "github:saghen/blink.cmp/main";
     "bufferline.nvim".flake = false;
     "bufferline.nvim".url = "github:akinsho/bufferline.nvim/main";
     "catppuccin".flake = false;
