@@ -1,6 +1,8 @@
 {
   lazy-nvim,
   lazynvimPlugins,
+  curl,
+  fzf,
   lazygit,
   neovim-checkhealth,
 }:
@@ -72,7 +74,11 @@ in
     }
   ];
 
-  extraPackages = [ lazygit ];
+  extraPackages = [
+    curl
+    fzf
+    lazygit
+  ];
 }).overrideAttrs
   (
     finalAttrs: previousAttrs:
