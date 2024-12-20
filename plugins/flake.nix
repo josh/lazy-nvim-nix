@@ -3,6 +3,7 @@
 # "github:NixOS/nixpkgs/nixpkgs-unstable"
 {
   inputs = {
+    # keep-sorted start
     "CopilotChat.nvim".flake = false;
     "CopilotChat.nvim".url = "github:CopilotC-Nvim/CopilotChat.nvim/main";
     "LazyVim".flake = false;
@@ -241,6 +242,7 @@
     "which-key.nvim".url = "github:folke/which-key.nvim/main";
     "yanky.nvim".flake = false;
     "yanky.nvim".url = "github:gbprod/yanky.nvim/main";
+    # keep-sorted end
   };
 
   outputs = _inputs: { };
