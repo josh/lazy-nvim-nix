@@ -67,7 +67,10 @@
     "supermaven-nvim": "supermaven-inc/supermaven-nvim"
   },
   "lazyvim.plugins.extras.ai.tabnine": {},
-  "lazyvim.plugins.extras.coding.blink": {},
+  "lazyvim.plugins.extras.coding.blink": {
+    "blink.cmp": "saghen/blink.cmp",
+    "friendly-snippets": "rafamadriz/friendly-snippets"
+  },
   "lazyvim.plugins.extras.coding.luasnip": {},
   "lazyvim.plugins.extras.coding.mini-comment": {
     "mini.comment": "echasnovski/mini.comment",
@@ -112,7 +115,6 @@
     "harpoon": "ThePrimeagen/harpoon"
   },
   "lazyvim.plugins.extras.editor.illuminate": {
-    "nvim-lspconfig": "neovim/nvim-lspconfig",
     "vim-illuminate": "RRethy/vim-illuminate"
   },
   "lazyvim.plugins.extras.editor.inc-rename": {
