@@ -1,12 +1,25 @@
 {
   lazy-nvim,
   lazynvimPlugins,
+  # keep-sorted start
+  cargo,
+  chafa,
   curl,
   fzf,
-  chafa,
-  viu,
-  ueberzugpp,
+  gnutar,
+  go,
+  gzip,
   lazygit,
+  nodePackages,
+  php83,
+  php83Packages,
+  python312Packages,
+  ruby,
+  ueberzugpp,
+  unzip,
+  viu,
+  wget,
+  # keep-sorted end
   neovim-checkhealth,
 }:
 let
@@ -78,6 +91,21 @@ in
     chafa
     viu
     ueberzugpp
+
+    # mason
+    unzip
+    wget
+    curl
+    gzip
+    gnutar
+    go
+    php83
+    php83Packages.composer
+    python312Packages.python
+    python312Packages.pip
+    cargo
+    ruby
+    nodePackages.nodejs
   ];
 }).overrideAttrs
   (
@@ -129,14 +157,9 @@ in
           pluginName = "mason";
           loadLazyPluginName = "mason.nvim";
           # ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed.
-          # ERROR curl: not available
           checkError = false;
-          # WARNING unzip: not available
-          # WARNING wget: not available
-          # WARNING pip: not available
-          # WARNING python venv: not available
-          # WARNING cargo: not available
-          # WARNING Ruby: not available
+          # WARNING java: not available
+          # WARNING julia: not available
           checkWarning = false;
         };
 
