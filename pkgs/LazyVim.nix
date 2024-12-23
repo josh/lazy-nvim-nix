@@ -104,6 +104,14 @@ in
           checkWarning = true;
         };
 
+        checkhealth-dressing = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "dressing";
+          loadLazyPluginName = "dressing.nvim";
+          checkError = true;
+          checkWarning = true;
+        };
+
         checkhealth-lspconfig = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "lspconfig";
