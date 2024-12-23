@@ -25,6 +25,7 @@ in
     plugins."dressing.nvim".spec
     plugins."flash.nvim".spec
     plugins."friendly-snippets".spec
+    plugins."fzf-lua".spec
     plugins."gitsigns.nvim".spec
     plugins."grug-far.nvim".spec
     plugins."indent-blankline.nvim".spec

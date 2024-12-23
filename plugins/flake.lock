@@ -544,6 +544,23 @@
         "type": "github"
       }
     },
+    "fzf-lua": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734969043,
+        "narHash": "sha256-M4J1hB7kHUYLKaUQfXkys0c04C4TYDYUmS3l5PkDqkQ=",
+        "owner": "ibhagwan",
+        "repo": "fzf-lua",
+        "rev": "7022b5b002bb7488e1be4470bad2342bcc8d4d99",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ibhagwan",
+        "ref": "main",
+        "repo": "fzf-lua",
+        "type": "github"
+      }
+    },
     "gitsigns.nvim": {
       "flake": false,
       "locked": {
@@ -1666,6 +1683,7 @@
         "flash.nvim": "flash.nvim",
         "flit.nvim": "flit.nvim",
         "friendly-snippets": "friendly-snippets",
+        "fzf-lua": "fzf-lua",
         "gitsigns.nvim": "gitsigns.nvim",
         "grug-far.nvim": "grug-far.nvim",
         "harpoon": "harpoon",
