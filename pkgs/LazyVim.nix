@@ -14,6 +14,7 @@ in
     (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
     # keep-sorted start
+    plugins."blink.cmp".spec
     plugins."bufferline.nvim".spec
     plugins."catppuccin".spec
     plugins."cmp-buffer".spec

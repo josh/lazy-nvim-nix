@@ -3,7 +3,6 @@
   path,
   stdenvNoCC,
   fetchFromGitHub,
-  vimPlugins,
 }:
 let
   /*
@@ -129,8 +128,6 @@ let
     "LazyVim" = plugins."LazyVim" // {
       extras = mapNestedAttrs (repo: builtins.getAttr repo plugins) LazyVim-deps;
     };
-
-    "blink.cmp" = vimPlugins.blink-cmp;
   };
 
 in
