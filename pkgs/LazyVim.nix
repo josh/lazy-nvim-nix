@@ -104,6 +104,15 @@ in
           checkWarning = true;
         };
 
+        checkhealth-blink-cmp = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "blink.cmp";
+          loadLazyPluginName = "blink.cmp";
+          checkError = true;
+          # WARNING blink_cmp_fuzzy lib is not downloaded/built
+          checkWarning = false;
+        };
+
         checkhealth-dressing = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "dressing";
