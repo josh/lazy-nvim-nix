@@ -17,21 +17,14 @@ in
     plugins."blink.cmp".spec
     plugins."bufferline.nvim".spec
     plugins."catppuccin".spec
-    plugins."cmp-buffer".spec
-    plugins."cmp-nvim-lsp".spec
-    plugins."cmp-path".spec
     plugins."conform.nvim".spec
-    plugins."dashboard-nvim".spec
-    plugins."dressing.nvim".spec
     plugins."flash.nvim".spec
     plugins."friendly-snippets".spec
     plugins."fzf-lua".spec
     plugins."gitsigns.nvim".spec
     plugins."grug-far.nvim".spec
-    plugins."indent-blankline.nvim".spec
     plugins."lazydev.nvim".spec
     plugins."lualine.nvim".spec
-    plugins."luvit-meta".spec
     plugins."mason-lspconfig.nvim".spec
     plugins."mason.nvim".spec
     plugins."mini.ai".spec
@@ -40,17 +33,12 @@ in
     plugins."neo-tree.nvim".spec
     plugins."noice.nvim".spec
     plugins."nui.nvim".spec
-    plugins."nvim-cmp".spec
     plugins."nvim-lint".spec
     plugins."nvim-lspconfig".spec
-    plugins."nvim-notify".spec
-    plugins."nvim-snippets".spec
     plugins."nvim-ts-autotag".spec
     plugins."persistence.nvim".spec
     plugins."plenary.nvim".spec
     plugins."snacks.nvim".spec
-    plugins."telescope-fzf-native.nvim".spec
-    plugins."telescope.nvim".spec
     plugins."todo-comments.nvim".spec
     plugins."tokyonight.nvim".spec
     plugins."trouble.nvim".spec
@@ -113,14 +101,6 @@ in
           checkWarning = false;
         };
 
-        checkhealth-dressing = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "dressing";
-          loadLazyPluginName = "dressing.nvim";
-          checkError = true;
-          checkWarning = true;
-        };
-
         checkhealth-lspconfig = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "lspconfig";
@@ -163,15 +143,6 @@ in
           # Snacks.notifier: ERROR is not ready
           checkError = false;
           # Snacks.statuscolumn: WARNING setup {disabled}
-          checkWarning = false;
-        };
-
-        checkhealth-telescope = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "telescope";
-          loadLazyPluginName = "telescope.nvim";
-          checkError = true;
-          # WARNING nvim-treesitter not found. (Required for `:Telescope treesitter`.)
           checkWarning = false;
         };
 
