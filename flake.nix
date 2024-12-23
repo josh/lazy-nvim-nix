@@ -10,17 +10,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     {
       self,
       nixpkgs,
-      treefmt-nix,
     }:
     let
       inherit (nixpkgs) lib;
@@ -35,7 +30,7 @@
         system: nixpkgs.legacyPackages.${system}.extend self.overlays.default
       );
       eachSystem = f: lib.genAttrs systems (system: f nixpkgs'.${system});
-      treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
+      treefmt-nix = eachSystem (pkgs: import ./internal/treefmt.nix pkgs);
     in
     {
       lib = lib';
@@ -83,7 +78,7 @@
         };
       };
 
-      formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
+      formatter = eachSystem (pkgs: treefmt-nix.${pkgs.system}.wrapper);
       checks = eachSystem (
         pkgs:
         let
@@ -101,7 +96,7 @@
           ) self.packages.${system};
         in
         {
-          formatting = treefmtEval.${system}.config.build.check self;
+          formatting = treefmt-nix.${system}.check self;
 
           startuptime = pkgs.runCommand "nvim-startuptime" { } ''
             ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime "$out" +q
