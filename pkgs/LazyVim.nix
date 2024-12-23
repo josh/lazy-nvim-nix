@@ -13,6 +13,7 @@ in
   spec = [
     (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
+    # keep-sorted start
     plugins."bufferline.nvim".spec
     plugins."catppuccin".spec
     plugins."cmp-buffer".spec
@@ -53,6 +54,7 @@ in
     plugins."trouble.nvim".spec
     plugins."ts-comments.nvim".spec
     plugins."which-key.nvim".spec
+    # keep-sorted end
 
     # FIXME: Tries to write to /nix/store/.../parser directory
     {
