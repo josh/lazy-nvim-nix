@@ -105,8 +105,7 @@ in
           pluginName = "blink.cmp";
           loadLazyPluginName = "blink.cmp";
           checkError = true;
-          # WARNING blink_cmp_fuzzy lib is not downloaded/built
-          checkWarning = false;
+          checkWarning = true;
         };
 
         checkhealth-fzf-lua = neovim-checkhealth.override {
