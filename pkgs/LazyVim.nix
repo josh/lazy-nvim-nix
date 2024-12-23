@@ -3,6 +3,9 @@
   lazynvimPlugins,
   curl,
   fzf,
+  chafa,
+  viu,
+  ueberzugpp,
   lazygit,
   neovim-checkhealth,
 }:
@@ -70,6 +73,11 @@ in
     curl
     fzf
     lazygit
+
+    # fzf-lua
+    chafa
+    viu
+    ueberzugpp
   ];
 }).overrideAttrs
   (
@@ -99,6 +107,14 @@ in
           checkError = true;
           # WARNING blink_cmp_fuzzy lib is not downloaded/built
           checkWarning = false;
+        };
+
+        checkhealth-fzf-lua = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "fzf_lua";
+          loadLazyPluginName = "fzf-lua";
+          checkError = true;
+          checkWarning = true;
         };
 
         checkhealth-lspconfig = neovim-checkhealth.override {
