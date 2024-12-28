@@ -1074,11 +1074,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1735090217,
-        "narHash": "sha256-prwPj0xItVBVnYdMTnMzdZOL3AFDMVQfVj6k3rK5V0g=",
+        "lastModified": 1735349386,
+        "narHash": "sha256-f8jWjt1d7Lg8jBF5NKxNWLpy56zi5++k217xyvnQOlQ=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "cc2b06b828c68b31a636aff32fdb5a75e5b42d2f",
+        "rev": "c06c1c42ed37e840a220a661147e177e7227e8f6",
         "type": "github"
       },
       "original": {
@@ -1414,11 +1414,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1735296447,
-        "narHash": "sha256-4uQ4djz9kUl83G8z3e5Hlg1PQsAdNKllF/kAiRvMsH4=",
+        "lastModified": 1735368824,
+        "narHash": "sha256-B+JHv//vP9KFQZyH+Cygfrt5jbKjlNcHOUT4C684xrE=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "eb3e850acff4d9f2f2dd8dacd75353043c899753",
+        "rev": "5d18ef22dc63624e90aa7b6dbc17f2c3856ae716",
         "type": "github"
       },
       "original": {
@@ -2014,11 +2014,11 @@
     "vim-dadbod-completion": {
       "flake": false,
       "locked": {
-        "lastModified": 1734615099,
-        "narHash": "sha256-5/jxsnaHAgs54mNHgKvhj1F5E7RjKX3UZ9DSjJBtVWk=",
+        "lastModified": 1735349411,
+        "narHash": "sha256-ukUWVWll57NVVaAHH4FWEeuSLT7gSWTWBqE3nLXSZHs=",
         "owner": "kristijanhusak",
         "repo": "vim-dadbod-completion",
-        "rev": "9e354e86fcc67a5ec2c104f312e374ea2f89c799",
+        "rev": "71eb73d1f7399be6a56cc43b928276cd5ca27ffd",
         "type": "github"
       },
       "original": {
