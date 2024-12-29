@@ -2,9 +2,11 @@
   description = "Lazy Neovim on Nix";
 
   nixConfig = {
-    extra-substituters = [ "https://lazy-nvim-nix.cachix.org" ];
+    extra-substituters = [
+      "https://josh.cachix.org"
+    ];
     extra-trusted-public-keys = [
-      "lazy-nvim-nix.cachix.org-1:hVfO46ldDlMsuON1A44DpCdZmtBOH6SCMXIPKmsVSGA="
+      "josh.cachix.org-1:qc8IeYlP361V9CSsSVugxn3o3ZQ6w/9dqoORjm0cbXk="
     ];
   };
 
