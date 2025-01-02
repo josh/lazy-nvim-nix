@@ -1,4 +1,5 @@
 {
+  lib,
   lazy-nvim,
   lazynvimPlugins,
   # keep-sorted start
@@ -24,63 +25,35 @@
 }:
 let
   plugins = lazynvimPlugins;
+  excludeSpecs = [
+    "recurseForDerivations"
+    "nvim-treesitter"
+    "nvim-treesitter-textobjects"
+    "trouble.nvim"
+  ];
+  extraSpecs =
+    name:
+    lib.attrsets.mapAttrsToList (_: drv: drv.spec) (
+      builtins.removeAttrs plugins."LazyVim".extras.${name} excludeSpecs
+    );
 in
 (lazy-nvim.override {
   spec = [
     (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
 
-    # keep-sorted start
+    # FIXME: Not being picked up by LazyVim.json dependency scan
     plugins."blink.cmp".spec
-    plugins."bufferline.nvim".spec
-    plugins."catppuccin".spec
-    plugins."conform.nvim".spec
-    plugins."flash.nvim".spec
     plugins."friendly-snippets".spec
     plugins."fzf-lua".spec
-    plugins."gitsigns.nvim".spec
-    plugins."grug-far.nvim".spec
-    plugins."lazydev.nvim".spec
-    plugins."lualine.nvim".spec
-    plugins."mason-lspconfig.nvim".spec
-    plugins."mason.nvim".spec
-    plugins."mini.ai".spec
-    plugins."mini.icons".spec
-    plugins."mini.pairs".spec
-    plugins."neo-tree.nvim".spec
-    plugins."noice.nvim".spec
-    plugins."nui.nvim".spec
-    plugins."nvim-lint".spec
-    plugins."nvim-lspconfig".spec
-    plugins."nvim-ts-autotag".spec
-    plugins."persistence.nvim".spec
-    plugins."plenary.nvim".spec
     plugins."snacks.nvim".spec
-    plugins."todo-comments.nvim".spec
-    plugins."tokyonight.nvim".spec
-    plugins."trouble.nvim".spec
-    plugins."ts-comments.nvim".spec
-    plugins."which-key.nvim".spec
-    # keep-sorted end
 
     # FIXME: Tries to write to /nix/store/.../parser directory
-    {
-      name = "nvim-treesitter";
-      url = "https://github.com/nvim-treesitter/nvim-treesitter";
-      enabled = false;
-    }
-    {
-      name = "nvim-treesitter-textobjects";
-      url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects";
-      enabled = false;
-    }
+    (plugins."nvim-treesitter".spec // { enabled = false; })
+    (plugins."nvim-treesitter-textobjects".spec // { enabled = false; })
 
     # FIXME: trouble.nvim doesn't like be loaded from /nix/store
-    {
-      name = "trouble.nvim";
-      url = "https://github.com/folke/trouble.nvim";
-      enabled = false;
-    }
-  ];
+    (plugins."trouble.nvim".spec // { enabled = false; })
+  ] ++ (extraSpecs "lazyvim.plugins");
 
   extraPackages = [
     curl
