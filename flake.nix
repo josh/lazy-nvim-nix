@@ -102,6 +102,10 @@
 
           startuptime = pkgs.runCommand "nvim-startuptime" { } ''
             ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime out~ +q
+            if grep "^E[0-9]\\+: " out~; then
+              cat out~
+              exit 1
+            fi
             mv out~ "$out"
           '';
 
