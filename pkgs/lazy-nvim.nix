@@ -113,9 +113,9 @@ in
         };
 
         startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ neovim ]; } ''
-          HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out~ +q
-          if grep "^E[0-9]\\+: " out~; then
-            cat out~
+          HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out~ +q 2>err
+          if grep "^E[0-9]\\+: " err; then
+            cat err
             exit 1
           fi
           mv out~ "$out"
