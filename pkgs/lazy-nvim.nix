@@ -7,6 +7,7 @@
   lazynvimUtils,
   neovimUtils,
   neovim-checkhealth,
+  bash,
   git,
   fd,
   lua5_1,
@@ -21,6 +22,7 @@ let
   opts = lazynvimUtils.defaultLazyOpts;
 
   moreExtraPackages = [
+    bash
     fd
     git
     lua5_1
