@@ -66,7 +66,8 @@ in
       in
       {
         help = runCommand "nvim-help" { nativeBuildInputs = [ neovim ]; } ''
-          nvim --help 2>&1 >$out
+          nvim --help 2>&1 >out~
+          mv out~ "$out"
         '';
 
         checkhealth = neovim-checkhealth.override {
@@ -112,7 +113,8 @@ in
         };
 
         startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ neovim ]; } ''
-          nvim --headless "+Lazy! home" --startuptime "$out" +q
+          nvim --headless "+Lazy! home" --startuptime out~ +q
+          mv out~ "$out"
         '';
       };
   }

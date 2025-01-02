@@ -25,7 +25,8 @@ let
       }
       ''
         out=out.json ${lib.getExe neovim} -l ${./lazyvim-plugins.lua}
-        ${lib.getExe jq} --sort-keys <out.json >$out
+        ${lib.getExe jq} --sort-keys <out.json >out~
+        mv out~ "$out"
       '';
 in
 pkg

@@ -101,7 +101,8 @@
           formatting = treefmt-nix.${system}.check self;
 
           startuptime = pkgs.runCommand "nvim-startuptime" { } ''
-            ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime "$out" +q
+            ${lib.getExe packages.lazy-nvim} --headless "+Lazy! home" --startuptime out~ +q
+            mv out~ "$out"
           '';
 
           LazyVimPlugins-outdated =
