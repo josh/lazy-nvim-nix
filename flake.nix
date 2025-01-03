@@ -106,7 +106,7 @@
                 nativeBuildInputs = [ packages.lazy-nvim ];
               }
               ''
-                HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out~ +q 2>err
+                HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out~ +q 2>&1 | tee err
                 if grep "^E[0-9]\\+: " err; then
                   cat err
                   exit 1
