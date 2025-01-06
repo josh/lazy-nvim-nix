@@ -1295,11 +1295,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1736085097,
-        "narHash": "sha256-n/3+20Srx6hNtcd8fdVuGgkPzUec2EZnS+a/Pc7uGjY=",
+        "lastModified": 1736154173,
+        "narHash": "sha256-OChCLXHAqa129NiGfmwddq0Hj5F9AtC3TmFbnNCZqfo=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "139cd3ccefdc92644746168dd95a15f36aec5458",
+        "rev": "dfa45de973c3ce7bd1b9a6d346f896a68ad07e44",
         "type": "github"
       },
       "original": {
