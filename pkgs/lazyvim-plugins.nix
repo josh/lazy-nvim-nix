@@ -2,7 +2,7 @@
   lib,
   stdenv,
   runCommand,
-  writeScript,
+  writeScriptBin,
   neovim,
   jq,
   lazynvimPlugins,
@@ -10,7 +10,7 @@
   LazyVim ? lazynvimPlugins."LazyVim",
 }:
 let
-  updateScript = writeScript "update-LazyVim-json.sh" ''
+  updateScript = writeScriptBin "update-LazyVim-json.sh" ''
     #!${stdenv.shell}
     set -o xtrace
     install -m 644 ${pkg} plugins/LazyVim.json
