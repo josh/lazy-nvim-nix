@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1736989649,
-        "narHash": "sha256-wLK0yIsWPffiG32N3Xm7hPS7JipZ8BXuHVBWip6naWM=",
+        "lastModified": 1737066790,
+        "narHash": "sha256-CvURSE0zT5btAxetHNhE3TTEMfFbQtRlWkGEfXysXBA=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "c32eca4f2fbd3d01a0628007797a3121ba9b8673",
+        "rev": "55eeffa22800e25f7a5c95fe8a799f4325424a44",
         "type": "github"
       },
       "original": {
@@ -785,11 +785,11 @@
     "luvit-meta": {
       "flake": false,
       "locked": {
-        "lastModified": 1735631530,
-        "narHash": "sha256-x1qZyBRxe9DbqyGg2doTSO5HsxHRuStSSSUCzHXRLyk=",
+        "lastModified": 1737067389,
+        "narHash": "sha256-n6eD2CayjoKdORN9MQY3RFJEE9cOUITypV3lKowiETk=",
         "owner": "Bilal2453",
         "repo": "luvit-meta",
-        "rev": "55709f183b0742a7e4f47688c284f81148ad4dc0",
+        "rev": "1df30b60b1b4aecfebc785aa98943db6c6989716",
         "type": "github"
       },
       "original": {
@@ -1810,11 +1810,11 @@
     "snacks.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1737062250,
-        "narHash": "sha256-uwML88wCBb7HHRir2SCB9iHjMH4e/W89ltgTTqc7G5M=",
+        "lastModified": 1737069670,
+        "narHash": "sha256-F1BCQ3UJoVeCeUY747yN75Wadtj2kSlyq/2hb2sx/pY=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "0cbdf3f5d83fd2b5bfa03f7ee213cf67e458df08",
+        "rev": "71f69e5e57f355f40251e274d45560af7d8dd365",
         "type": "github"
       },
       "original": {
