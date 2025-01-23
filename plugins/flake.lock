@@ -1020,6 +1020,23 @@
         "type": "github"
       }
     },
+    "mini.snippets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1736611383,
+        "narHash": "sha256-How9m7KTo66FrwjZQlgZRmJ5toFKn/+GnUbx/0va3lM=",
+        "owner": "echasnovski",
+        "repo": "mini.snippets",
+        "rev": "72920f62e3dd1330720e94e8f5d42592f3a1ecf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "echasnovski",
+        "ref": "main",
+        "repo": "mini.snippets",
+        "type": "github"
+      }
+    },
     "mini.starter": {
       "flake": false,
       "locked": {
@@ -1711,6 +1728,7 @@
         "mini.indentscope": "mini.indentscope",
         "mini.move": "mini.move",
         "mini.pairs": "mini.pairs",
+        "mini.snippets": "mini.snippets",
         "mini.starter": "mini.starter",
         "mini.surround": "mini.surround",
         "neo-tree.nvim": "neo-tree.nvim",

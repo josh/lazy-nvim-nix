@@ -124,6 +124,8 @@
     "mini.move".url = "github:echasnovski/mini.move/main";
     "mini.pairs".flake = false;
     "mini.pairs".url = "github:echasnovski/mini.pairs/main";
+    "mini.snippets".flake = false;
+    "mini.snippets".url = "github:echasnovski/mini.snippets/main";
     "mini.starter".flake = false;
     "mini.starter".url = "github:echasnovski/mini.starter/main";
     "mini.surround".flake = false;
