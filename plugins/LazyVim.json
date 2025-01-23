@@ -76,6 +76,10 @@
     "mini.comment": "echasnovski/mini.comment",
     "nvim-ts-context-commentstring": "JoosepAlviste/nvim-ts-context-commentstring"
   },
+  "lazyvim.plugins.extras.coding.mini-snippets": {
+    "friendly-snippets": "rafamadriz/friendly-snippets",
+    "mini.snippets": "echasnovski/mini.snippets"
+  },
   "lazyvim.plugins.extras.coding.mini-surround": {
     "mini.surround": "echasnovski/mini.surround"
   },
