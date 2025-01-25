@@ -12,25 +12,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        system:
-          - "aarch64-darwin"
-          - "aarch64-linux"
-          - "x86_64-linux"
+        os:
+          - "ubuntu-24.04"
+          - "ubuntu-24.04-arm"
+          - "macos-15"
 
-    runs-on: ${{ endsWith(matrix.system, '-darwin') && 'macos-latest' || 'ubuntu-latest' }}
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v4
 
-      - if: matrix.system == 'aarch64-linux'
-        uses: docker/setup-qemu-action@v3
-        with:
-          platforms: arm64
-
       - uses: DeterminateSystems/nix-installer-action@main
         with:
           extra-conf: |
-            system = ${{ matrix.system }}
             accept-flake-config = true
             allow-import-from-derivation = false
 
