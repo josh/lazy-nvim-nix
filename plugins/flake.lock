@@ -2015,11 +2015,11 @@
     "vim-dadbod": {
       "flake": false,
       "locked": {
-        "lastModified": 1737473569,
-        "narHash": "sha256-Fl9itH35RSBL8XvHst7UqbQf0BA2I/5CowgJ2j9UT8M=",
+        "lastModified": 1737843830,
+        "narHash": "sha256-7wlMfOpt5lcKuZPfiY+3hbaSN0YkjpbtF4L2ko/pfI4=",
         "owner": "tpope",
         "repo": "vim-dadbod",
-        "rev": "96997dac981d50717a63d4dbd48d4a43e09ecf57",
+        "rev": "9f0ca8bcef704659820a95c3bbd2c262583a66a1",
         "type": "github"
       },
       "original": {
