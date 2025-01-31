@@ -154,6 +154,9 @@
     "plenary.nvim": "nvim-lua/plenary.nvim",
     "refactoring.nvim": "ThePrimeagen/refactoring.nvim"
   },
+  "lazyvim.plugins.extras.editor.snacks_explorer": {
+    "snacks.nvim": "folke/snacks.nvim"
+  },
   "lazyvim.plugins.extras.editor.snacks_picker": {},
   "lazyvim.plugins.extras.editor.telescope": {},
   "lazyvim.plugins.extras.formatting.biome": {
