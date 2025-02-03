@@ -106,7 +106,8 @@ in
           pluginName = "blink.cmp";
           loadLazyPluginName = "blink.cmp";
           checkError = true;
-          checkWarning = true;
+          # WARNING Some providers may show up as "disabled" but are enabled dynamically (i.e. cmdline)
+          checkWarning = false;
         };
 
         checkhealth-fzf-lua = neovim-checkhealth.override {

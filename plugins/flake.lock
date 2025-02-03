@@ -1074,11 +1074,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738053735,
-        "narHash": "sha256-OXdKSmvOHAQoywSjP1MwWozNt0e6zm/EtWz+UbsVzwY=",
+        "lastModified": 1738571437,
+        "narHash": "sha256-Kq3Yw1PE7AXjjFpSAt2lxNjRYlfCcTWjlVCAIEhmhLI=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "6a4f0a830f2322f187bce6f18a9e6b5b7ba188e3",
+        "rev": "3d15e34e1eb85912ca0b762d833b0bf632131f3b",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1738441347,
-        "narHash": "sha256-njqNOtG9mIsgqWeOzMnDTtdlEHIUBlKcrmN4l7dKo8o=",
+        "lastModified": 1738572148,
+        "narHash": "sha256-m1rhuebbs3djrZC/0T+uKzzo0kk4zzvlbUEH0FgvGKU=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "f98fa715acc975c2dd5fb5ba7ceddeb1cc725ad2",
+        "rev": "00b236b795acfb79339bd6771488c155073a2889",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1738515205,
-        "narHash": "sha256-RJcR3MgXxnZL7AG+YMGLUCxRbPND1m221Ewf+mAsX/w=",
+        "lastModified": 1738565549,
+        "narHash": "sha256-zPe589jQ/D2P/RjROwMDaGhOmyFbMYYj4gYmdeeFogo=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "73b68cb943cd6718bdee318a70874620070255d4",
+        "rev": "4e701776f8824fc188a6254f57d080971ce28c92",
         "type": "github"
       },
       "original": {
@@ -1811,11 +1811,11 @@
     "smear-cursor.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738535519,
-        "narHash": "sha256-lT93vA7iGZKXhPAFWPtnaLxaCllNoHyu1JY7VDuawv0=",
+        "lastModified": 1738568048,
+        "narHash": "sha256-EMv3daZ+nsiva+T9NAzod8IlDttU1kvrh5BLjEt2Y18=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "5d6cd88b46d7581ba94573ed2140968028832f9f",
+        "rev": "8d41110e3f7117532ed33dc7e81c963acb1cc83b",
         "type": "github"
       },
       "original": {
@@ -1828,11 +1828,11 @@
     "snacks.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738563026,
-        "narHash": "sha256-Unjbizov95tvuSNqIj2vAQkLTR3zF1ww65lsFq/JeBg=",
+        "lastModified": 1738589214,
+        "narHash": "sha256-wjap0v81NXNENlmuFhoUfhKp+sn/X7z3OQcCqpSWrBM=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "c12e493070dad5ab185596f8fb9122af23d07350",
+        "rev": "95d3e7f96182e4cc8aa0c05a616a61eba9a77366",
         "type": "github"
       },
       "original": {
