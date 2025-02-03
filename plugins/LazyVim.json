@@ -23,6 +23,7 @@
     "nvim-ts-autotag": "windwp/nvim-ts-autotag",
     "persistence.nvim": "folke/persistence.nvim",
     "plenary.nvim": "nvim-lua/plenary.nvim",
+    "snacks.nvim": "folke/snacks.nvim",
     "todo-comments.nvim": "folke/todo-comments.nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim",
     "trouble.nvim": "folke/trouble.nvim",
