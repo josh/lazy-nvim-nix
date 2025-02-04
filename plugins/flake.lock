@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1737946836,
-        "narHash": "sha256-ZQASKfbtw41RPKMeN5czsp5jVEp2NEwu4bVKbSxYiqU=",
+        "lastModified": 1738631045,
+        "narHash": "sha256-yIaWaBBHyKXRaDr+8alWD8xx0CggCE25Z3UqZ6qmgHU=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "1b375c24602680b5fe28c3c223a822111857dc37",
+        "rev": "52f72bbc68b86446259ea907b0ba3c0bf0cda588",
         "type": "github"
       },
       "original": {
@@ -360,11 +360,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1738501396,
-        "narHash": "sha256-Btls3SvcbxvrLjjTqke9EynAbwEHEgYSzAdmAkO8nHc=",
+        "lastModified": 1738624351,
+        "narHash": "sha256-C3DAKpVwgMLd0oCCTsyB90C8EgR1KnBw0Sc4dvlFs8k=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "4ff479bcb79444103c1905ff4b4777960e0fc742",
+        "rev": "95b067e1356fb5b0143c9487ffc9950ddaa7df3a",
         "type": "github"
       },
       "original": {
@@ -2134,11 +2134,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1738171698,
-        "narHash": "sha256-QiX4Cl1yWcyocZeBng3zzvWXPTkIaJV38EozXopHns4=",
+        "lastModified": 1738621460,
+        "narHash": "sha256-63yUFtNppvw2D5cdRhz2O3ni6V4xMoSHYn0fgJexBLA=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "3a9f47ce6e42c4a3c9a92a254f1f611a8d374fc9",
+        "rev": "3c55cc050713952e611c081a0a0bfe04671a5b8a",
         "type": "github"
       },
       "original": {
