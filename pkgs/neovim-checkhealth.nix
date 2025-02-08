@@ -11,14 +11,33 @@
   checkError ? checkWarning,
   checkWarning ? false,
 }:
+let
+  lazyLoadCmd = if loadLazyPluginName != null then [ "+Lazy! load ${loadLazyPluginName}" ] else [ ];
+  checkCmd =
+    if pluginName == null || pluginName == "all" then
+      [ "+checkhealth" ]
+    else
+      [ "+checkhealth ${pluginName}" ];
+in
 runCommand "checkhealth-${pluginName}"
   {
+    __structuredAttrs = true;
+
     NEOVIM_BIN = lib.getExe neovim;
-    CHECK_PLUGIN_NAME = pluginName;
-    LAZY_LOAD_PLUGIN_NAME = loadLazyPluginName;
     CHECK_OK = if checkOk then "1" else "";
     CHECK_ERROR = if checkError then "1" else "";
     CHECK_WARNING = if checkWarning then "1" else "";
+
+    nvimArgs =
+      [
+        "--headless"
+      ]
+      ++ lazyLoadCmd
+      ++ checkCmd
+      ++ [
+        "+w!out.txt"
+        "+q"
+      ];
 
     nativeBuildInputs = lib.lists.optionals stdenv.isLinux [ xclip ];
     DISPLAY = lib.optionalString stdenv.isLinux ":0";
@@ -29,17 +48,7 @@ runCommand "checkhealth-${pluginName}"
     mkdir -p .config/nvim
     touch .config/nvim/init.lua
 
-    CHECK_CMD="+checkhealth"
-    if [[ -n "$CHECK_PLUGIN_NAME" && "$CHECK_PLUGIN_NAME" != "all" ]]; then
-      CHECK_CMD="+checkhealth $CHECK_PLUGIN_NAME"
-    fi
-
-    LAZY_LOAD_CMD=""
-    if [[ -n "$LAZY_LOAD_PLUGIN_NAME" ]]; then
-      LAZY_LOAD_CMD="+Lazy! load $LAZY_LOAD_PLUGIN_NAME"
-    fi
-
-    HOME="$PWD" timeout 30s "$NEOVIM_BIN" --headless "$LAZY_LOAD_CMD" "$CHECK_CMD" '+w!out.txt' +q
+    HOME="$PWD" timeout 30s "$NEOVIM_BIN" "''${nvimArgs[@]}"
     cat out.txt
 
     ok_count=$(grep --count " OK " <out.txt || true)
