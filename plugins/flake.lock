@@ -2083,11 +2083,11 @@
     "vim-illuminate": {
       "flake": false,
       "locked": {
-        "lastModified": 1715960194,
-        "narHash": "sha256-DdJzTHxoOv+vjFymETa2MgXpM/qDwvZjpoo1W8OOBj0=",
+        "lastModified": 1738990052,
+        "narHash": "sha256-RHRdeTI7JBAfkmArppsH5bK4141QNJLN7kuFFn1B9A0=",
         "owner": "RRethy",
         "repo": "vim-illuminate",
-        "rev": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa",
+        "rev": "0a064309bc0072bbd4083e15d10485325195cc60",
         "type": "github"
       },
       "original": {
