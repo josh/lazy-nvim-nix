@@ -39,7 +39,7 @@ runCommand "checkhealth-${pluginName}"
       LAZY_LOAD_CMD="+Lazy! load $LAZY_LOAD_PLUGIN_NAME"
     fi
 
-    HOME="$PWD" "$NEOVIM_BIN" --headless "$LAZY_LOAD_CMD" "$CHECK_CMD" '+w!out.txt' +q
+    HOME="$PWD" timeout 30s "$NEOVIM_BIN" --headless "$LAZY_LOAD_CMD" "$CHECK_CMD" '+w!out.txt' +q
     cat out.txt
 
     ok_count=$(grep --count " OK " <out.txt || true)
