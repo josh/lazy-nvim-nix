@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738874454,
-        "narHash": "sha256-g0F18dk+asTlSfxI9Sj52wafdj0dW9nzx+VS9hPVLNU=",
+        "lastModified": 1738969847,
+        "narHash": "sha256-W7aG9dbOFrOV2TqZKBsFgTREd+P27q9ZJf2/aFttqlw=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "94d0ac0a0cae69ecdba4aebd062c18fee68ce5f2",
+        "rev": "597cd8ffa3c54471df860c4036a8c20e123292b9",
         "type": "github"
       },
       "original": {
@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1738880761,
-        "narHash": "sha256-HSuh+3m5lOUR0RjSx+MJvpUGWiUm6l6gbqz3yS0CXN4=",
+        "lastModified": 1738976955,
+        "narHash": "sha256-pDcugv0TfV0bgPzF5aWkAe2XMLUtqQwCXufKQ/FuL/M=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "1176d512b1390f992c775f08dcb155d4e0ba01cf",
+        "rev": "91fc21854dddb800ed35cbaf2a53e111bceefc43",
         "type": "github"
       },
       "original": {
@@ -1091,11 +1091,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738891812,
-        "narHash": "sha256-WQ0EqSLGeIGCMgG3o53Mytm7asIHnfHETWrVJll2I7g=",
+        "lastModified": 1738978201,
+        "narHash": "sha256-uuAO0tRqq/pp/hbxbYgxOVzNIoC2uXeYoftOLQEm+kY=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "21e8dc1b20a8a4dd4ae37b4a4ebb1ac5f852bf28",
+        "rev": "b9efcf6dda08fb23fdf7dbcf641866ba47a56f04",
         "type": "github"
       },
       "original": {
