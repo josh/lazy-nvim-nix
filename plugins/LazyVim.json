@@ -13,7 +13,6 @@
     "mini.ai": "echasnovski/mini.ai",
     "mini.icons": "echasnovski/mini.icons",
     "mini.pairs": "echasnovski/mini.pairs",
-    "neo-tree.nvim": "nvim-neo-tree/neo-tree.nvim",
     "noice.nvim": "folke/noice.nvim",
     "nui.nvim": "MunifTanjim/nui.nvim",
     "nvim-lint": "mfussenegger/nvim-lint",
@@ -23,14 +22,18 @@
     "nvim-ts-autotag": "windwp/nvim-ts-autotag",
     "persistence.nvim": "folke/persistence.nvim",
     "plenary.nvim": "nvim-lua/plenary.nvim",
-    "snacks.nvim": "folke/snacks.nvim",
     "todo-comments.nvim": "folke/todo-comments.nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim",
     "trouble.nvim": "folke/trouble.nvim",
     "ts-comments.nvim": "folke/ts-comments.nvim",
     "which-key.nvim": "folke/which-key.nvim"
   },
-  "lazyvim.plugins.coding": {},
+  "lazyvim.plugins.coding": {
+    "lazydev.nvim": "folke/lazydev.nvim",
+    "mini.ai": "echasnovski/mini.ai",
+    "mini.pairs": "echasnovski/mini.pairs",
+    "ts-comments.nvim": "folke/ts-comments.nvim"
+  },
   "lazyvim.plugins.colorscheme": {
     "catppuccin": "catppuccin/nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim"
@@ -50,7 +53,6 @@
     "flash.nvim": "folke/flash.nvim",
     "gitsigns.nvim": "lewis6991/gitsigns.nvim",
     "grug-far.nvim": "MagicDuck/grug-far.nvim",
-    "neo-tree.nvim": "nvim-neo-tree/neo-tree.nvim",
     "todo-comments.nvim": "folke/todo-comments.nvim",
     "trouble.nvim": "folke/trouble.nvim",
     "which-key.nvim": "folke/which-key.nvim"
@@ -143,6 +145,9 @@
   },
   "lazyvim.plugins.extras.editor.navic": {
     "nvim-navic": "SmiteshP/nvim-navic"
+  },
+  "lazyvim.plugins.extras.editor.neo-tree": {
+    "neo-tree.nvim": "nvim-neo-tree/neo-tree.nvim"
   },
   "lazyvim.plugins.extras.editor.outline": {
     "outline.nvim": "hedyhli/outline.nvim"
