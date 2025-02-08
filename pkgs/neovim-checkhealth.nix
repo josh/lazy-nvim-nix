@@ -12,32 +12,33 @@
   checkWarning ? false,
 }:
 let
-  lazyLoadCmd = if loadLazyPluginName != null then [ "+Lazy! load ${loadLazyPluginName}" ] else [ ];
+  lazyLoadCmd = if loadLazyPluginName != null then "+Lazy! load ${loadLazyPluginName}" else null;
   checkCmd =
-    if pluginName == null || pluginName == "all" then
-      [ "+checkhealth" ]
-    else
-      [ "+checkhealth ${pluginName}" ];
+    if pluginName == null || pluginName == "all" then "+checkhealth" else "+checkhealth ${pluginName}";
 in
 runCommand "checkhealth-${pluginName}"
   {
-    __structuredAttrs = true;
+    # __structuredAttrs = true;
 
     NEOVIM_BIN = lib.getExe neovim;
     CHECK_OK = if checkOk then "1" else "";
     CHECK_ERROR = if checkError then "1" else "";
     CHECK_WARNING = if checkWarning then "1" else "";
 
-    nvimArgs =
-      [
-        "--headless"
-      ]
-      ++ lazyLoadCmd
-      ++ checkCmd
-      ++ [
-        "+w!out.txt"
-        "+q"
-      ];
+    LAZY_LOAD_CMD = lazyLoadCmd;
+    CHECK_CMD = checkCmd;
+
+    # FIXME: __structuredAttrs not working on Linux
+    # nvimArgs =
+    #   [
+    #     "--headless"
+    #   ]
+    #   ++ (lib.lists.optional (lazyLoadCmd != null) lazyLoadCmd)
+    #   ++ (lib.lists.optional (checkCmd != null) checkCmd)
+    #   ++ [
+    #     "+w!out.txt"
+    #     "+q"
+    #   ];
 
     nativeBuildInputs = lib.lists.optionals stdenv.isLinux [ xclip ];
     DISPLAY = lib.optionalString stdenv.isLinux ":0";
@@ -48,7 +49,11 @@ runCommand "checkhealth-${pluginName}"
     mkdir -p .config/nvim
     touch .config/nvim/init.lua
 
-    HOME="$PWD" timeout 30s "$NEOVIM_BIN" "''${nvimArgs[@]}"
+    if [ -n "$LAZY_LOAD_CMD" ]; then
+      HOME="$PWD" timeout 30s "$NEOVIM_BIN" --headless "$LAZY_LOAD_CMD" "$CHECK_CMD" '+w!out.txt' +q
+    else
+      HOME="$PWD" timeout 30s "$NEOVIM_BIN" --headless "$CHECK_CMD" '+w!out.txt' +q
+    fi
     cat out.txt
 
     ok_count=$(grep --count " OK " <out.txt || true)
