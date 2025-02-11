@@ -39,7 +39,8 @@ let
 in
 (lazy-nvim.override {
   spec = [
-    (plugins."LazyVim".spec // { "import" = "lazyvim.plugins"; })
+    plugins."LazyVim".spec
+    { "import" = "lazyvim.plugins"; }
 
     # FIXME: Not being picked up by LazyVim.json dependency scan
     plugins."blink.cmp".spec
