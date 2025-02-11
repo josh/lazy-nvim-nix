@@ -45,6 +45,7 @@ in
     plugins."blink.cmp".spec
     plugins."friendly-snippets".spec
     plugins."fzf-lua".spec
+    plugins."neo-tree.nvim".spec
     plugins."snacks.nvim".spec
 
     # FIXME: Tries to write to /nix/store/.../parser directory
