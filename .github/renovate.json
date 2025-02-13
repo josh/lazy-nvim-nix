@@ -1,14 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":disableDependencyDashboard"],
   "nix": {
     "enabled": true
   },
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true,
     "schedule": ["at any time"]
   },
-  "timezone": "America/Los_Angeles",
-  "schedule": ["at any time"]
+  "automerge": true,
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0
 }
