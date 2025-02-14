@@ -496,11 +496,11 @@
     "flash.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738189335,
-        "narHash": "sha256-9oSr4/8WLiwu9JWGyx512WPe9f8Cq2Su8fkSq/C/+4s=",
+        "lastModified": 1739519195,
+        "narHash": "sha256-0WKr+fJtV7xTecxWJ8qUkq8NE818Vhyi/QSQ7CcVNPY=",
         "owner": "folke",
         "repo": "flash.nvim",
-        "rev": "f899265876ecdcf7352dbc9f0adf87068cedefbb",
+        "rev": "3c942666f115e2811e959eabbdd361a025db8b63",
         "type": "github"
       },
       "original": {
@@ -683,11 +683,11 @@
     "kulala.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1739464588,
-        "narHash": "sha256-RNl74XZvOauhbIfxK4xY+Lo16uo/V86eJZpPqslfL/M=",
+        "lastModified": 1739521916,
+        "narHash": "sha256-dhRDEtl9obg21GVPl43BUFg6nUTwzi4d8l0TnJsgJBE=",
         "owner": "mistweaverco",
         "repo": "kulala.nvim",
-        "rev": "a83a15017c49e05a1f8da5592c1e2eabc7e15ea9",
+        "rev": "93aa41655c0ff4fd6f53d17c92512c907c223e59",
         "type": "github"
       },
       "original": {
@@ -802,11 +802,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1739280792,
-        "narHash": "sha256-ITz4BN9n01gET6zrDRv1fqkbPKnAjrFj0r8NQpV3MVQ=",
+        "lastModified": 1739527451,
+        "narHash": "sha256-ktCcQZew63ErmEemUUDXdoM1xz4IB8O+H4ELJX4szBc=",
         "owner": "williamboman",
         "repo": "mason-lspconfig.nvim",
-        "rev": "805c31ec6bfb557975143712ecff6956d3227141",
+        "rev": "a8e6efcf623b86bae6d2223eede7c43883329f80",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1739429673,
-        "narHash": "sha256-nJ8yc32UPVxf6TKFzcj0cbZJrhCkK2QDwf8dFfzqCjA=",
+        "lastModified": 1739515961,
+        "narHash": "sha256-+N6/PvnbAXKngY9P5fFbq99s/qsyRXQzop0cYgS1rDk=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "6d957c22cb48a734b009a69d03c18d20042c4754",
+        "rev": "80e6de9d24eec68d82d5f4e6feae94c9c753ebd6",
         "type": "github"
       },
       "original": {
@@ -1828,11 +1828,11 @@
     "snacks.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1739514688,
-        "narHash": "sha256-mAPuTc5OwnYANxiXYcifq4r222ePwEdifMxZwunPs0k=",
+        "lastModified": 1739528718,
+        "narHash": "sha256-oXBSFPcTnVzUxsoH4fuTIpXttixJWPHsR7LdTOVfMSo=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "7d350bc0c7e897ad0d7bd7fc9a470dabecab32ca",
+        "rev": "f1c683033deb4f66b32c613dd94a09610f76465a",
         "type": "github"
       },
       "original": {
