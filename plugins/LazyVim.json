@@ -86,9 +86,7 @@
   "lazyvim.plugins.extras.coding.mini-surround": {
     "mini.surround": "echasnovski/mini.surround"
   },
-  "lazyvim.plugins.extras.coding.neogen": {
-    "neogen": "danymat/neogen"
-  },
+  "lazyvim.plugins.extras.coding.neogen": {},
   "lazyvim.plugins.extras.coding.nvim-cmp": {
     "cmp-buffer": "hrsh7th/cmp-buffer",
     "cmp-nvim-lsp": "hrsh7th/cmp-nvim-lsp",
