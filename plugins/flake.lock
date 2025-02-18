@@ -2117,11 +2117,11 @@
     "vim-startuptime": {
       "flake": false,
       "locked": {
-        "lastModified": 1738260994,
-        "narHash": "sha256-EV9ZzLblsF+95xdPXmrMLZ9+/Lin7UGvfGT8Z4aEuEE=",
+        "lastModified": 1739853439,
+        "narHash": "sha256-0YLDkU1y89O5z7tgxaH5USQpJDfTuN0fsPJOAp6pa5Y=",
         "owner": "dstein64",
         "repo": "vim-startuptime",
-        "rev": "9aaa3c0880e63a8934ba58a430c6139225bba238",
+        "rev": "b6f0d93f6b8cf6eee0b4c94450198ba2d6a05ff6",
         "type": "github"
       },
       "original": {
