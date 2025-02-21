@@ -1828,11 +1828,11 @@
     "snacks.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1740121679,
-        "narHash": "sha256-CgfbpKRkbx+yTAQ6tbM7+uy0PVzp9rgP47tEeP/UOEo=",
+        "lastModified": 1740162435,
+        "narHash": "sha256-1fesN6zgh6zQrKJA3vM9LwJ5XIHfgrjZsvz6w5po7Q8=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "2261b0eedf2ace48ac68b7eb527e9d7a8ba394bc",
+        "rev": "f6c7bac2f66dea3689a07c9329ae73adcd87b92b",
         "type": "github"
       },
       "original": {
