@@ -1023,11 +1023,11 @@
     "mini.snippets": {
       "flake": false,
       "locked": {
-        "lastModified": 1739451348,
-        "narHash": "sha256-2Cn7uPr+TWr8u0HdxQgt4GDeQtnE3ygU2swbr+WuiSA=",
+        "lastModified": 1740239931,
+        "narHash": "sha256-zsR3OhKFePlWkjw3mKKBW9Rj4g8xc3N5cCG0eLJ+2J0=",
         "owner": "echasnovski",
         "repo": "mini.snippets",
-        "rev": "c9fc2dac03fa86e976b95b62724145d7cf4d9721",
+        "rev": "04e1c0f8538a4ee0ddc054e30e92a93cb4c1b568",
         "type": "github"
       },
       "original": {
@@ -2151,11 +2151,11 @@
     "which-key.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1739567619,
-        "narHash": "sha256-LCcvy5uwEy01NhXCW5tlJXAK2UPgNrZTYvjuE9J34ek=",
+        "lastModified": 1740233407,
+        "narHash": "sha256-uvMcSduMr7Kd2oUmIOYzvWF4FIl6bZxIYm9FSw/3pCo=",
         "owner": "folke",
         "repo": "which-key.nvim",
-        "rev": "5bf7a73fe851896d5ac26d313db849bf00f45b78",
+        "rev": "370ec46f710e058c9c1646273e6b225acf47cbed",
         "type": "github"
       },
       "original": {
