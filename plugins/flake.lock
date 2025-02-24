@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1740279931,
-        "narHash": "sha256-saaQxFcspZBPDcMsdX4+VWCrJI061RfuTDwD3Zz1UEU=",
+        "lastModified": 1740424793,
+        "narHash": "sha256-iDd/JMV11741pfRnaV5UlgMk8AWYxVYvENtJTVZ6FZM=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "d2fbc41787d30fbfc6853ba82f2f0c47c9165034",
+        "rev": "9458fdce7150103c8edf2e066808da69f1dddc28",
         "type": "github"
       },
       "original": {
@@ -1074,11 +1074,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1740052820,
-        "narHash": "sha256-IgEW55fwV3prifCng4R3QtWF3HN8pycVNN5U5ZCPI7E=",
+        "lastModified": 1740423135,
+        "narHash": "sha256-o0rxi6lPYQUsLEvD5ilwmJnW7K6j5Qwbh+2TK+U7EB4=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "94c8ec36da52af0ea0128012e12abe05c26ef840",
+        "rev": "c2f12ba9dba917d53dba13121c15d7903e28c24d",
         "type": "github"
       },
       "original": {
