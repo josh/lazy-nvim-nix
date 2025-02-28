@@ -411,11 +411,11 @@
     "crates.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1740064212,
-        "narHash": "sha256-xuRth8gfX6ZTV3AUBaTM9VJr7ulsNFxtKEsFDZduDC8=",
+        "lastModified": 1740711032,
+        "narHash": "sha256-ijuz7abSLNTjgeIThtV+MV6SMBWgcAWcPK7yYpB9HeI=",
         "owner": "Saecki",
         "repo": "crates.nvim",
-        "rev": "1803c8b5516610ba7cdb759a4472a78414ee6cd4",
+        "rev": "6bf1b4ceb62f205c903590ccc62061aafc17024a",
         "type": "github"
       },
       "original": {
@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1740260408,
-        "narHash": "sha256-uNH+Sq5TxNIyleY7D17LRd1IPcO9K2WqWaD0A5FZbtw=",
+        "lastModified": 1740719311,
+        "narHash": "sha256-VxDiAuNVwlLF2Gq3ToB0JpfVoz4Ry7Y7mzOLcgG6fF0=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "9b84b53f3297d4912d7eb95b979e9b27e2e61281",
+        "rev": "ae9378a48fcf07475d93b3dc7775c2aab0b9fa7b",
         "type": "github"
       },
       "original": {
