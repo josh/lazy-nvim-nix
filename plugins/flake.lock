@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1739657870,
-        "narHash": "sha256-dyr4BOmKX37tXwqbb8+Auih7FdQYan8/RXnc2axpWzs=",
+        "lastModified": 1741134947,
+        "narHash": "sha256-nXMisyGm/W3E2d3aRaU9GOGfisU9MsEAN2oVUjC0tr4=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "3284a2cb858ba009c79da87d5e010ccee3c99c4d",
+        "rev": "7f69874aa2c2f4ca3ddd9ffa5d2eb07c5c20d3ae",
         "type": "github"
       },
       "original": {
@@ -343,11 +343,11 @@
     "conform.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741121961,
-        "narHash": "sha256-WVc+rmMSARQRC65mKoKJaIvEMgSeKeSrwib2q0WfSNI=",
+        "lastModified": 1741136809,
+        "narHash": "sha256-8uC+6rQdLqpfF/lf25mppqK/xgM1+6RGIyZaheaPd48=",
         "owner": "stevearc",
         "repo": "conform.nvim",
-        "rev": "579400bb334639cc4767458c5d15c12053cf0adc",
+        "rev": "db8a4a9edb217067b1d7a2e0362c74bfe9cc944d",
         "type": "github"
       },
       "original": {
@@ -1091,11 +1091,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741051836,
-        "narHash": "sha256-oDLaa74OHZKe/DLhnF5rlI3TvpRfqTLDdbeKhk06PH0=",
+        "lastModified": 1741138232,
+        "narHash": "sha256-Ky+9XcfY5pPvfyAjzcxpIcHoc/brTyDKhGtxs8hvO2Q=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "c8f1fe49b8ec2c6f1f3a6a18c5f06049b53b6243",
+        "rev": "040689925e7da61f7a03d02718b9d9d84c6070c4",
         "type": "github"
       },
       "original": {
