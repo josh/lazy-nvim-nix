@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741134947,
-        "narHash": "sha256-nXMisyGm/W3E2d3aRaU9GOGfisU9MsEAN2oVUjC0tr4=",
+        "lastModified": 1741281213,
+        "narHash": "sha256-vYbyXTxcYkTx26ubCClDmBj/sLd2KDZlPTn7P1OrApE=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "7f69874aa2c2f4ca3ddd9ffa5d2eb07c5c20d3ae",
+        "rev": "2204cf08791449a6a2fd2ef187a29112eeefd989",
         "type": "github"
       },
       "original": {
@@ -241,11 +241,11 @@
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1740785163,
-        "narHash": "sha256-99/xcTj3nzNFSfxt1U3ITzWL+NGl4vnXYesJrZzm24Q=",
+        "lastModified": 1741277149,
+        "narHash": "sha256-464vODaUNRI6Uq/AAjDhevS7ylbEFHP5qrRxklIdE7U=",
         "owner": "Civitasv",
         "repo": "cmake-tools.nvim",
-        "rev": "943438bb6433ad7d600a44fca86f1573dc5da9e2",
+        "rev": "a5d5bf0a93bb96085502334a5036fc054ad9cf33",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1741244076,
-        "narHash": "sha256-0bfKCIOkwuKtu4jHI6+4zYp9RAYQG7RvTctXs9Rj450=",
+        "lastModified": 1741285640,
+        "narHash": "sha256-5EVBtYKeHMuIQYcXMoZtaBZPQ+sktFEpNwIBgPjFzJY=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "794cf2f6309691d4e9d3945ae33943a3d90ddd84",
+        "rev": "f22181a62c47bf591fbfd6ada7d9a1156278d6e0",
         "type": "github"
       },
       "original": {
