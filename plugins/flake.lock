@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741368855,
-        "narHash": "sha256-DQilXSMLLNoyHJw3jIjXm0SJuBdm9tyrFsGepZeos48=",
+        "lastModified": 1741383373,
+        "narHash": "sha256-fzGxWpmTnoI9tKAaRazVK0KxR5Nc0ancSixNIhnlb7I=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "908b53d0ac99e47b384f772f28a76949537676e8",
+        "rev": "61c5917471b37ae2dee2487ba2803f062e746e03",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     "R.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741052101,
-        "narHash": "sha256-zPc8wvrHLz//eWStUDD5D8O8yrR+0Uzx6mdaIPGfo+A=",
+        "lastModified": 1741384418,
+        "narHash": "sha256-vRULZUXLVMAdNHoJQ6tASZBK8ric1NFF6jwbxscFk6k=",
         "owner": "R-nvim",
         "repo": "R.nvim",
-        "rev": "508dc92f39c7adf2c6a48fedeac1c073992d363b",
+        "rev": "acd5fff751eba0898e2ae853aaa1ceeaa37c9207",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741040147,
-        "narHash": "sha256-20AO7w4foC5z05GSenzXtGO2O5oGd0QHeDcjHTKuKuQ=",
+        "lastModified": 1741387190,
+        "narHash": "sha256-OnAwo4tD0t07FY522c9K4v+Z7j9d3YG11ozgmDWMnYk=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "3d39dc8b31d4ab7aad1b9ffdba136eafc6c7c360",
+        "rev": "ce902a02cae42359d73e8ca053975ed553438afa",
         "type": "github"
       },
       "original": {
