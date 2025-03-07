@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1741285640,
-        "narHash": "sha256-5EVBtYKeHMuIQYcXMoZtaBZPQ+sktFEpNwIBgPjFzJY=",
+        "lastModified": 1741330586,
+        "narHash": "sha256-M3KFPaCxhm0f7/vfut9coH3YOM6rUJF4zOhRiuaL0ls=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "f22181a62c47bf591fbfd6ada7d9a1156278d6e0",
+        "rev": "71ac531a6301b6d5f4dc4d7157ffd8bd8d6d769e",
         "type": "github"
       },
       "original": {
@@ -1811,11 +1811,11 @@
     "smear-cursor.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1739394733,
-        "narHash": "sha256-2ewfzlqYUjUYfCcOOP3CQclW/eIIzgk0TrFxbcrUaqs=",
+        "lastModified": 1741334730,
+        "narHash": "sha256-+gkEACV0zRzi3rKa/psKr3cFnDpC37fpjiyyG1SsbNU=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "4b7334a09cd2434e73588cc0ea63e71177251249",
+        "rev": "4f91b437757c3f8648be978602c079e7c718c807",
         "type": "github"
       },
       "original": {
@@ -2134,11 +2134,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1741170058,
-        "narHash": "sha256-qz8VhXQT+GrJfPASQwaXkzBWupny6u9V6NprOHEvgaU=",
+        "lastModified": 1741339677,
+        "narHash": "sha256-Y7Y0Vlr5Dc56Q0GBdTtgVvGxwCWQgLZsk7jalr08t6E=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "bb4fbf6d02de0f97c99b63a4b880cb5040b1dab6",
+        "rev": "cf6b84775624582d7422715ee46b0a63b53cee38",
         "type": "github"
       },
       "original": {
