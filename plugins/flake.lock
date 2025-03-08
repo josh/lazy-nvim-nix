@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741383373,
-        "narHash": "sha256-fzGxWpmTnoI9tKAaRazVK0KxR5Nc0ancSixNIhnlb7I=",
+        "lastModified": 1741391321,
+        "narHash": "sha256-vPZW8a3ovAW6HiD5sxcPporF7rKvVYs/w02BNKpXR9U=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "61c5917471b37ae2dee2487ba2803f062e746e03",
+        "rev": "7ba905eefb9f42ac7de20607b29f54b922750de8",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741387190,
-        "narHash": "sha256-OnAwo4tD0t07FY522c9K4v+Z7j9d3YG11ozgmDWMnYk=",
+        "lastModified": 1741396510,
+        "narHash": "sha256-zTMJ8phD4JDnuRF25X3ZuNzSLjVKs5Tp3WIJDTWDy/4=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "ce902a02cae42359d73e8ca053975ed553438afa",
+        "rev": "3a370c3a47b579f67a365c16d7bb740fa9d8eb7d",
         "type": "github"
       },
       "original": {
@@ -1091,11 +1091,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741224634,
-        "narHash": "sha256-1XVPBv9RsPLhYEFPT0ItXwV5TdlC3qYLxwi+EiBS5T4=",
+        "lastModified": 1741397299,
+        "narHash": "sha256-nS0QvOa+bIWHKBDrPUe+mT66fhVs5tCwWqA/9Lw9gKs=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "c215518f96a1058965fab3d1d3fd429b8b8fef1d",
+        "rev": "746fe7006b23dc1aa2399cd8d0962566ee0bda4a",
         "type": "github"
       },
       "original": {
@@ -1482,11 +1482,11 @@
     "nvim-treesitter-textobjects": {
       "flake": false,
       "locked": {
-        "lastModified": 1741051714,
-        "narHash": "sha256-1hmhd3ty6aHqAEQfpxSJdc6uu1B+MkGSWY/lCtYm/Q8=",
+        "lastModified": 1741395588,
+        "narHash": "sha256-3d+x6uNKoK3eOS/w7qOy6BBozRMiy/gC8O/PnfdBsMg=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-textobjects",
-        "rev": "8b2d4d519f3516d09910f5baf48d1a47b594f0ce",
+        "rev": "143856b1cee509a190cc8c17ddb0638002171235",
         "type": "github"
       },
       "original": {
