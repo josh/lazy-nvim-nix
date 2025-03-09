@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741480481,
-        "narHash": "sha256-twGRlcK0N+6Kxn/L1L8w5KHk8mJsX0820MJMg1tidsY=",
+        "lastModified": 1741490861,
+        "narHash": "sha256-arj0wfDwAoHkfCFhHqH/gU8ZH4d7s6G1P7CMQXnIDbQ=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "e00fc6b8cf00c0261d0f676de31642d4f08e2c19",
+        "rev": "09d38bed9148553d38d2dc5407293f9fcce491bd",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1741458963,
-        "narHash": "sha256-nI9OY+vdEatbhRLF6+QGGNVOVxlGP7pcmBgiZwQpB6Y=",
+        "lastModified": 1741486793,
+        "narHash": "sha256-exhktDxTUg8t3sIawHUywTLDXbGsqZWVnO5NSJkg3hg=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "07c3bedc14e824489c1f8abfd7123bdb6d4634e2",
+        "rev": "86d7cd6f3a0debf6bcb5a2187ea019214a62f2ff",
         "type": "github"
       },
       "original": {
@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1741088468,
-        "narHash": "sha256-Gy9ebQO5nV2nTmWZmDiD2HW7W5y7Za5wKu9i2LEtZNM=",
+        "lastModified": 1741494218,
+        "narHash": "sha256-IfzrAKXHWuFUFaDyhwoOB3ohjfjtukGRhE9YScekdvg=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "da9a0898541b34b95361e4223df17a7f680be070",
+        "rev": "33e704a07d1f79e55e26becf60992971266719fa",
         "type": "github"
       },
       "original": {
@@ -1074,11 +1074,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741293750,
-        "narHash": "sha256-zEiQzWjySgwIOUBaKc7WntJC4x64FgHQOgVctXk3874=",
+        "lastModified": 1741487224,
+        "narHash": "sha256-9Xkcvc+DA2D6zHQ43i3lnzrBQhLx5a+yQ0/sKDKvGJw=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "2a5c86bd61e6c60ab7c2cb029c5cf619e4ee0b3a",
+        "rev": "40dd57777a96d0728f6758874b141f409466e2da",
         "type": "github"
       },
       "original": {
@@ -1652,11 +1652,11 @@
     "refactoring.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741190308,
-        "narHash": "sha256-dFzRsIdK4liNRzyWMV/JzSTjx+7JDYn+OhYleGqs5us=",
+        "lastModified": 1741494096,
+        "narHash": "sha256-mhzMjWmJXAkjta/rZimq4itRRP4m4snz6taGX7ApIUQ=",
         "owner": "ThePrimeagen",
         "repo": "refactoring.nvim",
-        "rev": "bce639550c4e0f61c90f16e56e681405345e1e30",
+        "rev": "5268cc6add06ba8862492063341a568d18d65fb6",
         "type": "github"
       },
       "original": {
