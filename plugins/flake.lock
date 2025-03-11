@@ -1074,11 +1074,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741607133,
-        "narHash": "sha256-hucp/cd2CpvrhK0lhEwT7nWrkvMEj3Gltobfpuh/QVI=",
+        "lastModified": 1741693832,
+        "narHash": "sha256-qbPxQBaMa7cPJ531W/Is8eI0eCCJIWVEWYKQu9/uahk=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "940063ec5c2c81f455d25dbc7e0b918774f5e924",
+        "rev": "b545111b8ee19075f1f93735e2a69353b7b2c800",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1741352245,
-        "narHash": "sha256-j6RUmiiHwHVuTpb18cA73TZ2IleXm5+sXZiADhvFk5M=",
+        "lastModified": 1741692728,
+        "narHash": "sha256-4Fsuh7DOpTiZNtwG7N/ivUL0DRI4ZLq61hJAGI62NVE=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "fd26f8626c03b424f7140d454031d1dcb8d23513",
+        "rev": "8a1529e46eef5efc86c34c8d9bdd313abc2ecba0",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1741596032,
-        "narHash": "sha256-8YYEUyZKOqTjTdubaxdu95AZNmDGLOhQAHcbuqqElx4=",
+        "lastModified": 1741679313,
+        "narHash": "sha256-JvbsNQ7OdmmkzIJ4XNLNDWjx+NfRA3RsKbgEyMUOrmM=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "38959800c2439c890e3238af559f0dc3be45e393",
+        "rev": "cf0eabc16cf32d69f7612d0e023ef210d84cdde6",
         "type": "github"
       },
       "original": {
@@ -1964,11 +1964,11 @@
     "tree-sitter-nu": {
       "flake": false,
       "locked": {
-        "lastModified": 1741608016,
-        "narHash": "sha256-MkeWI+3JD1jx69WQIWvQisevQHyE9fTkGCOXfNr+Nmo=",
+        "lastModified": 1741692422,
+        "narHash": "sha256-EyaFrO9NE2Ivo8YTXZ6nmC31PB7WFbFdz7AMRw0ooHo=",
         "owner": "nushell",
         "repo": "tree-sitter-nu",
-        "rev": "c9f04276e6b5bbbcdba7aa1810ea621ced5bed97",
+        "rev": "c10340b5bb3789f69182acf8f34c3d4fc24d2fe1",
         "type": "github"
       },
       "original": {
