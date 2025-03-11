@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741645097,
-        "narHash": "sha256-WgZu0z0CnTMkwYFKPoqG7U1VBjOFZ3UCuG1IUNttJPw=",
+        "lastModified": 1741723152,
+        "narHash": "sha256-u30q62SBp/DhZkOCVPvMP1pQTpHB3uI0tvoRqcGdto8=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "335b3eaf3bcb5446e4d9439b240d12fcd7d2fd13",
+        "rev": "371620e550efda53fa97cf177448b46dbd100c63",
         "type": "github"
       },
       "original": {
@@ -1074,11 +1074,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741699888,
-        "narHash": "sha256-k23QAjtqiLlxi3WUGALdtk47uqa2PXrsqdhQkUFM2CA=",
+        "lastModified": 1741723881,
+        "narHash": "sha256-drFqHCYjgotI2BiG5xZUU61OELxE8PLiX85Hv8u9jw4=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "d8d6c481ab5abda00c22ed8b122817c8cc697f7c",
+        "rev": "8c6349bceb1d8a863964dd25dc7944d588a56aaa",
         "type": "github"
       },
       "original": {
