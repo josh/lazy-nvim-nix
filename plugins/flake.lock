@@ -768,11 +768,11 @@
     "lualine.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741844635,
-        "narHash": "sha256-rf/78+B2sKRfL4ge31B+bPZsOlDFYv6bg7ohxd1Rzt4=",
+        "lastModified": 1741851570,
+        "narHash": "sha256-7Oqe+vh2M4zOQIoa2KdHg2RirtQPdYBYLKcNaA1vsfE=",
         "owner": "nvim-lualine",
         "repo": "lualine.nvim",
-        "rev": "a605ee525487beaf04e000b627a3560040aa922e",
+        "rev": "02d61f515e7d88e1b02366ca972aecf2768d53df",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1741801639,
-        "narHash": "sha256-YcJqd2hjmUHhBfKGC2IycyUClmqaNV4L8mzJjVfmj3o=",
+        "lastModified": 1741854115,
+        "narHash": "sha256-jisidsJNHEJ0v2fMO1I4MIf84jNN6qljvsjU19Pexcs=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "548ed98f8a0af738d095ef1be5961f41061ed743",
+        "rev": "683816f14718b257666b29f792a8d330936cf5c1",
         "type": "github"
       },
       "original": {
@@ -1533,11 +1533,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741797021,
-        "narHash": "sha256-InUZRxY8JjJOW04Jdyain/0QRfPTwpv9O/QNjmjnH9c=",
+        "lastModified": 1741854732,
+        "narHash": "sha256-ilYhNQVAlv5vYUf2RaZr+vBQkctYiP9kzd3zoqJj7TI=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "631776a36c12724ba1db5ed8549cad35f70134dc",
+        "rev": "340c41f768f9dad3ed8cb52153214509f5cb6d56",
         "type": "github"
       },
       "original": {
