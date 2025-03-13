@@ -768,11 +768,11 @@
     "lualine.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738997087,
-        "narHash": "sha256-uAxe3UdNUVfdpQcKvGvQ/E2blGksvMPlTBfEOtgeVYo=",
+        "lastModified": 1741844635,
+        "narHash": "sha256-rf/78+B2sKRfL4ge31B+bPZsOlDFYv6bg7ohxd1Rzt4=",
         "owner": "nvim-lualine",
         "repo": "lualine.nvim",
-        "rev": "f4f791f67e70d378a754d02da068231d2352e5bc",
+        "rev": "a605ee525487beaf04e000b627a3560040aa922e",
         "type": "github"
       },
       "original": {
@@ -1652,11 +1652,11 @@
     "refactoring.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741494096,
-        "narHash": "sha256-mhzMjWmJXAkjta/rZimq4itRRP4m4snz6taGX7ApIUQ=",
+        "lastModified": 1741834703,
+        "narHash": "sha256-21aaCwBr5E/pyFCu7GSF7dQkiAM7MwGWgJg9SP2sfM8=",
         "owner": "ThePrimeagen",
         "repo": "refactoring.nvim",
-        "rev": "5268cc6add06ba8862492063341a568d18d65fb6",
+        "rev": "36bd14ddd7ebf0546c15e6088e8bc93f8a98787d",
         "type": "github"
       },
       "original": {
