@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742064096,
-        "narHash": "sha256-D/HZOcFMoi1o8ylmoi2ZSrlSxOEix95Q4MwRDBFFUNM=",
+        "lastModified": 1742073157,
+        "narHash": "sha256-TL3oCJ5orFb+YAOIcglM2whdegMwKEP0ZW8Hc0RR6cg=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "6a573c4b82ffb00076b97f02b9442256b9cb5205",
+        "rev": "7b8f13c1e2aec4c4ee57577110e147ea3c99385c",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     "R.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742047122,
-        "narHash": "sha256-gHkyLbZyrD3jkfhylGb5Hrl4s6zHHXn9lLJKIhEVgXg=",
+        "lastModified": 1742072421,
+        "narHash": "sha256-vPJqWXIkvz3J2Zkn/bctkFMDwGHyl+DEiElbU/DSEDg=",
         "owner": "R-nvim",
         "repo": "R.nvim",
-        "rev": "e61f63d282509b23c8c52953ef467c3585ac422e",
+        "rev": "0d264fb2e2fd42cd54e29467a6243eafa8f31903",
         "type": "github"
       },
       "original": {
@@ -1533,11 +1533,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742043978,
-        "narHash": "sha256-8bhxSUTJ7Txw8ZQZVAj22h0h9Cyryl5huAf6dPu/Vnw=",
+        "lastModified": 1742073116,
+        "narHash": "sha256-Dj1JGd0h6LZaRTdQEaMz9IfgCHweffyWT009W9lDTfg=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "1997accb974910b4959a65b92742aa1aab1e7699",
+        "rev": "17999e0370f19dd26322bc6b62f2537dd656a4b1",
         "type": "github"
       },
       "original": {
