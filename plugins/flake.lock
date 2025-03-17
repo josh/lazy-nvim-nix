@@ -615,11 +615,11 @@
     "haskell-snippets.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1728295342,
-        "narHash": "sha256-TiEngGiiy+aIsAJy+I5RUFml9ofqk6VX7WJng+QMG/c=",
+        "lastModified": 1742202338,
+        "narHash": "sha256-EK9kzsoQyZ8vXxIIgKNk5qF8nc51TWZlwYz9XYZrifw=",
         "owner": "mrcjkb",
         "repo": "haskell-snippets.nvim",
-        "rev": "bd893770dd7a0c1a473601c3c919e61670745b36",
+        "rev": "27ac316463b9807496cd03e65289d3e79aa23528",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1742132283,
-        "narHash": "sha256-lAl1h/MjB93h/rU+VKa+cvjE1LAKVo4NIeW7MVVYDxI=",
+        "lastModified": 1742194526,
+        "narHash": "sha256-/VEZSYkaSZrKSkNDFb58njvQM/uf129t8Xr0/r4m0ac=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "da88ea477c67c7f7ebab6d1e662d0cdebfcb57f0",
+        "rev": "d76a8b6e1b67fd3bcffec4a5d45fd9dee4dbbee8",
         "type": "github"
       },
       "original": {
@@ -1448,11 +1448,11 @@
     "nvim-treesitter-context": {
       "flake": false,
       "locked": {
-        "lastModified": 1742121371,
-        "narHash": "sha256-XoGHrEwMnUg9sL+MEHGQgsPKV6eFpMZhu5tXJMvp4y0=",
+        "lastModified": 1742201688,
+        "narHash": "sha256-rpmHIOXiD/mh0PHBdo1k1Wdb213KtBevmyCFrP89tME=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-context",
-        "rev": "572e534c9f881bb9bf9f388e4c87f360446c72d4",
+        "rev": "83ded3bbff8bc13abc9704bf1c5e426f3ba343c4",
         "type": "github"
       },
       "original": {
@@ -1533,11 +1533,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742142853,
-        "narHash": "sha256-NwDkCAouu2rRk/5KfQCXyA+BBs8ht32mGYu807XaVfw=",
+        "lastModified": 1742201334,
+        "narHash": "sha256-mAeGb1NpUvvN5O2aals3/FSq8+HCthU6GTRXyKlJNbk=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "b6fb264a1a38eb39f41d57a31c93e2210a4fe0a6",
+        "rev": "42f21639f0fd37dde894ffd220e4405795ce6326",
         "type": "github"
       },
       "original": {
