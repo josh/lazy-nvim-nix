@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742159103,
-        "narHash": "sha256-Nb7T3cqiAevjf7fNXwa9zIA8n3JrpPf+UnwjzpQ+Xlw=",
+        "lastModified": 1742210958,
+        "narHash": "sha256-+1dSGYeUpW/EUbP0scgGz48UB5RAPZYIWCglTFyntaU=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "37638fc50b200c47db42f89a4257c2557c7f7fd7",
+        "rev": "62b1249aa4a4fc7afe11c7e647cba0cef743826f",
         "type": "github"
       },
       "original": {
@@ -666,11 +666,11 @@
     "indent-blankline.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1737369467,
-        "narHash": "sha256-0+boInVEzS2myYil/l+frs8PAa/2eJcVTyXnEk6TGvI=",
+        "lastModified": 1742224677,
+        "narHash": "sha256-0q/V+b4UrDRnaC/eRWOi9HU9a61vQSAM9/C8ZQyKt+Y=",
         "owner": "lukas-reineke",
         "repo": "indent-blankline.nvim",
-        "rev": "e10626f7fcd51ccd56d7ffc00883ba7e0aa28f78",
+        "rev": "005b56001b2cb30bfa61b7986bc50657816ba4ba",
         "type": "github"
       },
       "original": {
@@ -734,11 +734,11 @@
     "lean.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1741801686,
-        "narHash": "sha256-PS8JNDi1bQfYLRPx2TcqOYlZLy6z9zLea/eaHeVGUPQ=",
+        "lastModified": 1742218917,
+        "narHash": "sha256-S5N4TZIJfCAx9lIbrJe19IJhJLtOJvc77R5sB5foq4U=",
         "owner": "Julian",
         "repo": "lean.nvim",
-        "rev": "c40bb6bd313b686526744b06f8e87aa71f3a2a26",
+        "rev": "d069945505058ffbb6c6f77550f25be00611f678",
         "type": "github"
       },
       "original": {
@@ -819,11 +819,11 @@
     "mason-nvim-dap.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1740003209,
-        "narHash": "sha256-zzXdLFvDwIAbPdrmEc5jePGNxi5RpTaG6N9zsTLwSjM=",
+        "lastModified": 1742223360,
+        "narHash": "sha256-JQkQimZ0nYkLbGWkcI9XDq/2ZEY49QXVGW8L0I5gzps=",
         "owner": "jay-babu",
         "repo": "mason-nvim-dap.nvim",
-        "rev": "09220b99d63d5363f219daa2785242ee5fddba7f",
+        "rev": "444aad7977ee713a4049e9d1dd9b377967d67a4c",
         "type": "github"
       },
       "original": {
