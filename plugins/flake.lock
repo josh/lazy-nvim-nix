@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742210958,
-        "narHash": "sha256-+1dSGYeUpW/EUbP0scgGz48UB5RAPZYIWCglTFyntaU=",
+        "lastModified": 1742264139,
+        "narHash": "sha256-SKiODNZrlGJ8Uot+hBN3rPz9B2wy/hchNYpC9wOR098=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "62b1249aa4a4fc7afe11c7e647cba0cef743826f",
+        "rev": "679441e4809019b7bf2bbcd0e352b75dc9508b92",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1742239281,
-        "narHash": "sha256-SzvQyxFH5MmxLWqYGMDxO6YhHYMW5FahzXWrSlhBAmM=",
+        "lastModified": 1742261704,
+        "narHash": "sha256-PV8rjfbpnygBd3+pzP0m3XQQaPjr0qb7I0BCOgDhiFE=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "8ca0b8760d93d7aa0f69ccbfe496e2e286c85549",
+        "rev": "d5aa7f455a41f483051db12aedb0ce9bafde6786",
         "type": "github"
       },
       "original": {
