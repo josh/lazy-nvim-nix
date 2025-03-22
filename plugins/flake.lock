@@ -360,11 +360,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1740833266,
-        "narHash": "sha256-ecyWwQSaElxntOoa2NPrPCFYey/PXtWtkOUp1cxHYkk=",
+        "lastModified": 1742648025,
+        "narHash": "sha256-n9xY9Bb+rPEtPGBaRbg51nJqMZtbsPAu1b9PKr36hL4=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "c5f427c33786a024c58d7105e2244f5f14c64fea",
+        "rev": "438ba1569625c6b4e4f31ed0a3b38219ad286cf7",
         "type": "github"
       },
       "original": {
@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1742614964,
-        "narHash": "sha256-Y4NPp/8AF6XBdlvjuD76t2E9b6RJnmfD9yWwMpy82Bs=",
+        "lastModified": 1742650939,
+        "narHash": "sha256-KxPihUQ5F6t1jMAvGOoA3M0vtWx/fZQD5OGkWfPFqWI=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "df5f1347fa8fe975b1018d73cdb91913f65f25c8",
+        "rev": "0c04031db9c0cdfbfe27b278277bd58d945e635f",
         "type": "github"
       },
       "original": {
@@ -1533,11 +1533,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742626045,
-        "narHash": "sha256-ETWkJrNq4Hwf9jsis6ZtFPIzq6eWZIQsNgugFgV0fJE=",
+        "lastModified": 1742655282,
+        "narHash": "sha256-BNUpO9wT3iDrPCfIwZcIIJwLK32hYz3/xqzuaXUD/aI=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "574c681f106619b8d7006ddf4d10837f90340663",
+        "rev": "7854bcd7cd3041cdc13b43198753ad1f60156b04",
         "type": "github"
       },
       "original": {
