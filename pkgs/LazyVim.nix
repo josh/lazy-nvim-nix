@@ -120,14 +120,6 @@ in
           checkWarning = true;
         };
 
-        checkhealth-lspconfig = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "lspconfig";
-          loadLazyPluginName = "nvim-lspconfig";
-          checkError = true;
-          checkWarning = true;
-        };
-
         checkhealth-mason = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "mason";
