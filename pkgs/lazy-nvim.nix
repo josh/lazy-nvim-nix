@@ -83,16 +83,16 @@ in
           checkWarning = true;
         };
 
-        checkhealth-nvim = neovim-checkhealth.override {
+        checkhealth-vim-deprecated = neovim-checkhealth.override {
           inherit neovim;
-          pluginName = "nvim";
+          pluginName = "vim.deprecated";
           checkError = true;
           checkWarning = true;
         };
 
-        checkhealth-provider-clipboard = neovim-checkhealth.override {
+        checkhealth-vim-health = neovim-checkhealth.override {
           inherit neovim;
-          pluginName = "provider.clipboard";
+          pluginName = "vim.health";
           checkError = true;
           checkWarning = true;
         };
@@ -103,6 +103,13 @@ in
           checkError = true;
           checkWarning = true;
           checkOk = false;
+        };
+
+        checkhealth-vim-provider = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "vim.provider";
+          checkError = true;
+          checkWarning = true;
         };
 
         checkhealth-vim-treesitter = neovim-checkhealth.override {
