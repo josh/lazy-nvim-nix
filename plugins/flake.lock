@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742420800,
-        "narHash": "sha256-L7M2qFIanqYY6WFfM6DbGaEMzR9KLw5jeHpbK0vSsp4=",
+        "lastModified": 1743444017,
+        "narHash": "sha256-sT3G5V1ARVFGUNdlObaxTiIs7prbN00IzcsaJ+idNCE=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "9ebc13583cff447f5493a63e99dfca526b3c3088",
+        "rev": "1d3cf8bd8c321b70a9f61e7872c2fca8890fd151",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1743434259,
-        "narHash": "sha256-x9XmJdb862VWDjm8v4ouZgONJ01XiN29wuY4CiUNtaU=",
+        "lastModified": 1743443763,
+        "narHash": "sha256-86Y98GiwX2DydSwA/zq+90gYCfKV0PcpqohKWjNNQf4=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "6fe420a3d122ff0d613ea2fc4f70cff2eb16e69e",
+        "rev": "623ed751616726e78f547cbba19cb6829011da3d",
         "type": "github"
       },
       "original": {
@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1743368020,
-        "narHash": "sha256-ouMAPF8BGZa5GF7mtJD0b/EgddLnQejAz0SGk2h9szU=",
+        "lastModified": 1743434929,
+        "narHash": "sha256-trlQa5Ff7HD0gs8Mqx8H/P1vAjKy7N8QMXI2bFGRyJg=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "caee13203d6143d691710c34f85ad6441fe3f535",
+        "rev": "96d0aeb27eb5a723c7d39e1f813e8e8146a2248a",
         "type": "github"
       },
       "original": {
