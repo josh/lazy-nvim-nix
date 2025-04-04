@@ -768,11 +768,11 @@
     "lualine.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1743064178,
-        "narHash": "sha256-DAYRf8JIty6W78JXBSyfnyCryUUYX+QrsHSAlcOk7Fc=",
+        "lastModified": 1743763928,
+        "narHash": "sha256-zVRE9a+ojQUHdaPL0CWqHKepFdO417KazahbdJPym6g=",
         "owner": "nvim-lualine",
         "repo": "lualine.nvim",
-        "rev": "1517caa8fff05e4b4999857319d3b0609a7f57fa",
+        "rev": "482ae358c67aec2a4939d68a1a4fe4c8064ccd16",
         "type": "github"
       },
       "original": {
@@ -904,11 +904,11 @@
     "mini.diff": {
       "flake": false,
       "locked": {
-        "lastModified": 1743517625,
-        "narHash": "sha256-rxIk97NtEgj0eaeROGpxcoBOnk+BQbfAU2gW3cLhPS4=",
+        "lastModified": 1743765492,
+        "narHash": "sha256-7tT1MqVAqzempIXsAy45s0dd5kEZanF07a75Tbciphs=",
         "owner": "echasnovski",
         "repo": "mini.diff",
-        "rev": "06c9fe0e33fbcf41202793550b905d7431dc81fc",
+        "rev": "73e27d1c32750e16592a2324ccf8b4b74b8b88b5",
         "type": "github"
       },
       "original": {
@@ -1346,11 +1346,11 @@
     "nvim-metals": {
       "flake": false,
       "locked": {
-        "lastModified": 1743334678,
-        "narHash": "sha256-IUFeYl/jwG/FrGYQ9lmQ9c4lSnGCB7+ddYDWiNiaWiA=",
+        "lastModified": 1743764593,
+        "narHash": "sha256-kL7WQm+ybe0dGOKvbmoMZl18D3yt9483KE4YlwEY7Ew=",
         "owner": "scalameta",
         "repo": "nvim-metals",
-        "rev": "4610aceb97fbcf2b050220ee5f83527e5c1699c5",
+        "rev": "bc896458ac639dea568e8dc06862074f8cba7fa3",
         "type": "github"
       },
       "original": {
@@ -1448,11 +1448,11 @@
     "nvim-treesitter-context": {
       "flake": false,
       "locked": {
-        "lastModified": 1742401063,
-        "narHash": "sha256-D4i4ChXK9yWCd/uBIkZaWq5hoYcBRfznHPbIRRaOPYo=",
+        "lastModified": 1743760826,
+        "narHash": "sha256-z4amYjSDoHVJcN9a5oRNoSli45rZlNoM3rzscMQEIYA=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-context",
-        "rev": "93b29a32d5f4be10e39226c6b796f28d68a8b483",
+        "rev": "a25c56c96c3bcc4be6245f8941108330100de330",
         "type": "github"
       },
       "original": {
