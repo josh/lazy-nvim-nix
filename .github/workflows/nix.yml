@@ -20,8 +20,6 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
-
       - uses: DeterminateSystems/nix-installer-action@main
         with:
           extra-conf: |
@@ -33,8 +31,6 @@ jobs:
           name: josh
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
 
-      - uses: DeterminateSystems/flake-checker-action@v9
-
       - name: Check flake
         run: |
-          nix flake check --keep-going --print-build-logs
+          nix flake check --keep-going --print-build-logs github:${{ github.repository }}/${{ github.sha }}
