@@ -87,13 +87,14 @@
           packages = self.packages.${system};
           plugins = pkgs.lazynvimPlugins;
 
+          buildPkg = pkg: pkgs.runCommand "${pkg.name}-build" { env.PKG = pkg; } "touch $out";
           addAttrsetPrefix = prefix: lib.attrsets.concatMapAttrs (n: v: { "${prefix}${n}" = v; });
           localTests = lib.attrsets.concatMapAttrs (
             pkgName: pkg:
             if (builtins.hasAttr "tests" pkg) then
-              ({ "${pkgName}-build" = pkg; } // (addAttrsetPrefix "${pkgName}-tests-" pkg.tests))
+              ({ "${pkgName}-build" = buildPkg pkg; } // (addAttrsetPrefix "${pkgName}-tests-" pkg.tests))
             else
-              { "${pkgName}-build" = pkg; }
+              { "${pkgName}-build" = buildPkg pkg; }
           ) self.packages.${system};
         in
         {
@@ -105,12 +106,13 @@
                 nativeBuildInputs = [ packages.lazy-nvim ];
               }
               ''
-                HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out~ +q 2>&1 | tee err
+                HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out +q 2>&1 | tee err
                 if grep "^E[0-9]\\+: " err; then
                   cat err
                   exit 1
                 fi
-                mv out~ "$out"
+                cat out
+                touch $out
               '';
 
           LazyVimPlugins-outdated =
@@ -122,10 +124,10 @@
               }
               ''
                 diff --unified $actual $expected
-                touch "$out"
+                touch $out
               '';
 
-          LazyVim-extras-catppuccin = plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
+          LazyVim-extras-catppuccin = buildPkg plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
             buildInputs = lib'.flattenDerivations plugins.LazyVim.extras;
           } "touch $out";

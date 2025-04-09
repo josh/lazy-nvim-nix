@@ -71,6 +71,6 @@ runCommand "checkhealth-${pluginName}"
       echo "Expected at least one OK" >&2
       return 1
     else
-      mv out.txt "$out"
+      touch $out
     fi
   ''

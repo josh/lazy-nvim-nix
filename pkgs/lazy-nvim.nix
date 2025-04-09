@@ -66,8 +66,8 @@ in
       in
       {
         help = runCommand "nvim-help" { nativeBuildInputs = [ neovim ]; } ''
-          nvim --help 2>&1 >out~
-          mv out~ "$out"
+          nvim --help 2>&1
+          touch $out
         '';
 
         checkhealth = neovim-checkhealth.override {
@@ -120,12 +120,13 @@ in
         };
 
         startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ neovim ]; } ''
-          HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out~ +q 2>&1 | tee err
+          HOME="$PWD" nvim --headless "+Lazy! home" --startuptime out +q 2>&1 | tee err
           if grep "^E[0-9]\\+: " err; then
             cat err
             exit 1
           fi
-          mv out~ "$out"
+          cat out
+          touch $out
         '';
       };
   }
