@@ -1295,11 +1295,11 @@
     "nvim-jdtls": {
       "flake": false,
       "locked": {
-        "lastModified": 1739436896,
-        "narHash": "sha256-pDwa4l7rT2L3l2cFiG/ErDyr4I2iOJ18ISjkiYXnBAM=",
+        "lastModified": 1744295538,
+        "narHash": "sha256-nNMHGsaZ7ikBTGMyP0BxaSBVgD8YZhznVjZTMq9qqC0=",
         "owner": "mfussenegger",
         "repo": "nvim-jdtls",
-        "rev": "2f7bff9b8d2ee1918b36ca55f19547d9d335a268",
+        "rev": "1be4289f761a9e98011f9f4a69505dc01e07e586",
         "type": "github"
       },
       "original": {
@@ -1312,11 +1312,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1743843058,
-        "narHash": "sha256-Y7PwKmwcPjuNZlBjftdkBZGKoWyk5LV3Tlws1Jr7Nuw=",
+        "lastModified": 1744298988,
+        "narHash": "sha256-WzGkZ6AqQWe7S1M1SZlCKlUsbQnO7qxrev/N93hajU8=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "e7b4ffa6ab763af012e38b21af2c9159f10d2d33",
+        "rev": "5b1bdf306bd3e565908145279e8bbfc594dac3b3",
         "type": "github"
       },
       "original": {
