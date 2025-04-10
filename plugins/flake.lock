@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1744089902,
-        "narHash": "sha256-3H+wKUcT19EmhGe5AM3b+pNBMDpLIXfzaEZ8Andp6BM=",
+        "lastModified": 1744278305,
+        "narHash": "sha256-gZMOzjrS3jAAq7zrLmqkO4wK2SBtIgdnyngP2H3qNKc=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "082f97122dd59d816a9a7b676d2b2f86a8ab6ed9",
+        "rev": "29f460c5c24765cba54952ce2de781e5d82ee6f6",
         "type": "github"
       },
       "original": {
@@ -751,11 +751,11 @@
     "leap.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1740786488,
-        "narHash": "sha256-VHCFaUsjiY9fs3nXHqMKATWJtH38WWVsQ04Hro8bB2c=",
+        "lastModified": 1744271634,
+        "narHash": "sha256-vH3VWH0IvlmvN1B44CemRiRmBlvxGQfaKSy4DQmMU9M=",
         "owner": "ggandor",
         "repo": "leap.nvim",
-        "rev": "346a16ef942635a8ca5ff92e603d07e7e8be6cbe",
+        "rev": "03eaa2e0c0ec9436dea0e954bc47564ff3ca9196",
         "type": "github"
       },
       "original": {
@@ -1176,11 +1176,11 @@
     "none-ls.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1743863620,
-        "narHash": "sha256-d07Bo7hMsSjzozbg8uXyDwcVofeVi6jISSLW/Vai1dA=",
+        "lastModified": 1744281711,
+        "narHash": "sha256-IYws4ZWNFRbDkLM6GIUcaZuAtZ40iE8vnu3zWMp21yI=",
         "owner": "nvimtools",
         "repo": "none-ls.nvim",
-        "rev": "6377e77dae38015d0a8c24852530098f1d8a24f6",
+        "rev": "0cbbf2d442afd0150590bffbd11fb0c83f5bed37",
         "type": "github"
       },
       "original": {
