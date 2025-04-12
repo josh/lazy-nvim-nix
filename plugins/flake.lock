@@ -275,11 +275,11 @@
     "cmp-git": {
       "flake": false,
       "locked": {
-        "lastModified": 1742892575,
-        "narHash": "sha256-pIb9qMuZcZW/JeKyI2oXHXp9jMZap+RlFA4kqFbLLMU=",
+        "lastModified": 1744445439,
+        "narHash": "sha256-OHm4PXE9DCO1SCSCvGrISEcmnZWwBFMvq4c8TDCNj58=",
         "owner": "petertriho",
         "repo": "cmp-git",
-        "rev": "d9efd00e0b9527ee05031ce7e7e55d6b118f543e",
+        "rev": "b5f15a7c6798e5aedfc27425d55af79c57094bf8",
         "type": "github"
       },
       "original": {
