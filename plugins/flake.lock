@@ -564,11 +564,11 @@
     "gitsigns.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1743773658,
-        "narHash": "sha256-l1Iu4jG1rGopUaEbKugzAqqbrQtpwnaKNbiMpnjH1VU=",
+        "lastModified": 1744463862,
+        "narHash": "sha256-cg8r0yuuSE8G5MTj0pET8MzJ+VQf+HsXDJx5FzriM78=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "17ab794b6fce6fce768430ebc925347e349e1d60",
+        "rev": "fcfa7a989cd6fed10abf02d9880dc76d7a38167d",
         "type": "github"
       },
       "original": {
@@ -1550,11 +1550,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1737249138,
-        "narHash": "sha256-+OY9B/VY1s/i00tuG9KduU6xqnZJuf9hii80WMomJL8=",
+        "lastModified": 1744466618,
+        "narHash": "sha256-yy9D/XmJMsWDebl13/56ldeGGZhtjClPQzhNUXkti9g=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "b9def31568d20b16f7da9479a4174d165046fe8a",
+        "rev": "330049a237635b7cae8aef4972312e6da513cf91",
         "type": "github"
       },
       "original": {
@@ -2134,11 +2134,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1744407603,
-        "narHash": "sha256-24yacz5jUNzz/usj5UyEV4FJrTo4FEyNsO+2Lv95378=",
+        "lastModified": 1744457154,
+        "narHash": "sha256-EQOM3+GHZyxLmo5b0P3qhtgrfllztVyKFvsKxpE3yAk=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "c6bab47449b9b14c70d91f5f7f08e2d84298bea4",
+        "rev": "408125296383af83fc53b2d03c9a0b8961c455d8",
         "type": "github"
       },
       "original": {
