@@ -1074,11 +1074,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1744193122,
-        "narHash": "sha256-9njURObJyjl4n+piskFbJOSQO/ij8afxHRoNTmK/9zc=",
+        "lastModified": 1744803437,
+        "narHash": "sha256-ZD5OqG6umqEEypZ26PLkUG23LeFpo5Chxg8tRupdTOE=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "5224467c6a49a6c77b8a8333f4d9af0abc788e10",
+        "rev": "f1f330690c26e0ab45a4fad99556d909d0dfc623",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1744726537,
-        "narHash": "sha256-ZC+sX2sYZnrqz4mkvrcVI3QXLSNTWvdGK3CAr20ZlLY=",
+        "lastModified": 1744801053,
+        "narHash": "sha256-0aZDZgtVLgT0cwiVqcN5XE2v4c9aplCUGDGE0K16cJg=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "3a7387a9c980304059b2bd7075684d6ef98ff331",
+        "rev": "c40a2dca6e4a4f4af262375dcb71692882b6122c",
         "type": "github"
       },
       "original": {
@@ -1448,11 +1448,11 @@
     "nvim-treesitter-context": {
       "flake": false,
       "locked": {
-        "lastModified": 1743773493,
-        "narHash": "sha256-4nvtD4Tz20o3bjWIJdt0grEvq3UQ+iqM+Fs0RNS3qRM=",
+        "lastModified": 1744795646,
+        "narHash": "sha256-ZyxGRlYAL0dm1rd7P1QfYt8sL68mlSUWU4HuDYpGzCc=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-context",
-        "rev": "439789a9a8df9639ecd749bb3286b77117024a6f",
+        "rev": "b8ec6e391020a3ee18547f3343b25fc7c9ada9cc",
         "type": "github"
       },
       "original": {
@@ -1811,11 +1811,11 @@
     "smear-cursor.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1744631781,
-        "narHash": "sha256-+cYtSu5A7ITKtyCZHMp/UAeZLYirIO/Q/yzAV0a4Yyc=",
+        "lastModified": 1744792523,
+        "narHash": "sha256-/KbvOjcf2Q3WLE+s9zmCLwoW0il49d5UksKgssH6D2g=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "3879bc2eb4a2a07a8637256fe33cc4484a23a813",
+        "rev": "a76711e1084b8732ff9f87856e4956c62b7e23ee",
         "type": "github"
       },
       "original": {
