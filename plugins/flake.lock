@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1744824608,
-        "narHash": "sha256-Lac8Blyjwg4JOdE3xOnJK0RfndjxpIHs86coJNEUqyE=",
+        "lastModified": 1744870205,
+        "narHash": "sha256-zvAa9az8tS1b0Y0p+Iz0XvKT6sSPBFpLvu5PtHlpT/8=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "cb5680882ed1f18e67429516e45b810de3d148b8",
+        "rev": "49c1268b99dab89671010673ed57980188cd00a0",
         "type": "github"
       },
       "original": {
@@ -2083,11 +2083,11 @@
     "vim-illuminate": {
       "flake": false,
       "locked": {
-        "lastModified": 1744345895,
-        "narHash": "sha256-nK3wxz6zOKB+Wtt7hFYJ9CJTiDEeAbsLnA6miQUmGms=",
+        "lastModified": 1744859423,
+        "narHash": "sha256-zqXKkrUNTH/EIx3PBRN8+mQcbWa6fO9i/UoSeav5R/w=",
         "owner": "RRethy",
         "repo": "vim-illuminate",
-        "rev": "08aa184f1bd508f6a59371b52cba26be07bc016d",
+        "rev": "1fa4b23409e22a03823648e344c77f260e2572cb",
         "type": "github"
       },
       "original": {
