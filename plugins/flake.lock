@@ -71,11 +71,11 @@
     "SchemaStore.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1745251804,
-        "narHash": "sha256-lhEbILMR9lx8SyagnD0fFH31KwJ2Z+HmEFnW1O2+yZQ=",
+        "lastModified": 1745352580,
+        "narHash": "sha256-QL8JV6Dn4oZkLMZwiT0ta5600ZO9G1vyPN9+W/uVZYc=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "3cc1bad59aac9125477fdee9fe1dddc578d57d82",
+        "rev": "ad028f85ec81d58fc5e128c705b8d0f1365898a4",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1745337380,
-        "narHash": "sha256-ySHbLTtg5uv/nTZRHCoorPqW2SZyINoWUzjJRh0Nxzs=",
+        "lastModified": 1745348362,
+        "narHash": "sha256-rxSNvJ3DppuagGZEdle8E0FHoRY0T9tNmSlSF/hMb7o=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "bdb1497c8bb4c331d27e7072420df909c8907f38",
+        "rev": "de8331ef9d1912a3474646c6f67801075fea51bd",
         "type": "github"
       },
       "original": {
@@ -326,11 +326,11 @@
     "codeium.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1743787951,
-        "narHash": "sha256-qah1QzyrAOEA+k1D0Li47zmw0xLDGtsQxshpw3sb0BE=",
+        "lastModified": 1745348640,
+        "narHash": "sha256-yTAlWL4nkSVFsE+SgqzUpyEfSdZ/g+rugo+cFVBQP+g=",
         "owner": "Exafunction",
         "repo": "codeium.nvim",
-        "rev": "9569c9095a70370849345c861cdb2b06c4cadac7",
+        "rev": "ad4414878f7ece254deab8c922d82cec124d161f",
         "type": "github"
       },
       "original": {
