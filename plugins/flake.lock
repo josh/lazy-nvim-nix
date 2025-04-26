@@ -360,11 +360,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1745232410,
-        "narHash": "sha256-Fcq5erTz1h+5bfQO86n0baeCxn+0cA4/DHyVNHeNTmE=",
+        "lastModified": 1745668096,
+        "narHash": "sha256-M5UULRLC9/vIAgikm27U1KYlR/xOFg3JB2I3gLIocvQ=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "1e656c64494f0b0c51baa40ea3c61f2b608e15b2",
+        "rev": "fb33775c2a1960c4b47a5ddd3fdbd82d81829752",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1745642782,
-        "narHash": "sha256-Vi4aM6212Rts6dNlJtFcHIBM4+yuZK8S3UbCksvKX5M=",
+        "lastModified": 1745673847,
+        "narHash": "sha256-L/yz0egBCIJ9kIDoZzX/+9GHx2au2VtlOPkm+zZ+T7M=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "a9d8e659df04eb48d4224798777eb33992692333",
+        "rev": "c48fac0936f24a5a2dbea9c8379ec9414a45eb8b",
         "type": "github"
       },
       "original": {
