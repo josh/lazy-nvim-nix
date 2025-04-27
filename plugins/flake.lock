@@ -2015,11 +2015,11 @@
     "vim-dadbod": {
       "flake": false,
       "locked": {
-        "lastModified": 1737843830,
-        "narHash": "sha256-7wlMfOpt5lcKuZPfiY+3hbaSN0YkjpbtF4L2ko/pfI4=",
+        "lastModified": 1745771207,
+        "narHash": "sha256-2KVsKLxXq0/DThx1n4LnVz9cMuiOOO87dayeD5UPnoI=",
         "owner": "tpope",
         "repo": "vim-dadbod",
-        "rev": "9f0ca8bcef704659820a95c3bbd2c262583a66a1",
+        "rev": "fa31d0ffeebaa59cf97a81e7f92194cced54a13f",
         "type": "github"
       },
       "original": {
@@ -2083,11 +2083,11 @@
     "vim-illuminate": {
       "flake": false,
       "locked": {
-        "lastModified": 1745713723,
-        "narHash": "sha256-cgHUfHPd5q0LbxTKlaoFfgXfXVjE19WUKAyZVniRREU=",
+        "lastModified": 1745775409,
+        "narHash": "sha256-5p2mX8Ed+ZVc/Br7ZMVFlqSSuOwbv3k4bGqnMkkU/UU=",
         "owner": "RRethy",
         "repo": "vim-illuminate",
-        "rev": "2086527383c780983c702d0cdb304409dc0358f6",
+        "rev": "f985f5a4fbc410c9e5367f6b5863a8fa502e516d",
         "type": "github"
       },
       "original": {
