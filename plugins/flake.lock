@@ -360,11 +360,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1745668096,
-        "narHash": "sha256-M5UULRLC9/vIAgikm27U1KYlR/xOFg3JB2I3gLIocvQ=",
+        "lastModified": 1745875484,
+        "narHash": "sha256-1aSdYmEMDiYzpIKD+JIM3Qc33lV6RS9Mm3QMydy51pA=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "fb33775c2a1960c4b47a5ddd3fdbd82d81829752",
+        "rev": "5a198c0a3f2bf3d707faed9756d5bd075d5cefcb",
         "type": "github"
       },
       "original": {
