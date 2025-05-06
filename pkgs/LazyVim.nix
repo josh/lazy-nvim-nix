@@ -117,7 +117,8 @@ in
           pluginName = "fzf_lua";
           loadLazyPluginName = "fzf-lua";
           checkError = true;
-          checkWarning = true;
+          # WARNING `nvim-web-devicons` or `mini.icons` not found
+          checkWarning = false;
         };
 
         checkhealth-mason = neovim-checkhealth.override {
