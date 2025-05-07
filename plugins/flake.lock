@@ -1550,11 +1550,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1746547339,
-        "narHash": "sha256-+Wh6rj9Y84N/bEhATV4mJo6ocMxYNP0SVOdqi9XN88A=",
+        "lastModified": 1746628752,
+        "narHash": "sha256-+iZuX8DubyXquLPdPRv6V5AAXs6xCoezrdiq+VIqX70=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "17d4ff0f54da98e27f89d5578f357f99b5eed204",
+        "rev": "a675a156f207ceabff20224ff404a4b74036a859",
         "type": "github"
       },
       "original": {
