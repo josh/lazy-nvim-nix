@@ -1533,11 +1533,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1746662837,
-        "narHash": "sha256-cQlb2L/AXkLB/IDB2viriAlXAj/aBCh2ihszj90Nj9Y=",
+        "lastModified": 1746706397,
+        "narHash": "sha256-w8J5soAtwhd8N8zR6Nc3XlNAcyqSVoNaH7EWkRvlSPU=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "75395f3d4723ab50997fafef8a00077ce9e346fc",
+        "rev": "4d2634797d1e84df608c10b53031f13a269fade3",
         "type": "github"
       },
       "original": {
