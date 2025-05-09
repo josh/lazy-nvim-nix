@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1746615843,
-        "narHash": "sha256-IzX6bdXkaSMNUiiyqWWWWMRGtmVgOu3zYVlnjh6mQ8Y=",
+        "lastModified": 1746751600,
+        "narHash": "sha256-XAgsZ8YgmNCV5XcoLXeG8wFduO4DiHP7+OReKhypxNs=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "b91e6d4bad441dcaeda3d0c6df45ed270443b60a",
+        "rev": "78c8d27c6f3300bfa92bb535236732d8e9bcb614",
         "type": "github"
       },
       "original": {
@@ -1091,11 +1091,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1746667863,
-        "narHash": "sha256-mz0P0/if6I+lZlMLk0LxOxjQjNNYpHoNFcGgV79q2z0=",
+        "lastModified": 1746754264,
+        "narHash": "sha256-Ga0SsPjSy0C3ZyflOEra6z+/jF9//ryHQZZzdHHSoog=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "147050b9b0473b1d725051dd0b8ddec8eadc1e0e",
+        "rev": "e15a3f4e9a748b50c1a02711bd43b057bdee1a13",
         "type": "github"
       },
       "original": {
