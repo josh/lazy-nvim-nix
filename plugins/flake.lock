@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1746837852,
-        "narHash": "sha256-fPZOnS+nM8I4JGve9h5hqN3Lf6nhC4zf87p+blmOh60=",
+        "lastModified": 1746889179,
+        "narHash": "sha256-hgZBnRX032djmT7j9aRD2xZlg+qzIvv8pNqM7AbnKQ8=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "af4a9f5ce58763365999bfc558ddecd20d41f2b7",
+        "rev": "61e5109c8cf24807e4ae29813a3a82b31821dd45",
         "type": "github"
       },
       "original": {
@@ -1550,11 +1550,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1746628752,
-        "narHash": "sha256-+iZuX8DubyXquLPdPRv6V5AAXs6xCoezrdiq+VIqX70=",
+        "lastModified": 1746886972,
+        "narHash": "sha256-QcBxJdNqLAtmP7rdYBvsNYPD8PGjjkvc4uV73GkCX2s=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "a675a156f207ceabff20224ff404a4b74036a859",
+        "rev": "113d1c3c55418d7210193cccd7b844eb39f2fc44",
         "type": "github"
       },
       "original": {
