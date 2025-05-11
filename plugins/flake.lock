@@ -190,11 +190,11 @@
     "chezmoi.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1743864312,
-        "narHash": "sha256-tCAIuXCCQfh2jx/pjmoP3S2jTRTGBc0mycyJc10BLX8=",
+        "lastModified": 1746967101,
+        "narHash": "sha256-lZFGBuH+yExt2BMdTvgOYV9AsJn6zyd6MTnyNbHgM8s=",
         "owner": "xvzc",
         "repo": "chezmoi.nvim",
-        "rev": "74f94b0fcc7cb1243979497c16df3bcaf8fbb473",
+        "rev": "838378806cac89ded93a4a27be32e98e066c0d2e",
         "type": "github"
       },
       "original": {
@@ -360,11 +360,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1746441251,
-        "narHash": "sha256-6ZQtLEYFdEd9wVfyfcReD2yqJf7YOxXy/zlblN9PST0=",
+        "lastModified": 1746957535,
+        "narHash": "sha256-gcOR0NTfV0INe7r66Or7qujWbyQEbal0lNEGoOiBJXc=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "15063cc166a9f407c46ee73b3e05c3389678e84d",
+        "rev": "9fad07b07c41f77c5cc8b5659101eca091d5aefa",
         "type": "github"
       },
       "original": {
