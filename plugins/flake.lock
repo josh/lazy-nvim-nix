@@ -1896,11 +1896,11 @@
     "telescope.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742346322,
-        "narHash": "sha256-GF1zOHZItVZm3bx2wqI4hPj7EXQJ2F9KS4MtaEt2gm0=",
+        "lastModified": 1747012888,
+        "narHash": "sha256-JpW0ehsX81yVbKNzrYOe1hdgVMs6oaaxMLH6lECnOJg=",
         "owner": "nvim-telescope",
         "repo": "telescope.nvim",
-        "rev": "a4ed82509cecc56df1c7138920a1aeaf246c0ac5",
+        "rev": "b4da76be54691e854d3e0e02c36b0245f945c2c7",
         "type": "github"
       },
       "original": {
