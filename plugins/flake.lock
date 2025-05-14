@@ -804,13 +804,13 @@
       "locked": {
         "lastModified": 1746568799,
         "narHash": "sha256-GxBuxz+JHuCGydBHeG21bKK0tXMdhIyUQ/4XVT3KbLU=",
-        "owner": "williamboman",
+        "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
         "rev": "d39a75bbce4b8aad5d627191ea915179c77c100f",
         "type": "github"
       },
       "original": {
-        "owner": "williamboman",
+        "owner": "mason-org",
         "ref": "main",
         "repo": "mason-lspconfig.nvim",
         "type": "github"
@@ -838,13 +838,13 @@
       "locked": {
         "lastModified": 1746567027,
         "narHash": "sha256-X8M4PlK3dFMX8Jr1gjp01z4l8JhcpDbR0f0B8/9ov5g=",
-        "owner": "williamboman",
+        "owner": "mason-org",
         "repo": "mason.nvim",
         "rev": "7c7318e8bae7e3536ef6b9e86b9e38e74f2e125e",
         "type": "github"
       },
       "original": {
-        "owner": "williamboman",
+        "owner": "mason-org",
         "ref": "main",
         "repo": "mason.nvim",
         "type": "github"
