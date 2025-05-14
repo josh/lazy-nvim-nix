@@ -123,7 +123,7 @@
                 expected = ./plugins/LazyVim.json;
               }
               ''
-                diff --unified $actual $expected
+                diff --unified $expected $actual
                 touch $out
               '';
 
