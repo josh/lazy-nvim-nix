@@ -8,8 +8,8 @@
     "grug-far.nvim": "MagicDuck/grug-far.nvim",
     "lazydev.nvim": "folke/lazydev.nvim",
     "lualine.nvim": "nvim-lualine/lualine.nvim",
-    "mason-lspconfig.nvim": "williamboman/mason-lspconfig.nvim",
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason-lspconfig.nvim": "mason-org/mason-lspconfig.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "mini.ai": "echasnovski/mini.ai",
     "mini.icons": "echasnovski/mini.icons",
     "mini.pairs": "echasnovski/mini.pairs",
@@ -164,17 +164,17 @@
   "lazyvim.plugins.extras.editor.snacks_picker": {},
   "lazyvim.plugins.extras.editor.telescope": {},
   "lazyvim.plugins.extras.formatting.biome": {
-    "mason.nvim": "williamboman/mason.nvim"
+    "mason.nvim": "mason-org/mason.nvim"
   },
   "lazyvim.plugins.extras.formatting.black": {
-    "mason.nvim": "williamboman/mason.nvim"
+    "mason.nvim": "mason-org/mason.nvim"
   },
   "lazyvim.plugins.extras.formatting.prettier": {},
   "lazyvim.plugins.extras.lang.angular": {
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.lang.ansible": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-ansible": "mfussenegger/nvim-ansible",
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
@@ -207,7 +207,7 @@
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.elm": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -223,7 +223,7 @@
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.go": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "mini.icons": "echasnovski/mini.icons",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
@@ -232,7 +232,7 @@
     "LuaSnip": "L3MON4D3/LuaSnip",
     "haskell-snippets.nvim": "mrcjkb/haskell-snippets.nvim",
     "haskell-tools.nvim": "mrcjkb/haskell-tools.nvim",
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
     "telescope.nvim": "nvim-telescope/telescope.nvim",
@@ -255,7 +255,7 @@
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.kotlin": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -278,7 +278,7 @@
   },
   "lazyvim.plugins.extras.lang.omnisharp": {},
   "lazyvim.plugins.extras.lang.php": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -297,7 +297,7 @@
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.ruby": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -313,7 +313,7 @@
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.sql": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "vim-dadbod": "tpope/vim-dadbod",
     "vim-dadbod-completion": "kristijanhusak/vim-dadbod-completion",
     "vim-dadbod-ui": "kristijanhusak/vim-dadbod-ui"
@@ -323,7 +323,7 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.lang.terraform": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -398,12 +398,12 @@
     "mini.icons": "echasnovski/mini.icons"
   },
   "lazyvim.plugins.extras.util.dot": {
-    "mason.nvim": "williamboman/mason.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.util.gitui": {
-    "mason.nvim": "williamboman/mason.nvim"
+    "mason.nvim": "mason-org/mason.nvim"
   },
   "lazyvim.plugins.extras.util.mini-hipatterns": {
     "mini.hipatterns": "echasnovski/mini.hipatterns"
