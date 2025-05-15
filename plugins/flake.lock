@@ -241,11 +241,11 @@
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747230606,
-        "narHash": "sha256-FIXWspPrhKeNdV13LiTVE7IZi1Vd+0mnLC/yaqumfPU=",
+        "lastModified": 1747284828,
+        "narHash": "sha256-SaQ0Yy/FiAVOrdo/aalJvYjHPb2EjktGp+ZhmMg7VRg=",
         "owner": "Civitasv",
         "repo": "cmake-tools.nvim",
-        "rev": "4912b0a31785028a20519fc9f15a56008f5bf0f5",
+        "rev": "d6fa30479c5f392f6f80b4b2e542f91155b289a8",
         "type": "github"
       },
       "original": {
