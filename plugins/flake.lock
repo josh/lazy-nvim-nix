@@ -173,11 +173,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1746365232,
-        "narHash": "sha256-4GpFqo1IDxikmsY6muTJ55+AYPURLMHt7L6lmboyYvI=",
+        "lastModified": 1747497798,
+        "narHash": "sha256-u3E/vyii4zD491GEffbscMU3teDOgt3bFWaYwnaX7E0=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "1bf070129c0b6f77cc23f6a2212dcdc868308c52",
+        "rev": "8162a4bd9afb42837a655e404d1f937a87ba95e6",
         "type": "github"
       },
       "original": {
@@ -241,11 +241,11 @@
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747486522,
-        "narHash": "sha256-fSjB+6ThFwEYJqISNzDpHoVA+4mCim+DzfuC6INHwDc=",
+        "lastModified": 1747498148,
+        "narHash": "sha256-viWTV/k0jRhjRg2SkEnzdVCdMtxRBg5dCv0QA/+K1wM=",
         "owner": "Civitasv",
         "repo": "cmake-tools.nvim",
-        "rev": "3637e4cb3289af7d7de2ea6cadfd2387d669d04b",
+        "rev": "e8e5baf92ddfb8d540c95e80c72fa49b8148086e",
         "type": "github"
       },
       "original": {
@@ -683,11 +683,11 @@
     "kulala.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1746460571,
-        "narHash": "sha256-Kckm4TNDEH0u38ecs4zZ5/ZrWYQgiAiu5sJvZxOrVng=",
+        "lastModified": 1747504457,
+        "narHash": "sha256-mC/WprAO0qup6ZkIz1XCOSZSfwgD4rl2dDJJQ7BnhUc=",
         "owner": "mistweaverco",
         "repo": "kulala.nvim",
-        "rev": "4a56a4cf40e126721a60039079f76a14caf5336a",
+        "rev": "60a38e659422b2934b6955c591c5f2c5310fdfc5",
         "type": "github"
       },
       "original": {
