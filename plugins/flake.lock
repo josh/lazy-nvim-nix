@@ -632,11 +632,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1746923441,
-        "narHash": "sha256-io31/s22N5kfKrOo8QRuEqYXNokHYH9eexJ7YMaSBWE=",
+        "lastModified": 1747528119,
+        "narHash": "sha256-tYofNw8O9WfvN5iGNWAIUrKVb1utvMVErTB6Rsjm5Jw=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "20d874b50f3af49d36003d15f74f12ccb085db6e",
+        "rev": "7d5537294bfed92635671fede843beba3bdfa4cb",
         "type": "github"
       },
       "original": {
@@ -734,11 +734,11 @@
     "lean.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747508395,
-        "narHash": "sha256-o6LbYDiRmyhqVutaT2JQ+JFlsg20d+odRjPrUoT1iSk=",
+        "lastModified": 1747530163,
+        "narHash": "sha256-ykIQdJnVA7txNCL+5jUe9hu0n6EQ9wegYTcZOZfVov8=",
         "owner": "Julian",
         "repo": "lean.nvim",
-        "rev": "6c9bf1e8f3ca8fc18c651f4cdd299902e5bdd3df",
+        "rev": "67f756bed5caec5ba23a9129f25dfa8a265425c9",
         "type": "github"
       },
       "original": {
@@ -1091,11 +1091,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747445445,
-        "narHash": "sha256-VES9sNQrvcs22Rv3QC6NUqjkzuxCTI4xt1Hqn4/ZJ0o=",
+        "lastModified": 1747531875,
+        "narHash": "sha256-PsQCvpkkCgYj2a7DlOrrWfXHMy5bwAyyt8EbjFsBCBI=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "ed5f758a1d260bde79974c7053fa01d25e6a893f",
+        "rev": "3a9a85de3f316bc4bf3d487c900911c7669ddfcc",
         "type": "github"
       },
       "original": {
