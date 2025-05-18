@@ -683,11 +683,11 @@
     "kulala.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747563444,
-        "narHash": "sha256-x47/atoBlPi7eo17AuIKZInC5/Ut9CdZ6f+4HxwTddM=",
+        "lastModified": 1747566703,
+        "narHash": "sha256-pAQrAaKayDOrH1dxvlxWrNtLxneIIWrmHvYMlQT7zgc=",
         "owner": "mistweaverco",
         "repo": "kulala.nvim",
-        "rev": "15843c82ef37b25ac1c0ba315d4b672c5d01b6c1",
+        "rev": "da056f3750fd63eb83baab70fd0d6e73a00e388d",
         "type": "github"
       },
       "original": {
@@ -1794,11 +1794,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747393028,
-        "narHash": "sha256-ElcwY9yBUaCgbv/gKdpfgsr7JrFDDsnzJwdLGkco6pw=",
+        "lastModified": 1747572898,
+        "narHash": "sha256-oUMsJDQIkTIndMDRRra/3n0I6mqJMuyoicSn7HP28kU=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "3567efce84c223519d0dcbe19ebbfb24683ec493",
+        "rev": "e9166120fcdd1aa617808b265e05397dc324739b",
         "type": "github"
       },
       "original": {
