@@ -768,11 +768,11 @@
     "lualine.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1745335540,
-        "narHash": "sha256-wfNEDR3uR8Y6hZhzcnuukQ2yMz7rCvuc4li/0rkPRTA=",
+        "lastModified": 1747713294,
+        "narHash": "sha256-spxXvgE8lj58M7dcpTk26+ZDxz5ihgeoGxbsqDW7j5c=",
         "owner": "nvim-lualine",
         "repo": "lualine.nvim",
-        "rev": "15884cee63a8c205334ab13ab1c891cd4d27101a",
+        "rev": "ecfcfee812ef4fee1e86ae8f315c4a045f7da719",
         "type": "github"
       },
       "original": {
