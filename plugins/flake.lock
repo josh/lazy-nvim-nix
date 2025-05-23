@@ -71,11 +71,11 @@
     "SchemaStore.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747452708,
-        "narHash": "sha256-ysxgGpMgeLOWKGKotdvUkTVODpW5ioIRk72W7trfVs0=",
+        "lastModified": 1747998041,
+        "narHash": "sha256-vR1X5vYChHN0zQ4EDkYu8LJJL7OgHgBQSl9hb/mXY9c=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "386bdbf18abb6ca103495c5bdbab65e46f3c361d",
+        "rev": "5571cd3cbb3f4a1eed78c3e212bd5e7fba2e9e61",
         "type": "github"
       },
       "original": {
@@ -360,11 +360,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1747403245,
-        "narHash": "sha256-F8Xfy1X+V103gagGy3wbjg3fI1sDdh8/dedNagGrI6w=",
+        "lastModified": 1747998382,
+        "narHash": "sha256-wWeHjrP/PsSP82TOWxmOBBXYCqX5lR/aAroCTFvPDEo=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "9fec2bd817e2ce9a24b07016141b213cc16befdc",
+        "rev": "1df285f180a16da369cd383f6e1c136923b2a862",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747432457,
-        "narHash": "sha256-ZotyZKv8JA85L5IUo7ZTsVpF90oqWWThPSpYb5KdT4c=",
+        "lastModified": 1747981756,
+        "narHash": "sha256-fBdOiW/EqSz3JyUxe/Oexa+TzTqOBldJDMwFSidMsj0=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "7df08fff7da6ee08006fe8eaccc3407b89da368b",
+        "rev": "f24022147ca4a0fe1d424a520a9437accbeba193",
         "type": "github"
       },
       "original": {
@@ -683,11 +683,11 @@
     "kulala.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747823972,
-        "narHash": "sha256-pHibPzNwy7jQ2eZZKOaJ0X/bOo3TQ4R55ZhK9Ona00I=",
+        "lastModified": 1747996588,
+        "narHash": "sha256-HlYvt3Kh9X0H/fc9nA35RH4D1CqOkQeXOn5HcKeq5oU=",
         "owner": "mistweaverco",
         "repo": "kulala.nvim",
-        "rev": "b384bf96f3f64f981b13f9f9a1067c48004b9c9a",
+        "rev": "8d612b2a0f8be1afa2ec5e612def3707a7dff028",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mini.ai": {
       "flake": false,
       "locked": {
-        "lastModified": 1743517623,
-        "narHash": "sha256-rN7nchgckFy0ZUrGAnEaLzK9fAPJkyqacM2SSju3h9E=",
+        "lastModified": 1747991835,
+        "narHash": "sha256-vIoQ6oEmolm4to8VcWe/Oz5oJDI9dyO3B4rIKhMNO34=",
         "owner": "echasnovski",
         "repo": "mini.ai",
-        "rev": "e139eb1101beb0250fea322f8c07a42f0f175688",
+        "rev": "b91997d220086e92edc1fec5ce82094dcc234291",
         "type": "github"
       },
       "original": {
