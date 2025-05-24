@@ -802,11 +802,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1748081182,
-        "narHash": "sha256-3Q8kzPte93j3t51Hb4JpNQJ3+TrJsG7H1UXQfb9ucXM=",
+        "lastModified": 1748104191,
+        "narHash": "sha256-Y0DWf94330xedEtUUqrcU4uTzTEtoXt2caCYaIHUFKc=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "ea7a62e2a4a58beedfe40b643f4840e0fda9a032",
+        "rev": "d24b3f1612e53f9d54d866b16bedab51813f2bf1",
         "type": "github"
       },
       "original": {
@@ -1142,11 +1142,11 @@
     "neotest": {
       "flake": false,
       "locked": {
-        "lastModified": 1747081206,
-        "narHash": "sha256-J9zEZHJKgH9wWeD0GMCIPJH/CUMq0vtBwNaXsObF7tY=",
+        "lastModified": 1748098642,
+        "narHash": "sha256-OpYEB682YumFpKSSyEygPMhYdf3WHWh2Bh1iunQfXSM=",
         "owner": "nvim-neotest",
         "repo": "neotest",
-        "rev": "862afb2a2219d9ca565f67416fb7003cc0f22c4f",
+        "rev": "ef492755730e59e1d8122c461abbd086bee4c76b",
         "type": "github"
       },
       "original": {
@@ -1550,11 +1550,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1748059615,
-        "narHash": "sha256-hgNNpKQelYTWHqp3tzeLJLvX0Ai4LjLrWiAaKrrOlQo=",
+        "lastModified": 1748107014,
+        "narHash": "sha256-P++r1isXYOYwL74pFFQfnVz/oYpIq9kl7do7Ahh2Thw=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "e272971a151d83e63407a00de012e3675cd812d1",
+        "rev": "757237876215b98087a9fa04d1c954c19390f4b6",
         "type": "github"
       },
       "original": {
@@ -2083,11 +2083,11 @@
     "vim-illuminate": {
       "flake": false,
       "locked": {
-        "lastModified": 1745787714,
-        "narHash": "sha256-MSX0obp+DDQ5c+r6QxPnV46uLTC0fzY1JFiyA097Uxw=",
+        "lastModified": 1748105647,
+        "narHash": "sha256-KqAJRCtDBG5xsvNsqkxoBdDckg02u4NBBreYQw7BphA=",
         "owner": "RRethy",
         "repo": "vim-illuminate",
-        "rev": "fbc16dee336d8cc0d3d2382ea4a53f4a29725abf",
+        "rev": "0d1e93684da00ab7c057410fecfc24f434698898",
         "type": "github"
       },
       "original": {
