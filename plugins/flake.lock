@@ -173,11 +173,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1747497798,
-        "narHash": "sha256-u3E/vyii4zD491GEffbscMU3teDOgt3bFWaYwnaX7E0=",
+        "lastModified": 1748086793,
+        "narHash": "sha256-3BUq4/3WrBbVw37ez16ZajTYWiNUQ6SiV9APHt4uvUU=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "8162a4bd9afb42837a655e404d1f937a87ba95e6",
+        "rev": "be1e5e6308bb9d016bf5c1565e0f1d5e46400d7a",
         "type": "github"
       },
       "original": {
@@ -802,11 +802,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747908450,
-        "narHash": "sha256-fWjC37+3rFML6iZWEjar+UxWGS2VwiGD0zIjhTMYFSY=",
+        "lastModified": 1748081182,
+        "narHash": "sha256-3Q8kzPte93j3t51Hb4JpNQJ3+TrJsG7H1UXQfb9ucXM=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "3856bbb0da214d1f2f3d5a2dd3fea26591f930f9",
+        "rev": "ea7a62e2a4a58beedfe40b643f4840e0fda9a032",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1747068210,
-        "narHash": "sha256-bYbwIVii2mxFyro91ogCVLkIyrMNP4QJRSGNVcZPVEU=",
+        "lastModified": 1748094813,
+        "narHash": "sha256-CVs9FTdg3oKtRjz2YqwkMr0W5qYLGfVyxyhE3qnGYbI=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79",
+        "rev": "42fc28ba918343ebfd5565147a42a26580579482",
         "type": "github"
       },
       "original": {
