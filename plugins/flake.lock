@@ -632,11 +632,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747686083,
-        "narHash": "sha256-bo7jTsgEDR4rTyb+cjvUfEac2mGWCeSjqony+sHCUxw=",
+        "lastModified": 1748171336,
+        "narHash": "sha256-dG/Y7tw9lmUY3BikamqMP1fMBwdMUlvYnE9xCy+1PHY=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "1d666e41eb88be766f1e5abeebe35ddf307ff5fe",
+        "rev": "ef5d077d8669202772cc61b92b9e98965bef0ab0",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1748153142,
-        "narHash": "sha256-DwyUla9LrufshwwHrskPc2n8F6njhhoVSOICCmarVAE=",
+        "lastModified": 1748153151,
+        "narHash": "sha256-mgWa5qubkkfZDy/I2Rts6PtXJy+luzUmSzbPb1lVerk=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "565f57158187871fe617abae2563f549df742ab9",
+        "rev": "3ea99227e316c5028f57a4d86a1a7fd01dd876d0",
         "type": "github"
       },
       "original": {
@@ -1550,11 +1550,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1748138937,
-        "narHash": "sha256-vUPatOEyCT9BTv+OGB9eeGftStGq+zG63Jmp0aQoCwk=",
+        "lastModified": 1748172158,
+        "narHash": "sha256-q+Vytkevc6RmZv9Fr7zWXYjQOLoYEaam2IKF9VWeuWA=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "7c4b6263c74077037a63cd36f2e1426a966c8b84",
+        "rev": "d118397eafd523bd6bf0088ebc806cf4aa56eb07",
         "type": "github"
       },
       "original": {
@@ -1794,11 +1794,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1748132776,
-        "narHash": "sha256-gXk7k4l6nevE4fGRAwOxGH0Vo4jVORtK7VOziC7q2DQ=",
+        "lastModified": 1748170306,
+        "narHash": "sha256-CTK+j9MVYNoMqDR7CzZjGNgB3NgUC1gIWfGGZIxHpMo=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "7c1f5c27785a566b0930a643434404e078a87df4",
+        "rev": "5120207f90846704a74cbf043295698b009bd5de",
         "type": "github"
       },
       "original": {
