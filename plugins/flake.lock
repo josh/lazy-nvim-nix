@@ -411,11 +411,11 @@
     "crates.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1748448465,
-        "narHash": "sha256-tr/z8O/5kA5zOC1PbqmhrgzRPtfJXbYCzH5miCbqvEo=",
+        "lastModified": 1748464706,
+        "narHash": "sha256-uSoBfu2HYkaLTZt8GqpJM3KD4I+rWmwz+ox+5G1ZvgI=",
         "owner": "Saecki",
         "repo": "crates.nvim",
-        "rev": "483f27c03467ea621e72b9ba8141f8b87fc1085e",
+        "rev": "fc59684a10706cce85e356d03b07fda535bec533",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1748460658,
-        "narHash": "sha256-xt50Wap7Q9PSas7bWAhEnd0rAkBMYjTseB1uiab7wbM=",
+        "lastModified": 1748469578,
+        "narHash": "sha256-gpN32f41WbYJyCAhyv6xwLO3ZzaskaLBkHalAgkFo4E=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "c5134083d5614527f2ade1bbfc4e467b2831f6b1",
+        "rev": "e2d3fd53b18e1c16fbd81f5b6647f3872ca7a557",
         "type": "github"
       },
       "original": {
