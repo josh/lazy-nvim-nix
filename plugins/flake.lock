@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1748444249,
-        "narHash": "sha256-lNOA7zOItFi3NfxMYGgbIE7MjgdlO/rVUJg/jWS0jI0=",
+        "lastModified": 1748527379,
+        "narHash": "sha256-hLzrnW5vFV20XlHl5Lr3klBTVbhe1yuMGFr60DvyGZc=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "758173f499d15410ecb50c5519a41b27c33e645d",
+        "rev": "29e982dfc96a134fecc80853c8cb8324e43e574b",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mini.ai": {
       "flake": false,
       "locked": {
-        "lastModified": 1748342910,
-        "narHash": "sha256-YufREh1go2pXxnDFTlhw8bUdWXV/DjQRxXoiNla7C5k=",
+        "lastModified": 1748523573,
+        "narHash": "sha256-jId3lNC8KiEj1zzPMkEXf5ZiDU3KmgIVkZJh0lqwG4o=",
         "owner": "echasnovski",
         "repo": "mini.ai",
-        "rev": "7f1fe86277f0e977642cf8fe15f004229f61e61a",
+        "rev": "4b5348fac5912f1957f4c012c2e0ab0c4b865386",
         "type": "github"
       },
       "original": {
