@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1748562568,
-        "narHash": "sha256-eue1tofhvWcHL2IU/zIS7rNgYEnOv4rqnEGtPtklFWQ=",
+        "lastModified": 1748675038,
+        "narHash": "sha256-Yrc0mHflXY9zANxEZVJezyAyOu1gTV0+XqbtbIURreg=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "7434d9247c9b95234e058b07b393443d5adeb2fe",
+        "rev": "6fd719634c529bfbfe031a03b7af9d728d849dc7",
         "type": "github"
       },
       "original": {
