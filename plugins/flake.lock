@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1745173586,
-        "narHash": "sha256-PD+wnDZ1J0zzGJr/oXgA67szpP0GnfKIhYAQpPGtMKM=",
+        "lastModified": 1748803075,
+        "narHash": "sha256-vj5dxur9aaZwy8ovbVy0Wq306+aCAEGNdrM05uau6U8=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "2e00d1d4248f08dddfceacb8d2996e51e13e00f6",
+        "rev": "8c89f27b5792e7691578cf05368a110702e4a1e9",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1748710470,
-        "narHash": "sha256-iv6EIGiQXfphuexTFiD6uC76aCTSob1Cf456IwmBm5s=",
+        "lastModified": 1748810155,
+        "narHash": "sha256-fgQ5pyM1QJ9mxFNfKv7vcB3ROyzSpKRFaG86qj00EZ8=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "30f0a7b5bfed80c1e4b1f7ba065f5c36db0ce025",
+        "rev": "abf5a60bd2fff26930bea7f226178ed0fa25bf04",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1748618855,
-        "narHash": "sha256-C7fp3bpHvxGuFxIJf3WBfAPfxEPxP5iWOTkwpXJhqbk=",
+        "lastModified": 1748802689,
+        "narHash": "sha256-gqftlop74O+5NSh4uDeZ0MRXtMuQvyymTkHEh1eSarY=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "03bc581e05e81d33808b42b2d7e76d70adb3b595",
+        "rev": "4315a9686f4d21a521d89a693e02947d1e119f5d",
         "type": "github"
       },
       "original": {
