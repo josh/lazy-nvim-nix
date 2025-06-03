@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1748803075,
-        "narHash": "sha256-vj5dxur9aaZwy8ovbVy0Wq306+aCAEGNdrM05uau6U8=",
+        "lastModified": 1748904189,
+        "narHash": "sha256-RnHfT1ZUV2FBlinf8Ce8DOhiRNYtCctFEOomeHoDGHU=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "8c89f27b5792e7691578cf05368a110702e4a1e9",
+        "rev": "89332755bf2bd94e408fad59e89028c4205dd040",
         "type": "github"
       },
       "original": {
@@ -2134,11 +2134,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1748631672,
-        "narHash": "sha256-y8UtltqQ5Gl76Ez41164lFn1hxgtT5Ra8y+Dg0NUpko=",
+        "lastModified": 1748901231,
+        "narHash": "sha256-//DXH3mMzhpkCmy/IQ5D4AsXSkZ+vsCxqeuezgMdGMY=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "c50ba2f90ba8bd22fe607a799f74943c708a25c9",
+        "rev": "f20b11458e97250d690ce0dc8670759b838cace9",
         "type": "github"
       },
       "original": {
