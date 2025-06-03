@@ -1244,11 +1244,11 @@
     "nvim-dap": {
       "flake": false,
       "locked": {
-        "lastModified": 1747919303,
-        "narHash": "sha256-Z0Mg7ceKgfhoxuUC9NJGR6MAlwzCSa00wuXAPx3tzJ0=",
+        "lastModified": 1748270898,
+        "narHash": "sha256-3TYuZR0P0M/JPV0VpG1eOKIEt6j8jhUPESFLyK0VG+s=",
         "owner": "mfussenegger",
         "repo": "nvim-dap",
-        "rev": "b0f983507e3702f073bfe1516846e58b56d4e42f",
+        "rev": "e771e86a69a8ba60cffb16609773522eafb9f41a",
         "type": "github"
       },
       "original": {
