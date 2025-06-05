@@ -1091,11 +1091,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1749000678,
-        "narHash": "sha256-2ZHMCXa/QwLN/5gqpUOQQO2JxgRnEbC4XIt5Zux3w4I=",
+        "lastModified": 1749087071,
+        "narHash": "sha256-fdynuurtQBmUT9V/3OFwYFKGl4g/TqXCO+LhJ22Ibtg=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "b2e6a4bc8bc37f905dc5efc08c9a7cbd8ca543ac",
+        "rev": "27ad122b711ad1ab7fe1cd8d352ded0c454ec05e",
         "type": "github"
       },
       "original": {
