@@ -1312,11 +1312,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1749053535,
-        "narHash": "sha256-pxOrgzZwrwEsrOC5VMyTbbi7Dx2Bb2li32FrbaidRWA=",
+        "lastModified": 1749111961,
+        "narHash": "sha256-ZvUwshZb5JP6Gsjai6O1bnVlYBHpmu+4yYwEj2kzkeo=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "0d2650564ce5a8bf8d5a4a4dd05b004936b03215",
+        "rev": "8d628d0eca9b9cdc6e9672a274fefc6b9986ee4b",
         "type": "github"
       },
       "original": {
@@ -1346,11 +1346,11 @@
     "nvim-metals": {
       "flake": false,
       "locked": {
-        "lastModified": 1747680659,
-        "narHash": "sha256-WG+JC++DLhgM9m250tHrVDaai/eVNWmA2g3zPfR/zLg=",
+        "lastModified": 1749111073,
+        "narHash": "sha256-rXPaiG+ekK2oX07I54Fk1ARaGHKfaQnh3yg2EzehWoE=",
         "owner": "scalameta",
         "repo": "nvim-metals",
-        "rev": "d1639b7fccd845875e33444c7860ad292ab8670d",
+        "rev": "5ab889232ccb6e749094294e7979fda4a71fdecb",
         "type": "github"
       },
       "original": {
