@@ -853,11 +853,11 @@
     "mini.ai": {
       "flake": false,
       "locked": {
-        "lastModified": 1748718858,
-        "narHash": "sha256-LOiPGx2ikSNdNC7Mu1N28azYZZmRqmpSJojjyX0vDm8=",
+        "lastModified": 1749302235,
+        "narHash": "sha256-JmoUArZ98O5mHXn93g4rJ0qST8tLLE4Wrt6S/SUfjT4=",
         "owner": "echasnovski",
         "repo": "mini.ai",
-        "rev": "5225f16eacf4dce2cb7204ca345123ef54e209d6",
+        "rev": "95e9d77e58bdf633c4d0c6b8c72892dd10eada51",
         "type": "github"
       },
       "original": {
@@ -1057,11 +1057,11 @@
     "mini.surround": {
       "flake": false,
       "locked": {
-        "lastModified": 1748864970,
-        "narHash": "sha256-YNptlsFdrRlNJs3hDgGStYnGaqtMut85mx720v6bI2U=",
+        "lastModified": 1749302245,
+        "narHash": "sha256-bwWVbsVblS7EYFyuIJioLw5g/TlZuYMjv9qZiof1Nkw=",
         "owner": "echasnovski",
         "repo": "mini.surround",
-        "rev": "0d278217ca98ffa5b768701fb57f52a88b1e1f93",
+        "rev": "365f98d842face0876e95f05d6e48fbfcc08e351",
         "type": "github"
       },
       "original": {
