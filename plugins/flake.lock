@@ -173,11 +173,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1748739941,
-        "narHash": "sha256-fRer5+yiUFrAVguQHtxe6Q89sO9HkoLahyI+0BQMGyM=",
+        "lastModified": 1749271780,
+        "narHash": "sha256-wt/Ybjgr4N80B+QsyANs1QezM7PpFceUWSweRFgkhl0=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "a0c769bc7cd04bbbf258b3d5f01e2bdce744108d",
+        "rev": "fa42eb5e26819ef58884257d5ae95dd0552b9a66",
         "type": "github"
       },
       "original": {
@@ -1550,11 +1550,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1749251061,
-        "narHash": "sha256-fcd7NSxtS9K0gtuKZauD0YETTLI8fp/MbvWPvpgOp14=",
+        "lastModified": 1749265432,
+        "narHash": "sha256-dsrHYURoMk5ZtI+0hkL9PjHX1/wfr+EKdyGxRdVraJQ=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "9280037b0bcea44fb097c57d6bc5e1e30a3ab03d",
+        "rev": "7e0a166365399b1b54f7e0079a577965d682b13c",
         "type": "github"
       },
       "original": {
