@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1749497256,
-        "narHash": "sha256-vQzn7D1GyD7HvUSP+FFRwL2Ks7k9CRufIWNbGTM1T+A=",
+        "lastModified": 1749521652,
+        "narHash": "sha256-SgHlRgY17+PoLa8FOpLhdpCW0y9ltb5hCNC4wmHs6rc=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "59a58b55eea0255c031a09017341f4917ebd998e",
+        "rev": "d8911f9824a83cc1c67d31223c126f2610d3f29f",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1749080620,
-        "narHash": "sha256-XBW72bjktnqxGBSjesZKkp+kF1ga/iod8wAU/odg5R4=",
+        "lastModified": 1749509917,
+        "narHash": "sha256-2DzFSXciJlmRNODp/lTp37v/kSWvrFnL2Y58s8hWYJk=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "c36f5f9b53f12a60aa53d42282e8ae78aef72178",
+        "rev": "e152f6f4c4261e177a5417dce0980d3a88cc6ce1",
         "type": "github"
       },
       "original": {
