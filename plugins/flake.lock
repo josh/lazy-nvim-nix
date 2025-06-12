@@ -360,11 +360,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1749385615,
-        "narHash": "sha256-MtzGmoXhGfi2ZgqHJxOpiuzaxvCFfbQNDY+NCRGfuTY=",
+        "lastModified": 1749717238,
+        "narHash": "sha256-CpiFWtWOBy7htyGKAop/oJvWeb0U1pKI2AckOTVLbmI=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "cb65153f5a7818ffda36397f49429038800afa1a",
+        "rev": "8edc78f7cf2cd49c0feba3ddd9a29eca1673a8ce",
         "type": "github"
       },
       "original": {
@@ -2134,11 +2134,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1749162949,
-        "narHash": "sha256-Xch+LdgDWof/jBbcmISU1nBCwd3Wxmj57sPGHQkq0Pk=",
+        "lastModified": 1749720355,
+        "narHash": "sha256-O4lkgNRx+YPG4BWTaA7UwzTUjGewEM/vHXj6O3MBl7c=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "22d9ae5265df069cb68310449a7218b836875c5b",
+        "rev": "4b4f18b1b181cdea35fdc418e5eb511f20e1f0fb",
         "type": "github"
       },
       "original": {
