@@ -1346,11 +1346,11 @@
     "nvim-metals": {
       "flake": false,
       "locked": {
-        "lastModified": 1749111073,
-        "narHash": "sha256-rXPaiG+ekK2oX07I54Fk1ARaGHKfaQnh3yg2EzehWoE=",
+        "lastModified": 1749891902,
+        "narHash": "sha256-qxTYbaVaINishdbqh8UJefjrSDKDbN7x0t1wUiRz6bU=",
         "owner": "scalameta",
         "repo": "nvim-metals",
-        "rev": "5ab889232ccb6e749094294e7979fda4a71fdecb",
+        "rev": "852b8aa60d8ca30e14ef9253ced91656e845cfb7",
         "type": "github"
       },
       "original": {
@@ -1448,11 +1448,11 @@
     "nvim-treesitter-context": {
       "flake": false,
       "locked": {
-        "lastModified": 1749682851,
-        "narHash": "sha256-JNVtK7spcpgWKBHBXgjWx31jd9gyXDPvT+Kh9XRdXrU=",
+        "lastModified": 1749893617,
+        "narHash": "sha256-QJAfpVdTHTxjUgggQekRLvNYuvG12gjtfTGybfcFdyo=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-context",
-        "rev": "b5ef8e3b8cb40b76975cfbcd2f590654eeb6ff00",
+        "rev": "1a1a7c5d6d75cb49bf64049dafab15ebe294a79f",
         "type": "github"
       },
       "original": {
@@ -1482,11 +1482,11 @@
     "nvim-treesitter-textobjects": {
       "flake": false,
       "locked": {
-        "lastModified": 1747971922,
-        "narHash": "sha256-61Q1jmhjLQOKSTmKwbhgN7yGIdwwIE6JrStLOzGMwu8=",
+        "lastModified": 1749894207,
+        "narHash": "sha256-+VkCcTe2a7xr0lIjoyAy8vDEiVAPnd96cAgC/iHxdtM=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-textobjects",
-        "rev": "0f051e9813a36481f48ca1f833897210dbcfffde",
+        "rev": "89ebe73cd2836db80a22d9748999ace0241917a5",
         "type": "github"
       },
       "original": {
