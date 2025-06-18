@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1749979799,
-        "narHash": "sha256-epX37kjQASKHm4vQf27nJbqCbxTlpGzjX1cEr/C+PSM=",
+        "lastModified": 1750219401,
+        "narHash": "sha256-jJLC/BFzXfaJg4E3+yDCdzYeHu57feEnjgD+cVIJmxU=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "f21fecf43eeae285583042fb8cf462cf7cb8d05e",
+        "rev": "ff348304202fc0d46a8d2ac308b6b4bab67beffc",
         "type": "github"
       },
       "original": {
