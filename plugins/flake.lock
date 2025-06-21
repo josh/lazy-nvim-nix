@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1750431430,
-        "narHash": "sha256-KZnM8ECaYwt+jXMX4d33HAkCIYYBGoBY9+F6qCHjZms=",
+        "lastModified": 1750511547,
+        "narHash": "sha256-tLZdfHOrL0H9tI1TwXTEKfn4Laa3AV6RtTR3owOMMIw=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "2096cf158133884738fef07f7b7d5bbf9accc237",
+        "rev": "fe7c97455a375259a480c496fe3410c52ac004dc",
         "type": "github"
       },
       "original": {
@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1750383188,
-        "narHash": "sha256-yVAr3ryXRQdjFTgS1PnGuMgxS9OpRtCTI6BKiQhwNbg=",
+        "lastModified": 1750510235,
+        "narHash": "sha256-NSVBjEFhezsIw7f/DB67nZ3pFTdyvldHfA/FIlaJIg8=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "05eaee319fcf2f5a0d378c2848641858c8b8962e",
+        "rev": "5b4acdb53f6a9ba6f6dff627b0b0c2fafc0888fe",
         "type": "github"
       },
       "original": {
@@ -1811,11 +1811,11 @@
     "smear-cursor.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1750432497,
-        "narHash": "sha256-TOpNLcF2jBUVwH0SRgmUiAYVCNIgxv4LDED+YSOlZKA=",
+        "lastModified": 1750513064,
+        "narHash": "sha256-nD1fvPVZaXFbLtJeFlXrX1o1DpU3JVH3/rlvxo/WPFM=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "07ada7a52bf3c1580c8a7c0f192bf0c8ca66bd30",
+        "rev": "cf2f73a4d0b402edb8177d059ee1127e621b79a7",
         "type": "github"
       },
       "original": {
