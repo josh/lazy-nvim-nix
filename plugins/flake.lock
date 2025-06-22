@@ -921,11 +921,11 @@
     "mini.files": {
       "flake": false,
       "locked": {
-        "lastModified": 1750437825,
-        "narHash": "sha256-RqhhbLTUBsjYQpxlfvLUt3KKbxxIsCsyBDCUmfIfYts=",
+        "lastModified": 1750602857,
+        "narHash": "sha256-iJZdPLZkX1SMNlfOEHlWWZ8M7sXp8xRGhVaX5kN/xaE=",
         "owner": "echasnovski",
         "repo": "mini.files",
-        "rev": "90f11bfd3ecbed55c28cc836c3c62c19ecdf4de0",
+        "rev": "a92ba6f1bf9e1e0b9c6de50db1f5df7ca89cb9e4",
         "type": "github"
       },
       "original": {
