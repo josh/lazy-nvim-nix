@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1750722081,
-        "narHash": "sha256-Jan4zwiF1PgYsOHmHPkkT4fVGxhFupcz+rH3JfPDuDo=",
+        "lastModified": 1750772159,
+        "narHash": "sha256-vlsam6ARTqdZlp98bt1nvWhuxPGl9C5vWuh88pH9b/0=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "7fdd9df62b755589f37fabe8948ac5689c50a247",
+        "rev": "ef02d172ffb6c23bc1d01bd0b0e778f70597e034",
         "type": "github"
       },
       "original": {
@@ -547,11 +547,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1750573248,
-        "narHash": "sha256-IfLXNKf/h870gAQHQRTyqMU0kR4hOnvhTPuXnWlYE6k=",
+        "lastModified": 1750768323,
+        "narHash": "sha256-zGXO1g1h0NgF9iMIxd0q6aIiPuVvMEktrnImbGK2Dls=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "fd6588ee052e150eb61f578fa8c40648def5b334",
+        "rev": "da839a79904a35c85d51b731e6a29168063d8ac4",
         "type": "github"
       },
       "original": {
