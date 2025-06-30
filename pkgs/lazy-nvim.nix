@@ -7,6 +7,7 @@
   lazynvimUtils,
   neovimUtils,
   neovim-checkhealth,
+  neovim-test-edit,
   bash,
   git,
   fd,
@@ -128,6 +129,23 @@ in
           cat out
           touch $out
         '';
+
+        edit-txt = neovim-test-edit.override {
+          inherit neovim;
+          editFile = runCommand "hello.txt" { } ''
+            echo "Hello, world!" >$out
+          '';
+        };
+
+        edit-md = neovim-test-edit.override {
+          inherit neovim;
+          editFile = ../README.md;
+        };
+
+        edit-nix = neovim-test-edit.override {
+          inherit neovim;
+          editFile = ../flake.nix;
+        };
       };
   }
 )

@@ -47,12 +47,15 @@
           LazyVimPlugins = callPackage ./pkgs/lazyvim-plugins.nix { };
           lazy-nvim-config = callPackage ./pkgs/lazy-nvim-config.nix { };
           lazy-nvim = callPackage ./pkgs/lazy-nvim.nix {
-            inherit (packages) neovim-checkhealth;
+            inherit (packages) neovim-checkhealth neovim-test-edit;
           };
           LazyVim = callPackage ./pkgs/LazyVim.nix {
             inherit (packages) lazy-nvim neovim-checkhealth;
           };
           neovim-checkhealth = callPackage ./pkgs/neovim-checkhealth.nix { };
+          neovim-test-edit = callPackage ./pkgs/neovim-test-edit.nix {
+            editFile = pkgs.runCommand "empty" { } "touch $out";
+          };
           lazy-neovide = callPackage ./pkgs/lazy-neovide.nix {
             neovim = packages.lazy-nvim;
           };
