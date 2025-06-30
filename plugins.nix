@@ -72,7 +72,7 @@ let
         cp -r . $out
         runHook postInstall
       '';
-    };
+    } // (if builtins.hasAttr "spec" src then { inherit (src) spec; } else {});
 
   /*
     Make a lazy.nvim plugin spec.
@@ -126,9 +126,30 @@ let
       "${path}/pkgs/applications/editors/vim/plugins/patches/lazy-nvim/no-helptags.patch"
     ];
 
-    "LazyVim" = plugins."LazyVim" // {
-      extras = mapNestedAttrs (repo: builtins.getAttr repo plugins) LazyVim-deps;
-    };
+    "LazyVim" =
+      let
+        # Fix mason-lspconfig API change by creating a patched version
+        patchedLazyVim = stdenvNoCC.mkDerivation {
+          name = formatDerivationName { inherit (plugins."LazyVim".meta) name version; };
+          src = plugins."LazyVim";
+          inherit (plugins."LazyVim") meta;
+          installPhase = ''
+            runHook preInstall
+            cp -r . $out
+            
+            # Fix the mason-lspconfig API usage in LazyVim
+            substituteInPlace $out/lua/lazyvim/plugins/lsp/init.lua \
+              --replace 'require("mason-lspconfig.mappings.server").lspconfig_to_package' \
+                        'require("mason-lspconfig.mappings").get_mason_map().lspconfig_to_package'
+            
+            runHook postInstall
+          '';
+        };
+      in
+      patchedLazyVim // {
+        spec = makeLazySpec "LazyVim" lockfile.nodes."LazyVim" patchedLazyVim;
+        extras = mapNestedAttrs (repo: builtins.getAttr repo plugins) LazyVim-deps;
+      };
 
     "blink.cmp" = vimPlugins.blink-cmp // {
       spec = plugins."blink.cmp".spec // {
