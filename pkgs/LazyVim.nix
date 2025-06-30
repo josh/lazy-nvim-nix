@@ -21,7 +21,6 @@
   viu,
   wget,
   # keep-sorted end
-  runCommand,
   neovim-checkhealth,
 }:
 let
@@ -161,11 +160,6 @@ in
           checkError = true;
           checkWarning = true;
         };
-
-        # FIXME: mason-lspconfig error #886
-        edit-md = runCommand "test-edit-md-disabled" { } "touch $out";
-        edit-nix = runCommand "test-edit-nix-disabled" { } "touch $out";
-        edit-txt = runCommand "test-edit-txt-disabled" { } "touch $out";
       };
     }
   )
