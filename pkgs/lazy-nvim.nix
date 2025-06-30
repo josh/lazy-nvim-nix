@@ -32,7 +32,7 @@ let
 
   extrasBinPath = lib.makeBinPath moreExtraPackages;
 
-  luaRcContent = ''
+  customLuaRC = ''
     vim.opt.rtp:prepend("${lazypath}");
     require("lazy").setup(${lazynvimUtils.toLua spec}, ${lazynvimUtils.toLua opts})
   '';
@@ -47,7 +47,7 @@ let
     # Extra config to pass to
     # pkgs/applications/editors/neovim/wrapper.nix
 
-    inherit luaRcContent;
+    inherit customLuaRC;
   };
 
   # Unfortunately can't pass extraWrapperArgs to makeNeovimConfig

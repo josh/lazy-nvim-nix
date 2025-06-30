@@ -5,7 +5,7 @@
   writeTextFile,
   lazynvimPlugins,
   lazynvimUtils,
-  luaRcContent ? "",
+  customLuaRC ? "",
   spec ? [ ],
   opts ? { },
 }:
@@ -14,7 +14,7 @@ writeTextFile {
   text = ''
     vim.opt.rtp:prepend("${lazynvimPlugins."lazy.nvim"}");
 
-    ${luaRcContent}
+    ${customLuaRC}
     require("lazy").setup(${lazynvimUtils.toLua spec}, ${
       lazynvimUtils.toLua (lazynvimUtils.defaultLazyOpts // opts)
     })
@@ -23,7 +23,7 @@ writeTextFile {
   passthru.tests =
     let
       example = callPackage ./lazy-nvim-config.nix {
-        luaRcContent = ''
+        customLuaRC = ''
           vim.g.mapleader = " "
           vim.g.maplocalleader = "\\"
         '';
