@@ -1,5 +1,6 @@
 {
   lib,
+  stdenv,
   lazy-nvim,
   lazynvimPlugins,
   # keep-sorted start
@@ -108,8 +109,11 @@ in
           pluginName = "blink.cmp";
           loadLazyPluginName = "blink.cmp";
           checkError = true;
-          # WARNING Some providers may show up as "disabled" but are enabled dynamically (i.e. cmdline)
-          checkWarning = false;
+          checkWarning = true;
+          ignoreLines = [
+            # OK: Not fixable, this warning is always shown
+            "WARNING Some providers may show up as \"disabled\" but are enabled dynamically"
+          ];
         };
 
         checkhealth-fzf-lua = neovim-checkhealth.override {
@@ -117,19 +121,29 @@ in
           pluginName = "fzf_lua";
           loadLazyPluginName = "fzf-lua";
           checkError = true;
-          # WARNING `nvim-web-devicons` or `mini.icons` not found
-          checkWarning = false;
+          checkWarning = true;
+          ignoreLines = [
+            # FIXME: I think we should be able to install these plugins
+            "WARNING `nvim-web-devicons` or `mini.icons` not found"
+          ];
         };
 
         checkhealth-mason = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "mason";
           loadLazyPluginName = "mason.nvim";
-          # ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed.
-          checkError = false;
-          # WARNING java: not available
-          # WARNING julia: not available
-          checkWarning = false;
+          checkError = true;
+          checkWarning = true;
+          ignoreLines = [
+            # FIXME: These errors should be fixable if we install the correct dependencies
+            "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
+            "WARNING javac: not available"
+            "WARNING java: not available"
+            "WARNING julia: not available"
+            "WARNING pip: not available"
+            # OK: Nix build sandbox will always prevent access to github API
+            "WARNING Failed to check GitHub API rate limit status"
+          ];
         };
 
         checkhealth-noice = neovim-checkhealth.override {
@@ -137,20 +151,45 @@ in
           pluginName = "noice";
           loadLazyPluginName = "noice.nvim";
           checkError = true;
-          # WARNING *Neovim* >= 0.11 is highly recommended
-          # WARNING {TreeSitter} `regex` parser is not installed
-          # WARNING {TreeSitter} `bash` parser is not installed
-          checkWarning = false;
+          checkWarning = true;
+          ignoreLines = [
+            # FIXME: These should be fixable if we install treesitter correctly
+            "WARNING {TreeSitter} `regex` parser is not installed"
+            "WARNING {TreeSitter} `bash` parser is not installed"
+          ];
         };
 
         checkhealth-snacks = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "snacks";
           loadLazyPluginName = "snacks.nvim";
-          # Snacks.notifier: ERROR is not ready
-          checkError = false;
-          # Snacks.statuscolumn: WARNING setup {disabled}
-          checkWarning = false;
+          checkError = true;
+          checkWarning = true;
+          ignoreLines =
+            [
+              # FIXME: Look into these errors, some may be fixable
+              "ERROR setup did not run"
+              "WARNING setup {disabled}"
+              "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
+              "ERROR None of the tools found: 'magick', 'convert'"
+              "ERROR `magick` is required to convert images. Only PNG files will be displayed."
+              "WARNING Image rendering in docs with missing treesitter parsers won't work"
+              "ERROR Tool not found: 'gs'"
+              "WARNING `gs` is required to render PDF files"
+              "ERROR None of the tools found: 'tectonic', 'pdflatex'"
+              "WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions"
+              "ERROR Tool not found: 'mmdc'"
+              "WARNING `mmdc` is required to render Mermaid diagrams"
+              "ERROR your terminal does not support the kitty graphics protocol"
+              "ERROR `vim.ui.input` is not set to `Snacks.input`"
+              "ERROR is not ready"
+              "ERROR `vim.ui.select` is not set to `Snacks.picker.select`"
+              "WARNING Missing Treesitter languages"
+            ]
+            ++ (lib.lists.optionals stdenv.isLinux [
+              # FIXME: Should be fixable if we install sqlite3
+              "WARNING `SQLite3` is not available"
+            ]);
         };
 
         checkhealth-which-key = neovim-checkhealth.override {
