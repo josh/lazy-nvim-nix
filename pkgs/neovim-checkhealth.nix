@@ -1,6 +1,7 @@
 {
   lib,
   stdenv,
+  writeText,
   runCommand,
   neovim,
   moreutils,
@@ -14,28 +15,24 @@
   ignoreLines ? [ ],
 }:
 let
-  lazyLoadCmd = if loadLazyPluginName != null then [ "+Lazy! load ${loadLazyPluginName}" ] else [ ];
-  checkCmd =
-    if pluginName == null || pluginName == "all" then
-      [ "+checkhealth" ]
-    else
-      [ "+checkhealth ${pluginName}" ];
+  vim-script-runner = writeText "checkhealth-${pluginName}.vim" ''
+    ${if loadLazyPluginName != null then "Lazy! load ${loadLazyPluginName}" else ""}
+    sleep 3
+    ${if pluginName == null || pluginName == "all" then "checkhealth" else "checkhealth ${pluginName}"}
+    w!out.txt
+    qall!
+  '';
 in
 runCommand "checkhealth-${pluginName}"
   {
     __structuredAttrs = true;
 
     neovimBin = lib.getExe neovim;
-    nvimArgs =
-      [
-        "--headless"
-      ]
-      ++ lazyLoadCmd
-      ++ checkCmd
-      ++ [
-        "+w!out.txt"
-        "+q"
-      ];
+    nvimArgs = [
+      "--headless"
+      "-S"
+      "${vim-script-runner}"
+    ];
 
     check = {
       ok = checkOk;

@@ -1,11 +1,19 @@
 {
   lib,
   stdenv,
+  writeText,
   runCommand,
   neovim,
   glibcLocales,
   editFile,
 }:
+let
+  vim-script-runner = writeText "test-edit-${builtins.baseNameOf editFile}.vim" ''
+    sleep 3
+    edit ${editFile}
+    qall!
+  '';
+in
 runCommand "test-edit-${builtins.baseNameOf editFile}"
   {
     __structuredAttrs = true;
@@ -13,15 +21,8 @@ runCommand "test-edit-${builtins.baseNameOf editFile}"
     neovimBin = lib.getExe neovim;
     nvimArgs = [
       "--headless"
-
-      "-c"
-      "edit ${editFile}"
-
-      "-c"
-      "sleep 3"
-
-      "-c"
-      "qall!"
+      "-S"
+      "${vim-script-runner}"
     ];
 
     env = {
