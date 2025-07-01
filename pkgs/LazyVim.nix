@@ -181,7 +181,6 @@ in
             "WARNING setup {disabled}"
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
             "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
-            "ERROR your terminal does not support the kitty graphics protocol"
             "ERROR is not ready"
             "WARNING Missing Treesitter languages"
           ];
