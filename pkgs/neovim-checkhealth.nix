@@ -3,6 +3,7 @@
   stdenv,
   runCommand,
   neovim,
+  moreutils,
   xclip,
   glibcLocales,
   pluginName ? "all",
@@ -10,6 +11,7 @@
   checkOk ? true,
   checkError ? checkWarning,
   checkWarning ? false,
+  ignoreLines ? [ ],
 }:
 let
   lazyLoadCmd = if loadLazyPluginName != null then [ "+Lazy! load ${loadLazyPluginName}" ] else [ ];
@@ -40,8 +42,9 @@ runCommand "checkhealth-${pluginName}"
       error = checkError;
       warning = checkWarning;
     };
+    inherit ignoreLines;
 
-    nativeBuildInputs = lib.lists.optionals stdenv.isLinux [ xclip ];
+    nativeBuildInputs = [ moreutils ] ++ lib.lists.optionals stdenv.isLinux [ xclip ];
 
     env = {
       DISPLAY = lib.optionalString stdenv.isLinux ":0";
@@ -54,7 +57,20 @@ runCommand "checkhealth-${pluginName}"
     touch .config/nvim/init.lua
 
     HOME="$PWD" timeout 30s "$neovimBin" "''${nvimArgs[@]}"
+    echo "-- stdout --"
     cat out.txt
+    echo "-- stdout --"
+
+    for ignoreLine in "''${ignoreLines[@]}"; do
+      if grep --fixed-strings --quiet -- "$ignoreLine" out.txt; then
+        echo "Found: $ignoreLine"
+        grep --invert-match --fixed-strings -- "$ignoreLine" out.txt | sponge out.txt
+      else
+        echo "Missing: $ignoreLine"
+        echo "not found in stdout, consider removing from 'ignoreLines'"
+        return 1
+      fi
+    done
 
     ok_count=$(grep --count " OK " <out.txt || true)
     error_count=$(grep --count " ERROR " <out.txt || true)
@@ -62,13 +78,13 @@ runCommand "checkhealth-${pluginName}"
     echo "$ok_count ok, $error_count errors, $warning_count warnings"
 
     if [[ -n "''${check[error]}" && "$error_count" -gt 0 ]]; then
-      echo "Expected no errors, but were $error_count" >&2
+      echo "Expected no errors, but were $error_count"
       return 1
     elif [[ -n "''${check[warning]}" && "$warning_count" -gt 0 ]]; then
-      echo "Expected no warnings, but were $warning_count" >&2
+      echo "Expected no warnings, but were $warning_count"
       return 1
     elif [[ -n "''${check[ok]}" && "$ok_count" -eq 0 ]]; then
-      echo "Expected at least one OK" >&2
+      echo "Expected at least one OK"
       return 1
     else
       touch $out
