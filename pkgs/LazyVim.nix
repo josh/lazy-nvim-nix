@@ -21,6 +21,7 @@
   php83Packages,
   python312Packages,
   ruby,
+  tectonic,
   ueberzugpp,
   unzip,
   viu,
@@ -89,9 +90,10 @@ in
     unzip
     wget
 
-    # snacks
+    # snacks healthcheck dependencies
     ghostscript
     imagemagick
+    tectonic
   ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
   (
@@ -177,7 +179,6 @@ in
             "WARNING setup {disabled}"
             "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
-            "ERROR None of the tools found: 'tectonic', 'pdflatex'"
             "WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions"
             "ERROR Tool not found: 'mmdc'"
             "WARNING `mmdc` is required to render Mermaid diagrams"
