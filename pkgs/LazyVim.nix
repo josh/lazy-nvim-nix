@@ -171,7 +171,7 @@ in
           checkWarning = true;
           ignoreLines = [
             # FIXME: Look into these errors, some may be fixable
-            "ERROR setup did not run"
+            "WARNING dashboard did not open: `headless`"
             "WARNING setup {disabled}"
             "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
             "ERROR None of the tools found: 'magick', 'convert'"
@@ -182,9 +182,7 @@ in
             "ERROR Tool not found: 'mmdc'"
             "WARNING `mmdc` is required to render Mermaid diagrams"
             "ERROR your terminal does not support the kitty graphics protocol"
-            "ERROR `vim.ui.input` is not set to `Snacks.input`"
             "ERROR is not ready"
-            "ERROR `vim.ui.select` is not set to `Snacks.picker.select`"
             "WARNING Missing Treesitter languages"
           ];
         };

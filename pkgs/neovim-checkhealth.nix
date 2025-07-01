@@ -16,6 +16,7 @@
 }:
 let
   vim-script-runner = writeText "checkhealth-${pluginName}.vim" ''
+    doautocmd UIEnter
     ${if loadLazyPluginName != null then "Lazy! load ${loadLazyPluginName}" else ""}
     sleep 3
     ${if pluginName == null || pluginName == "all" then "checkhealth" else "checkhealth ${pluginName}"}
