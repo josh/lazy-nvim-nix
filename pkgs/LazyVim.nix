@@ -11,6 +11,7 @@
   gnutar,
   go,
   gzip,
+  julia,
   lazygit,
   nodePackages,
   php83,
@@ -75,6 +76,7 @@ in
     gzip
     gnutar
     go
+    julia
     php83
     php83Packages.composer
     (python312Packages.python.withPackages (ps: with ps; [ pip ]))
@@ -138,7 +140,6 @@ in
             "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
             "WARNING javac: not available"
             "WARNING java: not available"
-            "WARNING julia: not available"
             # OK: Nix build sandbox will always prevent access to github API
             "WARNING Failed to check GitHub API rate limit status"
           ];
