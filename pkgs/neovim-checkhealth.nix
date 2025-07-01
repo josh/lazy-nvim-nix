@@ -23,6 +23,11 @@ let
     w!out.txt
     qall!
   '';
+  binstubs = runCommand "checkhealth-binstubs" { } ''
+    mkdir -p $out/bin
+    touch $out/bin/kitty $out/bin/wezterm $out/bin/ghostty
+    chmod +x $out/bin/*
+  '';
 in
 runCommand "checkhealth-${pluginName}"
   {
@@ -42,7 +47,10 @@ runCommand "checkhealth-${pluginName}"
     };
     inherit ignoreLines;
 
-    nativeBuildInputs = [ moreutils ] ++ lib.lists.optionals stdenv.isLinux [ xclip ];
+    nativeBuildInputs = [
+      binstubs
+      moreutils
+    ] ++ lib.lists.optionals stdenv.isLinux [ xclip ];
 
     env = {
       DISPLAY = lib.optionalString stdenv.isLinux ":0";

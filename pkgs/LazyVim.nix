@@ -179,7 +179,6 @@ in
             # FIXME: Look into these errors, some may be fixable
             "WARNING dashboard did not open: `headless`"
             "WARNING setup {disabled}"
-            "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
             "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
             "ERROR your terminal does not support the kitty graphics protocol"
