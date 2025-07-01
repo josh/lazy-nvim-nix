@@ -11,6 +11,7 @@
   gnutar,
   go,
   gzip,
+  julia,
   lazygit,
   nodePackages,
   php83,
@@ -81,7 +82,7 @@ in
     cargo
     ruby
     nodePackages.nodejs
-  ];
+  ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
   (
     finalAttrs: previousAttrs:
@@ -133,15 +134,18 @@ in
           loadLazyPluginName = "mason.nvim";
           checkError = true;
           checkWarning = true;
-          ignoreLines = [
-            # FIXME: These errors should be fixable if we install the correct dependencies
-            "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
-            "WARNING javac: not available"
-            "WARNING java: not available"
-            "WARNING julia: not available"
-            # OK: Nix build sandbox will always prevent access to github API
-            "WARNING Failed to check GitHub API rate limit status"
-          ];
+          ignoreLines =
+            [
+              # FIXME: These errors should be fixable if we install the correct dependencies
+              "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
+              "WARNING javac: not available"
+              "WARNING java: not available"
+              # OK: Nix build sandbox will always prevent access to github API
+              "WARNING Failed to check GitHub API rate limit status"
+            ]
+            ++ (lib.lists.optionals (!lib.meta.availableOn stdenv.hostPlatform julia) [
+              "WARNING julia: not available"
+            ]);
         };
 
         checkhealth-noice = neovim-checkhealth.override {
