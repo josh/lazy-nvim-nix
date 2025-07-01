@@ -1,9 +1,11 @@
 {
-  lib,
   path,
+  lib,
+  stdenv,
   stdenvNoCC,
   fetchFromGitHub,
   vimPlugins,
+  sqlite,
 }:
 let
   /*
@@ -134,6 +136,18 @@ let
       spec = plugins."blink.cmp".spec // {
         dir = "${vimPlugins.blink-cmp}";
       };
+    };
+
+    # Fix sqlite3 not available warning
+    "snacks.nvim" = plugins."snacks.nvim" // {
+      spec =
+        plugins."snacks.nvim".spec
+        // (lib.attrsets.optionalAttrs stdenv.hostPlatform.isLinux {
+          opts.picker.db.sqlite3_path = "${sqlite.out}/lib/libsqlite3.so";
+        })
+        // (lib.attrsets.optionalAttrs stdenv.hostPlatform.isDarwin {
+          opts.picker.db.sqlite3_path = "${sqlite.out}/lib/libsqlite3.dylib";
+        });
     };
 
     # Downgrade to mason 1.x plugins

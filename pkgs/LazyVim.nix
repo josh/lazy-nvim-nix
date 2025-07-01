@@ -169,29 +169,24 @@ in
           loadLazyPluginName = "snacks.nvim";
           checkError = true;
           checkWarning = true;
-          ignoreLines =
-            [
-              # FIXME: Look into these errors, some may be fixable
-              "ERROR setup did not run"
-              "WARNING setup {disabled}"
-              "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
-              "ERROR None of the tools found: 'magick', 'convert'"
-              "ERROR `magick` is required to convert images. Only PNG files will be displayed."
-              "WARNING Image rendering in docs with missing treesitter parsers won't work"
-              "ERROR None of the tools found: 'tectonic', 'pdflatex'"
-              "WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions"
-              "ERROR Tool not found: 'mmdc'"
-              "WARNING `mmdc` is required to render Mermaid diagrams"
-              "ERROR your terminal does not support the kitty graphics protocol"
-              "ERROR `vim.ui.input` is not set to `Snacks.input`"
-              "ERROR is not ready"
-              "ERROR `vim.ui.select` is not set to `Snacks.picker.select`"
-              "WARNING Missing Treesitter languages"
-            ]
-            ++ (lib.lists.optionals stdenv.isLinux [
-              # FIXME: Should be fixable if we install sqlite3
-              "WARNING `SQLite3` is not available"
-            ]);
+          ignoreLines = [
+            # FIXME: Look into these errors, some may be fixable
+            "ERROR setup did not run"
+            "WARNING setup {disabled}"
+            "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
+            "ERROR None of the tools found: 'magick', 'convert'"
+            "ERROR `magick` is required to convert images. Only PNG files will be displayed."
+            "WARNING Image rendering in docs with missing treesitter parsers won't work"
+            "ERROR None of the tools found: 'tectonic', 'pdflatex'"
+            "WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions"
+            "ERROR Tool not found: 'mmdc'"
+            "WARNING `mmdc` is required to render Mermaid diagrams"
+            "ERROR your terminal does not support the kitty graphics protocol"
+            "ERROR `vim.ui.input` is not set to `Snacks.input`"
+            "ERROR is not ready"
+            "ERROR `vim.ui.select` is not set to `Snacks.picker.select`"
+            "WARNING Missing Treesitter languages"
+          ];
         };
 
         checkhealth-which-key = neovim-checkhealth.override {
