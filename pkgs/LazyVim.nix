@@ -8,6 +8,7 @@
   chafa,
   curl,
   fzf,
+  ghostscript,
   gnutar,
   go,
   gzip,
@@ -84,6 +85,9 @@ in
     ruby
     unzip
     wget
+
+    # snacks
+    ghostscript
   ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
   (
@@ -176,8 +180,6 @@ in
               "ERROR None of the tools found: 'magick', 'convert'"
               "ERROR `magick` is required to convert images. Only PNG files will be displayed."
               "WARNING Image rendering in docs with missing treesitter parsers won't work"
-              "ERROR Tool not found: 'gs'"
-              "WARNING `gs` is required to render PDF files"
               "ERROR None of the tools found: 'tectonic', 'pdflatex'"
               "WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions"
               "ERROR Tool not found: 'mmdc'"
