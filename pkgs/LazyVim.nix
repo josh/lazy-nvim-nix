@@ -9,6 +9,7 @@
   curl,
   fzf,
   ghostscript,
+  imagemagick,
   gnutar,
   go,
   gzip,
@@ -90,6 +91,7 @@ in
 
     # snacks
     ghostscript
+    imagemagick
   ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
   (
@@ -174,7 +176,6 @@ in
             "WARNING dashboard did not open: `headless`"
             "WARNING setup {disabled}"
             "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
-            "ERROR None of the tools found: 'magick', 'convert'"
             "ERROR `magick` is required to convert images. Only PNG files will be displayed."
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
             "ERROR None of the tools found: 'tectonic', 'pdflatex'"
