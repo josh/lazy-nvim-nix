@@ -25,7 +25,7 @@ let
   '';
   binstubs = runCommand "checkhealth-binstubs" { } ''
     mkdir -p $out/bin
-    touch $out/bin/kitty $out/bin/wezterm $out/bin/ghostty
+    touch $out/bin/kitty
     chmod +x $out/bin/*
   '';
 in
@@ -54,8 +54,9 @@ runCommand "checkhealth-${pluginName}"
 
     env = {
       DISPLAY = lib.optionalString stdenv.isLinux ":0";
-      LOCALE_ARCHIVE = lib.optionalString stdenv.isLinux "${glibcLocales}/lib/locale/locale-archive";
       LANG = "en_US.UTF-8";
+      LOCALE_ARCHIVE = lib.optionalString stdenv.isLinux "${glibcLocales}/lib/locale/locale-archive";
+      TERM = "xterm-kitty";
     };
   }
   ''
