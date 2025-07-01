@@ -16,6 +16,7 @@
   jdk,
   julia,
   lazygit,
+  mermaid-cli,
   nodePackages,
   php83,
   php83Packages,
@@ -93,6 +94,7 @@ in
     # snacks
     ghostscript
     imagemagick
+    mermaid-cli
     tectonic
   ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
@@ -180,8 +182,6 @@ in
             "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
             "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
-            "ERROR Tool not found: 'mmdc'"
-            "WARNING `mmdc` is required to render Mermaid diagrams"
             "ERROR your terminal does not support the kitty graphics protocol"
             "ERROR is not ready"
             "WARNING Missing Treesitter languages"
