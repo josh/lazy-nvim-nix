@@ -27,7 +27,6 @@
 }:
 let
   plugins = lazynvimPlugins;
-  juliaAvailable = lib.meta.availableOn stdenv.hostPlatform julia;
   excludeSpecs = [
     "recurseForDerivations"
     "nvim-treesitter"
@@ -83,7 +82,7 @@ in
     cargo
     ruby
     nodePackages.nodejs
-  ] ++ (lib.lists.optionals juliaAvailable [ julia ]);
+  ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
   (
     finalAttrs: previousAttrs:
@@ -144,7 +143,7 @@ in
               # OK: Nix build sandbox will always prevent access to github API
               "WARNING Failed to check GitHub API rate limit status"
             ]
-            ++ (lib.lists.optionals (!juliaAvailable) [
+            ++ (lib.lists.optionals (!lib.meta.availableOn stdenv.hostPlatform julia) [
               "WARNING julia: not available"
             ]);
         };
