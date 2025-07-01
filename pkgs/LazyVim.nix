@@ -46,7 +46,14 @@ in
     # FIXME: Not being picked up by LazyVim.json dependency scan
     plugins."blink.cmp".spec
     plugins."friendly-snippets".spec
-    plugins."fzf-lua".spec
+    (
+      plugins."fzf-lua".spec
+      // {
+        dependencies = [
+          plugins."mini.icons".spec
+        ];
+      }
+    )
     plugins."neo-tree.nvim".spec
     plugins."snacks.nvim".spec
 
@@ -122,10 +129,7 @@ in
           loadLazyPluginName = "fzf-lua";
           checkError = true;
           checkWarning = true;
-          ignoreLines = [
-            # FIXME: I think we should be able to install these plugins
-            "WARNING `nvim-web-devicons` or `mini.icons` not found"
-          ];
+          ignoreLines = [ ];
         };
 
         checkhealth-mason = neovim-checkhealth.override {

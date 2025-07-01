@@ -31,6 +31,9 @@ runCommand "checkhealth-${pluginName}"
         "--headless"
       ]
       ++ lazyLoadCmd
+      ++ [
+        "+sleep 5"
+      ]
       ++ checkCmd
       ++ [
         "+w!out.txt"
