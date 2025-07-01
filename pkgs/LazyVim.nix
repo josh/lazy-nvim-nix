@@ -182,7 +182,6 @@ in
             "ERROR Tool not found: 'mmdc'"
             "WARNING `mmdc` is required to render Mermaid diagrams"
             "ERROR your terminal does not support the kitty graphics protocol"
-            "ERROR is not ready"
             "WARNING Missing Treesitter languages"
           ];
         };
