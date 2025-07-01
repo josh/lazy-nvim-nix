@@ -11,6 +11,7 @@
   gnutar,
   go,
   gzip,
+  jdk,
   julia,
   lazygit,
   nodePackages,
@@ -70,18 +71,19 @@ in
     ueberzugpp
 
     # mason
-    unzip
-    wget
+    cargo
     curl
-    gzip
     gnutar
     go
+    gzip
+    jdk
+    nodePackages.nodejs
     php83
     php83Packages.composer
     (python312Packages.python.withPackages (ps: with ps; [ pip ]))
-    cargo
     ruby
-    nodePackages.nodejs
+    unzip
+    wget
   ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
   (
@@ -138,8 +140,6 @@ in
             [
               # FIXME: These errors should be fixable if we install the correct dependencies
               "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
-              "WARNING javac: not available"
-              "WARNING java: not available"
               # OK: Nix build sandbox will always prevent access to github API
               "WARNING Failed to check GitHub API rate limit status"
             ]
