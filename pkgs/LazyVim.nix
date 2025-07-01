@@ -77,8 +77,7 @@ in
     go
     php83
     php83Packages.composer
-    python312Packages.python
-    python312Packages.pip
+    (python312Packages.python.withPackages (ps: with ps; [ pip ]))
     cargo
     ruby
     nodePackages.nodejs
@@ -140,7 +139,6 @@ in
             "WARNING javac: not available"
             "WARNING java: not available"
             "WARNING julia: not available"
-            "WARNING pip: not available"
             # OK: Nix build sandbox will always prevent access to github API
             "WARNING Failed to check GitHub API rate limit status"
           ];
