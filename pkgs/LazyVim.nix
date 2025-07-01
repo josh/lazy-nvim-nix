@@ -176,7 +176,6 @@ in
             "WARNING dashboard did not open: `headless`"
             "WARNING setup {disabled}"
             "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
-            "ERROR `magick` is required to convert images. Only PNG files will be displayed."
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
             "ERROR None of the tools found: 'tectonic', 'pdflatex'"
             "WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions"
