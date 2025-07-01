@@ -127,7 +127,7 @@ let
     ];
 
     "LazyVim" = plugins."LazyVim" // {
-      extras = mapNestedAttrs (repo: builtins.getAttr repo plugins) LazyVim-deps;
+      extras = mapNestedAttrs (repo: builtins.getAttr repo plugins') LazyVim-deps;
     };
 
     "blink.cmp" = vimPlugins.blink-cmp // {
@@ -135,7 +135,42 @@ let
         dir = "${vimPlugins.blink-cmp}";
       };
     };
+
+    # Downgrade to mason 1.x plugins
+    "mason.nvim" = buildPlugin "mason.nvim" {
+      locked = {
+        lastModified = 1739657665;
+        narHash = "sha256-5XlzwN4tLXsdP6XnpA3r2bvkEIiHM7qfF4nSr4pj4bw=";
+        owner = "mason-org";
+        repo = "mason.nvim";
+        rev = "fc98833b6da5de5a9c5b1446ac541577059555be";
+        type = "github";
+      };
+      original = {
+        owner = "mason-org";
+        ref = "main";
+        repo = "mason.nvim";
+        type = "github";
+      };
+    };
+    "mason-lspconfig.nvim" = buildPlugin "mason-lspconfig.nvim" {
+      locked = {
+        lastModified = 1739657637;
+        narHash = "sha256-+Rji3UH32QQZADqQhMcJpgmkwbDumKaBlZO6cqNvUGY=";
+        owner = "mason-org";
+        repo = "mason-lspconfig.nvim";
+        rev = "1a31f824b9cd5bc6f342fc29e9a53b60d74af245";
+        type = "github";
+      };
+      original = {
+        owner = "mason-org";
+        ref = "main";
+        repo = "mason-lspconfig.nvim";
+        type = "github";
+      };
+    };
   };
 
+  plugins' = plugins // pluginOverrides;
 in
-lib.recurseIntoAttrs (plugins // pluginOverrides)
+lib.recurseIntoAttrs plugins'
