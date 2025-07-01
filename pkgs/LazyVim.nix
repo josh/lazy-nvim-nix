@@ -179,7 +179,6 @@ in
             "WARNING setup {disabled}"
             "ERROR None of the tools found: 'kitty', 'wezterm', 'ghostty'"
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
-            "WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions"
             "ERROR Tool not found: 'mmdc'"
             "WARNING `mmdc` is required to render Mermaid diagrams"
             "ERROR your terminal does not support the kitty graphics protocol"
