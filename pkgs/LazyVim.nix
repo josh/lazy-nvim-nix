@@ -49,9 +49,11 @@ in
     # FIXME: Not being picked up by LazyVim.json dependency scan
     plugins."blink.cmp".spec
     plugins."friendly-snippets".spec
-    plugins."fzf-lua".spec
     plugins."neo-tree.nvim".spec
     plugins."snacks.nvim".spec
+
+    # Fix "mini.icons not found" warning
+    (plugins."fzf-lua".spec // { dependencies = [ plugins."mini.icons".spec ]; })
 
     # FIXME: Tries to write to /nix/store/.../parser directory
     (plugins."nvim-treesitter".spec // { enabled = false; })
@@ -128,10 +130,6 @@ in
           loadLazyPluginName = "fzf-lua";
           checkError = true;
           checkWarning = true;
-          ignoreLines = [
-            # FIXME: I think we should be able to install these plugins
-            "WARNING `nvim-web-devicons` or `mini.icons` not found"
-          ];
         };
 
         checkhealth-mason = neovim-checkhealth.override {
