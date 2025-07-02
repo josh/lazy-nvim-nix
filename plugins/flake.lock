@@ -1982,11 +1982,11 @@
     "tree-sitter-nu": {
       "flake": false,
       "locked": {
-        "lastModified": 1751118535,
-        "narHash": "sha256-pmW4F3Gif5VRosA+4CVzbF0ZrZioRujyiEJyWq6+dwg=",
+        "lastModified": 1751488188,
+        "narHash": "sha256-Nfa6Fmem1/N97ckdmbopTtZ8pyH7j/HPTiivLp3O81E=",
         "owner": "nushell",
         "repo": "tree-sitter-nu",
-        "rev": "d62bb4a0c78e9476a6dd0081761444f6870252ed",
+        "rev": "9524f8db0802f211a49c085ae003bdf163e199d7",
         "type": "github"
       },
       "original": {
