@@ -5,6 +5,7 @@
   stdenvNoCC,
   fetchFromGitHub,
   vimPlugins,
+  curl,
   sqlite,
 }:
 let
@@ -132,10 +133,13 @@ let
       extras = mapNestedAttrs (repo: builtins.getAttr repo plugins') LazyVim-deps;
     };
 
+    # Fixes "blink_cmp_fuzzy lib is not downloaded/built" warning
+    # See pkgs/tests/blink-cmp-healthcheck.nix
     "blink.cmp" = vimPlugins.blink-cmp // {
       spec = plugins."blink.cmp".spec // {
         dir = "${vimPlugins.blink-cmp}";
       };
+      extraPackages = [ curl ];
     };
 
     # Fix sqlite3 not available warning
