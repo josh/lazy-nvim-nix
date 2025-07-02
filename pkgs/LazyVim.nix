@@ -115,16 +115,12 @@ in
         checkhealth-lazyvim = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "lazyvim";
-          checkError = true;
-          checkWarning = true;
         };
 
         checkhealth-blink-cmp = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "blink.cmp";
           loadLazyPluginName = "blink.cmp";
-          checkError = true;
-          checkWarning = true;
           ignoreLines = [
             # OK: Not fixable, this warning is always shown
             "WARNING Some providers may show up as \"disabled\" but are enabled dynamically"
@@ -135,16 +131,12 @@ in
           inherit neovim;
           pluginName = "fzf_lua";
           loadLazyPluginName = "fzf-lua";
-          checkError = true;
-          checkWarning = true;
         };
 
         checkhealth-mason = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "mason";
           loadLazyPluginName = "mason.nvim";
-          checkError = true;
-          checkWarning = true;
           ignoreLines =
             [
               # FIXME: These errors should be fixable if we install the correct dependencies
@@ -161,8 +153,6 @@ in
           inherit neovim;
           pluginName = "noice";
           loadLazyPluginName = "noice.nvim";
-          checkError = true;
-          checkWarning = true;
           ignoreLines = [
             # FIXME: These should be fixable if we install treesitter correctly
             "WARNING {TreeSitter} `regex` parser is not installed"
@@ -174,8 +164,6 @@ in
           inherit neovim;
           pluginName = "snacks";
           loadLazyPluginName = "snacks.nvim";
-          checkError = true;
-          checkWarning = true;
           ignoreLines = [
             # FIXME: Look into these errors, some may be fixable
             "WARNING dashboard did not open: `headless`"
@@ -191,8 +179,6 @@ in
           inherit neovim;
           pluginName = "which-key";
           loadLazyPluginName = "which-key.nvim";
-          checkError = true;
-          checkWarning = true;
         };
       };
     }

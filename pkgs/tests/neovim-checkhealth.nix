@@ -10,8 +10,8 @@
   pluginName ? "all",
   loadLazyPluginName ? null,
   checkOk ? true,
-  checkError ? checkWarning,
-  checkWarning ? false,
+  checkError ? true,
+  checkWarning ? true,
   ignoreLines ? [ ],
 }:
 let

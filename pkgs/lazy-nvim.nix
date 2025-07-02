@@ -73,51 +73,37 @@ in
 
         checkhealth = neovim-checkhealth.override {
           inherit neovim;
-          checkError = true;
-          checkWarning = true;
         };
 
         checkhealth-lazy = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "lazy";
-          checkError = true;
-          checkWarning = true;
         };
 
         checkhealth-vim-deprecated = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "vim.deprecated";
-          checkError = true;
-          checkWarning = true;
         };
 
         checkhealth-vim-health = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "vim.health";
-          checkError = true;
-          checkWarning = true;
         };
 
         checkhealth-vim-lsp = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "vim.lsp";
-          checkError = true;
-          checkWarning = true;
           checkOk = false;
         };
 
         checkhealth-vim-provider = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "vim.provider";
-          checkError = true;
-          checkWarning = true;
         };
 
         checkhealth-vim-treesitter = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "vim.treesitter";
-          checkError = true;
-          checkWarning = true;
         };
 
         startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ neovim ]; } ''
