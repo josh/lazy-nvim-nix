@@ -53,7 +53,6 @@ in
     plugins."blink.cmp".spec
     plugins."friendly-snippets".spec
     plugins."neo-tree.nvim".spec
-    plugins."snacks.nvim".spec
 
     # Fix "mini.icons not found" warning
     (plugins."fzf-lua".spec // { dependencies = [ plugins."mini.icons".spec ]; })

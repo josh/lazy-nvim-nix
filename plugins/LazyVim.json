@@ -24,6 +24,7 @@
     "plenary.nvim": "nvim-lua/plenary.nvim",
     "todo-comments.nvim": "folke/todo-comments.nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim",
+    "snacks.nvim": "folke/snacks.nvim",
     "trouble.nvim": "folke/trouble.nvim",
     "ts-comments.nvim": "folke/ts-comments.nvim",
     "which-key.nvim": "folke/which-key.nvim"
