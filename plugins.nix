@@ -7,19 +7,32 @@
   vimPlugins,
   # keep-sorted start
   bat,
+  cargo,
   chafa,
   curl,
   delta,
   fd,
   fzf,
   ghostscript,
+  gnutar,
+  go,
+  gzip,
   imagemagick,
+  jdk,
+  julia,
   mermaid-cli,
+  nodePackages,
+  php83,
+  php83Packages,
+  python312Packages,
   ripgrep,
+  ruby,
   sqlite,
   tectonic,
   ueberzugpp,
+  unzip,
   viu,
+  wget,
 # keep-sorted end
 }:
 let
@@ -198,22 +211,44 @@ let
     };
 
     # Downgrade to mason 1.x plugins
-    "mason.nvim" = buildPlugin "mason.nvim" {
-      locked = {
-        lastModified = 1739657665;
-        narHash = "sha256-5XlzwN4tLXsdP6XnpA3r2bvkEIiHM7qfF4nSr4pj4bw=";
-        owner = "mason-org";
-        repo = "mason.nvim";
-        rev = "fc98833b6da5de5a9c5b1446ac541577059555be";
-        type = "github";
+    "mason.nvim" =
+      let
+        mason_v1 = buildPlugin "mason.nvim" {
+          locked = {
+            lastModified = 1739657665;
+            narHash = "sha256-5XlzwN4tLXsdP6XnpA3r2bvkEIiHM7qfF4nSr4pj4bw=";
+            owner = "mason-org";
+            repo = "mason.nvim";
+            rev = "fc98833b6da5de5a9c5b1446ac541577059555be";
+            type = "github";
+          };
+          original = {
+            owner = "mason-org";
+            ref = "main";
+            repo = "mason.nvim";
+            type = "github";
+          };
+        };
+      in
+      mason_v1
+      // {
+        # spec = mason_v1.spec // { };
+        extraPackages = [
+          cargo
+          curl
+          gnutar
+          go
+          gzip
+          jdk
+          nodePackages.nodejs
+          php83
+          php83Packages.composer
+          (python312Packages.python.withPackages (ps: with ps; [ pip ]))
+          ruby
+          unzip
+          wget
+        ] ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
       };
-      original = {
-        owner = "mason-org";
-        ref = "main";
-        repo = "mason.nvim";
-        type = "github";
-      };
-    };
     "mason-lspconfig.nvim" = buildPlugin "mason-lspconfig.nvim" {
       locked = {
         lastModified = 1739657637;

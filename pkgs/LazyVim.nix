@@ -4,23 +4,8 @@
   callPackage,
   lazy-nvim,
   lazynvimPlugins,
-  # keep-sorted start
-  cargo,
-  curl,
-  gnutar,
-  go,
-  gzip,
-  jdk,
   julia,
   lazygit,
-  nodePackages,
-  php83,
-  php83Packages,
-  python312Packages,
-  ruby,
-  unzip,
-  wget,
-# keep-sorted end
 }:
 let
   plugins = lazynvimPlugins;
@@ -59,26 +44,11 @@ in
   extraPackages =
     [
       lazygit
-
-      # mason
-      cargo
-      curl
-      gnutar
-      go
-      gzip
-      jdk
-      nodePackages.nodejs
-      php83
-      php83Packages.composer
-      (python312Packages.python.withPackages (ps: with ps; [ pip ]))
-      ruby
-      unzip
-      wget
     ]
     ++ plugins."blink.cmp".extraPackages
     ++ plugins."fzf-lua".extraPackages
-    ++ plugins."snacks.nvim".extraPackages
-    ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
+    ++ plugins."mason.nvim".extraPackages
+    ++ plugins."snacks.nvim".extraPackages;
 }).overrideAttrs
   (
     finalAttrs: previousAttrs:
@@ -126,9 +96,9 @@ in
               # OK: Nix build sandbox will always prevent access to github API
               "WARNING Failed to check GitHub API rate limit status"
             ]
-            ++ (lib.lists.optionals (!lib.meta.availableOn stdenv.hostPlatform julia) [
-              "WARNING julia: not available"
-            ]);
+            ++ (lib.lists.optional (
+              !lib.meta.availableOn stdenv.hostPlatform julia
+            ) "WARNING julia: not available");
         };
 
         checkhealth-noice = neovim-checkhealth.override {

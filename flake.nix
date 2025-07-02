@@ -134,6 +134,11 @@
             inherit (self.legacyPackages.${system}) lazynvimPlugins;
           };
 
+          mason-checkhealth = pkgs.callPackage ./pkgs/tests/mason-checkhealth.nix {
+            inherit (self.packages.${system}) lazy-nvim;
+            inherit (self.legacyPackages.${system}) lazynvimPlugins;
+          };
+
           snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix {
             inherit (self.packages.${system}) lazy-nvim;
             inherit (self.legacyPackages.${system}) lazynvimPlugins;
