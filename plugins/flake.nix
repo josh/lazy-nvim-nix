@@ -184,6 +184,8 @@
     "nvim-ts-autotag".url = "github:windwp/nvim-ts-autotag/main";
     "nvim-ts-context-commentstring".flake = false;
     "nvim-ts-context-commentstring".url = "github:JoosepAlviste/nvim-ts-context-commentstring/main";
+    "nvim-web-devicons".flake = false;
+    "nvim-web-devicons".url = "github:nvim-tree/nvim-web-devicons/master";
     "octo.nvim".flake = false;
     "octo.nvim".url = "github:pwntester/octo.nvim/master";
     "one-small-step-for-vimkind".flake = false;

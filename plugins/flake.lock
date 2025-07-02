@@ -1530,6 +1530,23 @@
         "type": "github"
       }
     },
+    "nvim-web-devicons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1750462241,
+        "narHash": "sha256-6M9H/PQbiJH22Os/Fx2asHgdUmy4ZxTXOmiyX66jjNQ=",
+        "owner": "nvim-tree",
+        "repo": "nvim-web-devicons",
+        "rev": "19d6211c78169e78bab372b585b6fb17ad974e82",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-tree",
+        "ref": "master",
+        "repo": "nvim-web-devicons",
+        "type": "github"
+      }
+    },
     "octo.nvim": {
       "flake": false,
       "locked": {
@@ -1758,6 +1775,7 @@
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
         "nvim-ts-autotag": "nvim-ts-autotag",
         "nvim-ts-context-commentstring": "nvim-ts-context-commentstring",
+        "nvim-web-devicons": "nvim-web-devicons",
         "octo.nvim": "octo.nvim",
         "one-small-step-for-vimkind": "one-small-step-for-vimkind",
         "outline.nvim": "outline.nvim",
