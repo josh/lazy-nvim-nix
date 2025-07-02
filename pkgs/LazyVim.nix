@@ -2,13 +2,13 @@
   lib,
   stdenv,
   callPackage,
-  lazy-nvim,
-  lazynvimPlugins,
+  lazy-nvim-nix,
   julia,
   lazygit,
+  lazy-nvim ? lazy-nvim-nix.lazy-nvim,
 }:
 let
-  plugins = lazynvimPlugins;
+  inherit (lazy-nvim-nix) plugins;
   excludeSpecs = [
     "recurseForDerivations"
     "nvim-treesitter"

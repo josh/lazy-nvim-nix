@@ -1,12 +1,8 @@
-{
-  callPackage,
-  lazy-nvim,
-  lazynvimPlugins,
-}:
+{ callPackage, lazy-nvim-nix }:
 callPackage ./neovim-checkhealth.nix {
-  neovim = lazy-nvim.override {
-    spec = [ lazynvimPlugins."blink.cmp".spec ];
-    inherit (lazynvimPlugins."blink.cmp") extraPackages;
+  neovim = lazy-nvim-nix.lazy-nvim.override {
+    spec = [ lazy-nvim-nix.plugins."blink.cmp".spec ];
+    inherit (lazy-nvim-nix.plugins."blink.cmp") extraPackages;
   };
   pluginName = "blink.cmp";
   loadLazyPluginName = "blink.cmp";

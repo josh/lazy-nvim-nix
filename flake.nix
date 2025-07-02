@@ -15,10 +15,7 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-    }:
+    { self, nixpkgs }:
     let
       inherit (nixpkgs) lib;
       lib' = import ./lib.nix { inherit nixpkgs; };
@@ -27,54 +24,49 @@
         "aarch64-linux"
         "x86_64-linux"
       ];
-      nixpkgs' = lib.genAttrs systems (
-        system: nixpkgs.legacyPackages.${system}.extend self.overlays.default
-      );
-      eachSystem = f: lib.genAttrs systems (system: f nixpkgs'.${system});
-      treefmt-nix = eachSystem (pkgs: import ./internal/treefmt.nix pkgs);
+      eachSystem = lib.genAttrs systems;
+      eachPkgs =
+        f: lib.genAttrs systems (system: f (nixpkgs.legacyPackages.${system}.extend self.overlays.default));
+      treefmt-nix = eachSystem (system: import ./internal/treefmt.nix nixpkgs.legacyPackages.${system});
     in
     {
       lib = lib';
 
-      packages = eachSystem (
-        pkgs:
-        let
-          inherit (pkgs) system callPackage;
-          packages = self.packages.${system};
-        in
-        {
-          default = packages.lazy-nvim;
-          LazyVimPlugins = callPackage ./pkgs/lazyvim-plugins.nix { };
-          lazy-nvim-config = callPackage ./pkgs/lazy-nvim-config.nix { };
-          lazy-nvim = callPackage ./pkgs/lazy-nvim.nix { };
-          LazyVim = callPackage ./pkgs/LazyVim.nix {
-            inherit (packages) lazy-nvim;
-          };
-          lazy-neovide = callPackage ./pkgs/lazy-neovide.nix {
-            neovim = packages.lazy-nvim;
-          };
-          LazyVim-neovide = callPackage ./pkgs/lazy-neovide.nix {
-            neovim = packages.LazyVim;
-          };
-        }
-      );
-
-      legacyPackages = eachSystem (pkgs: {
-        inherit (pkgs) lazynvimPlugins lazynvimUtils;
+      packages = eachPkgs (pkgs: {
+        inherit (pkgs.lazy-nvim-nix)
+          lazy-nvim-config
+          lazy-nvim
+          LazyVim
+          lazy-neovide
+          LazyVim-neovide
+          ;
+        default = pkgs.lazy-nvim-nix.LazyVim;
+        LazyVimPlugins = pkgs.callPackage ./pkgs/lazyvim-plugins.nix { };
       });
 
       overlays.default = final: _prev: {
-        lazynvimPlugins = final.callPackage ./plugins.nix { };
-        lazynvimUtils = lib';
+        lazy-nvim-nix = {
+          lib = lib';
+          plugins = final.callPackage ./plugins.nix { };
+          lazy-nvim-config = final.callPackage ./pkgs/lazy-nvim-config.nix { };
+          lazy-nvim = final.callPackage ./pkgs/lazy-nvim.nix { };
+          LazyVim = final.callPackage ./pkgs/LazyVim.nix { };
+          lazy-neovide = final.callPackage ./pkgs/lazy-neovide.nix {
+            neovim = final.lazy-nvim-nix.lazy-nvim;
+          };
+          LazyVim-neovide = final.callPackage ./pkgs/lazy-neovide.nix {
+            neovim = final.lazy-nvim-nix.LazyVim;
+          };
+        };
       };
 
-      formatter = eachSystem (pkgs: treefmt-nix.${pkgs.system}.wrapper);
-      checks = eachSystem (
+      formatter = eachSystem (system: treefmt-nix.${system}.wrapper);
+      checks = eachPkgs (
         pkgs:
         let
           inherit (pkgs) system;
           packages = self.packages.${system};
-          plugins = pkgs.lazynvimPlugins;
+          inherit (pkgs.lazy-nvim-nix) plugins;
 
           buildPkg = pkg: pkgs.runCommand "${pkg.name}-build" { env.PKG = pkg; } "touch $out";
           addAttrsetPrefix = prefix: lib.attrsets.concatMapAttrs (n: v: { "${prefix}${n}" = v; });
@@ -116,25 +108,10 @@
                 touch $out
               '';
 
-          blink-cmp-checkhealth = pkgs.callPackage ./pkgs/tests/blink-cmp-checkhealth.nix {
-            inherit (self.packages.${system}) lazy-nvim;
-            inherit (self.legacyPackages.${system}) lazynvimPlugins;
-          };
-
-          fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix {
-            inherit (self.packages.${system}) lazy-nvim;
-            inherit (self.legacyPackages.${system}) lazynvimPlugins;
-          };
-
-          mason-checkhealth = pkgs.callPackage ./pkgs/tests/mason-checkhealth.nix {
-            inherit (self.packages.${system}) lazy-nvim;
-            inherit (self.legacyPackages.${system}) lazynvimPlugins;
-          };
-
-          snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix {
-            inherit (self.packages.${system}) lazy-nvim;
-            inherit (self.legacyPackages.${system}) lazynvimPlugins;
-          };
+          blink-cmp-checkhealth = pkgs.callPackage ./pkgs/tests/blink-cmp-checkhealth.nix { };
+          fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix { };
+          mason-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/mason-nvim-checkhealth.nix { };
+          snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix { };
 
           LazyVim-extras-catppuccin = buildPkg plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {

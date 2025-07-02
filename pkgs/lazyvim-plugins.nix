@@ -1,13 +1,13 @@
 {
+  lazy-nvim-nix,
   lib,
   stdenv,
   runCommand,
   writeScriptBin,
   neovim,
   jq,
-  lazynvimPlugins,
-  lazy-nvim ? lazynvimPlugins."lazy.nvim",
-  LazyVim ? lazynvimPlugins."LazyVim",
+  lazy-nvim ? lazy-nvim-nix.plugins."lazy.nvim",
+  LazyVim ? lazy-nvim-nix.plugins."LazyVim",
 }:
 let
   updateScript = writeScriptBin "update-LazyVim-json.sh" ''

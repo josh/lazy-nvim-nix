@@ -1,12 +1,8 @@
-{
-  callPackage,
-  lazy-nvim,
-  lazynvimPlugins,
-}:
+{ callPackage, lazy-nvim-nix }:
 callPackage ./neovim-checkhealth.nix {
-  neovim = lazy-nvim.override {
-    spec = [ lazynvimPlugins."snacks.nvim".spec ];
-    inherit (lazynvimPlugins."snacks.nvim") extraPackages;
+  neovim = lazy-nvim-nix.lazy-nvim.override {
+    spec = [ lazy-nvim-nix.plugins."snacks.nvim".spec ];
+    inherit (lazy-nvim-nix.plugins."snacks.nvim") extraPackages;
   };
   pluginName = "snacks";
   loadLazyPluginName = "snacks.nvim";

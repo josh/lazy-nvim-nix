@@ -4,9 +4,8 @@
   runCommand,
   wrapNeovimUnstable,
   neovim-unwrapped,
-  lazynvimPlugins,
-  lazynvimUtils,
   neovimUtils,
+  lazy-nvim-nix,
   bash,
   git,
   fd,
@@ -17,9 +16,11 @@
   extraPackages ? [ ],
 }:
 let
-  lazypath = lazynvimPlugins."lazy.nvim";
+  lib' = lazy-nvim-nix.lib;
+  inherit (lazy-nvim-nix) plugins;
+  lazypath = plugins."lazy.nvim";
 
-  opts = lazynvimUtils.defaultLazyOpts;
+  opts = lib'.defaultLazyOpts;
 
   moreExtraPackages = [
     bash
@@ -34,7 +35,7 @@ let
 
   customLuaRC = ''
     vim.opt.rtp:prepend("${lazypath}");
-    require("lazy").setup(${lazynvimUtils.toLua spec}, ${lazynvimUtils.toLua opts})
+    require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua opts})
   '';
 
   config = neovimUtils.makeNeovimConfig {

@@ -2,14 +2,13 @@
   lib,
   callPackage,
   stdenv,
-  lazy-nvim,
-  lazynvimPlugins,
+  lazy-nvim-nix,
   julia,
 }:
 callPackage ./neovim-checkhealth.nix {
-  neovim = lazy-nvim.override {
-    spec = [ lazynvimPlugins."mason.nvim".spec ];
-    inherit (lazynvimPlugins."mason.nvim") extraPackages;
+  neovim = lazy-nvim-nix.lazy-nvim.override {
+    spec = [ lazy-nvim-nix.plugins."mason.nvim".spec ];
+    inherit (lazy-nvim-nix.plugins."mason.nvim") extraPackages;
   };
   pluginName = "mason";
   loadLazyPluginName = "mason.nvim";

@@ -1,12 +1,8 @@
-{
-  callPackage,
-  lazy-nvim,
-  lazynvimPlugins,
-}:
+{ callPackage, lazy-nvim-nix }:
 callPackage ./neovim-checkhealth.nix {
-  neovim = lazy-nvim.override {
-    spec = [ lazynvimPlugins."fzf-lua".spec ];
-    inherit (lazynvimPlugins."fzf-lua") extraPackages;
+  neovim = lazy-nvim-nix.lazy-nvim.override {
+    spec = [ lazy-nvim-nix.plugins."fzf-lua".spec ];
+    inherit (lazy-nvim-nix.plugins."fzf-lua") extraPackages;
   };
   pluginName = "fzf_lua";
   loadLazyPluginName = "fzf-lua";
