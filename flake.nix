@@ -124,7 +124,7 @@
                 touch $out
               '';
 
-          blink-cmp-healthcheck = pkgs.callPackage ./pkgs/tests/blink-cmp-healthcheck.nix {
+          blink-cmp-checkhealth = pkgs.callPackage ./pkgs/tests/blink-cmp-checkhealth.nix {
             inherit (self.packages.${system}) lazy-nvim;
             inherit (self.legacyPackages.${system}) lazynvimPlugins;
           };

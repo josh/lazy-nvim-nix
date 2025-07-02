@@ -134,7 +134,7 @@ let
     };
 
     # Fixes "blink_cmp_fuzzy lib is not downloaded/built" warning
-    # See pkgs/tests/blink-cmp-healthcheck.nix
+    # See pkgs/tests/blink-cmp-checkhealth.nix
     "blink.cmp" = vimPlugins.blink-cmp // {
       spec = plugins."blink.cmp".spec // {
         dir = "${vimPlugins.blink-cmp}";
