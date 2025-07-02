@@ -63,17 +63,9 @@
         inherit (pkgs) lazynvimPlugins lazynvimUtils;
       });
 
-      overlays.default = final: prev: {
+      overlays.default = final: _prev: {
         lazynvimPlugins = final.callPackage ./plugins.nix { };
         lazynvimUtils = lib';
-
-        writers = prev.writers // {
-          writeLuaTable =
-            name: obj:
-            final.writers.writeText name ''
-              return ${lib'.toLua obj}
-            '';
-        };
       };
 
       formatter = eachSystem (pkgs: treefmt-nix.${pkgs.system}.wrapper);
