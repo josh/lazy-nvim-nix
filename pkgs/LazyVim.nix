@@ -1,6 +1,7 @@
 {
   lib,
   stdenv,
+  callPackage,
   lazy-nvim,
   lazynvimPlugins,
   # keep-sorted start
@@ -27,8 +28,7 @@
   unzip,
   viu,
   wget,
-  # keep-sorted end
-  neovim-checkhealth,
+# keep-sorted end
 }:
 let
   plugins = lazynvimPlugins;
@@ -102,6 +102,7 @@ in
     finalAttrs: previousAttrs:
     let
       neovim = finalAttrs.finalPackage;
+      neovim-checkhealth = callPackage ./tests/neovim-checkhealth.nix { inherit neovim; };
     in
     {
       passthru.tests = previousAttrs.passthru.tests // {

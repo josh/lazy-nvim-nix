@@ -1,14 +1,12 @@
 {
   lib,
+  callPackage,
   runCommand,
   wrapNeovimUnstable,
   neovim-unwrapped,
   lazynvimPlugins,
   lazynvimUtils,
   neovimUtils,
-  neovim-checkhealth,
-  neovim-test-edit,
-  lazy-nvim-check-plugins-installed,
   bash,
   git,
   fd,
@@ -65,6 +63,7 @@ in
     passthru.tests =
       let
         neovim = finalAttrs.finalPackage;
+        neovim-checkhealth = callPackage ./tests/neovim-checkhealth.nix { inherit neovim; };
       in
       {
         help = runCommand "nvim-help" { nativeBuildInputs = [ neovim ]; } ''
@@ -131,23 +130,23 @@ in
           touch $out
         '';
 
-        check-plugins-installed = lazy-nvim-check-plugins-installed.override {
+        check-plugins-installed = callPackage ./tests/lazy-nvim-check-plugins-installed.nix {
           inherit neovim;
         };
 
-        edit-txt = neovim-test-edit.override {
+        edit-txt = callPackage ./tests/neovim-test-edit.nix {
           inherit neovim;
           editFile = runCommand "hello.txt" { } ''
             echo "Hello, world!" >$out
           '';
         };
 
-        edit-md = neovim-test-edit.override {
+        edit-md = callPackage ./tests/neovim-test-edit.nix {
           inherit neovim;
           editFile = ../README.md;
         };
 
-        edit-nix = neovim-test-edit.override {
+        edit-nix = callPackage ./tests/neovim-test-edit.nix {
           inherit neovim;
           editFile = ../flake.nix;
         };
