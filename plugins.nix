@@ -5,12 +5,22 @@
   stdenvNoCC,
   fetchFromGitHub,
   vimPlugins,
+  # keep-sorted start
+  bat,
+  chafa,
   curl,
+  delta,
+  fd,
+  fzf,
   ghostscript,
   imagemagick,
   mermaid-cli,
+  ripgrep,
   sqlite,
   tectonic,
+  ueberzugpp,
+  viu,
+# keep-sorted end
 }:
 let
   /*
@@ -144,6 +154,26 @@ let
         dir = "${vimPlugins.blink-cmp}";
       };
       extraPackages = [ curl ];
+    };
+
+    "fzf-lua" = plugins."fzf-lua" // {
+      spec = plugins."fzf-lua".spec // {
+        dependencies = [
+          # Either
+          # plugins."nvim-web-devicons".spec
+          plugins."mini.icons".spec
+        ];
+      };
+      extraPackages = [
+        bat
+        chafa
+        delta
+        fd
+        fzf
+        ripgrep
+        ueberzugpp
+        viu
+      ];
     };
 
     # Fix sqlite3 not available warning

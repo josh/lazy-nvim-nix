@@ -6,9 +6,7 @@
   lazynvimPlugins,
   # keep-sorted start
   cargo,
-  chafa,
   curl,
-  fzf,
   gnutar,
   go,
   gzip,
@@ -20,9 +18,7 @@
   php83Packages,
   python312Packages,
   ruby,
-  ueberzugpp,
   unzip,
-  viu,
   wget,
 # keep-sorted end
 }:
@@ -48,11 +44,9 @@ in
     # FIXME: Not being picked up by LazyVim.json dependency scan
     plugins."blink.cmp".spec
     plugins."friendly-snippets".spec
+    plugins."fzf-lua".spec
     plugins."neo-tree.nvim".spec
     plugins."snacks.nvim".spec
-
-    # Fix "mini.icons not found" warning
-    (plugins."fzf-lua".spec // { dependencies = [ plugins."mini.icons".spec ]; })
 
     # FIXME: Tries to write to /nix/store/.../parser directory
     (plugins."nvim-treesitter".spec // { enabled = false; })
@@ -64,13 +58,7 @@ in
 
   extraPackages =
     [
-      fzf
       lazygit
-
-      # fzf-lua
-      chafa
-      viu
-      ueberzugpp
 
       # mason
       cargo
@@ -88,6 +76,7 @@ in
       wget
     ]
     ++ plugins."blink.cmp".extraPackages
+    ++ plugins."fzf-lua".extraPackages
     ++ plugins."snacks.nvim".extraPackages
     ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs

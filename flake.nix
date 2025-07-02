@@ -129,6 +129,11 @@
             inherit (self.legacyPackages.${system}) lazynvimPlugins;
           };
 
+          fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix {
+            inherit (self.packages.${system}) lazy-nvim;
+            inherit (self.legacyPackages.${system}) lazynvimPlugins;
+          };
+
           snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix {
             inherit (self.packages.${system}) lazy-nvim;
             inherit (self.legacyPackages.${system}) lazynvimPlugins;
