@@ -15,7 +15,7 @@ runCommand "lazy-nvim-check-plugins-installed"
     ];
   }
   ''
-    if HOME="$PWD" timeout 10s "$neovimBin" "''${nvimArgs[@]}"; then
+    if timeout 10s "$neovimBin" "''${nvimArgs[@]}"; then
       touch $out
     fi
   ''
