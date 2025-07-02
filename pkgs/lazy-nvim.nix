@@ -8,6 +8,7 @@
   neovimUtils,
   neovim-checkhealth,
   neovim-test-edit,
+  lazy-nvim-check-plugins-installed,
   bash,
   git,
   fd,
@@ -129,6 +130,10 @@ in
           cat out
           touch $out
         '';
+
+        check-plugins-installed = lazy-nvim-check-plugins-installed.override {
+          inherit neovim;
+        };
 
         edit-txt = neovim-test-edit.override {
           inherit neovim;
