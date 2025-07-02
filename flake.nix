@@ -129,6 +129,11 @@
             inherit (self.legacyPackages.${system}) lazynvimPlugins;
           };
 
+          snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix {
+            inherit (self.packages.${system}) lazy-nvim;
+            inherit (self.legacyPackages.${system}) lazynvimPlugins;
+          };
+
           LazyVim-extras-catppuccin = buildPkg plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
             buildInputs = lib'.flattenDerivations plugins.LazyVim.extras;

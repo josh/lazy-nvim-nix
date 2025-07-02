@@ -9,21 +9,17 @@
   chafa,
   curl,
   fzf,
-  ghostscript,
   gnutar,
   go,
   gzip,
-  imagemagick,
   jdk,
   julia,
   lazygit,
-  mermaid-cli,
   nodePackages,
   php83,
   php83Packages,
   python312Packages,
   ruby,
-  tectonic,
   ueberzugpp,
   unzip,
   viu,
@@ -66,37 +62,34 @@ in
     (plugins."trouble.nvim".spec // { enabled = false; })
   ] ++ (extraSpecs "lazyvim.plugins");
 
-  extraPackages = [
-    curl
-    fzf
-    lazygit
+  extraPackages =
+    [
+      fzf
+      lazygit
 
-    # fzf-lua
-    chafa
-    viu
-    ueberzugpp
+      # fzf-lua
+      chafa
+      viu
+      ueberzugpp
 
-    # mason
-    cargo
-    curl
-    gnutar
-    go
-    gzip
-    jdk
-    nodePackages.nodejs
-    php83
-    php83Packages.composer
-    (python312Packages.python.withPackages (ps: with ps; [ pip ]))
-    ruby
-    unzip
-    wget
-
-    # snacks
-    ghostscript
-    imagemagick
-    mermaid-cli
-    tectonic
-  ] ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
+      # mason
+      cargo
+      curl
+      gnutar
+      go
+      gzip
+      jdk
+      nodePackages.nodejs
+      php83
+      php83Packages.composer
+      (python312Packages.python.withPackages (ps: with ps; [ pip ]))
+      ruby
+      unzip
+      wget
+    ]
+    ++ plugins."blink.cmp".extraPackages
+    ++ plugins."snacks.nvim".extraPackages
+    ++ (lib.lists.optionals (lib.meta.availableOn stdenv.hostPlatform julia) [ julia ]);
 }).overrideAttrs
   (
     finalAttrs: previousAttrs:
