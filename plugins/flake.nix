@@ -36,8 +36,6 @@
     "cmake-tools.nvim".url = "github:Civitasv/cmake-tools.nvim/master";
     "cmp-buffer".flake = false;
     "cmp-buffer".url = "github:hrsh7th/cmp-buffer/main";
-    "cmp-git".flake = false;
-    "cmp-git".url = "github:petertriho/cmp-git/main";
     "cmp-nvim-lsp".flake = false;
     "cmp-nvim-lsp".url = "github:hrsh7th/cmp-nvim-lsp/main";
     "cmp-path".flake = false;
@@ -48,8 +46,6 @@
     "conform.nvim".url = "github:stevearc/conform.nvim/master";
     "conjure".flake = false;
     "conjure".url = "github:Olical/conjure/main";
-    "copilot-cmp".flake = false;
-    "copilot-cmp".url = "github:zbirenbaum/copilot-cmp/master";
     "copilot.lua".flake = false;
     "copilot.lua".url = "github:zbirenbaum/copilot.lua/master";
     "crates.nvim".flake = false;
@@ -58,8 +54,6 @@
     "dashboard-nvim".url = "github:nvimdev/dashboard-nvim/master";
     "dial.nvim".flake = false;
     "dial.nvim".url = "github:monaqa/dial.nvim/master";
-    "dressing.nvim".flake = false;
-    "dressing.nvim".url = "github:stevearc/dressing.nvim/master";
     "edgy.nvim".flake = false;
     "edgy.nvim".url = "github:folke/edgy.nvim/main";
     "flash.nvim".flake = false;
@@ -96,8 +90,6 @@
     "leap.nvim".url = "github:ggandor/leap.nvim/main";
     "lualine.nvim".flake = false;
     "lualine.nvim".url = "github:nvim-lualine/lualine.nvim/master";
-    "luvit-meta".flake = false;
-    "luvit-meta".url = "github:Bilal2453/luvit-meta/main";
     "mason-lspconfig.nvim".flake = false;
     "mason-lspconfig.nvim".url = "github:mason-org/mason-lspconfig.nvim/main";
     "mason-nvim-dap.nvim".flake = false;
@@ -136,8 +128,6 @@
     "neoconf.nvim".url = "github:folke/neoconf.nvim/main";
     "neodev.nvim".flake = false;
     "neodev.nvim".url = "github:folke/neodev.nvim/main";
-    "neogen".flake = false;
-    "neogen".url = "github:danymat/neogen/main";
     "neotest".flake = false;
     "neotest".url = "github:nvim-neotest/neotest/master";
     "noice.nvim".flake = false;
@@ -168,8 +158,6 @@
     "nvim-navic".url = "github:SmiteshP/nvim-navic/master";
     "nvim-nio".flake = false;
     "nvim-nio".url = "github:nvim-neotest/nvim-nio/master";
-    "nvim-notify".flake = false;
-    "nvim-notify".url = "github:rcarriga/nvim-notify/master";
     "nvim-snippets".flake = false;
     "nvim-snippets".url = "github:garymjr/nvim-snippets/main";
     "nvim-treesitter".flake = false;
@@ -184,8 +172,6 @@
     "nvim-ts-autotag".url = "github:windwp/nvim-ts-autotag/main";
     "nvim-ts-context-commentstring".flake = false;
     "nvim-ts-context-commentstring".url = "github:JoosepAlviste/nvim-ts-context-commentstring/main";
-    "nvim-web-devicons".flake = false;
-    "nvim-web-devicons".url = "github:nvim-tree/nvim-web-devicons/master";
     "octo.nvim".flake = false;
     "octo.nvim".url = "github:pwntester/octo.nvim/master";
     "one-small-step-for-vimkind".flake = false;
@@ -210,10 +196,6 @@
     "snacks.nvim".url = "github:folke/snacks.nvim/main";
     "supermaven-nvim".flake = false;
     "supermaven-nvim".url = "github:supermaven-inc/supermaven-nvim/main";
-    "tailwindcss-colorizer-cmp.nvim".flake = false;
-    "tailwindcss-colorizer-cmp.nvim".url = "github:roobert/tailwindcss-colorizer-cmp.nvim/main";
-    "telescope-fzf-native.nvim".flake = false;
-    "telescope-fzf-native.nvim".url = "github:nvim-telescope/telescope-fzf-native.nvim/main";
     "telescope.nvim".flake = false;
     "telescope.nvim".url = "github:nvim-telescope/telescope.nvim/master";
     "telescope_hoogle".flake = false;
@@ -222,8 +204,6 @@
     "todo-comments.nvim".url = "github:folke/todo-comments.nvim/main";
     "tokyonight.nvim".flake = false;
     "tokyonight.nvim".url = "github:folke/tokyonight.nvim/main";
-    "tree-sitter-nu".flake = false;
-    "tree-sitter-nu".url = "github:nushell/tree-sitter-nu/main";
     "trouble.nvim".flake = false;
     "trouble.nvim".url = "github:folke/trouble.nvim/main";
     "ts-comments.nvim".flake = false;
