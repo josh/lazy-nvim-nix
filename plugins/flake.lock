@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1751507390,
-        "narHash": "sha256-vwKfuWuU8YoegVKvUD58vkTD0dOFnITk9RBWdLUgKWA=",
+        "lastModified": 1751512405,
+        "narHash": "sha256-ujHoogMQLb6aVHehHEglx9Ilpt99biBa5XNNmKiaINE=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "03dd5b4418c6b868387899c19d4b9867a42b1acb",
+        "rev": "6d6b0092cfe570ade9b183cd53bb1a620290d02b",
         "type": "github"
       },
       "original": {
