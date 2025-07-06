@@ -1244,11 +1244,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1751715814,
-        "narHash": "sha256-Mx7+9tWz4I/xHfW0HvqpQWfnxQxo7LsJr7bg+JFcU9g=",
+        "lastModified": 1751805368,
+        "narHash": "sha256-k3Req9s1pjZw5BG7eaZVXilSl+OcMIUhJ9KcRRMLm+E=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "bb3fb99cf14daa33014331ac6eb4b5de9180f775",
+        "rev": "1b6d7c3abf962cc392bcaf0dd7b92bdb9a1a5684",
         "type": "github"
       },
       "original": {
