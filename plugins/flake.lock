@@ -37,11 +37,11 @@
     "LuaSnip": {
       "flake": false,
       "locked": {
-        "lastModified": 1750843827,
-        "narHash": "sha256-F61yj2BYppv2HDqQrkeCDy6DhjkKypZPL/jWJqHRB5o=",
+        "lastModified": 1751838474,
+        "narHash": "sha256-vEHHSE3lt6iBkoA4ye6NbU5xyBS0J29dLjQrljxk6LU=",
         "owner": "L3MON4D3",
         "repo": "LuaSnip",
-        "rev": "eda5be8f0ce9816278671f0b578cdbb8b762c701",
+        "rev": "66b5c2707e624dcd2cd3605676c64a2efe47e9d1",
         "type": "github"
       },
       "original": {
@@ -496,11 +496,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1751687352,
-        "narHash": "sha256-r8jUdKRGLJgfxr1G/cHNRcOgRjacR9w6l490m4iJSUY=",
+        "lastModified": 1751838772,
+        "narHash": "sha256-fOE/EWBvcYe9Vxevy53N81U3Uc/YevF5taHmWZD2fBM=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "9be1552e7de8d72fa280b87ede3642e8bfb4c998",
+        "rev": "fc93ab3204eefc08baa1e47da5f6804f89112a3c",
         "type": "github"
       },
       "original": {
@@ -1683,11 +1683,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1751761456,
-        "narHash": "sha256-tWpXkmeutlQGaTNBi2EiuW3ca20RxUbPpcsh7vovIEI=",
+        "lastModified": 1751837139,
+        "narHash": "sha256-e+iLn5/ZgmaUOFd+vOZShJSYbQ1JK5nHFv1zmqFGmrI=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "9b881500f721b2b2c7c33e13cec5659753854a07",
+        "rev": "41d1e845ccbad1670fc32babe7fe7bf512d4ea16",
         "type": "github"
       },
       "original": {
