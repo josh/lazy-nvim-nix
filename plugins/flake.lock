@@ -343,11 +343,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1752263049,
-        "narHash": "sha256-kFMHNAUfIUOk1hgelABXgwy2Vne7F2oSdEIeHD2GTmI=",
+        "lastModified": 1752315674,
+        "narHash": "sha256-MBD71wnH7eeZYjruvjH9Zpv8zsZ+3GKhVz0n98Cuj8k=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "9cc2a8feb754896715fc604240e327b32db25036",
+        "rev": "36e3e51c1d62e6062d2934ddb7e5296d2aceef59",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1751953748,
-        "narHash": "sha256-+AGdTXlHHsDYkn0dQPn/fw0DvKmfnbILBy9sx/Naqmg=",
+        "lastModified": 1752326021,
+        "narHash": "sha256-dhoAmIFkUolk4UfKcI26VltL7LElb2gooEUrJLnztV4=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "ee69a8abc488ff8c8186e053b24cebf37a383330",
+        "rev": "2e4d5cf328939e6176df9925209e5d2e289f3187",
         "type": "github"
       },
       "original": {
@@ -1006,11 +1006,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752010893,
-        "narHash": "sha256-qYqcljTn3FbHta1FBGFFK+fzF5RhamtRLI+bXcJNt7w=",
+        "lastModified": 1752312333,
+        "narHash": "sha256-Zslyq9vlj+Ixo7Fmj1JXn5j+fwQFOh1DHKRozl5bm4Q=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "7c9c5b2fadcac4edd9f89f38cbff13ae838cc330",
+        "rev": "84c3df0aa276da7f6095b000de314986f7b5ac98",
         "type": "github"
       },
       "original": {
