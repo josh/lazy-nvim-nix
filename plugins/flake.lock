@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1752422770,
-        "narHash": "sha256-R95i3dDVBfH0oxTdK0F0ami0SAk0VVONXIlX6ZF0kmk=",
+        "lastModified": 1752484303,
+        "narHash": "sha256-zZUu04nvr589Petq2q09qhXl94ZUIwNYcpppxY0/IvA=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "3536ce464e82843b00c76718d9bfe1994647d686",
+        "rev": "02ee0a164117aa3caf7af80cde3b917ad5effcde",
         "type": "github"
       },
       "original": {
@@ -513,11 +513,11 @@
     "gitsigns.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752228677,
-        "narHash": "sha256-81sJe2qkEmq9QeiZvGKKaAfv8Fx1EDxn+A1AeNFl2aE=",
+        "lastModified": 1752489882,
+        "narHash": "sha256-Ja5i4x7xhrH9W6IHEaFrn4U9ESceleEs5rKhbkow23o=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "4666d040b60d1dc0e474ccd9a3fd3c4d67b4767c",
+        "rev": "bbee149e00c404aa9f7a7c248b981cde953b252a",
         "type": "github"
       },
       "original": {
@@ -734,11 +734,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1751969245,
-        "narHash": "sha256-gyNsnNzxP20JE6O4qfwMBDm5lbapXdIdurjD6O4uR0c=",
+        "lastModified": 1752487680,
+        "narHash": "sha256-NmHNz7mFb4S9KtLbUJPpMbnIfiX6f58G6fDEs8Hj6/c=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "7815740f4d0afb74ada00956c36e18ad695ed9e3",
+        "rev": "acb2d97a5c5e3f58156cb387fdf6035c34cd2768",
         "type": "github"
       },
       "original": {
