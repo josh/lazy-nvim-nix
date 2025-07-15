@@ -71,11 +71,11 @@
     "SchemaStore.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752177651,
-        "narHash": "sha256-DE9Ya9V0KAbjkLjE/847Kcwfgxrm1YqlanwNwbYgmXs=",
+        "lastModified": 1752602468,
+        "narHash": "sha256-NsZKP1AGWorUz2BW2atgQ9aZZ0TOpueTj2DWoKWKn+M=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "36fb914c0defa2274207e670182253508e5569d5",
+        "rev": "d916dcfbc42dae61f8b17618b1e9e87dcbf5404a",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1752484303,
-        "narHash": "sha256-zZUu04nvr589Petq2q09qhXl94ZUIwNYcpppxY0/IvA=",
+        "lastModified": 1752608645,
+        "narHash": "sha256-iWM+/lq4HG4Cm+f8JkLee34hnC9119znBOFDXC1Fow0=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "02ee0a164117aa3caf7af80cde3b917ad5effcde",
+        "rev": "586ee87534f5bf65f1c8dea2d1da2a57e8cddd36",
         "type": "github"
       },
       "original": {
@@ -700,11 +700,11 @@
     "leap.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1751818204,
-        "narHash": "sha256-B6v1arWf7oPkYlYNue0BWj3W7i1VYsZbir0TDeQe2Zo=",
+        "lastModified": 1752609342,
+        "narHash": "sha256-6d6/w5zqheqTgyHnpkwvJnYEXU5YLTE1jqo5qOe6VZc=",
         "owner": "ggandor",
         "repo": "leap.nvim",
-        "rev": "87835bf56c3162bc0508065ccb127b9f565b8a95",
+        "rev": "653d507c8ac67d76bda2de2cadcb94229fdb02a4",
         "type": "github"
       },
       "original": {
@@ -785,11 +785,11 @@
     "mini.ai": {
       "flake": false,
       "locked": {
-        "lastModified": 1751990781,
-        "narHash": "sha256-7rd1pW8GJWY2VBJwB4mlngw+JGPLRMrJiGbWclEvYKE=",
+        "lastModified": 1752587663,
+        "narHash": "sha256-TkEOdfLHp1QOOF6oc1kwSvQ5jOgzRr9H5gdGJ1SVFDw=",
         "owner": "echasnovski",
         "repo": "mini.ai",
-        "rev": "96cd250fdea1fec929a62c7432de73e0f59788cd",
+        "rev": "6a8e0b151d39b293cfa483cdea785e448c2e0e11",
         "type": "github"
       },
       "original": {
@@ -989,11 +989,11 @@
     "mini.surround": {
       "flake": false,
       "locked": {
-        "lastModified": 1749826982,
-        "narHash": "sha256-khhvGI4aWVgdTeBabxncVNWPI5vouSTpHAUYfEhgISs=",
+        "lastModified": 1752587663,
+        "narHash": "sha256-MzOBrjoLNeU6hQwuCTmHtn1a6mWMfP2jdlHLXPz91oo=",
         "owner": "echasnovski",
         "repo": "mini.surround",
-        "rev": "1a2b59c77a0c4713a5bd8972da322f842f4821b1",
+        "rev": "d510a830e81a1b436e821c9a038eefb314b58b5d",
         "type": "github"
       },
       "original": {
