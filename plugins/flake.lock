@@ -513,11 +513,11 @@
     "gitsigns.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752489882,
-        "narHash": "sha256-Ja5i4x7xhrH9W6IHEaFrn4U9ESceleEs5rKhbkow23o=",
+        "lastModified": 1752571529,
+        "narHash": "sha256-3g0Cnm6qp5TdTSl2s9uwqflZOP0UWbo7fzPYkbBNqhg=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "bbee149e00c404aa9f7a7c248b981cde953b252a",
+        "rev": "d20209a154a8d11710607899b24a0698085b35cf",
         "type": "github"
       },
       "original": {
@@ -734,11 +734,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752487680,
-        "narHash": "sha256-NmHNz7mFb4S9KtLbUJPpMbnIfiX6f58G6fDEs8Hj6/c=",
+        "lastModified": 1752574054,
+        "narHash": "sha256-q0qG8gydcd1SEXyTPoxx63uzcG77ZIDXq270TgupwfA=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "acb2d97a5c5e3f58156cb387fdf6035c34cd2768",
+        "rev": "bc743e4f3dc4b6d22b0a9e0b68a6664d93f8a694",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752459579,
-        "narHash": "sha256-MlR8kz370jgcRaOsPQwismZytuG6wQgNjsfeNW065Qc=",
+        "lastModified": 1752568760,
+        "narHash": "sha256-o2FQsl4OX9cRDpFp+Cgp3DwmQs5k2rt0h0GwnWfpxHU=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "5d8ae5f54c1400070f4b18b08d3c98126be281fc",
+        "rev": "d995602df91faa2416a400625e801cd4aeaa9823",
         "type": "github"
       },
       "original": {
@@ -1700,11 +1700,11 @@
     "smear-cursor.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1750939317,
-        "narHash": "sha256-g2SXgtBvB1eivkPZvPkCevbA/HKSMvX/fK2MYZXDPIk=",
+        "lastModified": 1752584005,
+        "narHash": "sha256-XJdyc7bcCiQUqc0/hgliITDS3NuAr0yMOnIxbBl+VZE=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "4a0f7ac265b4ed1ce4d0af2afc13072763bfa691",
+        "rev": "69b2d4aa715dc2ead1aa772e19bc241b561a68fa",
         "type": "github"
       },
       "original": {
