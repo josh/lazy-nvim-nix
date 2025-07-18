@@ -496,11 +496,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1752814608,
-        "narHash": "sha256-O+rOkVbUiOanrlfuGQRaoroBYJsgcUfUWZ64ouaBaGA=",
+        "lastModified": 1752831475,
+        "narHash": "sha256-nVA0jHn5p0nvaddiw5/fTe0kQafvsYdxJ+1SJimgzMs=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "9864a1683bfea163fd8fed86eb0312bb2dc7b3e6",
+        "rev": "a9803618d77bd024d97de75cf5878819d4d6a2d0",
         "type": "github"
       },
       "original": {
@@ -1159,11 +1159,11 @@
     "nvim-dap": {
       "flake": false,
       "locked": {
-        "lastModified": 1751917404,
-        "narHash": "sha256-t41Q+uMhNBVKUpQyhdNhHmkqW0wwAXYKvTfUhkgWyWk=",
+        "lastModified": 1752825222,
+        "narHash": "sha256-gPzfEBrA1OJ3AVuE0noPrETaBRrV07GldwRmvCWDC/U=",
         "owner": "mfussenegger",
         "repo": "nvim-dap",
-        "rev": "cc77338e6e34c79f1c638f51ae4160dc9bfb05de",
+        "rev": "5dd4d50f2e6a2eaf9e57fad023d294ef371bda35",
         "type": "github"
       },
       "original": {
