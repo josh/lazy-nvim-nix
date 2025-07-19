@@ -39,16 +39,16 @@ in
 
     # FIXME: trouble.nvim doesn't like be loaded from /nix/store
     (plugins."trouble.nvim".spec // { enabled = false; })
-  ] ++ (extraSpecs "lazyvim.plugins");
+  ]
+  ++ (extraSpecs "lazyvim.plugins");
 
-  extraPackages =
-    [
-      lazygit
-    ]
-    ++ plugins."blink.cmp".extraPackages
-    ++ plugins."fzf-lua".extraPackages
-    ++ plugins."mason.nvim".extraPackages
-    ++ plugins."snacks.nvim".extraPackages;
+  extraPackages = [
+    lazygit
+  ]
+  ++ plugins."blink.cmp".extraPackages
+  ++ plugins."fzf-lua".extraPackages
+  ++ plugins."mason.nvim".extraPackages
+  ++ plugins."snacks.nvim".extraPackages;
 }).overrideAttrs
   (
     finalAttrs: previousAttrs:
@@ -89,16 +89,15 @@ in
           inherit neovim;
           pluginName = "mason";
           loadLazyPluginName = "mason.nvim";
-          ignoreLines =
-            [
-              # FIXME: These errors should be fixable if we install the correct dependencies
-              "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
-              # OK: Nix build sandbox will always prevent access to github API
-              "WARNING Failed to check GitHub API rate limit status"
-            ]
-            ++ (lib.lists.optional (
-              !lib.meta.availableOn stdenv.hostPlatform julia
-            ) "WARNING julia: not available");
+          ignoreLines = [
+            # FIXME: These errors should be fixable if we install the correct dependencies
+            "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
+            # OK: Nix build sandbox will always prevent access to github API
+            "WARNING Failed to check GitHub API rate limit status"
+          ]
+          ++ (lib.lists.optional (
+            !lib.meta.availableOn stdenv.hostPlatform julia
+          ) "WARNING julia: not available");
         };
 
         checkhealth-noice = neovim-checkhealth.override {

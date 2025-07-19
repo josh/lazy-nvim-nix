@@ -247,7 +247,8 @@ let
           ruby
           unzip
           wget
-        ] ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
+        ]
+        ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
       };
     "mason-lspconfig.nvim" = buildPlugin "mason-lspconfig.nvim" {
       locked = {

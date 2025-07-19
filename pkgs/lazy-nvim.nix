@@ -29,7 +29,8 @@ let
     lua5_1
     luajitPackages.luarocks
     ripgrep
-  ] ++ extraPackages;
+  ]
+  ++ extraPackages;
 
   extrasBinPath = lib.makeBinPath moreExtraPackages;
 

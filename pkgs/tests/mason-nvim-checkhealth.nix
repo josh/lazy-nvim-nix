@@ -12,12 +12,11 @@ callPackage ./neovim-checkhealth.nix {
   };
   pluginName = "mason";
   loadLazyPluginName = "mason.nvim";
-  ignoreLines =
-    [
-      # OK: Nix build sandbox will always prevent access to github API
-      "WARNING Failed to check GitHub API rate limit status"
-    ]
-    ++ (lib.lists.optional (
-      !lib.meta.availableOn stdenv.hostPlatform julia
-    ) "WARNING julia: not available");
+  ignoreLines = [
+    # OK: Nix build sandbox will always prevent access to github API
+    "WARNING Failed to check GitHub API rate limit status"
+  ]
+  ++ (lib.lists.optional (
+    !lib.meta.availableOn stdenv.hostPlatform julia
+  ) "WARNING julia: not available");
 }

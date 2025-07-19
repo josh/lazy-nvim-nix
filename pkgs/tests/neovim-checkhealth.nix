@@ -50,7 +50,8 @@ runCommand "checkhealth-${pluginName}"
     nativeBuildInputs = [
       binstubs
       moreutils
-    ] ++ lib.lists.optionals stdenv.isLinux [ xclip ];
+    ]
+    ++ lib.lists.optionals stdenv.isLinux [ xclip ];
 
     env = {
       DISPLAY = lib.optionalString stdenv.isLinux ":0";
