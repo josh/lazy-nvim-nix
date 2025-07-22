@@ -173,11 +173,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1749271780,
-        "narHash": "sha256-wt/Ybjgr4N80B+QsyANs1QezM7PpFceUWSweRFgkhl0=",
+        "lastModified": 1753183848,
+        "narHash": "sha256-U3z0Yw7sHe6pnUlVAEGcTNQ7oxIZbOV30Vi3Un0SC/Y=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "fa42eb5e26819ef58884257d5ae95dd0552b9a66",
+        "rev": "44bd5ea20a1eccba71ee39e436d2fdf5017f1f80",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1753147231,
-        "narHash": "sha256-975e/kyc5dk85g5RkxorA14J57oLlAwP2wgtd1DPTkM=",
+        "lastModified": 1753185938,
+        "narHash": "sha256-+nfig9xmcSXHqnySCC29Ek40dhufj4QEcLIiA9G6Itw=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "7e3f79df5042ea216ceb2f339386de2465e744bb",
+        "rev": "ecdf11af55d2c9c66c20dd5224bb9896430074d5",
         "type": "github"
       },
       "original": {
