@@ -751,11 +751,11 @@
     "mason-nvim-dap.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752754167,
-        "narHash": "sha256-L2ukoxU43XgCYTvwXBNICxa1QF+Jpwd/+Dk2i7Z5YLM=",
+        "lastModified": 1753222956,
+        "narHash": "sha256-fr6Uk8P9i/LkHPwVp76NweI6m9KIr3shBJMrcxE0C3U=",
         "owner": "jay-babu",
         "repo": "mason-nvim-dap.nvim",
-        "rev": "5fcd0dfdcf55d8a1c1a02cccc14ee5d79728a496",
+        "rev": "86389a3dd687cfaa647b6f44731e492970034baa",
         "type": "github"
       },
       "original": {
