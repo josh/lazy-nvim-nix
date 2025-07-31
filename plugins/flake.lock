@@ -513,11 +513,11 @@
     "gitsigns.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1753442199,
-        "narHash": "sha256-7BKwxHoFWGepqm8/J+RB6zu+7IpGUUmgLP4a2O2lIuA=",
+        "lastModified": 1753953127,
+        "narHash": "sha256-MnnXn6llcvIzdFuQT/1qt7uJgWZxvNMi6Dw4GG+5NDI=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "b01433169be710d6c69f7b4ee264d9670698b831",
+        "rev": "cc2e664c7e3cd8a31af34df040d16a75cfcadced",
         "type": "github"
       },
       "original": {
@@ -734,11 +734,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1753818753,
-        "narHash": "sha256-mGuWLwZnLR1RGvNUkXpzNydd2fGUun2Rooxnxh31HGs=",
+        "lastModified": 1753956467,
+        "narHash": "sha256-uJysWhQcqiOv48ySKZsqEMaWEE1rpzTQ7mPxQdzoQbk=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
+        "rev": "844d247d998c2f9a6a3baad8bb9748edc55ce69f",
         "type": "github"
       },
       "original": {
@@ -1227,11 +1227,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1753039571,
-        "narHash": "sha256-ly5S0KAZN8Jeag22SCX+5XKqn3d+zCRN/8Jf5HlEn9I=",
+        "lastModified": 1753951521,
+        "narHash": "sha256-GmXScmbXJx74RMgPhkdKtdODZqkOarFHE1XOiSnt5Bo=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "9c6207559297b24f0b7c32829f8e45f7d65b991f",
+        "rev": "7ef127aaede2a4d5ad8df8321e2eb4e567f29594",
         "type": "github"
       },
       "original": {
