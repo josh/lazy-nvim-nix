@@ -39,6 +39,16 @@ in
 
     # FIXME: trouble.nvim doesn't like be loaded from /nix/store
     (plugins."trouble.nvim".spec // { enabled = false; })
+
+    # FIXME: noice.nvim breaks cmdline and prevents exiting nvim
+    # TODO: Add test coverage to reproduce the error in nix check
+    (
+      plugins."noice.nvim".spec
+      // {
+        opts.cmdline.enabled = false;
+        opts.messages.enabled = false;
+      }
+    )
   ]
   ++ (extraSpecs "lazyvim.plugins");
 
