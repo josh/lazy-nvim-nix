@@ -154,6 +154,11 @@ let
   pluginOverrides = {
     "lazy.nvim" = applyPatches plugins."lazy.nvim" [
       "${path}/pkgs/applications/editors/vim/plugins/patches/lazy-nvim/no-helptags.patch"
+
+      # Disable rtp healthcheck that @folke is too lazy to fix it
+      # Randomly errors when a nix path contains "paq"
+      # https://github.com/folke/lazy.nvim/issues/798
+      ./plugins/lazy-nvim-rtp.patch
     ];
 
     "LazyVim" = plugins."LazyVim" // {

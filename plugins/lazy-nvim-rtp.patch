@@ -1,0 +1,20 @@
+diff --git i/lua/lazy/health.lua w/lua/lazy/health.lua
+index 6a6d60d..319223f 100644
+--- i/lua/lazy/health.lua
++++ w/lua/lazy/health.lua
+@@ -90,15 +90,6 @@ function M.check()
+     ok("no existing packages found by other package managers")
+   end
+ 
+-  for _, name in ipairs({ "packer", "plugged", "paq", "pckr", "mini.deps" }) do
+-    for _, path in ipairs(vim.opt.rtp:get()) do
+-      if path:find(name, 1, true) then
+-        error("Found paths on the rtp from another plugin manager `" .. name .. "`")
+-        break
+-      end
+-    end
+-  end
+-
+   local packer_compiled = vim.fn.stdpath("config") .. "/plugin/packer_compiled.lua"
+   if uv.fs_stat(packer_compiled) then
+     error("please remove the file `" .. packer_compiled .. "`")
