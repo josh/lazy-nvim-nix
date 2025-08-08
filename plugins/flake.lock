@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1754581984,
-        "narHash": "sha256-XbZewCKweLO/XbcMUmLN3AX+OCyA20H7q/s/1qPr8bw=",
+        "lastModified": 1754650574,
+        "narHash": "sha256-3jNdXlKF/Nuj+iQR1rckWgd/T7icTrofiVqbOvew6zU=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "d4ed3fb40f301fc1ff32e0ff3b437b619112ce14",
+        "rev": "6eb4d810bc9f2163ed85922df9f78fea49cd4989",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     "R.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1754588403,
-        "narHash": "sha256-VrOhRlGOo26ChM8z8YbnTnkcqW2fVyl5no7OB5rCJ5E=",
+        "lastModified": 1754652493,
+        "narHash": "sha256-aWbwfPGoPU/PWaIixpXd0BVY/plHVxpkAN2vxCuSu9E=",
         "owner": "R-nvim",
         "repo": "R.nvim",
-        "rev": "e41bb1bd56a4dc5f39292be04e0d7cef2bd6bcbf",
+        "rev": "fef6a88163d0079befd160460b1a05c7f482da8d",
         "type": "github"
       },
       "original": {
@@ -343,11 +343,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1752931873,
-        "narHash": "sha256-QFwT1RiQ66qlZUZvg9b/OWvbii7oqDXYMaETN2gZaH4=",
+        "lastModified": 1754656207,
+        "narHash": "sha256-U+zgAifwPBloWGzvhUxO845vp6OVnLOiWPcpFIiv/wg=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "0ac12d481141555cc4baa0ad656b590ed30d2090",
+        "rev": "6093f2c528a9144842a577c8d65cdf128bb8669d",
         "type": "github"
       },
       "original": {
