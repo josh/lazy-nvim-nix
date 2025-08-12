@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1754736680,
-        "narHash": "sha256-L2VoT7qSVUYbUTSZECICBguVWhArXn1bvtYQodvCQIs=",
+        "lastModified": 1754987079,
+        "narHash": "sha256-nqZkCxCezRZG7qPV+PGbAWvmqoJsU0+dgiBkb0NE/0Y=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "10f2ebe48849726608f79e21bc9eb89c567a22f3",
+        "rev": "dc6882469bf3b98e078888f86bb68ad90d395c7e",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1754181266,
-        "narHash": "sha256-2BXuWtG0/gmGxXSdR/l6dPjhlbiB14SGKCIfA6CbfL8=",
+        "lastModified": 1754974949,
+        "narHash": "sha256-0OQV/I03J2GLKMhKTnmSuzAlfLRseOSRCX8NFFYogW0=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "ade0330b8a8657798abb9cc0d498b1c00b0d2ce5",
+        "rev": "0170141fda5c1ebdfe81ff741e6d02d04e3a51a3",
         "type": "github"
       },
       "original": {
@@ -717,11 +717,11 @@
     "lualine.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1749383457,
-        "narHash": "sha256-2aPgA7riA/FubQpTkqsxLKl7OZ8L6FkucNHc2QEx2HQ=",
+        "lastModified": 1754970649,
+        "narHash": "sha256-lWt2kpW+hsTMWt8tar/+AISTDrIt4Jn27NmI9j+Xt4s=",
         "owner": "nvim-lualine",
         "repo": "lualine.nvim",
-        "rev": "a94fc68960665e54408fe37dcf573193c4ce82c9",
+        "rev": "b8c23159c0161f4b89196f74ee3a6d02cdc3a955",
         "type": "github"
       },
       "original": {
