@@ -462,11 +462,11 @@
     "flit.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1752748458,
-        "narHash": "sha256-zI4mPTyz/A+H0DtAiso8Mn5P4nK1GFYKpC0gXTlHqvY=",
+        "lastModified": 1755271834,
+        "narHash": "sha256-URKG+9tYAchpLpE7+sG0hdzZpEqTSxxgg6iD7tWHIIY=",
         "owner": "ggandor",
         "repo": "flit.nvim",
-        "rev": "7fbf60207cc170be75db3f42e6f6db0d4d887e5d",
+        "rev": "513e38abe61237c53a9e983e45595b1d2e7d5391",
         "type": "github"
       },
       "original": {
@@ -496,11 +496,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1755232509,
-        "narHash": "sha256-4oyANldkMukLKIkhAm4PElC94THrWtqsAtk50xFyrZo=",
+        "lastModified": 1755272592,
+        "narHash": "sha256-i9z7s+6wPUF7niMUmH0jrR5UfdpLtRQEAA4J2Tn4N50=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "ee37d2860a221ae2e75c08abd28240b4a9746e23",
+        "rev": "76e7f90437139ae8d6950e275473005a05b992c3",
         "type": "github"
       },
       "original": {
@@ -1700,11 +1700,11 @@
     "smear-cursor.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1755201555,
-        "narHash": "sha256-7ejBg6uR/fMl5NH3fOgeZHcaNguBw5ZG5SEz1LbLm1Q=",
+        "lastModified": 1755271030,
+        "narHash": "sha256-p4sd6vgjvrqxzBRYlT4XNPO+qGLDXMpcPo2BOJj5UGI=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "b900f1feca8c37479c30889b29327385257443c0",
+        "rev": "12a70b24438ce246579a5a45d3b77c03b47f9359",
         "type": "github"
       },
       "original": {
