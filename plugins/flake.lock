@@ -173,11 +173,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1755093911,
-        "narHash": "sha256-nTRSyQ/Dh0bsd1aQzSq1mAL1CR1b/cpYxJ+3TMq5GTs=",
+        "lastModified": 1755353606,
+        "narHash": "sha256-dsDA04xF5d7gXeaEjsLgHt/zlQXHIQ93Cd0S6WCrWJA=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "3aaf3ab60221bca8edb1354e41bd514a22c89de2",
+        "rev": "211dc3649f775c5a390e9fae07bf20d985f8dcf2",
         "type": "github"
       },
       "original": {
@@ -496,11 +496,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1755310523,
-        "narHash": "sha256-1QCKEbS/H20t3QYaxJxXls13YSW0PUuuVbDyYNzv6Wg=",
+        "lastModified": 1755353461,
+        "narHash": "sha256-eDk5Ee3Es6DXcHoGlTJS70qQbO1he0X21L1nYMgHX3E=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "71fe5c16a2fc2897fc41d916b30b96d8a3a9811a",
+        "rev": "6c4632cff91e47b61358d26833023bf9048f7e89",
         "type": "github"
       },
       "original": {
@@ -1431,11 +1431,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1754950393,
-        "narHash": "sha256-Q2E28fpjLFuzZqKJzvOF5IXC1mAgUgKbbWTR/NPh3Ks=",
+        "lastModified": 1755350816,
+        "narHash": "sha256-ynXj2qpq3eHME/sUIS5e654U8uQjyATWdAuJpURbReg=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "86192674d685cf9076d0228e50d281f840d2c889",
+        "rev": "cdddd801139a3d8b7cdae788e10d4755991a0a11",
         "type": "github"
       },
       "original": {
