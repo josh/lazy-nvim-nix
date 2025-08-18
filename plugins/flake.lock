@@ -581,11 +581,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1755538920,
-        "narHash": "sha256-b2WLycLTjh2PuiLV84bueMKGJ5OEF2QYUZsQ6sn12ts=",
+        "lastModified": 1755552685,
+        "narHash": "sha256-ggnTK0bgpL6WimKQSp7i7+T2ffzVY4wXQLBaNQlSeog=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "65075604bc59204429fafd5602fab26b8dea7b5d",
+        "rev": "5fb8eda3c4430cb1d473d3e2138b070bdca1c224",
         "type": "github"
       },
       "original": {
@@ -1057,11 +1057,11 @@
     "neotest": {
       "flake": false,
       "locked": {
-        "lastModified": 1754633561,
-        "narHash": "sha256-i748jIY4cfMRwJsZHoa1Rbc+CnZISUvWCxZtEslSZys=",
+        "lastModified": 1755548671,
+        "narHash": "sha256-jyJzF7YlvTqXHI/2P8Kf81tR9BGospigY+kvl68HLKs=",
         "owner": "nvim-neotest",
         "repo": "neotest",
-        "rev": "ce178308ea30f96667f1c11f022880d8c04cafd3",
+        "rev": "35a59c1f59dbb954d92b74ab64a966a668cea495",
         "type": "github"
       },
       "original": {
@@ -1700,11 +1700,11 @@
     "smear-cursor.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1755271030,
-        "narHash": "sha256-p4sd6vgjvrqxzBRYlT4XNPO+qGLDXMpcPo2BOJj5UGI=",
+        "lastModified": 1755538839,
+        "narHash": "sha256-0WAd7JlIpsyAVnCfqsCj7dFPIY9B1+Dpajd4cC2gyqo=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "12a70b24438ce246579a5a45d3b77c03b47f9359",
+        "rev": "a1a64940ec3175ff09424baaa6b28a4a2f783074",
         "type": "github"
       },
       "original": {
