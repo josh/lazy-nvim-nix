@@ -1210,11 +1210,11 @@
     "nvim-jdtls": {
       "flake": false,
       "locked": {
-        "lastModified": 1749801683,
-        "narHash": "sha256-9E9VUDgGLQ7V0xpiMpjhoNURpctR+WMMqsu2XL3ATZs=",
+        "lastModified": 1755925763,
+        "narHash": "sha256-YlliUdzKEqh3GyaGqjXFxm6dIW0GUgDK/FJdMjhSU+A=",
         "owner": "mfussenegger",
         "repo": "nvim-jdtls",
-        "rev": "4d77ff02063cf88963d5cf10683ab1fd15d072de",
+        "rev": "b9ba76a225a0767d1f1dceb8d670ddb4424acfe3",
         "type": "github"
       },
       "original": {
