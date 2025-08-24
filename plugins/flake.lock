@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1755912020,
-        "narHash": "sha256-ua8Yin769p4LO/lNYSGwyaQrDu5YQ8DKgM6pzubswUU=",
+        "lastModified": 1756007387,
+        "narHash": "sha256-aDZ9K1WDrRlkEYMXjT+Kk59WrkvaW1yTu04hoKw6TYU=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "b7baffb30af580f342adf6b82aa341942002dbf3",
+        "rev": "62a5a3149b66444a245c052e431c30568ae173e3",
         "type": "github"
       },
       "original": {
