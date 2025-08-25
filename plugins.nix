@@ -28,7 +28,6 @@
   ripgrep,
   ruby,
   sqlite,
-  tectonic,
   ueberzugpp,
   unzip,
   viu,
@@ -211,7 +210,6 @@ let
         ghostscript
         imagemagick
         mermaid-cli
-        tectonic
       ];
     };
 
