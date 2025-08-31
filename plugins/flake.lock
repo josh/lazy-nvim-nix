@@ -411,11 +411,11 @@
     "dial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1756540507,
-        "narHash": "sha256-gCotbbwwl3jOOxjhkwlFgki+meaCZa4pf+jBxm1PD6o=",
+        "lastModified": 1756635414,
+        "narHash": "sha256-amLwFLMAYW8yB6mZdilx4XICHg6TH5g+kRogvJ77Tu4=",
         "owner": "monaqa",
         "repo": "dial.nvim",
-        "rev": "7c8baea9f058c6ab25381b731baba7f7d8a34cef",
+        "rev": "f0404ec1f83a03f2c3457e60087c6331d1cbb83f",
         "type": "github"
       },
       "original": {
@@ -1006,11 +1006,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1756547239,
-        "narHash": "sha256-lvhLS99aYugeCWwONf+X2OxP5LYIMVhmCO0zhcYAxOA=",
+        "lastModified": 1756637207,
+        "narHash": "sha256-tgA5PVNGDnPXl8q8wY1fT+aF2eiLX5V+HXX3cwhCYl4=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "fc42dcec2861adb48e9b3621f02dfd40a24d923c",
+        "rev": "aa27c5cb33d14729d516971f422d3fb7b5513972",
         "type": "github"
       },
       "original": {
