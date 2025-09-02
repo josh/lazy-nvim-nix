@@ -1006,11 +1006,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1756770650,
-        "narHash": "sha256-MXEEJ7qBF8l7ke3GwaYFz7ogS7SoDrE5wtIC0Y+RVdk=",
+        "lastModified": 1756781982,
+        "narHash": "sha256-SacuWtkoaTW8ubxbfrylTjZ4a0KGEgyxWHk7iswzBpI=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "5bb90268c45010842a12821ba34af650b8f97bfc",
+        "rev": "ed057048a281b418d5318dd5153f9486daa517a3",
         "type": "github"
       },
       "original": {
@@ -1023,11 +1023,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1756431043,
-        "narHash": "sha256-m8PK7Tn5wlFqLOSwWkn42HtKoCXPRHYXOjimQhcTV/w=",
+        "lastModified": 1756776646,
+        "narHash": "sha256-7pzNiH4NdFhn+yxiS0dQua2hQoae+aEcAoyoZrmua5g=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "d2455d8e9a6dc8133c0b5db6df391f408217a950",
+        "rev": "e80f748eb1f2d490a9a1ce91d500c3f255b39bd7",
         "type": "github"
       },
       "original": {
