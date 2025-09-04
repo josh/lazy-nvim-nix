@@ -360,11 +360,11 @@
     "copilot.lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1757001708,
-        "narHash": "sha256-ykXJStzuW9QPc9FB4o9FOXpVcALHiLXqSGmbyBI6la4=",
+        "lastModified": 1757008169,
+        "narHash": "sha256-MZu69CvGDzWLjpI86577ROIF9UmpjGIt/EYtakPFg+M=",
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "rev": "23e1d0b6095a6598dbb608a37b47bbb3417c47c0",
+        "rev": "81d289a8ce5d4ee1dea9b1c8ee4ac376b2e27a5f",
         "type": "github"
       },
       "original": {
