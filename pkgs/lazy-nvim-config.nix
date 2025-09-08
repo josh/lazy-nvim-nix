@@ -1,5 +1,4 @@
 {
-  lib,
   callPackage,
   writeTextFile,
   lazy-nvim-nix,
