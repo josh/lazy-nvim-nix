@@ -989,11 +989,11 @@
     "mini.surround": {
       "flake": false,
       "locked": {
-        "lastModified": 1756385445,
-        "narHash": "sha256-WjasSMDQqRVFrf/9flDL25xglsYNDBKi9/dVEHlhiDw=",
+        "lastModified": 1757427769,
+        "narHash": "sha256-8Sd+pq9CkbgZAvutRDiRnRUP7wfLspBLMQB03iCfoqc=",
         "owner": "echasnovski",
         "repo": "mini.surround",
-        "rev": "953fb53aa1d0b2ae4506d35fff0e0e7afc8ceb8d",
+        "rev": "e170a2dde4b0a8905c9bb218ed428be94ec0b255",
         "type": "github"
       },
       "original": {
