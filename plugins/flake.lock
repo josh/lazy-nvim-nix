@@ -496,11 +496,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1757520953,
-        "narHash": "sha256-638/VObr3JBPEVvMD1ha9x39da1UUrWz7DwpH1zE45Y=",
+        "lastModified": 1757549868,
+        "narHash": "sha256-NR2onvfS5MIaAU7SyaqSk0KfHPint6yUTURo1DHo94g=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "911d8d43081e91e41dba2f3dabf8d843eafba84f",
+        "rev": "f74dcb2a244abcec01f0652598fb0b2104b5ba81",
         "type": "github"
       },
       "original": {
@@ -530,11 +530,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1757352794,
-        "narHash": "sha256-Ebl6siIVrarXQ4Ms4lFRw9EJwFYuNLc7x3OdAgPlaig=",
+        "lastModified": 1757550804,
+        "narHash": "sha256-zwTyALPydIP9Jp4W6LcOa5z1vDBOWrawcwErEsulfF0=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "d0fe24a6dfb0171750b9be6661f08dfec0397a66",
+        "rev": "50d9ee2b5a19634670441948e7e4afaa042f1059",
         "type": "github"
       },
       "original": {
@@ -1397,11 +1397,11 @@
     "nvim-ts-autotag": {
       "flake": false,
       "locked": {
-        "lastModified": 1739910276,
-        "narHash": "sha256-a3Bcql68mp3y5bH9XMiDTQB0e75T+qFB593objIGg/I=",
+        "lastModified": 1757545454,
+        "narHash": "sha256-nT2W5gKFEfzP7MztLjm7yqwam3ADk0svcMdLg2nmI/4=",
         "owner": "windwp",
         "repo": "nvim-ts-autotag",
-        "rev": "a1d526af391f6aebb25a8795cbc05351ed3620b5",
+        "rev": "c4ca798ab95b316a768d51eaaaee48f64a4a46bc",
         "type": "github"
       },
       "original": {
