@@ -343,11 +343,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1757774642,
-        "narHash": "sha256-GDttYyXFG8mQrnkcj4S9hYIx7zppCJTzUTYMZRB7Gpk=",
+        "lastModified": 1757857691,
+        "narHash": "sha256-Pssv1vHLfFZXRTfOWvF57GZEIjGkxBZGw6L3IFogZn8=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "1f1c49c23119a289031dd6c2adef36187c9175f4",
+        "rev": "c7efe2af827c8fa3c396b87d6d7924d75b1afe22",
         "type": "github"
       },
       "original": {
@@ -496,11 +496,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1757767820,
-        "narHash": "sha256-rGpmkO8FQ3Ih44wODZfXvmZ+fwwjVmrlHK+P49nYRrI=",
+        "lastModified": 1757865463,
+        "narHash": "sha256-E/r9zFEJFjnbVDAHJpnuNDPT8Yqv3hsdHESCq3X5pIw=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "e9d1683a4ed0326c5cfe3856b4503338b584aaa0",
+        "rev": "d39620ba79d3685bae28e76b9a9a8dbc1cf2cd34",
         "type": "github"
       },
       "original": {
