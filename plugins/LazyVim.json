@@ -10,9 +10,9 @@
     "lualine.nvim": "nvim-lualine/lualine.nvim",
     "mason-lspconfig.nvim": "mason-org/mason-lspconfig.nvim",
     "mason.nvim": "mason-org/mason.nvim",
-    "mini.ai": "echasnovski/mini.ai",
-    "mini.icons": "echasnovski/mini.icons",
-    "mini.pairs": "echasnovski/mini.pairs",
+    "mini.ai": "nvim-mini/mini.ai",
+    "mini.icons": "nvim-mini/mini.icons",
+    "mini.pairs": "nvim-mini/mini.pairs",
     "noice.nvim": "folke/noice.nvim",
     "nui.nvim": "MunifTanjim/nui.nvim",
     "nvim-lint": "mfussenegger/nvim-lint",
@@ -30,24 +30,13 @@
   },
   "lazyvim.plugins.coding": {
     "lazydev.nvim": "folke/lazydev.nvim",
-    "mini.ai": "echasnovski/mini.ai",
-    "mini.pairs": "echasnovski/mini.pairs",
+    "mini.ai": "nvim-mini/mini.ai",
+    "mini.pairs": "nvim-mini/mini.pairs",
     "ts-comments.nvim": "folke/ts-comments.nvim"
   },
   "lazyvim.plugins.colorscheme": {
     "catppuccin": "catppuccin/nvim",
     "tokyonight.nvim": "folke/tokyonight.nvim"
-  },
-  "lazyvim.plugins.compat.nvim-0_9": {
-    "cmp-buffer": "hrsh7th/cmp-buffer",
-    "cmp-nvim-lsp": "hrsh7th/cmp-nvim-lsp",
-    "cmp-path": "hrsh7th/cmp-path",
-    "lazydev.nvim": "folke/lazydev.nvim",
-    "mini.comment": "echasnovski/mini.comment",
-    "neodev.nvim": "folke/neodev.nvim",
-    "nvim-cmp": "hrsh7th/nvim-cmp",
-    "nvim-lspconfig": "neovim/nvim-lspconfig",
-    "nvim-ts-context-commentstring": "JoosepAlviste/nvim-ts-context-commentstring"
   },
   "lazyvim.plugins.editor": {
     "flash.nvim": "folke/flash.nvim",
@@ -76,15 +65,15 @@
   },
   "lazyvim.plugins.extras.coding.luasnip": {},
   "lazyvim.plugins.extras.coding.mini-comment": {
-    "mini.comment": "echasnovski/mini.comment",
+    "mini.comment": "nvim-mini/mini.comment",
     "nvim-ts-context-commentstring": "JoosepAlviste/nvim-ts-context-commentstring"
   },
   "lazyvim.plugins.extras.coding.mini-snippets": {
     "friendly-snippets": "rafamadriz/friendly-snippets",
-    "mini.snippets": "echasnovski/mini.snippets"
+    "mini.snippets": "nvim-mini/mini.snippets"
   },
   "lazyvim.plugins.extras.coding.mini-surround": {
-    "mini.surround": "echasnovski/mini.surround"
+    "mini.surround": "nvim-mini/mini.surround"
   },
   "lazyvim.plugins.extras.coding.neogen": {},
   "lazyvim.plugins.extras.coding.nvim-cmp": {
@@ -133,13 +122,13 @@
   },
   "lazyvim.plugins.extras.editor.mini-diff": {
     "lualine.nvim": "nvim-lualine/lualine.nvim",
-    "mini.diff": "echasnovski/mini.diff"
+    "mini.diff": "nvim-mini/mini.diff"
   },
   "lazyvim.plugins.extras.editor.mini-files": {
-    "mini.files": "echasnovski/mini.files"
+    "mini.files": "nvim-mini/mini.files"
   },
   "lazyvim.plugins.extras.editor.mini-move": {
-    "mini.move": "echasnovski/mini.move"
+    "mini.move": "nvim-mini/mini.move"
   },
   "lazyvim.plugins.extras.editor.navic": {
     "nvim-navic": "SmiteshP/nvim-navic"
@@ -224,7 +213,7 @@
   },
   "lazyvim.plugins.extras.lang.go": {
     "mason.nvim": "mason-org/mason.nvim",
-    "mini.icons": "echasnovski/mini.icons",
+    "mini.icons": "nvim-mini/mini.icons",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -377,13 +366,13 @@
     "indent-blankline.nvim": "lukas-reineke/indent-blankline.nvim"
   },
   "lazyvim.plugins.extras.ui.mini-animate": {
-    "mini.animate": "echasnovski/mini.animate"
+    "mini.animate": "nvim-mini/mini.animate"
   },
   "lazyvim.plugins.extras.ui.mini-indentscope": {
-    "mini.indentscope": "echasnovski/mini.indentscope"
+    "mini.indentscope": "nvim-mini/mini.indentscope"
   },
   "lazyvim.plugins.extras.ui.mini-starter": {
-    "mini.starter": "echasnovski/mini.starter",
+    "mini.starter": "nvim-mini/mini.starter",
     "snacks.nvim": "folke/snacks.nvim"
   },
   "lazyvim.plugins.extras.ui.smear-cursor": {
@@ -392,10 +381,14 @@
   "lazyvim.plugins.extras.ui.treesitter-context": {
     "nvim-treesitter-context": "nvim-treesitter/nvim-treesitter-context"
   },
+  "lazyvim.plugins.extras.ui.treesitter-main": {
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter-textobjects": "nvim-treesitter/nvim-treesitter-textobjects"
+  },
   "lazyvim.plugins.extras.util.chezmoi": {
     "chezmoi.nvim": "xvzc/chezmoi.nvim",
     "chezmoi.vim": "alker0/chezmoi.vim",
-    "mini.icons": "echasnovski/mini.icons"
+    "mini.icons": "nvim-mini/mini.icons"
   },
   "lazyvim.plugins.extras.util.dot": {
     "mason.nvim": "mason-org/mason.nvim",
@@ -406,7 +399,7 @@
     "mason.nvim": "mason-org/mason.nvim"
   },
   "lazyvim.plugins.extras.util.mini-hipatterns": {
-    "mini.hipatterns": "echasnovski/mini.hipatterns"
+    "mini.hipatterns": "nvim-mini/mini.hipatterns"
   },
   "lazyvim.plugins.extras.util.octo": {
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",

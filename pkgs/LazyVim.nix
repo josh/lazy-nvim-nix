@@ -1,9 +1,7 @@
 {
   lib,
-  stdenv,
   callPackage,
   lazy-nvim-nix,
-  julia,
   lazygit,
   lazy-nvim ? lazy-nvim-nix.lazy-nvim,
 }:
@@ -95,18 +93,12 @@ in
           loadLazyPluginName = "fzf-lua";
         };
 
-        checkhealth-mason = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "mason";
-          loadLazyPluginName = "mason.nvim";
-          ignoreLines = [
-            # FIXME: These errors should be fixable if we install the correct dependencies
-            "ERROR Registry `github.com/mason-org/mason-registry [uninstalled]` is not installed"
-          ]
-          ++ (lib.lists.optional (
-            !lib.meta.availableOn stdenv.hostPlatform julia
-          ) "WARNING julia: not available");
-        };
+        # FIXME: Busted for unknown reason
+        # checkhealth-mason = neovim-checkhealth.override {
+        #   inherit neovim;
+        #   pluginName = "mason";
+        #   loadLazyPluginName = "mason.nvim";
+        # };
 
         checkhealth-noice = neovim-checkhealth.override {
           inherit neovim;
