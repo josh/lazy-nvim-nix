@@ -213,61 +213,23 @@ let
       ];
     };
 
-    # Downgrade to mason 1.x plugins
-    "mason.nvim" =
-      let
-        mason_v1 = buildPlugin "mason.nvim" {
-          locked = {
-            lastModified = 1739657665;
-            narHash = "sha256-5XlzwN4tLXsdP6XnpA3r2bvkEIiHM7qfF4nSr4pj4bw=";
-            owner = "mason-org";
-            repo = "mason.nvim";
-            rev = "fc98833b6da5de5a9c5b1446ac541577059555be";
-            type = "github";
-          };
-          original = {
-            owner = "mason-org";
-            ref = "main";
-            repo = "mason.nvim";
-            type = "github";
-          };
-        };
-      in
-      mason_v1
-      // {
-        # spec = mason_v1.spec // { };
-        extraPackages = [
-          cargo
-          curl
-          gnutar
-          go
-          gzip
-          jdk
-          nodePackages.nodejs
-          php83
-          php83Packages.composer
-          (python312Packages.python.withPackages (ps: with ps; [ pip ]))
-          ruby
-          unzip
-          wget
-        ]
-        ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
-      };
-    "mason-lspconfig.nvim" = buildPlugin "mason-lspconfig.nvim" {
-      locked = {
-        lastModified = 1739657637;
-        narHash = "sha256-+Rji3UH32QQZADqQhMcJpgmkwbDumKaBlZO6cqNvUGY=";
-        owner = "mason-org";
-        repo = "mason-lspconfig.nvim";
-        rev = "1a31f824b9cd5bc6f342fc29e9a53b60d74af245";
-        type = "github";
-      };
-      original = {
-        owner = "mason-org";
-        ref = "main";
-        repo = "mason-lspconfig.nvim";
-        type = "github";
-      };
+    "mason.nvim" = plugins."mason.nvim" // {
+      extraPackages = [
+        cargo
+        curl
+        gnutar
+        go
+        gzip
+        jdk
+        nodePackages.nodejs
+        php83
+        php83Packages.composer
+        (python312Packages.python.withPackages (ps: with ps; [ pip ]))
+        ruby
+        unzip
+        wget
+      ]
+      ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
     };
   };
 
