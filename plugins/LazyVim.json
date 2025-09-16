@@ -224,7 +224,6 @@
     "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
-    "telescope.nvim": "nvim-telescope/telescope.nvim",
     "telescope_hoogle": "luc-tielen/telescope_hoogle"
   },
   "lazyvim.plugins.extras.lang.helm": {
