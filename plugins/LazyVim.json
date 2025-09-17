@@ -380,10 +380,6 @@
   "lazyvim.plugins.extras.ui.treesitter-context": {
     "nvim-treesitter-context": "nvim-treesitter/nvim-treesitter-context"
   },
-  "lazyvim.plugins.extras.ui.treesitter-main": {
-    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
-    "nvim-treesitter-textobjects": "nvim-treesitter/nvim-treesitter-textobjects"
-  },
   "lazyvim.plugins.extras.util.chezmoi": {
     "chezmoi.nvim": "xvzc/chezmoi.nvim",
     "chezmoi.vim": "alker0/chezmoi.vim",
