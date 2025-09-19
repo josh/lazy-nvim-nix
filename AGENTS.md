@@ -29,3 +29,10 @@ These flags will give you the most verbose output for debugging. When running in
 ## Formatting
 
 `nix flake check` will also check if source files are formatted correctly. If there is a formatting issue, run `nix fmt` to fix it.
+
+## Update LazyVim plugins
+
+```
+$ nix flake update --flake ./plugins/flake.nix LazyVim
+$ nix run .#LazyVimPlugins.updateScript
+```
