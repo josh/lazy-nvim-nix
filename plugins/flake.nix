@@ -158,6 +158,8 @@
     "nvim-navic".url = "github:SmiteshP/nvim-navic/master";
     "nvim-nio".flake = false;
     "nvim-nio".url = "github:nvim-neotest/nvim-nio/master";
+    "nvim-paredit".flake = false;
+    "nvim-paredit".url = "github:julienvincent/nvim-paredit";
     "nvim-snippets".flake = false;
     "nvim-snippets".url = "github:garymjr/nvim-snippets/main";
     "nvim-treesitter".flake = false;

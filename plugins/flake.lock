@@ -1309,6 +1309,22 @@
         "type": "github"
       }
     },
+    "nvim-paredit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1755859919,
+        "narHash": "sha256-nRaS6ViO+fqg6cZiyNZhCrIpFC6Lnn5Rv2WjQTmR2uA=",
+        "owner": "julienvincent",
+        "repo": "nvim-paredit",
+        "rev": "b6ba636874a3115d944e35746444724240568aca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "julienvincent",
+        "repo": "nvim-paredit",
+        "type": "github"
+      }
+    },
     "nvim-snippets": {
       "flake": false,
       "locked": {
@@ -1643,6 +1659,7 @@
         "nvim-metals": "nvim-metals",
         "nvim-navic": "nvim-navic",
         "nvim-nio": "nvim-nio",
+        "nvim-paredit": "nvim-paredit",
         "nvim-snippets": "nvim-snippets",
         "nvim-treesitter": "nvim-treesitter",
         "nvim-treesitter-context": "nvim-treesitter-context",
