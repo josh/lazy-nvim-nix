@@ -179,8 +179,8 @@
   "lazyvim.plugins.extras.lang.clojure": {
     "baleia.nvim": "m00qek/baleia.nvim",
     "conjure": "Olical/conjure",
-    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
-    "nvim-treesitter-sexp": "PaterJason/nvim-treesitter-sexp"
+    "nvim-paredit": "julienvincent/nvim-paredit",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.cmake": {
     "cmake-tools.nvim": "Civitasv/cmake-tools.nvim",

@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1758232292,
-        "narHash": "sha256-aIcG21CkckfkWNpTjPcAQ1C3/Tsoagv/axr6e+6OLmk=",
+        "lastModified": 1758274147,
+        "narHash": "sha256-9mICWYFUWD2XKYc9awOp23mSs62VZVonfsw/uamIoJ0=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "2401d5fca6f2a2fcaca4f9c4c84c4b713c602352",
+        "rev": "55e762a8888cd5f336e4e2d4b2cc6b8b1b950663",
         "type": "github"
       },
       "original": {
@@ -1309,6 +1309,22 @@
         "type": "github"
       }
     },
+    "nvim-paredit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1755859919,
+        "narHash": "sha256-nRaS6ViO+fqg6cZiyNZhCrIpFC6Lnn5Rv2WjQTmR2uA=",
+        "owner": "julienvincent",
+        "repo": "nvim-paredit",
+        "rev": "b6ba636874a3115d944e35746444724240568aca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "julienvincent",
+        "repo": "nvim-paredit",
+        "type": "github"
+      }
+    },
     "nvim-snippets": {
       "flake": false,
       "locked": {
@@ -1643,6 +1659,7 @@
         "nvim-metals": "nvim-metals",
         "nvim-navic": "nvim-navic",
         "nvim-nio": "nvim-nio",
+        "nvim-paredit": "nvim-paredit",
         "nvim-snippets": "nvim-snippets",
         "nvim-treesitter": "nvim-treesitter",
         "nvim-treesitter-context": "nvim-treesitter-context",
