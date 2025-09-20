@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1758376115,
-        "narHash": "sha256-LjzDUb3rhGJPPHAKDYqSiDNGvhk31qDuPWI+wUxQbHE=",
+        "lastModified": 1758379844,
+        "narHash": "sha256-KYNiwKH8ZWdK4biT+ERoOg7x6tnPGVg6O6Fw2eoup7A=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "65e38d3b34cab653a05318c1a9014df3c89fdb53",
+        "rev": "b4606f9df3395a261bb6a09acc837993da5d8bfc",
         "type": "github"
       },
       "original": {
@@ -343,11 +343,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1758375498,
-        "narHash": "sha256-9+/9kxqNxfNBiw0OjfINX27Vpn4l9RPHEdZi20uGPcY=",
+        "lastModified": 1758376979,
+        "narHash": "sha256-kQBKmpVJr8SH5qkcgRTugwYMVlwzL347p3NYiGFCqaI=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "b726b9d4383c64cb289069dec0e87aa15169f5ec",
+        "rev": "5f9171a62ec5bf6786608a7fde57dad64d497d54",
         "type": "github"
       },
       "original": {
