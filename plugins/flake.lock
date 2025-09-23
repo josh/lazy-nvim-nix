@@ -1006,11 +1006,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1758546930,
-        "narHash": "sha256-YMgQouxNtRMuJdwqpH8K1DRnlo/NnwDJNgNf0l65yl4=",
+        "lastModified": 1758613822,
+        "narHash": "sha256-MwN3WZvjAQv5s66dNOL3Ik7iFdylHsGFEz7JHrXULwA=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "a2f053a04af613f3f756f7147bae4c2d005a3d85",
+        "rev": "b3a1b5579a1a041252e513397bee02c3fb178c14",
         "type": "github"
       },
       "original": {
