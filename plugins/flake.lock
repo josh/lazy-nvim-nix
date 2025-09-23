@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1758542220,
-        "narHash": "sha256-xyWf1l49gDUQYK+4FtQ6tn0QkaYgq2ceqCoYSdZq0T8=",
+        "lastModified": 1758625594,
+        "narHash": "sha256-ZHrvAMJJyytBmZC+n5jxJORNPJ7LDhM/LI/UZmCd/qk=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "21518ae8a32cc56cfd8eefbbe33b8fe801d5bb3a",
+        "rev": "8a760984611cd9df0971a9f36a94838b9e32453f",
         "type": "github"
       },
       "original": {
@@ -360,11 +360,11 @@
     "copilot.lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1758570882,
-        "narHash": "sha256-mT74V3MTfv/icnOre9I0sSESqdq+Kojh2UdJeX4sLWk=",
+        "lastModified": 1758629801,
+        "narHash": "sha256-07Nto4u2eymHaO7/gxuaAxjX0I9v+Z2cKxNYJ37/mD0=",
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "rev": "46e9895565fdae79833eda075b9b05d8543d7a77",
+        "rev": "cb1a9820dd2a4af59323e5742f14723af467716f",
         "type": "github"
       },
       "original": {
