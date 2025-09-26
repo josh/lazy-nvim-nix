@@ -50,7 +50,8 @@
     "codeium.nvim": "Exafunction/codeium.nvim"
   },
   "lazyvim.plugins.extras.ai.copilot": {
-    "copilot.lua": "zbirenbaum/copilot.lua"
+    "copilot.lua": "zbirenbaum/copilot.lua",
+    "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.ai.copilot-chat": {
     "CopilotChat.nvim": "CopilotC-Nvim/CopilotChat.nvim"
