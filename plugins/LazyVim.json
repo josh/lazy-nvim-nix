@@ -57,6 +57,7 @@
     "CopilotChat.nvim": "CopilotC-Nvim/CopilotChat.nvim"
   },
   "lazyvim.plugins.extras.ai.copilot-native": {},
+  "lazyvim.plugins.extras.ai.sidekick": {},
   "lazyvim.plugins.extras.ai.supermaven": {
     "supermaven-nvim": "supermaven-inc/supermaven-nvim"
   },
