@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1758428342,
-        "narHash": "sha256-STNwPM0B8UA+adrTvx39fdtDCzulosKPvo1AT9gAr+U=",
+        "lastModified": 1759053081,
+        "narHash": "sha256-InfMXVubzYJyd4MdNM7ePTCWrPpVlPhRobd516uVJwE=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "acd1e6d38d216289cd0748808da25dfc66015612",
+        "rev": "2f3e07398ba81ccc0cf3d1fca9805aaca126264e",
         "type": "github"
       },
       "original": {
@@ -343,11 +343,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1758376979,
-        "narHash": "sha256-kQBKmpVJr8SH5qkcgRTugwYMVlwzL347p3NYiGFCqaI=",
+        "lastModified": 1759059896,
+        "narHash": "sha256-FvtuqSgQFKKUbekL0IgvKpdM/o2z+9mk+2yegB0IM7Y=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "5f9171a62ec5bf6786608a7fde57dad64d497d54",
+        "rev": "d450b6508fd63c9b0601a229e75225774228fd2b",
         "type": "github"
       },
       "original": {
@@ -598,11 +598,11 @@
     "inc-rename.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1753006190,
-        "narHash": "sha256-iDRch/C3TurLIPZxUhK/e3I6qUcQntUpyTJ/REWMcyk=",
+        "lastModified": 1759054135,
+        "narHash": "sha256-hXOOzCesxHHeRLPIKgK6KZYdv1FpT3MgLRGvxJLjxNg=",
         "owner": "smjonas",
         "repo": "inc-rename.nvim",
-        "rev": "8ae25b35ae16ca4bd5de3d3c472eec3b574018d4",
+        "rev": "7c79416330364976955ec8059fe3832b72ee1271",
         "type": "github"
       },
       "original": {
@@ -1464,11 +1464,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1752955441,
-        "narHash": "sha256-aDqBD24KvFT1JxlAVnie7RRIwOlboU8jmKhHfhOh+Ns=",
+        "lastModified": 1759054602,
+        "narHash": "sha256-VyHSfX3E7txuysyJNSNtyNXrKc5aUTD2CQ7xOF03T9U=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "91b4e0fb0d640def73812aceb22dafb99261dd67",
+        "rev": "51d3e18dea8936dc95ed3c6df6dda7ec6882e8c4",
         "type": "github"
       },
       "original": {
