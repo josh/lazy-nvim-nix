@@ -326,11 +326,11 @@
     "conform.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759207155,
-        "narHash": "sha256-CJbxgcS16xL5kFKeG9ghdCum/3kGYDaPIB8L+yYGhEo=",
+        "lastModified": 1759363923,
+        "narHash": "sha256-CdgDyubUiianvo1FXR5Bb49OA+T5Gv03+3dW7a/qhHM=",
         "owner": "stevearc",
         "repo": "conform.nvim",
-        "rev": "c64cc754ace603e185ab30113aaef174187eacf8",
+        "rev": "9d6f881a4047a51c7709223dcf24e967633c6523",
         "type": "github"
       },
       "original": {
@@ -1006,11 +1006,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759355514,
-        "narHash": "sha256-0Toa5/1CVkHWfZVAHyVRPJSmCDqoFudfvt6GzUPkAq0=",
+        "lastModified": 1759361253,
+        "narHash": "sha256-u0G7c+NzKneDAw+gEq4/N9O3rinM0v9sengzFM4FpH4=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "3dd783a43167328fd41629db423802a1ddcdeec0",
+        "rev": "9130e58424ad95bf2dd8b40afbb8cf04d648638c",
         "type": "github"
       },
       "original": {
@@ -1464,11 +1464,11 @@
     "one-small-step-for-vimkind": {
       "flake": false,
       "locked": {
-        "lastModified": 1759054602,
-        "narHash": "sha256-VyHSfX3E7txuysyJNSNtyNXrKc5aUTD2CQ7xOF03T9U=",
+        "lastModified": 1759364114,
+        "narHash": "sha256-aDqBD24KvFT1JxlAVnie7RRIwOlboU8jmKhHfhOh+Ns=",
         "owner": "jbyuki",
         "repo": "one-small-step-for-vimkind",
-        "rev": "51d3e18dea8936dc95ed3c6df6dda7ec6882e8c4",
+        "rev": "99c22f1fa83eb9aa442cf13a23aed7197a2d4456",
         "type": "github"
       },
       "original": {
