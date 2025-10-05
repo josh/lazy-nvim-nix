@@ -581,11 +581,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759019092,
-        "narHash": "sha256-wf38O91Bejt6MvhF3/d1J0Zkbu/sFchOYy31fahKIR4=",
+        "lastModified": 1759623891,
+        "narHash": "sha256-ffrLuzxiEIpkfqR48BuGU/rv2Z2FFuRxkwyQTKpmjCU=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "641b06beab01bb85e4d4bb1f4a22d9f82938a8d4",
+        "rev": "972efd0e8ca2f2328754be2d833059eb9fa95213",
         "type": "github"
       },
       "original": {
@@ -1700,11 +1700,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759018992,
-        "narHash": "sha256-daJ1BpyPL7DdhLYu2KZw6OmpOylSzCpSwVx6mLjc4Ok=",
+        "lastModified": 1759623626,
+        "narHash": "sha256-Cz4LDzz7v3kBS1mbxZjprogqHFghYr5xMfSN3us2Ltk=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "7c9271934d926969e920f7da932da6ba234b1e5a",
+        "rev": "96a4f5efc7705f613ddd47fb5d1445c172acb213",
         "type": "github"
       },
       "original": {
