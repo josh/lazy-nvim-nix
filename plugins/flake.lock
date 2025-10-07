@@ -139,11 +139,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1759758688,
-        "narHash": "sha256-hzZ2ULV/bpObooQvL6f4NVNlBrRqz7nNZ/V/xiy/EbI=",
+        "lastModified": 1759863884,
+        "narHash": "sha256-9JL6EE3pUKcEauImY9kmPQ+W7vqXaAkcGffSYP8nxLk=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "d918ebde3a71c0fcbdd6e8f8c146d986d7aaf76f",
+        "rev": "8483171db6c780545589e63160b020c6af3dedf4",
         "type": "github"
       },
       "original": {
@@ -1006,11 +1006,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759835345,
-        "narHash": "sha256-N9MEXPUtsUeHvulHE/ISEGvPVA72oVWKG4jAPgr9PJo=",
+        "lastModified": 1759879533,
+        "narHash": "sha256-9odPVhANPpYtZ3dXcnSZ2y2zWWaf4bnwd40ZHDJ61A0=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "96bb26de7c9b0665518af7d841742b049b411722",
+        "rev": "0c29e3795b9105d68390d2fdfd430409ef8c5d65",
         "type": "github"
       },
       "original": {
@@ -1989,11 +1989,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1759845768,
-        "narHash": "sha256-YO+pWTxcVW/aPIZgSnHCCCwtuEgYdWN4A0cIZORJIrw=",
+        "lastModified": 1759869598,
+        "narHash": "sha256-ZCTo1QvYqYhThnkQhXzYa6PTlKjI5QTVejCqAduGd4A=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "159b74a9e68a6241dedefb52492aee1f58b258dc",
+        "rev": "088ad457c04d3c8adb6fdeeb491bb9a42c70a5f5",
         "type": "github"
       },
       "original": {
