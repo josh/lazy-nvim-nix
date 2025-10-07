@@ -71,11 +71,11 @@
     "SchemaStore.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759454886,
-        "narHash": "sha256-T6mWvScsU0IsB3wFre5+TrNIbpQCA0flf7BNrGQIb+M=",
+        "lastModified": 1759827636,
+        "narHash": "sha256-ekvoerVARxSXdMz3wPy5mwNANOM+rJbpYWbkmnREX/M=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "8e17e50b519ba360bcfd5dfb5843ccac9be500ba",
+        "rev": "f3d6d9afc8f09bf4dec91bf2bb5a40fcfe7ea477",
         "type": "github"
       },
       "original": {
@@ -1006,11 +1006,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759785594,
-        "narHash": "sha256-PkQb1zJGHJ2YDMU3nfQ2JuTYZxXvbTZ5nTAX5MoRR34=",
+        "lastModified": 1759827407,
+        "narHash": "sha256-8aASmo5b1cEwb8Q7Fmz5FIDztVCautuGL7WsMmpsxUM=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "4ef23e89c2bfe3019717fb9197ad83eb7243a9e0",
+        "rev": "20bb14c5138f382409cb75568b9dff9e0e5fcdec",
         "type": "github"
       },
       "original": {
@@ -1700,11 +1700,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1759623626,
-        "narHash": "sha256-Cz4LDzz7v3kBS1mbxZjprogqHFghYr5xMfSN3us2Ltk=",
+        "lastModified": 1759820079,
+        "narHash": "sha256-nB2nEyinuFnLn3GWbay0VoPLbJy77RIS4uvWsGcxJYY=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "96a4f5efc7705f613ddd47fb5d1445c172acb213",
+        "rev": "25de2236be57cb061854bcaaf3de6707530ab792",
         "type": "github"
       },
       "original": {
