@@ -46,6 +46,13 @@
     "trouble.nvim": "folke/trouble.nvim",
     "which-key.nvim": "folke/which-key.nvim"
   },
+  "lazyvim.plugins.extras.ai.avante": {
+    "avante.nvim": "yetone/avante.nvim",
+    "nui.nvim": "MunifTanjim/nui.nvim"
+  },
+  "lazyvim.plugins.extras.ai.claudecode": {
+    "claudecode.nvim": "coder/claudecode.nvim"
+  },
   "lazyvim.plugins.extras.ai.codeium": {
     "codeium.nvim": "Exafunction/codeium.nvim"
   },
@@ -190,16 +197,26 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
+  "lazyvim.plugins.extras.lang.dart": {
+    "conform.nvim": "stevearc/conform.nvim",
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
+  },
   "lazyvim.plugins.extras.lang.docker": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
+  "lazyvim.plugins.extras.lang.dotnet": {},
   "lazyvim.plugins.extras.lang.elixir": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.elm": {
     "mason.nvim": "mason-org/mason.nvim",
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
+  },
+  "lazyvim.plugins.extras.lang.ember": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -226,13 +243,12 @@
     "haskell-tools.nvim": "mrcjkb/haskell-tools.nvim",
     "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
-    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
-    "telescope_hoogle": "luc-tielen/telescope_hoogle"
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.helm": {
+    "helm-ls.nvim": "qvalentin/helm-ls.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
-    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
-    "vim-helm": "towolf/vim-helm"
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.java": {
     "nvim-jdtls": "mfussenegger/nvim-jdtls",
@@ -242,6 +258,10 @@
   },
   "lazyvim.plugins.extras.lang.json": {
     "SchemaStore.nvim": "b0o/SchemaStore.nvim",
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
+  },
+  "lazyvim.plugins.extras.lang.julia": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -267,7 +287,6 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
-  "lazyvim.plugins.extras.lang.omnisharp": {},
   "lazyvim.plugins.extras.lang.php": {
     "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
@@ -299,8 +318,12 @@
     "rustaceanvim": "mrcjkb/rustaceanvim"
   },
   "lazyvim.plugins.extras.lang.scala": {
-    "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-metals": "scalameta/nvim-metals",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
+    "plenary.nvim": "nvim-lua/plenary.nvim"
+  },
+  "lazyvim.plugins.extras.lang.solidity": {
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.lang.sql": {
@@ -326,7 +349,18 @@
   "lazyvim.plugins.extras.lang.toml": {
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
+  "lazyvim.plugins.extras.lang.twig": {
+    "mason.nvim": "mason-org/mason.nvim",
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
+  },
   "lazyvim.plugins.extras.lang.typescript": {},
+  "lazyvim.plugins.extras.lang.typst": {
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
+    "ts-comments.nvim": "folke/ts-comments.nvim",
+    "typst-preview.nvim": "chomosuke/typst-preview.nvim"
+  },
   "lazyvim.plugins.extras.lang.vue": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
@@ -391,6 +425,11 @@
   "lazyvim.plugins.extras.util.dot": {
     "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
+  },
+  "lazyvim.plugins.extras.util.gh": {
+    "gh.nvim": "ldelossa/gh.nvim",
+    "litee.nvim": "ldelossa/litee.nvim",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
   "lazyvim.plugins.extras.util.gitui": {
