@@ -18,6 +18,8 @@
     "aerial.nvim".url = "github:stevearc/aerial.nvim/master";
     "alpha-nvim".flake = false;
     "alpha-nvim".url = "github:goolord/alpha-nvim/main";
+    "avante.nvim".flake = false;
+    "avante.nvim".url = "github:yetone/avante.nvim/main";
     "baleia.nvim".flake = false;
     "baleia.nvim".url = "github:m00qek/baleia.nvim/main";
     "blink.cmp".flake = false;
