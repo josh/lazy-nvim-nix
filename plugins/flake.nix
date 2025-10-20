@@ -92,6 +92,8 @@
     "lean.nvim".url = "github:Julian/lean.nvim/main";
     "leap.nvim".flake = false;
     "leap.nvim".url = "github:ggandor/leap.nvim/main";
+    "litee.nvim".flake = false;
+    "litee.nvim".url = "github:ldelossa/litee.nvim/main";
     "lualine.nvim".flake = false;
     "lualine.nvim".url = "github:nvim-lualine/lualine.nvim/master";
     "mason-lspconfig.nvim".flake = false;
