@@ -78,6 +78,8 @@
     "haskell-snippets.nvim".url = "github:mrcjkb/haskell-snippets.nvim/master";
     "haskell-tools.nvim".flake = false;
     "haskell-tools.nvim".url = "github:mrcjkb/haskell-tools.nvim/master";
+    "helm-ls.nvim".flake = false;
+    "helm-ls.nvim".url = "github:qvalentin/helm-ls.nvim/main";
     "inc-rename.nvim".flake = false;
     "inc-rename.nvim".url = "github:smjonas/inc-rename.nvim/main";
     "indent-blankline.nvim".flake = false;

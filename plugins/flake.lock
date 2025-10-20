@@ -629,6 +629,23 @@
         "type": "github"
       }
     },
+    "helm-ls.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1757598429,
+        "narHash": "sha256-nzuJxAAaEmuVYg9k0B8OKslxsihhg6RKlhz6E7xJTQU=",
+        "owner": "qvalentin",
+        "repo": "helm-ls.nvim",
+        "rev": "f36ecbd3e7b0b2ac8358a9d6a3213888e29943db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "qvalentin",
+        "ref": "main",
+        "repo": "helm-ls.nvim",
+        "type": "github"
+      }
+    },
     "inc-rename.nvim": {
       "flake": false,
       "locked": {
@@ -1653,6 +1670,7 @@
         "harpoon": "harpoon",
         "haskell-snippets.nvim": "haskell-snippets.nvim",
         "haskell-tools.nvim": "haskell-tools.nvim",
+        "helm-ls.nvim": "helm-ls.nvim",
         "inc-rename.nvim": "inc-rename.nvim",
         "indent-blankline.nvim": "indent-blankline.nvim",
         "kulala.nvim": "kulala.nvim",
