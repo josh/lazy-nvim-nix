@@ -76,6 +76,10 @@ in
         checkhealth-lazyvim = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "lazyvim";
+          ignoreLines = [
+            # FIXME: Not finding nvim-treesitter's clang
+            "ERROR `C compiler` is not installed"
+          ];
         };
 
         checkhealth-blink-cmp = neovim-checkhealth.override {
