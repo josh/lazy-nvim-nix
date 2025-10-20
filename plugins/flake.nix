@@ -34,6 +34,8 @@
     "chezmoi.vim".url = "github:alker0/chezmoi.vim/main";
     "clangd_extensions.nvim".flake = false;
     "clangd_extensions.nvim".url = "github:p00f/clangd_extensions.nvim/main";
+    "claudecode.nvim".flake = false;
+    "claudecode.nvim".url = "github:coder/claudecode.nvim/main";
     "cmake-tools.nvim".flake = false;
     "cmake-tools.nvim".url = "github:Civitasv/cmake-tools.nvim/master";
     "cmp-buffer".flake = false;
