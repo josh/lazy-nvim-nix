@@ -255,6 +255,23 @@
         "type": "github"
       }
     },
+    "claudecode.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760892433,
+        "narHash": "sha256-XYmf1RQ2bVK6spINZW4rg6OQQ5CWWcR0Tw4QX8ZDjgs=",
+        "owner": "coder",
+        "repo": "claudecode.nvim",
+        "rev": "1552086ebcce9f4a2ea3b9793018a884d6b60169",
+        "type": "github"
+      },
+      "original": {
+        "owner": "coder",
+        "ref": "main",
+        "repo": "claudecode.nvim",
+        "type": "github"
+      }
+    },
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
@@ -1614,6 +1631,7 @@
         "chezmoi.nvim": "chezmoi.nvim",
         "chezmoi.vim": "chezmoi.vim",
         "clangd_extensions.nvim": "clangd_extensions.nvim",
+        "claudecode.nvim": "claudecode.nvim",
         "cmake-tools.nvim": "cmake-tools.nvim",
         "cmp-buffer": "cmp-buffer",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
