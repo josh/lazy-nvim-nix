@@ -214,6 +214,8 @@
     "trouble.nvim".url = "github:folke/trouble.nvim/main";
     "ts-comments.nvim".flake = false;
     "ts-comments.nvim".url = "github:folke/ts-comments.nvim/main";
+    "typst-preview.nvim".flake = false;
+    "typst-preview.nvim".url = "github:chomosuke/typst-preview.nvim/master";
     "vim-dadbod".flake = false;
     "vim-dadbod".url = "github:tpope/vim-dadbod/master";
     "vim-dadbod-completion".flake = false;
