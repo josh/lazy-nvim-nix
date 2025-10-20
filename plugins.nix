@@ -20,14 +20,17 @@
   imagemagick,
   jdk,
   julia,
+  llvmPackages_21,
   mermaid-cli,
   nodePackages,
+  nodejs_24,
   php83,
   php83Packages,
   python312Packages,
   ripgrep,
   ruby,
   sqlite,
+  tree-sitter,
   ueberzugpp,
   unzip,
   viu,
@@ -230,6 +233,14 @@ let
         wget
       ]
       ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
+    };
+
+    "nvim-treesitter" = plugins."nvim-treesitter" // {
+      extraPackages = [
+        nodejs_24
+        tree-sitter
+        llvmPackages_21.clang-unwrapped
+      ];
     };
   };
 

@@ -56,6 +56,7 @@ in
   ++ plugins."blink.cmp".extraPackages
   ++ plugins."fzf-lua".extraPackages
   ++ plugins."mason.nvim".extraPackages
+  ++ plugins."nvim-treesitter".extraPackages
   ++ plugins."snacks.nvim".extraPackages;
 }).overrideAttrs
   (
