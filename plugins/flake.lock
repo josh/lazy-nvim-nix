@@ -782,6 +782,23 @@
         "type": "github"
       }
     },
+    "litee.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1717706633,
+        "narHash": "sha256-PUFPQA0LWXn2fjT8Cfy7SFX14hkbUH05mQF4enuxUo0=",
+        "owner": "ldelossa",
+        "repo": "litee.nvim",
+        "rev": "4efaf373322d9e71eaff31164abb393417cc6f6a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ldelossa",
+        "ref": "main",
+        "repo": "litee.nvim",
+        "type": "github"
+      }
+    },
     "lualine.nvim": {
       "flake": false,
       "locked": {
@@ -1696,6 +1713,7 @@
         "lazydev.nvim": "lazydev.nvim",
         "lean.nvim": "lean.nvim",
         "leap.nvim": "leap.nvim",
+        "litee.nvim": "litee.nvim",
         "lualine.nvim": "lualine.nvim",
         "mason-lspconfig.nvim": "mason-lspconfig.nvim",
         "mason-nvim-dap.nvim": "mason-nvim-dap.nvim",
