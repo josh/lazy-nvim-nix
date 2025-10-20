@@ -13,6 +13,7 @@
   delta,
   fd,
   fzf,
+  gcc,
   ghostscript,
   gnutar,
   go,
@@ -20,7 +21,6 @@
   imagemagick,
   jdk,
   julia,
-  llvmPackages_21,
   mermaid-cli,
   nodePackages,
   nodejs_24,
@@ -237,9 +237,9 @@ let
 
     "nvim-treesitter" = plugins."nvim-treesitter" // {
       extraPackages = [
+        gcc
         nodejs_24
         tree-sitter
-        llvmPackages_21.clang-unwrapped
       ];
     };
   };
