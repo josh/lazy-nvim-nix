@@ -870,17 +870,17 @@
     "mini.ai": {
       "flake": false,
       "locked": {
-        "lastModified": 1759495439,
-        "narHash": "sha256-Ua29HUnWroYY5PKsx4OaAoIB3bW2yPT9MQEDThjyKkM=",
+        "lastModified": 1759495437,
+        "narHash": "sha256-4cYYb9wVo/g/z07QLnHJq02NNORat/984QXFUUuCr8g=",
         "owner": "nvim-mini",
-        "repo": "mini.comment",
-        "rev": "c40bc46e72f41d3db265f6d86deb3dc259c0985d",
+        "repo": "mini.ai",
+        "rev": "11c57180bc9084089206e211ac7aa598bedc9673",
         "type": "github"
       },
       "original": {
         "owner": "nvim-mini",
         "ref": "main",
-        "repo": "mini.comment",
+        "repo": "mini.ai",
         "type": "github"
       }
     },
