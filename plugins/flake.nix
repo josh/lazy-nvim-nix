@@ -107,7 +107,7 @@
     "mason.nvim".flake = false;
     "mason.nvim".url = "github:mason-org/mason.nvim/main";
     "mini.ai".flake = false;
-    "mini.ai".url = "github:nvim-mini/mini.comment/main";
+    "mini.ai".url = "github:nvim-mini/mini.ai/main";
     "mini.animate".flake = false;
     "mini.animate".url = "github:nvim-mini/mini.animate/main";
     "mini.comment".flake = false;
