@@ -544,6 +544,23 @@
         "type": "github"
       }
     },
+    "gh.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737474491,
+        "narHash": "sha256-XI4FVjajin0NM+OaEN+O5vmalPpOB2RII+aOERSzjJA=",
+        "owner": "ldelossa",
+        "repo": "gh.nvim",
+        "rev": "6f367b2ab8f9d4a0a23df2b703a3f91137618387",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ldelossa",
+        "ref": "main",
+        "repo": "gh.nvim",
+        "type": "github"
+      }
+    },
     "gitsigns.nvim": {
       "flake": false,
       "locked": {
@@ -1665,6 +1682,7 @@
         "flit.nvim": "flit.nvim",
         "friendly-snippets": "friendly-snippets",
         "fzf-lua": "fzf-lua",
+        "gh.nvim": "gh.nvim",
         "gitsigns.nvim": "gitsigns.nvim",
         "grug-far.nvim": "grug-far.nvim",
         "harpoon": "harpoon",

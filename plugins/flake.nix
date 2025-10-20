@@ -68,6 +68,8 @@
     "friendly-snippets".url = "github:rafamadriz/friendly-snippets/main";
     "fzf-lua".flake = false;
     "fzf-lua".url = "github:ibhagwan/fzf-lua/main";
+    "gh.nvim".flake = false;
+    "gh.nvim".url = "github:ldelossa/gh.nvim/main";
     "gitsigns.nvim".flake = false;
     "gitsigns.nvim".url = "github:lewis6991/gitsigns.nvim/main";
     "grug-far.nvim".flake = false;
