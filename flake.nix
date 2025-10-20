@@ -112,6 +112,7 @@
           fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix { };
           mason-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/mason-nvim-checkhealth.nix { };
           noice-checkhealth = pkgs.callPackage ./pkgs/tests/noice-checkhealth.nix { };
+          nvim-treesitter = pkgs.callPackage ./pkgs/tests/nvim-treesitter.nix { };
           snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix { };
 
           LazyVim-extras-catppuccin = buildPkg plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
