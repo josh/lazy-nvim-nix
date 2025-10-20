@@ -1721,6 +1721,7 @@
         "tokyonight.nvim": "tokyonight.nvim",
         "trouble.nvim": "trouble.nvim",
         "ts-comments.nvim": "ts-comments.nvim",
+        "typst-preview.nvim": "typst-preview.nvim",
         "vim-dadbod": "vim-dadbod",
         "vim-dadbod-completion": "vim-dadbod-completion",
         "vim-dadbod-ui": "vim-dadbod-ui",
@@ -1900,6 +1901,23 @@
         "owner": "folke",
         "ref": "main",
         "repo": "ts-comments.nvim",
+        "type": "github"
+      }
+    },
+    "typst-preview.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760905662,
+        "narHash": "sha256-hGgfPq1Rn4bvH3BZA/Vtxvcrzp3gZW+THnDvLJoFZIw=",
+        "owner": "chomosuke",
+        "repo": "typst-preview.nvim",
+        "rev": "e544812bba84b4f7976590f2b6c0dfbd099e1893",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chomosuke",
+        "ref": "master",
+        "repo": "typst-preview.nvim",
         "type": "github"
       }
     },
