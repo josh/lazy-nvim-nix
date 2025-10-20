@@ -119,6 +119,23 @@
         "type": "github"
       }
     },
+    "avante.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760939914,
+        "narHash": "sha256-4Mq7ypksGUehZ+Dm+16pQLqXSy8JP7RBCJcOdzY2epo=",
+        "owner": "yetone",
+        "repo": "avante.nvim",
+        "rev": "fb2852006789c148c58f28612e458c0213bae6af",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yetone",
+        "ref": "main",
+        "repo": "avante.nvim",
+        "type": "github"
+      }
+    },
     "baleia.nvim": {
       "flake": false,
       "locked": {
@@ -1589,6 +1606,7 @@
         "SchemaStore.nvim": "SchemaStore.nvim",
         "aerial.nvim": "aerial.nvim",
         "alpha-nvim": "alpha-nvim",
+        "avante.nvim": "avante.nvim",
         "baleia.nvim": "baleia.nvim",
         "blink.cmp": "blink.cmp",
         "bufferline.nvim": "bufferline.nvim",
