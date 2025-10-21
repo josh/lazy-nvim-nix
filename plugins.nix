@@ -30,6 +30,7 @@
   ripgrep,
   ruby,
   sqlite,
+  tectonic,
   tree-sitter,
   ueberzugpp,
   unzip,
@@ -213,6 +214,7 @@ let
         ghostscript
         imagemagick
         mermaid-cli
+        tectonic
       ];
     };
 
