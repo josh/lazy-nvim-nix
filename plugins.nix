@@ -31,6 +31,7 @@
   ripgrep,
   ruby,
   sqlite,
+  tectonic,
   tree-sitter,
   ueberzugpp,
   unzip,
@@ -215,6 +216,7 @@ let
         imagemagick
         lazygit
         mermaid-cli
+        tectonic
       ];
     };
 
