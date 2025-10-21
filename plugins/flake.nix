@@ -104,6 +104,8 @@
     "mason-lspconfig.nvim".url = "github:mason-org/mason-lspconfig.nvim/main";
     "mason-nvim-dap.nvim".flake = false;
     "mason-nvim-dap.nvim".url = "github:jay-babu/mason-nvim-dap.nvim/main";
+    "mason-registry".flake = false;
+    "mason-registry".url = "github:mason-org/mason-registry/main";
     "mason.nvim".flake = false;
     "mason.nvim".url = "github:mason-org/mason.nvim/main";
     "mini.ai".flake = false;
