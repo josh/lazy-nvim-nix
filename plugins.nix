@@ -21,6 +21,7 @@
   imagemagick,
   jdk,
   julia,
+  lazygit,
   mermaid-cli,
   nodePackages,
   nodejs_24,
@@ -212,6 +213,7 @@ let
       extraPackages = [
         ghostscript
         imagemagick
+        lazygit
         mermaid-cli
       ];
     };
