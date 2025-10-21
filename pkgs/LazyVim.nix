@@ -1,6 +1,8 @@
 {
   lib,
+  stdenv,
   callPackage,
+  julia,
   lazy-nvim-nix,
   lazygit,
   lazy-nvim ? lazy-nvim-nix.lazy-nvim,
@@ -84,12 +86,14 @@ in
           loadLazyPluginName = "fzf-lua";
         };
 
-        # FIXME: Busted for unknown reason
-        # checkhealth-mason = neovim-checkhealth.override {
-        #   inherit neovim;
-        #   pluginName = "mason";
-        #   loadLazyPluginName = "mason.nvim";
-        # };
+        checkhealth-mason = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "mason";
+          loadLazyPluginName = "mason.nvim";
+          ignoreLines = lib.lists.optional (
+            !lib.meta.availableOn stdenv.hostPlatform julia
+          ) "WARNING julia: not available";
+        };
 
         checkhealth-noice = neovim-checkhealth.override {
           inherit neovim;

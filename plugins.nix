@@ -37,6 +37,7 @@
   unzip,
   viu,
   wget,
+  yq-go,
 # keep-sorted end
 }:
 let
@@ -149,6 +150,20 @@ let
 
   LazyVim-deps = builtins.fromJSON (builtins.readFile ./plugins/LazyVim.json);
 
+  masonRegistry =
+    let
+      name = "mason-registry";
+      node = lockfile.nodes.mason-registry;
+    in
+    fetchFromGitHub {
+      name = formatDerivationName {
+        inherit name;
+        version = dateFromUnix node.locked.lastModified;
+      };
+      inherit (node.locked) owner repo rev;
+      sha256 = node.locked.narHash;
+    };
+
   mapNestedAttrs =
     f: attrset:
     lib.recurseIntoAttrs (
@@ -221,6 +236,11 @@ let
     };
 
     "mason.nvim" = plugins."mason.nvim" // {
+      spec = plugins."mason.nvim".spec // {
+        opts = {
+          registries = [ "file:${masonRegistry}" ];
+        };
+      };
       extraPackages = [
         cargo
         curl
@@ -235,6 +255,7 @@ let
         ruby
         unzip
         wget
+        yq-go
       ]
       ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
     };

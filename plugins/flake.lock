@@ -850,6 +850,23 @@
         "type": "github"
       }
     },
+    "mason-registry": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1761041606,
+        "narHash": "sha256-Yy8JhU7kgAVDCOVMToKhrU+ZbR8NDOVGRSXa7T/muwI=",
+        "owner": "mason-org",
+        "repo": "mason-registry",
+        "rev": "8acb42e136c9626231f0c49b756bd49b8815288d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mason-org",
+        "ref": "main",
+        "repo": "mason-registry",
+        "type": "github"
+      }
+    },
     "mason.nvim": {
       "flake": false,
       "locked": {
@@ -1717,6 +1734,7 @@
         "lualine.nvim": "lualine.nvim",
         "mason-lspconfig.nvim": "mason-lspconfig.nvim",
         "mason-nvim-dap.nvim": "mason-nvim-dap.nvim",
+        "mason-registry": "mason-registry",
         "mason.nvim": "mason.nvim",
         "mini.ai": "mini.ai",
         "mini.animate": "mini.animate",
