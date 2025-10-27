@@ -112,9 +112,12 @@ in
           loadLazyPluginName = "snacks.nvim";
           ignoreLines = [
             # FIXME: Look into these errors, some may be fixable
+            "ERROR None of the tools found: 'trash', 'gio', 'kioclient5', 'kioclient'"
             "ERROR is not ready"
+            "ERROR your terminal does not support the kitty graphics protocol"
             "WARNING Image rendering in docs with missing treesitter parsers won't work"
             "WARNING Missing Treesitter languages"
+            "WARNING No system trash command found; deleting files will be permanent"
             "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
             "WARNING dashboard did not open: `headless`"
             "WARNING setup {disabled}"
