@@ -224,11 +224,11 @@
     "chezmoi.vim": {
       "flake": false,
       "locked": {
-        "lastModified": 1757109380,
-        "narHash": "sha256-AU70ZnnXVRYb9s8nKdkR5/qVMQFbfNm0ZKdN/fIQhNE=",
+        "lastModified": 1761705375,
+        "narHash": "sha256-VHLuJe8FvtvuBKvR1Wg93tSABg+8qs0yCt+PLcpzaM0=",
         "owner": "alker0",
         "repo": "chezmoi.vim",
-        "rev": "ca5f2ed602046d5662cb76d845c4b510aae0ce84",
+        "rev": "03b8d12928394bfaefa6f4ea8e652a9054b91f05",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1761697318,
-        "narHash": "sha256-t/pYLRlNONgx/F5RqfpudcRb6BGHMsuuBHUlJkkWxLc=",
+        "lastModified": 1761703657,
+        "narHash": "sha256-DIeQKjO6iorBp11sDjqA8dgdEEVY8c3bgRMJAQ/+gPQ=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "df5a530363a992ffa1203567404e2e8e61c48ac7",
+        "rev": "4f8f5a1e727be0c314a238091bce0248846bd150",
         "type": "github"
       },
       "original": {
