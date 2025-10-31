@@ -64,7 +64,7 @@
       checks = eachPkgs (
         pkgs:
         let
-          inherit (pkgs) system;
+          inherit (pkgs.stdenv.hostPlatform) system;
           packages = self.packages.${system};
           inherit (pkgs.lazy-nvim-nix) plugins;
 
