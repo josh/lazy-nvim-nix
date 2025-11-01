@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1761945213,
-        "narHash": "sha256-W+l4A/xt8LmW81Fmd/Y9U9+HpZhJNd2MsFWA2viI9aw=",
+        "lastModified": 1761987716,
+        "narHash": "sha256-sfbyuhv/Vgw7GCmqGioncRRBhM0wGpVxPGAWXf4bhxA=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "4fa9dd77f610bfc3030971be9505bab05311abf6",
+        "rev": "5c610560429c81522fccc65d79da74403b6f0b38",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1759852544,
-        "narHash": "sha256-wVEX0lCxeipvwCfdd2JbQwnhgg6UrTXixC8E1OiEblI=",
+        "lastModified": 1761983455,
+        "narHash": "sha256-sLtw80DWKNFwm/POgsekngg/Uz85Z8C81DCh+qWjj6s=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "9da1fb942dd0668d5182f9c8dee801b9c190e2bb",
+        "rev": "91764de033247e9a52c4ee01d52a0ac1cf1ed037",
         "type": "github"
       },
       "original": {
