@@ -190,11 +190,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1761396780,
-        "narHash": "sha256-Nz/XbItShbrnKtj0+gcEDBFO5y00g0EG5CHqdJGK2j0=",
+        "lastModified": 1762006357,
+        "narHash": "sha256-WNOuJ+XdO0x3Vlc8mALwtFU6iwJXilOM/NF0F1161FQ=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "8c4125e3c746976ba025dc5d908fa22c6aa09486",
+        "rev": "234fc048de931a0e42ebcad675bf6559d75e23df",
         "type": "github"
       },
       "original": {
@@ -1329,11 +1329,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1761983455,
-        "narHash": "sha256-sLtw80DWKNFwm/POgsekngg/Uz85Z8C81DCh+qWjj6s=",
+        "lastModified": 1761994024,
+        "narHash": "sha256-Uiz8u0aPz8UMVPjPrMTqI3wsBzjuikvd4MwJPpKzE9w=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "91764de033247e9a52c4ee01d52a0ac1cf1ed037",
+        "rev": "8c694e1a1ee2ac14df931679cd54e6b8d402c2c2",
         "type": "github"
       },
       "original": {
@@ -1843,11 +1843,11 @@
     "snacks.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761974896,
-        "narHash": "sha256-qQEDO+vw3oJmSxyodJ5LXgysC+yjRs9DiUOYEXsR0Hs=",
+        "lastModified": 1762010083,
+        "narHash": "sha256-1NsiZrihzBYx1QtRzzZ0Tbqhabq3yrhlMPEbO6ykMl4=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "9ad41782eced6a06034e568357cdad35cbf52ffa",
+        "rev": "6f60105302fcae45524a5b6232beb52829e93e3f",
         "type": "github"
       },
       "original": {
