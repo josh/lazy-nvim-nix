@@ -394,11 +394,11 @@
     "copilot.lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1761595323,
-        "narHash": "sha256-KkiU2xmpfIbpuijvcXDw+LWKWuBgxjwY7jEQIasN5Kw=",
+        "lastModified": 1762028541,
+        "narHash": "sha256-WBU0OpKj/XMaycIqp2gJKYjYERq3Kay4LhFIWjypJcQ=",
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "rev": "93adf9844dcbe09a37e7a72eaa286d33d38bf628",
+        "rev": "3abf63400a13dd4eb767dd8b7bd147cbd697f864",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1761987716,
-        "narHash": "sha256-sfbyuhv/Vgw7GCmqGioncRRBhM0wGpVxPGAWXf4bhxA=",
+        "lastModified": 1762018611,
+        "narHash": "sha256-mpDGPwDMgQ4+ZFa3KjHL2lArHjolDGFQg4AdWd8oG7A=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "5c610560429c81522fccc65d79da74403b6f0b38",
+        "rev": "a5286bb33b6b2437bfb894f70e1e822266f3b884",
         "type": "github"
       },
       "original": {
@@ -1549,11 +1549,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761929329,
-        "narHash": "sha256-VaJZzCyyULnJoss7yhJnsNLx0Mo8+G1lH3v23V/jv5Q=",
+        "lastModified": 1762025173,
+        "narHash": "sha256-iETApcZnYbvdbbtnIp5HtCxhHHlx5fEQT1eQ7YQji14=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "c0a5531a6dce294f92560764f73a3a48c2ef01f2",
+        "rev": "570d7781fe1422462fd7daeaa47c162a254ac1dd",
         "type": "github"
       },
       "original": {
