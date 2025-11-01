@@ -440,7 +440,8 @@
   },
   "lazyvim.plugins.extras.util.octo": {
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
-    "octo.nvim": "pwntester/octo.nvim"
+    "octo.nvim": "pwntester/octo.nvim",
+    "snacks.nvim": "folke/snacks.nvim"
   },
   "lazyvim.plugins.extras.util.project": {
     "project.nvim": "ahmedkhalf/project.nvim"
