@@ -377,11 +377,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1762089923,
-        "narHash": "sha256-9o/cYTdi90TBpi1dx4l+MI0tlokDO7iwM48qwvudY6Y=",
+        "lastModified": 1762097144,
+        "narHash": "sha256-LL0ZaBDQgwu2OV+X5t9BhdFHWMc6GgOQCJxc/XUFQ2U=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "a92c59a7912140904c28dd988292df76c681c4d8",
+        "rev": "dab027e0cb710beb070424a117b9065279f6083d",
         "type": "github"
       },
       "original": {
@@ -751,11 +751,11 @@
     "lean.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761924361,
-        "narHash": "sha256-x2XDg5SL8ZfPK9LkO9HnVyMw9m56WBXp2sbdSA4z5Gk=",
+        "lastModified": 1762097607,
+        "narHash": "sha256-gj0Bm1jki7z61e55fFJzOFEzokIVBr6SkgrSBn9XZhk=",
         "owner": "Julian",
         "repo": "lean.nvim",
-        "rev": "6e359b4472d40ed6752dfc6359e8338981ce6518",
+        "rev": "cbc661b1378b76dee460ed6617d94681eef9b0a3",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1762090706,
-        "narHash": "sha256-nYQttoI5k+LABVEPJ9Ik5I/kJrStPBipCvyEaKpvkfk=",
+        "lastModified": 1762105308,
+        "narHash": "sha256-jW/IK1tB+YShJoZWmO5n1iNELmpNbUZ94LeHAVQI06k=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "4e833d42b31098e80a1b310f0671d123f04e4f18",
+        "rev": "0e755f95cbe676c0ea19f996943cf310c7f0876f",
         "type": "github"
       },
       "original": {
@@ -1549,11 +1549,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762025173,
-        "narHash": "sha256-iETApcZnYbvdbbtnIp5HtCxhHHlx5fEQT1eQ7YQji14=",
+        "lastModified": 1762093067,
+        "narHash": "sha256-SfG+tI3KNgKxsNDrY9QchC7oFQld6zBylSJbe6Xtbb0=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "570d7781fe1422462fd7daeaa47c162a254ac1dd",
+        "rev": "1fabe299866c333f61bffa56eca57ebbfc6621ca",
         "type": "github"
       },
       "original": {
@@ -1843,11 +1843,11 @@
     "snacks.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762090535,
-        "narHash": "sha256-rrIxy+ls0MLY2Tu4hHj5RKP2DwHmUiJKcNuIuTOh75M=",
+        "lastModified": 1762103473,
+        "narHash": "sha256-QdIJAEaVy3OLaASXaPiz/RLBcB3xaTmVC/VAoDdRHcI=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "39b5abfe59196ae29f0ba0e3837e4afa600f6240",
+        "rev": "7e2d710781d450ff9941ce2f729f15634e89631f",
         "type": "github"
       },
       "original": {
@@ -1928,11 +1928,11 @@
     "tokyonight.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761660768,
-        "narHash": "sha256-dIG5yS3pf0S6PQEHuUtynoXPyvK3/EzY193M4N7+ZSA=",
+        "lastModified": 1762099174,
+        "narHash": "sha256-310tJN2Pl5rjyhQoSMYAaoJCNu8501Pxrl5MuxuC2io=",
         "owner": "folke",
         "repo": "tokyonight.nvim",
-        "rev": "2642dbb83333e0575d1c3436e1d837926871c5fb",
+        "rev": "b13cfc1286d2aa8bda6ce137b79e857d5a3d5739",
         "type": "github"
       },
       "original": {
