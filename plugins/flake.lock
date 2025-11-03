@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762001044,
-        "narHash": "sha256-pm1B4tdHqSV8n+hM78asqw5WNdMfC5fUSiZcjg8ZtAg=",
+        "lastModified": 1762152667,
+        "narHash": "sha256-d1sxA2hr1M+2p6YwkZUtpcmsjHgkbPwJ8HK7juu7qno=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "28db03f958d58dfff3c647ce28fdc1cb88ac158d",
+        "rev": "42c9f7152b9bd1a4f739b115390370c208dc2a55",
         "type": "github"
       },
       "original": {
@@ -717,11 +717,11 @@
     "lazy.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761664458,
-        "narHash": "sha256-gZuX2cwNxmRePbP35fue6lQzav6oX2X9pI2HS2IVcSI=",
+        "lastModified": 1762153187,
+        "narHash": "sha256-vzRbl4FAWThNJfqXsGRjuPBTePFpcB0fe0FsFXdj8mE=",
         "owner": "folke",
         "repo": "lazy.nvim",
-        "rev": "f0f5bbb9e5bfae5e6468f9359ffea3d151418176",
+        "rev": "202d8e92b3a74ac88eb3a7f1e40fb59b4c2a6535",
         "type": "github"
       },
       "original": {
@@ -1843,11 +1843,11 @@
     "snacks.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762151378,
-        "narHash": "sha256-EK7XTfrOtYQKpon9tNKwMaAgHe0/w8voBWeHldDerhY=",
+        "lastModified": 1762155440,
+        "narHash": "sha256-i+0TsnxxJ9lseTEp91WH8mrbPhjUuzB6i0lPduRdS7c=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "da14fac1e54dc0022b9ba724a50ae93e43f5f271",
+        "rev": "8bb3ad6c53232b4c7f0cf430ef3df1bef69fd6ee",
         "type": "github"
       },
       "original": {
