@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1761785134,
-        "narHash": "sha256-OloQKfJZIP8Hu9O6+b2iVUtaD52dyYrfDy16Kd3KXHM=",
+        "lastModified": 1762646708,
+        "narHash": "sha256-zbyH4ym7d9MpaWqymSw0dtrAdPf8YnrVZ8Y8a1N3ILk=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "a8458b79a957a6e3e217d84106a0fd4b9470ff4c",
+        "rev": "be1c28b4a32beec16e29ac9c3edb7c6f760747ae",
         "type": "github"
       },
       "original": {
@@ -632,11 +632,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762043416,
-        "narHash": "sha256-UTI81G3GouoNRzniVBKhGVtlmxccua4WBoOdOmJ5ZOs=",
+        "lastModified": 1762648104,
+        "narHash": "sha256-scspQxdTu4NqWi3XtMfIgErklVFQhvrVo4aPxApvVBk=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "c57cf95975b93735dc5ea6dfefe54f2bc023bfdc",
+        "rev": "bd308855fef906fa13817725587797cd82afcf8d",
         "type": "github"
       },
       "original": {
