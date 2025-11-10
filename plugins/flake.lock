@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1762646708,
-        "narHash": "sha256-zbyH4ym7d9MpaWqymSw0dtrAdPf8YnrVZ8Y8a1N3ILk=",
+        "lastModified": 1762775166,
+        "narHash": "sha256-5tit+xOA2intcfBSUby5UyWO2OL9o4AKrLq1aS/V/PY=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "be1c28b4a32beec16e29ac9c3edb7c6f760747ae",
+        "rev": "b19dabe6ddc0b1cef4e0b30e864aca88fdabc551",
         "type": "github"
       },
       "original": {
@@ -819,11 +819,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762682787,
-        "narHash": "sha256-wQb5S0sq3qW4UNkLjmewOewQt9Y/TkG/3cZyGEVdIj8=",
+        "lastModified": 1762769319,
+        "narHash": "sha256-mBlJn4MyAPRk32igXGmP/KQAUmGOiOzEOwh6XvlsmWk=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "d6274160025ceac91ee46db7db664d5c699a214d",
+        "rev": "b1d9a914b02ba5660f1e272a03314b31d4576fe2",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1762766412,
-        "narHash": "sha256-/glEHvZE7ivP631rKa66T/QISUp4xINFNamg7gwIHSY=",
+        "lastModified": 1762778525,
+        "narHash": "sha256-9e4NmLJiZov+4YalDfqiLdEugrULMWflh9hBwfzJsIg=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "ca9efa41c5b3789a51dd60a26bf43c95b5fd45af",
+        "rev": "174221291fddcc3bcd1c5cadbbce39982341b4d7",
         "type": "github"
       },
       "original": {
@@ -1464,11 +1464,11 @@
     "nvim-treesitter-context": {
       "flake": false,
       "locked": {
-        "lastModified": 1761077440,
-        "narHash": "sha256-QdZstxKsEILwe7eUZCmMdyLPyvNKc/e7cfdYQowHWPQ=",
+        "lastModified": 1762769683,
+        "narHash": "sha256-ICwAUXKngSPsJ6VV+84KUPqtAwlGPrm4FIf9ioisiz8=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-context",
-        "rev": "ec308c7827b5f8cb2dd0ad303a059c945dd21969",
+        "rev": "660861b1849256398f70450afdf93908d28dc945",
         "type": "github"
       },
       "original": {
