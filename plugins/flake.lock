@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762429240,
-        "narHash": "sha256-T8l4CzSaN39ssbWlkCLbhmvPGYrY7RodFJgYer6vv5s=",
+        "lastModified": 1762850125,
+        "narHash": "sha256-neKqaa9+0KfySJEg4cTNCAvMrv74vJemfltr947WPE8=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "a507822c0f67df661d1411f9274a65ca9cc832f5",
+        "rev": "c64a61734fc9d45470a72603395c02137802bc6f",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1762847831,
-        "narHash": "sha256-T1L/mZ3DTzoti2UwGQzP/YCttTsjniiTbC9nrP4ocfc=",
+        "lastModified": 1762862186,
+        "narHash": "sha256-q32Dtgp0X+pQ2z0uzaTtk6PJ3e68bB8K1OxGetcZ91U=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "86d7c3883f6cae10da57954b88e9ab1c682fd156",
+        "rev": "a03f7f83494baed3106d8acaf9532ce4583a8398",
         "type": "github"
       },
       "original": {
