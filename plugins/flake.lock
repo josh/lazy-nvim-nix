@@ -156,11 +156,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1762359884,
-        "narHash": "sha256-0+KyxOh7WUm6rRLfb936X48qBhYL5aRYn2OBEj4G1/s=",
+        "lastModified": 1762876327,
+        "narHash": "sha256-P4UxpfIJBIRiMk0w3y2VJHlf6VaML2KsNJWuIN5NWuU=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "40380e711b616a28affb0f4086a2f7de2f2a556b",
+        "rev": "ab1b3661e2b263e3fd305f24bfe4b3d5c2049bc4",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1762862186,
-        "narHash": "sha256-q32Dtgp0X+pQ2z0uzaTtk6PJ3e68bB8K1OxGetcZ91U=",
+        "lastModified": 1762879678,
+        "narHash": "sha256-d83Iw2vnad12Q9forVZKrAZEc5SJIQxrAAzSETiyJIs=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "a03f7f83494baed3106d8acaf9532ce4583a8398",
+        "rev": "596626835d7401b64528678173aa30be72e9b25f",
         "type": "github"
       },
       "original": {
@@ -955,11 +955,11 @@
     "mini.files": {
       "flake": false,
       "locked": {
-        "lastModified": 1762188606,
-        "narHash": "sha256-5E1TR80bLnCMbRh0keEZ2ZhHWs5QmzViJEUe76j/quY=",
+        "lastModified": 1762870866,
+        "narHash": "sha256-kQWbf7HE01vW8KyEJfim+iHgTrgPBm4BQ++hNxMwPbE=",
         "owner": "nvim-mini",
         "repo": "mini.files",
-        "rev": "dce9a4e4f14b3bf469e83c78aef393a090f4d057",
+        "rev": "26baa6215c2e5c40ba7fe82685d827fe8e5c68c8",
         "type": "github"
       },
       "original": {
