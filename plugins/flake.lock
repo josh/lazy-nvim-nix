@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1760648644,
-        "narHash": "sha256-uk2y8I8Hl8ufTFKLQuzchGxSujSlohV/2zcjL1aF65o=",
+        "lastModified": 1762797995,
+        "narHash": "sha256-uCk4h8K0k1CAEhrakjJHlmwRmIDGozIq49WTM0E46Bk=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "3e72397465f774b01aa38e4fe8e6eecf23d766d9",
+        "rev": "b58b2d65863f4ebad88b10a1ddd519e5380466e0",
         "type": "github"
       },
       "original": {
@@ -1549,11 +1549,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762611073,
-        "narHash": "sha256-nQu3rV0WkrQYVSwAr7EdxWtWZ69lg2CA6Hz2iroww08=",
+        "lastModified": 1762801191,
+        "narHash": "sha256-bn/FOAJpFNccHWsLMgiLnyTcOz+TaIUsBq/xKOaAN8k=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "aeee82dac023f03560111d056c88963d723d3cbe",
+        "rev": "11646cef0ad080a938cdbc181a4a3f7b59996c05",
         "type": "github"
       },
       "original": {
@@ -2115,11 +2115,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1762719131,
-        "narHash": "sha256-DLGR2gqP/xT8YOKn+u97o0ocLwClfroKkHQujHMNW5A=",
+        "lastModified": 1762811209,
+        "narHash": "sha256-BLp6nbVig1yjeJaIQ7aatRX4ussVRzVUU4aYITgQ+VE=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "4ee6801bf6bd48420c31da6b59ed24ba720b18d9",
+        "rev": "32bcb3922c20588e00de68f73c86312eda2141ad",
         "type": "github"
       },
       "original": {
