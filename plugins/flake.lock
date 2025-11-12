@@ -275,11 +275,11 @@
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1756456211,
-        "narHash": "sha256-UYJZoi+vAIDAy/b5FV3MZdhIsm0i3z0BTbU7i+WEHVQ=",
+        "lastModified": 1762932428,
+        "narHash": "sha256-L1Tuk/i6tBIRuaSx82AEUjBxVHr6nxOdTmfqRvpaFTE=",
         "owner": "Civitasv",
         "repo": "cmake-tools.nvim",
-        "rev": "88e07c6bff838a5bda2f461e9c1122b79ff0829f",
+        "rev": "87944a5d79b4da7458145d7476d5336557e11911",
         "type": "github"
       },
       "original": {
@@ -1877,11 +1877,11 @@
     "telescope.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762525038,
-        "narHash": "sha256-9u2S9Tn1ZhB6JTm8k34FcFV4ex4FL4eAn5InGrWPgD0=",
+        "lastModified": 1762931078,
+        "narHash": "sha256-7DHFXZxUtPUQkpy2zjC2lwhj7isBCyEwh9LbtqAjSFs=",
         "owner": "nvim-telescope",
         "repo": "telescope.nvim",
-        "rev": "0294ae3eafe662c438addb8692d9c98ef73a983e",
+        "rev": "3a12a853ebf21ec1cce9a92290e3013f8ae75f02",
         "type": "github"
       },
       "original": {
