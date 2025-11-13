@@ -1,6 +1,9 @@
 {
+  lib,
   callPackage,
+  stdenv,
   lazy-nvim-nix,
+  julia,
 }:
 callPackage ./neovim-checkhealth.nix {
   neovim = lazy-nvim-nix.lazy-nvim.override {
@@ -9,9 +12,7 @@ callPackage ./neovim-checkhealth.nix {
   };
   pluginName = "mason";
   loadLazyPluginName = "mason.nvim";
-  ignoreLines = [
-    "WARNING java: not available"
-    "WARNING javac: not available"
-    "WARNING julia: not available"
-  ];
+  ignoreLines = lib.lists.optional (
+    !lib.meta.availableOn stdenv.hostPlatform julia
+  ) "WARNING julia: not available";
 }
