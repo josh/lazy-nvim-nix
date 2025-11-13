@@ -11,10 +11,12 @@ callPackage ./neovim-checkhealth.nix {
     "ERROR None of the tools found: 'trash', 'gio', 'kioclient5', 'kioclient'"
     "ERROR is not ready"
     "ERROR your terminal does not support the kitty graphics protocol"
+    "ERROR Tool not found: 'mmdc'"
     "WARNING Image rendering in docs with missing treesitter parsers won't work"
     "WARNING Missing Treesitter languages"
     "WARNING No system trash command found; deleting files will be permanent"
     "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
+    "WARNING `mmdc` is required to render Mermaid diagrams"
     "WARNING setup {disabled}"
     "WARNING {which-key} is not installed"
   ];

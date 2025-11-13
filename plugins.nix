@@ -20,7 +20,6 @@
   gzip,
   imagemagick,
   lazygit,
-  mermaid-cli,
   nodePackages,
   nodejs_24,
   php83,
@@ -228,7 +227,6 @@ let
         ghostscript
         imagemagick
         lazygit
-        mermaid-cli
         tectonic
       ];
     };
