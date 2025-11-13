@@ -19,8 +19,6 @@
   go,
   gzip,
   imagemagick,
-  jdk,
-  julia,
   lazygit,
   mermaid-cli,
   nodePackages,
@@ -247,7 +245,6 @@ let
         gnutar
         go
         gzip
-        jdk
         nodePackages.nodejs
         php83
         php83Packages.composer
@@ -256,8 +253,7 @@ let
         unzip
         wget
         yq-go
-      ]
-      ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
+      ];
     };
 
     "nvim-treesitter" = plugins."nvim-treesitter" // {
