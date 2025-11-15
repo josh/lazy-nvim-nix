@@ -90,7 +90,11 @@ in
           inherit neovim;
           pluginName = "mason";
           loadLazyPluginName = "mason.nvim";
-          ignoreLines = lib.lists.optional (
+          ignoreLines = [
+            # FIXME: mason not finding pip3 in $PATH for some reason
+            "WARNING pip: not available"
+          ]
+          ++ lib.lists.optional (
             !lib.meta.availableOn stdenv.hostPlatform julia
           ) "WARNING julia: not available";
         };
