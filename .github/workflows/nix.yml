@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - "ubuntu-24.04"
+          - "ubuntu-slim"
           - "ubuntu-24.04-arm"
           - "macos-15"
 
