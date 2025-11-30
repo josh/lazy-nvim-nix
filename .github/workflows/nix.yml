@@ -22,9 +22,11 @@ jobs:
     steps:
       - uses: DeterminateSystems/determinate-nix-action@v3.13.2
         with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
           extra-conf: |
             accept-flake-config = true
             allow-import-from-derivation = false
+          _internal-strict-mode: true
 
       - uses: cachix/cachix-action@v16
         with:
