@@ -26,7 +26,7 @@
   nodejs_24,
   php83,
   php83Packages,
-  python312Packages,
+  python312,
   ripgrep,
   ruby,
   sqlite,
@@ -240,6 +240,7 @@ let
         };
       };
       extraPackages = [
+        # keep-sorted start
         cargo
         curl
         gnutar
@@ -249,11 +250,12 @@ let
         nodePackages.nodejs
         php83
         php83Packages.composer
-        (python312Packages.python.withPackages (ps: with ps; [ pip ]))
+        python312
         ruby
         unzip
         wget
         yq-go
+        # keep-sorted end
       ]
       ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
     };
