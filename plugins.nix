@@ -26,7 +26,7 @@
   nodejs_24,
   php83,
   php83Packages,
-  python312,
+  python312Packages,
   ripgrep,
   ruby,
   sqlite,
@@ -240,24 +240,28 @@ let
           registries = [ "file:${masonRegistry}" ];
         };
       };
-      extraPackages = [
-        # keep-sorted start
-        cargo
-        curl
-        gnutar
-        go
-        gzip
-        jdk
-        nodePackages.nodejs
-        php83
-        php83Packages.composer
-        python312
-        ruby
-        unzip
-        wget
-        yq-go
-        # keep-sorted end
-      ];
+      extraPackages =
+        let
+          python312WithPip = python312Packages.python.withPackages (ps: with ps; [ pip ]);
+        in
+        [
+          # keep-sorted start
+          cargo
+          curl
+          gnutar
+          go
+          gzip
+          jdk
+          nodePackages.nodejs
+          php83
+          php83Packages.composer
+          python312WithPip
+          ruby
+          unzip
+          wget
+          yq-go
+          # keep-sorted end
+        ];
     };
 
     "nvim-treesitter" = plugins."nvim-treesitter" // {
