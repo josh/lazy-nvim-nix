@@ -1,3 +1,0 @@
-self-hosted-runner:
-  labels:
-    - ubuntu-slim # FIXME: Added in actionlint 1.7.9
