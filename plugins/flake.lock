@@ -1329,11 +1329,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1763729870,
-        "narHash": "sha256-9fIZPUZhnQEHJtvboCs+A2QXo4UMTFejuHNagDkfkRk=",
+        "lastModified": 1764844232,
+        "narHash": "sha256-YWuP5JdQyTBXlpMBoVVTVi977rPGIGmYuKUV/AYIWiM=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "d1118791070d090777398792a73032a0ca5c79ff",
+        "rev": "be4f6c6d513e2ee4f590229e6a7d2a1e13476104",
         "type": "github"
       },
       "original": {
