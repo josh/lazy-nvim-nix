@@ -20,7 +20,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: DeterminateSystems/determinate-nix-action@v3.14.0
+      - uses: DeterminateSystems/determinate-nix-action@9a921d81e9a16a9ad8423a63a7b31deb601139a6 # v3.14.0
         with:
           extra-conf: |
             accept-flake-config = true
