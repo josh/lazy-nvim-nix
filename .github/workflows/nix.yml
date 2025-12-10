@@ -26,7 +26,7 @@ jobs:
             accept-flake-config = true
             allow-import-from-derivation = false
 
-      - uses: cachix/cachix-action@v16
+      - uses: cachix/cachix-action@0fc020193b5a1fa3ac4575aa3a7d3aa6a35435ad # v16
         with:
           name: josh
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
