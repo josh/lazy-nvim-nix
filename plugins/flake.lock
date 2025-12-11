@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1765421684,
-        "narHash": "sha256-CrlGCfO46dmwrvZpYoKQCOYJ4xVh03VTjkQX+B0OMHk=",
+        "lastModified": 1765433151,
+        "narHash": "sha256-NvjXk/5No6CEeU9azGbvXEPRRUkAXVoqQ8+bbDKvIM8=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "133c92660b7058143fa28f1c46011e846e174020",
+        "rev": "0efae312c95b2af658bb2eca9e7bfd83c9dd75ab",
         "type": "github"
       },
       "original": {
