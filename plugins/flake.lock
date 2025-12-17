@@ -156,11 +156,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1765811174,
-        "narHash": "sha256-HyzeuM9znmP8AXJDPWREpk8Qf5hvydLG4m9hopleLPA=",
+        "lastModified": 1765974365,
+        "narHash": "sha256-i3gQQnWjf4X6O9F1yJ9EmUINgFra2yhvB/Z2ex6FtK8=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "ee7cfac8e1d0bf9b90a27d7a9823c13389bead08",
+        "rev": "b14922e5c4b30efe0857256989b72eaf1f14109f",
         "type": "github"
       },
       "original": {
@@ -717,11 +717,11 @@
     "lazy.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762421181,
-        "narHash": "sha256-h5404njTAfqMJFQ3MAr2PWSbV81eS4aIs0cxAXkT0EM=",
+        "lastModified": 1765971162,
+        "narHash": "sha256-5A4kducPwKb5fKX4oSUFvo898P0dqfsqqLxFaXBsbQY=",
         "owner": "folke",
         "repo": "lazy.nvim",
-        "rev": "85c7ff3711b730b4030d03144f6db6375044ae82",
+        "rev": "306a05526ada86a7b30af95c5cc81ffba93fef97",
         "type": "github"
       },
       "original": {
