@@ -88,11 +88,11 @@
     "aerial.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766158407,
-        "narHash": "sha256-KOJyM7dPz1G56/k5kO4lAipyyj9YsdQxMmKdGJEipgE=",
+        "lastModified": 1766158598,
+        "narHash": "sha256-IOtGab692KC59W7qds15fF1YRWB5RVsh3JBRVmLToYY=",
         "owner": "stevearc",
         "repo": "aerial.nvim",
-        "rev": "c954d389646f6b75a159a75a6c1dcce8f6f3e400",
+        "rev": "535f643b0c3e642465d3cf37b96fc54ddd3b2c1e",
         "type": "github"
       },
       "original": {
@@ -360,11 +360,11 @@
     "conform.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766126897,
-        "narHash": "sha256-jC1RC/sUgfvSkFp381zOPdwSGAz44gKoaqaZMprFkeE=",
+        "lastModified": 1766158704,
+        "narHash": "sha256-NczngxdFdD9vrK4SRaIL5GWU3kWX7XyrhKO9v3Hxtfo=",
         "owner": "stevearc",
         "repo": "conform.nvim",
-        "rev": "41715945edf518ca73a9bd63ab6cdc23dd5c7b33",
+        "rev": "9a98b68f8fb289ca8671e9866ba4e0309a693994",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1766149390,
-        "narHash": "sha256-6raN8r3HInIxWVmJkTX9L6ejKaq15qAwSH/eykZU5mo=",
+        "lastModified": 1766163181,
+        "narHash": "sha256-uCy0K/OiDhPmEERQrH1wIBYmGlkS1g4befUg/K4a18M=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "77c8311345b21b4205241df30e101abe3685ddb1",
+        "rev": "7f54502cbf2e1105533dd271225f51933675125c",
         "type": "github"
       },
       "original": {
