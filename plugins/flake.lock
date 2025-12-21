@@ -751,11 +751,11 @@
     "lean.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766137225,
-        "narHash": "sha256-mq+KX2EpLipm/41V366YQP3Lhq33uRr2t7jhmIUkdLM=",
+        "lastModified": 1766304459,
+        "narHash": "sha256-ZldZzInVI/+RMCdbI9GUxHBGq7vy18Ttd0KldtWAwuU=",
         "owner": "Julian",
         "repo": "lean.nvim",
-        "rev": "f567bd8241044c2ba1e1ab3ca655a43a16374b1b",
+        "rev": "f87777a13f4635422a699395a3f15fdbfd6b274f",
         "type": "github"
       },
       "original": {
@@ -1363,11 +1363,11 @@
     "nvim-metals": {
       "flake": false,
       "locked": {
-        "lastModified": 1766228925,
-        "narHash": "sha256-eJMfer6hPOGHrOu/qGXZm6WKgK1CHN8AiY8OlWlvj/0=",
+        "lastModified": 1766309221,
+        "narHash": "sha256-X55yrKRV/mFjz7dYbs3yJh2Ef3foUq1cDYhCWDUq9tU=",
         "owner": "scalameta",
         "repo": "nvim-metals",
-        "rev": "6db781444e4f02a73696346ad6ff8d13dbda1032",
+        "rev": "90dadd67bb1069ce1ba2a4dabf4e45da2807ba80",
         "type": "github"
       },
       "original": {
