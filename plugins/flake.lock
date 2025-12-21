@@ -360,11 +360,11 @@
     "conform.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766293187,
-        "narHash": "sha256-KBWjbMfj8uZD5rdDv6sOOZ0uY1avJz8HmrZDMlMzCnY=",
+        "lastModified": 1766346125,
+        "narHash": "sha256-Pp4bGTlZEqxHoHqVCEekDdg2jvNayxAuBReK4HJ6yGg=",
         "owner": "stevearc",
         "repo": "conform.nvim",
-        "rev": "5f5152fae39a57e3a04cbce09fb21e10c49c9d95",
+        "rev": "5420c4b5ea0aeb99c09cfbd4fd0b70d257b44f25",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1766313449,
-        "narHash": "sha256-qzKR5eEAGWTqdmHOMpJkiCaVPUa8mv7cAfjycID0XfQ=",
+        "lastModified": 1766352942,
+        "narHash": "sha256-BGWxgqzNAZDdbHAcwE85WsCcuknS/xUkv4CVn8F9j2U=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "5ae89eda5f93eb6e2468d49e0de88bc987656b66",
+        "rev": "33e4c0150ce51e0add043d6f82cdd68999a164bf",
         "type": "github"
       },
       "original": {
