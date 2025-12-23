@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766102633,
-        "narHash": "sha256-dYCrItNNF5xyEZoUaq7rOGvq/Q69VP/BB6mXVykaTzs=",
+        "lastModified": 1766519966,
+        "narHash": "sha256-7ONjxDI5wy63TpIQyZyKVFTi9tA0QOGmF9iDaPILMyw=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "bc589a1ba340a00ae40bf1436401eac5b1454687",
+        "rev": "74eef260e1142264ab994fb9c88e4f420e9486d7",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1766498974,
-        "narHash": "sha256-qjIuoL3e6Ed4x8wAv5+QEEwEoUyWZ/4TdqFxeK78VjI=",
+        "lastModified": 1766512364,
+        "narHash": "sha256-TE4AZJ2E1vNezXihlfJjohDn9ECKJ0FzzPKyWQ84GP4=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "b8e9529037b77dcd80f9deb03e78d1d998ae6db8",
+        "rev": "ecadefeb1811c7d7879ec3b6d8ff3da8fdf5e2a7",
         "type": "github"
       },
       "original": {
@@ -1346,11 +1346,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1766504157,
-        "narHash": "sha256-2EVA0/sYjhKObLg8irkEfEaobUbJ16XTiUjDFuJ+2aE=",
+        "lastModified": 1766507594,
+        "narHash": "sha256-LJdveve0iOYQdPyr9uNpSGnfCfUpVDDkN+80oEHWLno=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "9926584b606c4f6314d7aa0a34951b4a87d9111e",
+        "rev": "8973916a3d015d65a8c4614e141f4270a713cf33",
         "type": "github"
       },
       "original": {
