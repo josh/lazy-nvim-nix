@@ -564,11 +564,11 @@
     "gitsigns.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766833194,
-        "narHash": "sha256-ePM7G4jngMiW0qjM+j3ZzDbNG0wGHtX/OF75h+4Gv+U=",
+        "lastModified": 1766850305,
+        "narHash": "sha256-WfXTf6doWjuOMlQ46/QkTyMa33dD1M3AGA18ZH+KzGQ=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "3f5ffea8abbb3d58d536abfe65cb7e48caee38f5",
+        "rev": "bf77caa5da671f5bab16e4792711d5aa288e8db0",
         "type": "github"
       },
       "original": {
