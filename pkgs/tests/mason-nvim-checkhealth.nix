@@ -10,8 +10,6 @@ callPackage ./neovim-checkhealth.nix {
   pluginName = "mason";
   loadLazyPluginName = "mason.nvim";
   ignoreLines = [
-    # FIXME: Add pip back to mason.nvim extraPackages
-    "WARNING pip: not available"
     "WARNING julia: not available"
   ];
 }
