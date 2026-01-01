@@ -1,8 +1,6 @@
 {
   lib,
-  stdenv,
   callPackage,
-  julia,
   lazy-nvim-nix,
   lazygit,
   lazy-nvim ? lazy-nvim-nix.lazy-nvim,
@@ -93,10 +91,8 @@ in
           ignoreLines = [
             # FIXME: Add pip back to mason.nvim extraPackages
             "WARNING pip: not available"
-          ]
-          ++ (lib.lists.optional (
-            !lib.meta.availableOn stdenv.hostPlatform julia
-          ) "WARNING julia: not available");
+            "WARNING julia: not available"
+          ];
         };
 
         checkhealth-noice = neovim-checkhealth.override {
