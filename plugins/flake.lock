@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1767304241,
-        "narHash": "sha256-2I4rxdDarAqy6FLU8L18ol28j1M0LCgExr6zN92fmAQ=",
+        "lastModified": 1767344282,
+        "narHash": "sha256-YLZsELnV9tyQx1WwzmUH6lVJG/ZDBNbE/siRJ/q7mRQ=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "4de14c04f973cf7f10622907349f3bb8cc3e8fd6",
+        "rev": "e64dc83629a65cb0c68398f34ce8f5d50e5b66fc",
         "type": "github"
       },
       "original": {
@@ -1261,11 +1261,11 @@
     "nvim-dap": {
       "flake": false,
       "locked": {
-        "lastModified": 1766472621,
-        "narHash": "sha256-D4YqVHXPC5UzXGNGIFHAFlwkyaxlWQekR6nXqMSJCYw=",
+        "lastModified": 1767335850,
+        "narHash": "sha256-dWBw00dF175UDOlZ6Jr9c3iEfIn2IKlZ4ZFhZDo+N+E=",
         "owner": "mfussenegger",
         "repo": "nvim-dap",
-        "rev": "818cd8787a77a97703eb1d9090543a374f79a9ac",
+        "rev": "7bb46cc612bb127d7b0e3e9ed695267d830824ec",
         "type": "github"
       },
       "original": {
@@ -1346,11 +1346,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1767081439,
-        "narHash": "sha256-qD7cSyGmAJO13nxEZYEr2FMsccJ/21LAw8L93BBTwk0=",
+        "lastModified": 1767332382,
+        "narHash": "sha256-OfAyiHsc6N6SgsW20czzlv2z9shhaP8gtIRQy/guR8w=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823",
+        "rev": "ac04ec3c2af08e9821b4eb64ede86072b9b213bf",
         "type": "github"
       },
       "original": {
