@@ -1996,11 +1996,11 @@
     "vim-dadbod": {
       "flake": false,
       "locked": {
-        "lastModified": 1746989977,
-        "narHash": "sha256-yTPha6/d62DQ0M13JT70X/szkWO87oiw0y4L93FDLq0=",
+        "lastModified": 1767745107,
+        "narHash": "sha256-1CA+H8wXDcA5sQLpHsJHHn9hNhWNyzZHHkVx3LqSPeA=",
         "owner": "tpope",
         "repo": "vim-dadbod",
-        "rev": "e95afed23712f969f83b4857a24cf9d59114c2e6",
+        "rev": "6d1d41da4873a445c5605f2005ad2c68c99d8770",
         "type": "github"
       },
       "original": {
