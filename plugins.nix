@@ -37,7 +37,7 @@
   viu,
   wget,
   yq-go,
-# keep-sorted end
+  # keep-sorted end
 }:
 let
   /*
