@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1767481614,
-        "narHash": "sha256-ZjgzhjJy+AUQvrHchpCaFhrysSLGCz0DH5Em7/r6Agk=",
+        "lastModified": 1768008419,
+        "narHash": "sha256-KNtnowiuudPH7g9EpF65n3JNbFL5cIDMP9LIrnvcL7k=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "a03d68e40eea835a1cdbd9f93049708dab3621e6",
+        "rev": "b8d1356b7120f5cf111709cb2fa504096248fb26",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1767979068,
-        "narHash": "sha256-uGvgqNueIncbmbpM+GnLJbdCZT+GIdNXXyNwEGjnNxM=",
+        "lastModified": 1768007665,
+        "narHash": "sha256-29Q6+enBMRp+UJAEox6Vm3hsH0v3beon2c3ihbfEdtA=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "2ca93a6ba7e9e35f3821fe918e8ea6606f2c586c",
+        "rev": "dd45bf0dbd7970510acd909494bf59bae418adf9",
         "type": "github"
       },
       "original": {
