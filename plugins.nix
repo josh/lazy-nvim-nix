@@ -20,6 +20,7 @@
   gzip,
   imagemagick,
   jdk,
+  julia,
   lazygit,
   mermaid-cli,
   nodePackages,
@@ -261,7 +262,8 @@ let
           wget
           yq-go
           # keep-sorted end
-        ];
+        ]
+        ++ (lib.lists.optional (lib.meta.availableOn stdenv.hostPlatform julia) julia);
     };
 
     "nvim-treesitter" = plugins."nvim-treesitter" // {
