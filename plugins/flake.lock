@@ -156,11 +156,11 @@
     "blink.cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1768248250,
-        "narHash": "sha256-bJ9OI1h8DOZJasZeWdH52Cmy8ZDo8JxZDnPJP2kDeic=",
+        "lastModified": 1768589322,
+        "narHash": "sha256-+zdnToFn+kxocsvadBOWP7zNlACLZsS9BdJMrATDOOw=",
         "owner": "saghen",
         "repo": "blink.cmp",
-        "rev": "b1b77404ce3c8b11e8f35611a28176b944c41e29",
+        "rev": "356ec151b9a49b8750f5c1ea90801212a0a80644",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1768585482,
-        "narHash": "sha256-X77W01sxsWIt289sDyl3+G8X1hoX9HSLJeSsdzBp2jE=",
+        "lastModified": 1768599449,
+        "narHash": "sha256-TSVscBqLNFxDpI9fRmgAJpAR3SZZM0tkLfnTtbEbG7w=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "e14f360d4745c6870ae03372b94dac9544a19537",
+        "rev": "c4a30dbfe6042d15f0aca3f18f5a649664573668",
         "type": "github"
       },
       "original": {
@@ -1363,11 +1363,11 @@
     "nvim-metals": {
       "flake": false,
       "locked": {
-        "lastModified": 1766309221,
-        "narHash": "sha256-X55yrKRV/mFjz7dYbs3yJh2Ef3foUq1cDYhCWDUq9tU=",
+        "lastModified": 1768592229,
+        "narHash": "sha256-LhVcJ5KbQeUik1+ZEuY/zoLKXkLAYb+sn6EcJFMfLjw=",
         "owner": "scalameta",
         "repo": "nvim-metals",
-        "rev": "90dadd67bb1069ce1ba2a4dabf4e45da2807ba80",
+        "rev": "7ed47cd3095508e80423e30922385d5b9988f9d6",
         "type": "github"
       },
       "original": {
