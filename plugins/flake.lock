@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1767975224,
-        "narHash": "sha256-kXshho0o6h+a0VoKkQ/OScvm0kOPRi0h8SPjzFct9GU=",
+        "lastModified": 1768751609,
+        "narHash": "sha256-pSKrxEgYDneC7+anW2DUrlnZRJy0+ch6jgfSR2uj4+A=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "21bdecb25aa72119d11d7fc08c7e0ce323f1b540",
+        "rev": "068e2570ff94bf734d0333eaf567a41dad061f43",
         "type": "github"
       },
       "original": {
@@ -377,11 +377,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1767352366,
-        "narHash": "sha256-m95CEkyjR6TflrKTiz7cEZVWKInAjvFDYhmmZ3j3DEE=",
+        "lastModified": 1768758420,
+        "narHash": "sha256-Gm4HdPVGEOpWDQE1zzLGOVukEsOXeYmiyz8NGubi9Vg=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "67705566318002cc0a88b075f695518a43aa0ca7",
+        "rev": "fa0c1f5a8f5dce5259b6468aba1b9cec2448698c",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1768730744,
-        "narHash": "sha256-Oz0d5nAiJ4XL122w3d5JuQ4z+dj8SGDcEqZ3mxjrvMs=",
+        "lastModified": 1768747144,
+        "narHash": "sha256-4ZYu5hgbljkRiIHSIipeIxqVySzue+7tKjrzIe8The4=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "6f062d21498fd6a4d490b30f44a5f1aacba1b760",
+        "rev": "47014fdfbcf15a88d5e9b8d9ef46dc86adfdd77b",
         "type": "github"
       },
       "original": {
