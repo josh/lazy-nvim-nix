@@ -71,11 +71,11 @@
     "SchemaStore.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1768500215,
-        "narHash": "sha256-YqpMq96FPe6WfzlYNXIC5UMpHdYmD90snYyiq59spms=",
+        "lastModified": 1768942950,
+        "narHash": "sha256-1I5SQRNxwMBKO2JtSXwVsSap7OUNpzBr3QbeiVMO5KA=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "fb7b9034285a5658c746faa12eff8c1c9d9b11b1",
+        "rev": "77014a9e6d3808746045593bdd55b3f22fc52bda",
         "type": "github"
       },
       "original": {
@@ -275,11 +275,11 @@
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766055561,
-        "narHash": "sha256-qv0/H+pb2RYc4aqxka1ucvXe2nu6r7c1OpPBBtwFf8o=",
+        "lastModified": 1768933187,
+        "narHash": "sha256-AeOwZ07eOtotkJeQ0wkJ6MFPorxJgensD2pnJLbk1Y8=",
         "owner": "Civitasv",
         "repo": "cmake-tools.nvim",
-        "rev": "f34418d7aa57c730ee91b3e45e7612978506fcf3",
+        "rev": "16dfb08bb2d6bf25a6c9b4c1c22feef4a835ba3c",
         "type": "github"
       },
       "original": {
@@ -1549,11 +1549,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1768604377,
-        "narHash": "sha256-HZUfwT3R7x2SCoVxL89B1Re8NQ4CFnJo6FuKm+JdmFE=",
+        "lastModified": 1768937528,
+        "narHash": "sha256-XWmoCyTDSVyzLo+522XfzZpj90HbsA7AIeF7bzbQR2s=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "e1ec5cc2eb0bcfc64e312c6ab93764ffb0c43c3b",
+        "rev": "295252d5344bc631d02ae9b1620d1e1b50cfbc35",
         "type": "github"
       },
       "original": {
