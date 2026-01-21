@@ -139,11 +139,11 @@
     "baleia.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1721805312,
-        "narHash": "sha256-qA1x5kplP2I8bURO0I4R0gt/zeznu9hQQ+XHptLGuwc=",
+        "lastModified": 1768984813,
+        "narHash": "sha256-r2b+aJmfFsXGL2QZoo8tBC0UY44ZqZPhaIr49dekkt4=",
         "owner": "m00qek",
         "repo": "baleia.nvim",
-        "rev": "1b25eac3ac03659c3d3af75c7455e179e5f197f7",
+        "rev": "71e7c93913b807e28400cb93b5f4bd5adfd728aa",
         "type": "github"
       },
       "original": {
@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1768882009,
-        "narHash": "sha256-eIu+xpHIwFPEq9G0n16OZRjkScG3ATpbXOO8wGDK5tg=",
+        "lastModified": 1768980578,
+        "narHash": "sha256-ObeahwiHnRd38P0jZqPk6Gj4E4DZh1lf1N/kkTHegZU=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "696f8c071723f845b904af2f99a798650210355e",
+        "rev": "20e2d3099ba99f37f9a7c7d9ed2a9d83c3b20618",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1768955603,
-        "narHash": "sha256-7t9z5MS5r4Yw0io3OhITmlFnvcbQW3faQFfx8Mto/10=",
+        "lastModified": 1768976941,
+        "narHash": "sha256-lt1ONe9T6DnAkezpJa8LBKAzTiN3T5hEYFVpYROPpzw=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "76105906b2e6980cbeec364e70c5e009152ae7b5",
+        "rev": "3899c43cf803807ec4374f6c17ee9b805a0d66e3",
         "type": "github"
       },
       "original": {
