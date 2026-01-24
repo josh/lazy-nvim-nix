@@ -632,11 +632,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1768696246,
-        "narHash": "sha256-MmrbvY8n8NzwBpm8g8QK1vzOAxN6zXolyt0ca0xklt8=",
+        "lastModified": 1769279830,
+        "narHash": "sha256-AIewrJB3NMqnBaiOB0+Fs0dV6+S4lX57syczEfWrroY=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "15de9c7de389c9182154b03302d0fcea6995f17a",
+        "rev": "d223712c767011350ed887c3152da4955d9b1457",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1769272741,
-        "narHash": "sha256-ZN0vCidGQkOQR0vx870zRCNGjJXhnU1ltEfmV+DC0Ok=",
+        "lastModified": 1769289026,
+        "narHash": "sha256-aY0jKDr+4ss1DSmiDJilNNIjISbKb+eQQ8xv//CoBYw=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "412813fd3655c9772f08740a01876772671d789b",
+        "rev": "8ca8cf1e9a5eb1672c7a1804e67f2a3d69b9a3f6",
         "type": "github"
       },
       "original": {
