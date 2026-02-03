@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770033415,
-        "narHash": "sha256-bA7ceEVTvWTwBhzFmyfEnMspYq7LFOBBG4mIQJabRSE=",
+        "lastModified": 1770074133,
+        "narHash": "sha256-1Hc9pMwDJGK1pYP6bAi4z77bI3S1EnMrI8BnZrPDXNU=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "6933b82e0b6dac53274cd8bff8fcd986a2070d77",
+        "rev": "69199d46b56f67a226789da256264c6291c4e63d",
         "type": "github"
       },
       "original": {
@@ -71,11 +71,11 @@
     "SchemaStore.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1769830848,
-        "narHash": "sha256-bCFDpo7O+vY7a+8gxDa0t82XoY3dyWPmm1kELFM7qUA=",
+        "lastModified": 1770073375,
+        "narHash": "sha256-s9aN1WOCnCzDBN50vsNXTyZVYzQmwnN7E4BSl9+yCLQ=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "9b6a3ab14cecc7da9f3aa4fa0ae2a7390748aca5",
+        "rev": "6217ff926e951401ac32f572da04e93e8cd6129d",
         "type": "github"
       },
       "original": {
@@ -377,11 +377,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1768761099,
-        "narHash": "sha256-46cln+BYDmf1cdeznsFJoxJjSXJon6vYN6svkZuZO8Y=",
+        "lastModified": 1770075828,
+        "narHash": "sha256-zok8g2jw0bb59DOUhbHKxK0vyqB7Uyspvtt/vqrCZyc=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "403639610bcb9b6a5dfc494dc3179cc19773a471",
+        "rev": "8dba456acc370ecac3f8191067f9ad43e18d7901",
         "type": "github"
       },
       "original": {
@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1769818953,
-        "narHash": "sha256-SUmzOvbMmc4FL4bAFa5RGK41OGkY5BxZTmED9dnXu94=",
+        "lastModified": 1770039623,
+        "narHash": "sha256-JBSZZJwsLhkOl58D69fOmunR59xEqFRm1SY7jrX83OE=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "b4b1f05957a77f7662de834328827890c1a8c02b",
+        "rev": "e5804f4924cf74ad03834c25988998a273ae0d7b",
         "type": "github"
       },
       "original": {
@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1769802108,
-        "narHash": "sha256-vhI1/GfCl6Tv7l7SY2BdTd4lHMlTGEys8AmmmMUhcWI=",
+        "lastModified": 1770067488,
+        "narHash": "sha256-qn1BTNCX0Sm158Lv5JfHThqlJX9ualCIlc+RCjWa+t8=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "14babc9b4520184d9696ef282eb7ac20687d4373",
+        "rev": "275dbedc96e61a6b8d1dfb28ba51586ddd233dcf",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1770022415,
-        "narHash": "sha256-m/f1HcEE63PNpPia87W9EZNqvkCH4wqerN0230Bjs/0=",
+        "lastModified": 1770075627,
+        "narHash": "sha256-OS/JO9O4/Keg/FgsVMI3txHof2E6g85HLNv8LUVIxiw=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "0e47cb7908fc5d35f146cdec47ae0552d6201a2e",
+        "rev": "4c787838557491da516a0fec7ee39075ebba1786",
         "type": "github"
       },
       "original": {
