@@ -3,11 +3,11 @@
     "CopilotChat.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770074133,
-        "narHash": "sha256-1Hc9pMwDJGK1pYP6bAi4z77bI3S1EnMrI8BnZrPDXNU=",
+        "lastModified": 1770893388,
+        "narHash": "sha256-/QddE/TloRK+8cJF9KHkOSsyctCcyn+T85We958dS/I=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "69199d46b56f67a226789da256264c6291c4e63d",
+        "rev": "743d6005fb412c85309d3f3aa45f18f3a2fb2098",
         "type": "github"
       },
       "original": {
@@ -275,11 +275,11 @@
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770414200,
-        "narHash": "sha256-UOmRX4VswIAnCSvBsIoGKdVo/1u/p9N2zwa9nxocmUw=",
+        "lastModified": 1770894796,
+        "narHash": "sha256-eEZcxKQqwd4FyXKQpMwhq68Z2MeLS6GPpu7C3BV5UwE=",
         "owner": "Civitasv",
         "repo": "cmake-tools.nvim",
-        "rev": "75a3589cf5ff19ede2a0c0f34da5c37554a44221",
+        "rev": "24502aec9166fd6b851762c5930ff316083acd85",
         "type": "github"
       },
       "original": {
@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1770641494,
-        "narHash": "sha256-EaaWEyzJ5CDTQoxJiMUFKkfB59GG+/8nVQkFXquI150=",
+        "lastModified": 1770909093,
+        "narHash": "sha256-ZrASVx5QG83r9IRfvSUwrF+HOwZIs40FZ4odnKZSn98=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "fb8c50ba62a0daa433b7ac2b78834f318322b879",
+        "rev": "739330f48ca64b4283f5228e9dc9c0c8f9a37110",
         "type": "github"
       },
       "original": {
@@ -819,11 +819,11 @@
     "mason-lspconfig.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770200309,
-        "narHash": "sha256-CVXJchsVcoxrA50yzPsGT0GFgcw2F2fhO6WYnCaN6m4=",
+        "lastModified": 1770891687,
+        "narHash": "sha256-BzErqyHQiCePyJwxzcK8YaxWRLs0RHAWUSckA/ONlGw=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "ae609525ddf01c153c39305730b1791800ffe4fe",
+        "rev": "21c2a84ce368e99b18f52ab348c4c02c32c02fcf",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1770889070,
-        "narHash": "sha256-q1goc3wJn9Kr8BGrVQ3MG/ei79sugTI7tu7o6IQHQUU=",
+        "lastModified": 1770902982,
+        "narHash": "sha256-WDAPaggxWJBZEpOPHG6cFXOnpu9K2+3i6VWy6+0sZxQ=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "808700d0ac32241aa9b612f99a77dd7e31682210",
+        "rev": "59d593e0e815506442663680f30bec6a43ddfb58",
         "type": "github"
       },
       "original": {
