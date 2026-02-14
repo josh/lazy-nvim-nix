@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1771018887,
-        "narHash": "sha256-KjLZ0tYpomPS6i+5xCGfW4HvGT0bcrDI9YLg7pDfnKo=",
+        "lastModified": 1771027067,
+        "narHash": "sha256-WYVRbwGoIFutXu7kIV3YeB3gaSaiMDzej1jvbo3SH3c=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "b673842b07b36b79cf304620a1e46182e84b58a9",
+        "rev": "bc37770f3aa5d943f32f463d2f8425cace515f1d",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770946427,
-        "narHash": "sha256-unZxm5qekhq765DprSTSMNqNX4L7vUZ1NlB5OFxU/OE=",
+        "lastModified": 1771032824,
+        "narHash": "sha256-lyIR17HCyvPAQld9vLRI0DPEbUz6A+0JbuFwn7bFh+w=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "7b84ac37a9ffb5cacbaf43c03cf868c18523c224",
+        "rev": "ace3447e4e800deb13f00bf2af275e0b7c9488c0",
         "type": "github"
       },
       "original": {
