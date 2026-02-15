@@ -190,11 +190,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1767886506,
-        "narHash": "sha256-cZ6VeF69s0eQ9I7Tz8MoEKuF9w+TbA94vXj2EuDoSgU=",
+        "lastModified": 1771164736,
+        "narHash": "sha256-0kxEY6QowwlDlGbxj5FI1MlEeeTcPfcf8PK+sgjYmb0=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "beaf41a30c26fd7d6c386d383155cbd65dd554cd",
+        "rev": "0a5de4da015a175f416d6ef1eda84661623e0500",
         "type": "github"
       },
       "original": {
@@ -394,11 +394,11 @@
     "copilot.lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1770403820,
-        "narHash": "sha256-pZjz2W9DERdHHNJS6ilLsfnCIdB7N0NaDYxjcyOvTKU=",
+        "lastModified": 1771165572,
+        "narHash": "sha256-0aPy0GE51H3HzhlX5eT4y/0BaFVRPY6kk5qMh/yY0+E=",
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "rev": "3faffefbd6ddeb52578535ec6b730e0b72d7fd1a",
+        "rev": "dd3e345d59051464573d821b042f0a0c82410b5d",
         "type": "github"
       },
       "original": {
