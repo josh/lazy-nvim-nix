@@ -666,11 +666,11 @@
     "inc-rename.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762380246,
-        "narHash": "sha256-IoB6TM8DFq1hCJof5wOap5hrv5HrPheJjGVRyXFekAQ=",
+        "lastModified": 1771180963,
+        "narHash": "sha256-jnv0GLBqqD13FMU9HE+PWY/CxtK3k6iGWaRnDRpTEXM=",
         "owner": "smjonas",
         "repo": "inc-rename.nvim",
-        "rev": "2597bccb57d1b570fbdbd4adf88b955f7ade715b",
+        "rev": "a2f4b564c72ea1f22cba2caa97db603618d16d6f",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1771146609,
-        "narHash": "sha256-gJ80JAPoWzB6o6wwPk3eJdEIQwUJP6TsgrpoKtwFg24=",
+        "lastModified": 1771173909,
+        "narHash": "sha256-WDYVN+lxmP8Bi9Zh3XIcXTfNOBP4aqf730NYX5sOWJk=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "dce7c7db31714f8005aac08ef4c30d9e14ba35ab",
+        "rev": "cb76ee36de784b23ce205cea1a20a22a187f7499",
         "type": "github"
       },
       "original": {
