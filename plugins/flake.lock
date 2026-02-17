@@ -683,11 +683,11 @@
     "indent-blankline.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1742224677,
-        "narHash": "sha256-0q/V+b4UrDRnaC/eRWOi9HU9a61vQSAM9/C8ZQyKt+Y=",
+        "lastModified": 1771288550,
+        "narHash": "sha256-Vc79ff416uJFqKH8zlM1y208SxaQGpQPqGVbiz5Vflg=",
         "owner": "lukas-reineke",
         "repo": "indent-blankline.nvim",
-        "rev": "005b56001b2cb30bfa61b7986bc50657816ba4ba",
+        "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
         "type": "github"
       },
       "original": {
@@ -1108,11 +1108,11 @@
     "neo-tree.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1771242901,
-        "narHash": "sha256-SvkK0WK6knfOFJVofJnKdI2qAxoS2NBcUPU/uCwWFE8=",
+        "lastModified": 1771291477,
+        "narHash": "sha256-l2JVLEyW6s1A83sifTZklMRtTwWF9gzK3rLBJRJiYEM=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "ccc9f8cf9620eae9c68e42bf97a2073e7561cf6c",
+        "rev": "9a1f0461c4cc62e64616bafe9425572ff6a5f245",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1771032824,
-        "narHash": "sha256-lyIR17HCyvPAQld9vLRI0DPEbUz6A+0JbuFwn7bFh+w=",
+        "lastModified": 1771292039,
+        "narHash": "sha256-dhIqx5e4uhpJl04q4QAh285TbJnOta7VVM/yvqYXNiw=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "ace3447e4e800deb13f00bf2af275e0b7c9488c0",
+        "rev": "6861b5f86db695f079987f7cf5c0912149c0bf22",
         "type": "github"
       },
       "original": {
@@ -1193,11 +1193,11 @@
     "none-ls.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770203580,
-        "narHash": "sha256-thbg8cmtpkKhAhKHlYCqCfi2HxceLe2H6me14hQm1vs=",
+        "lastModified": 1771286386,
+        "narHash": "sha256-x/x3eQwc9HrdYvpqOkvhiXvO6i/NbutFrAPGl2VcVkY=",
         "owner": "nvimtools",
         "repo": "none-ls.nvim",
-        "rev": "68ed8b9bf5dfdae4d579fcd19723926f84d7b6cb",
+        "rev": "f61f46ded0ca9edce7a09b674f8e162d10921426",
         "type": "github"
       },
       "original": {
