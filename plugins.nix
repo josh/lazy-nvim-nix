@@ -252,7 +252,8 @@ let
           go
           gzip
           jdk
-          nodePackages.nodejs
+          nodePackages.npm
+          nodejs_24
           php83
           php83Packages.composer
           python312WithPip
