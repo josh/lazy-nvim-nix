@@ -394,11 +394,11 @@
     "copilot.lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1772110222,
-        "narHash": "sha256-tQ/RfIPY0/2WoZOQdFnOG4V4xsmqg8+ZLFp/PTeyWoM=",
+        "lastModified": 1772122345,
+        "narHash": "sha256-quwptJn3U+SInRi+WFMhKmd4Y5QrB6r5luY6IeZebrw=",
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "rev": "9f91e57dc03f38b248789dcc402d27819cc947ed",
+        "rev": "1eecd6c47e2b1c1a7affaa23a3ab61d344be56d1",
         "type": "github"
       },
       "original": {
@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1772041276,
-        "narHash": "sha256-EPFAPihVLu7BF4n2UPCqXPJtP0kpgIRuqVpEY2Eae2A=",
+        "lastModified": 1772122100,
+        "narHash": "sha256-B8W93xDkFFiZkSIW05OLI1zVroiS0lf+crcfzPOKAEI=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "cfc085749d9232373fc6d8cf3a964c5601a7816e",
+        "rev": "1653c4c599dba538fbebf9de81a96380dc2998ff",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1772100777,
-        "narHash": "sha256-xDel29Rjrl2vSUlIZk1yv1Yh7ehglGPMFMot5NtF3Z8=",
+        "lastModified": 1772111803,
+        "narHash": "sha256-6PgvQOaQQnEAa2K7+BOF//JbYoac+qTuDG3i4/em1Pw=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "144f7b2009deb33da62d7f0878dc7c457624af93",
+        "rev": "8750a379ebc70c3454e302636d94709f43088a61",
         "type": "github"
       },
       "original": {
