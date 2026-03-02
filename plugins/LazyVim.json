@@ -126,8 +126,6 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.editor.leap": {
-    "flit.nvim": "ggandor/flit.nvim",
-    "leap.nvim": "ggandor/leap.nvim",
     "vim-repeat": "tpope/vim-repeat"
   },
   "lazyvim.plugins.extras.editor.mini-diff": {
