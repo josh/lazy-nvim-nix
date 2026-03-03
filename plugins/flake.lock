@@ -581,11 +581,11 @@
     "grug-far.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1772229628,
-        "narHash": "sha256-ouAHhAw3+enRbif0cMRqGs84pn9Zi4tdAUxzVJ88Tcc=",
+        "lastModified": 1772512141,
+        "narHash": "sha256-Qq1TSSzJAuIB/duwi3dHmpcJIQ4N8+P+UKfZ9z2oS30=",
         "owner": "MagicDuck",
         "repo": "grug-far.nvim",
-        "rev": "9370422e5cdd55321c0b8c4880082c5fd4e52e99",
+        "rev": "ac52ee2d87399dfd7b0d59d5b1d2bbaf2a4028f1",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1772485954,
-        "narHash": "sha256-jP5Un4oZD2Rp4Hb2FoqHaur13yOUNCdDjYy9Min9LfA=",
+        "lastModified": 1772503540,
+        "narHash": "sha256-EsQCa3yEznYB/rcO22hjADeiuo7NJPbwoH2/etMweU4=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "cff97f609f5afc5bd7c19121450cd95e135c764a",
+        "rev": "5d314caf1919947d4a07cb28bf60e4b1c7f3891b",
         "type": "github"
       },
       "original": {
