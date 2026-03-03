@@ -241,11 +241,11 @@
     "clangd_extensions.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1772432722,
-        "narHash": "sha256-1JH0jtpZ9XgVOBx6khYcI2e+2noPXu7GARk+hr+ctP4=",
+        "lastModified": 1772497136,
+        "narHash": "sha256-ql3ZGFiWCbhntC07vnqq9eODFOTEYoq9vhQ7PHjHCo4=",
         "owner": "p00f",
         "repo": "clangd_extensions.nvim",
-        "rev": "fa3e795139515383ae0af279a1eaafb47d34d43a",
+        "rev": "701193f72bde77b1f6dbd8f04fd873197b94870e",
         "type": "github"
       },
       "original": {
@@ -666,11 +666,11 @@
     "inc-rename.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1771180963,
-        "narHash": "sha256-jnv0GLBqqD13FMU9HE+PWY/CxtK3k6iGWaRnDRpTEXM=",
+        "lastModified": 1772487541,
+        "narHash": "sha256-WDvzCOCWJFNTGl6g0/BF1SLPR+Xc4vGwVLqIdhAShkg=",
         "owner": "smjonas",
         "repo": "inc-rename.nvim",
-        "rev": "a2f4b564c72ea1f22cba2caa97db603618d16d6f",
+        "rev": "0074b551a17338ccdcd299bd86687cc651bcb33d",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1772242352,
-        "narHash": "sha256-3OaKLZIbnzD1ZIlrqLUjK78tFwN0vgsbfGzACZKAARo=",
+        "lastModified": 1772501654,
+        "narHash": "sha256-viqU8mqgj0oVCacmB8yens3IPBLRT6sUCmsi+cNqcCY=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "26c55935a0f19e474e0cd2fe5e13273dc94fb1d4",
+        "rev": "2c672c5a3ee01b6d30e2facc0aeae696b45acbc2",
         "type": "github"
       },
       "original": {
