@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1772643095,
-        "narHash": "sha256-kJEkCxXKMNnz1qVab0h46j1UqWnl9aLSNv7WVT53s80=",
+        "lastModified": 1772663183,
+        "narHash": "sha256-XBMwhAJ9QAq2u9LIAanZBv+iujI/89L49opMlSZPMCQ=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "3f2a09a69325456700480e10776cc005cb2f201a",
+        "rev": "9b1bee8bfb885b47563696f869effbdcb5c47445",
         "type": "github"
       },
       "original": {
@@ -1549,11 +1549,11 @@
     "octo.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1772660506,
-        "narHash": "sha256-Xxr+nADxqCKentwoP5j85gTJzEHfPv3PeywZhPbxaNg=",
+        "lastModified": 1772661731,
+        "narHash": "sha256-SKC9r/H3idSq72G5McWwMcuiU9K5yuAxv/CQm+y5/5c=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "75f3ab9f9ea1c041c3b7a181f177b896693aa5f8",
+        "rev": "c14f5b6ee92f0b2717efd525211bcb6cebf03fa6",
         "type": "github"
       },
       "original": {
@@ -2115,11 +2115,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1772288968,
-        "narHash": "sha256-oz+/5wlR/XTdvbMoFBdaP9mqut5Va9H3OD8bUS6PWvI=",
+        "lastModified": 1772662386,
+        "narHash": "sha256-rBe8FivGH4I7uRlbrMu+9GYFA2TQ2yoyOPNcZwBLVho=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "fcd1533862cc3153c203399964065bc835f6919a",
+        "rev": "82d2305ff71dfb3bd91602534cc9bb9a195bcb38",
         "type": "github"
       },
       "original": {
