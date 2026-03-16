@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1773584080,
-        "narHash": "sha256-EjCjBTqpZz74oOJ2+8+hEbTUfTRFiSfVMs1owaryeSY=",
+        "lastModified": 1773631786,
+        "narHash": "sha256-gQrh6OutNKRy+G9W52+8sr9tK4sJhTr1+o4W5Y8s3gE=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "bf59dcee2a8d894724b060401d2abf3d71d4bd47",
+        "rev": "6e41ba7505f35a6f054ca682b043aa0cea36c2ef",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1773452037,
-        "narHash": "sha256-5imkXNOV5MAGvKrYFiewmMSiv0MH2YSw4UDtAInJ0Ys=",
+        "lastModified": 1773624861,
+        "narHash": "sha256-dJurySy1t/MeKnFT0YOR7Mqrc1FkXWWKgQc2kGYWTQg=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "0916f50099edff8577ae43fa1d88245cff4e67e7",
+        "rev": "1a7f925b245915eaaa610c8a67525da50af8f15a",
         "type": "github"
       },
       "original": {
