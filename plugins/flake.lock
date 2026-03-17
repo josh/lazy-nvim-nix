@@ -275,11 +275,11 @@
     "cmake-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1773419335,
-        "narHash": "sha256-xDwQ0Jyqygezm2p9ySfxQtcnUzraEmE1xvJVJgZTxuQ=",
+        "lastModified": 1773750436,
+        "narHash": "sha256-IdiYj7vsYXzk1jBrEhIdvDvUHcGPR6Kt2ga829dGqn8=",
         "owner": "Civitasv",
         "repo": "cmake-tools.nvim",
-        "rev": "b3a5d4d3e889d0f8f0c94ccd910407c6ce466b25",
+        "rev": "5fc40e9e252a113be945019ab16301b851eb98d1",
         "type": "github"
       },
       "original": {
@@ -751,11 +751,11 @@
     "lean.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1773499818,
-        "narHash": "sha256-qbKybfraFtAvFj2rJgX3fDP6GS4oTDqmDBKS3SsjxrQ=",
+        "lastModified": 1773749512,
+        "narHash": "sha256-WFpS+hAtMXQJQxHptBz6lhrL/ndApvyRZJRPjYogVH8=",
         "owner": "Julian",
         "repo": "lean.nvim",
-        "rev": "306d2d756c869c60887efdf0dd8d35d8b0e9a33c",
+        "rev": "639a9407dbc63c0d6385d6911e8a7e193445616f",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1773724724,
-        "narHash": "sha256-4JKs1XQIhsX4h50ZfGy7QglM8FDqhopj+oU6FtqrpcA=",
+        "lastModified": 1773742372,
+        "narHash": "sha256-9Acg4HgcWEZnxlzARYhp5sQL89O5Swm6IlCcqp84ZmM=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "8051fef7a70b9db3458a0d101986709bdef67f22",
+        "rev": "3e73177fbb98b7c63d147cf08263008f75b98a2b",
         "type": "github"
       },
       "original": {
