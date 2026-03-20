@@ -161,7 +161,7 @@
   "lazyvim.plugins.extras.editor.snacks_picker": {},
   "lazyvim.plugins.extras.editor.telescope": {},
   "lazyvim.plugins.extras.formatting.biome": {
-    "mason.nvim": "mason-org/mason.nvim"
+    "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.formatting.black": {
     "mason.nvim": "mason-org/mason.nvim"
