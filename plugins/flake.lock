@@ -1794,6 +1794,7 @@
         "trouble.nvim": "trouble.nvim",
         "ts-comments.nvim": "ts-comments.nvim",
         "typst-preview.nvim": "typst-preview.nvim",
+        "venv-selector.nvim": "venv-selector.nvim",
         "vim-dadbod": "vim-dadbod",
         "vim-dadbod-completion": "vim-dadbod-completion",
         "vim-dadbod-ui": "vim-dadbod-ui",
@@ -1990,6 +1991,23 @@
         "owner": "chomosuke",
         "ref": "master",
         "repo": "typst-preview.nvim",
+        "type": "github"
+      }
+    },
+    "venv-selector.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1772477351,
+        "narHash": "sha256-2+jbneudVXDejMBqaz6svJMsIUWqRKIyhRlbOr35K9s=",
+        "owner": "linux-cultist",
+        "repo": "venv-selector.nvim",
+        "rev": "42e8faadf9b819654f29eb1a785797a3a328f301",
+        "type": "github"
+      },
+      "original": {
+        "owner": "linux-cultist",
+        "ref": "main",
+        "repo": "venv-selector.nvim",
         "type": "github"
       }
     },

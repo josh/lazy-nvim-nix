@@ -224,6 +224,8 @@
     "ts-comments.nvim".url = "github:folke/ts-comments.nvim/main";
     "typst-preview.nvim".flake = false;
     "typst-preview.nvim".url = "github:chomosuke/typst-preview.nvim/master";
+    "venv-selector.nvim".flake = false;
+    "venv-selector.nvim".url = "github:linux-cultist/venv-selector.nvim/main";
     "vim-dadbod".flake = false;
     "vim-dadbod".url = "github:tpope/vim-dadbod/master";
     "vim-dadbod-completion".flake = false;
