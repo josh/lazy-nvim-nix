@@ -160,14 +160,13 @@
   },
   "lazyvim.plugins.extras.editor.snacks_picker": {},
   "lazyvim.plugins.extras.editor.telescope": {},
-  "lazyvim.plugins.extras.formatting.biome": {
-    "nvim-lspconfig": "neovim/nvim-lspconfig"
-  },
   "lazyvim.plugins.extras.formatting.black": {
     "mason.nvim": "mason-org/mason.nvim"
   },
   "lazyvim.plugins.extras.formatting.prettier": {},
   "lazyvim.plugins.extras.lang.angular": {
+    "conform.nvim": "stevearc/conform.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.lang.ansible": {
@@ -176,6 +175,8 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.lang.astro": {
+    "conform.nvim": "stevearc/conform.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
@@ -294,7 +295,11 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
-  "lazyvim.plugins.extras.lang.python": {},
+  "lazyvim.plugins.extras.lang.python": {
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
+    "venv-selector.nvim": "linux-cultist/venv-selector.nvim"
+  },
   "lazyvim.plugins.extras.lang.r": {
     "R.nvim": "R-nvim/R.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
@@ -330,7 +335,12 @@
     "vim-dadbod-completion": "kristijanhusak/vim-dadbod-completion",
     "vim-dadbod-ui": "kristijanhusak/vim-dadbod-ui"
   },
-  "lazyvim.plugins.extras.lang.svelte": {},
+  "lazyvim.plugins.extras.lang.svelte": {
+    "conform.nvim": "stevearc/conform.nvim",
+    "mason.nvim": "mason-org/mason.nvim",
+    "nvim-lspconfig": "neovim/nvim-lspconfig",
+    "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
+  },
   "lazyvim.plugins.extras.lang.tailwind": {
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
@@ -352,7 +362,21 @@
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
-  "lazyvim.plugins.extras.lang.typescript": {},
+  "lazyvim.plugins.extras.lang.typescript": {
+    "mason.nvim": "mason-org/mason.nvim",
+    "nvim-lspconfig": "neovim/nvim-lspconfig"
+  },
+  "lazyvim.plugins.extras.lang.typescript.biome": {
+    "nvim-lspconfig": "neovim/nvim-lspconfig"
+  },
+  "lazyvim.plugins.extras.lang.typescript.oxc": {
+    "mason.nvim": "mason-org/mason.nvim",
+    "nvim-lspconfig": "neovim/nvim-lspconfig"
+  },
+  "lazyvim.plugins.extras.lang.typescript.tsgo": {
+    "nvim-lspconfig": "neovim/nvim-lspconfig"
+  },
+  "lazyvim.plugins.extras.lang.typescript.vtsls": {},
   "lazyvim.plugins.extras.lang.typst": {
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter",
@@ -360,6 +384,7 @@
     "typst-preview.nvim": "chomosuke/typst-preview.nvim"
   },
   "lazyvim.plugins.extras.lang.vue": {
+    "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig",
     "nvim-treesitter": "nvim-treesitter/nvim-treesitter"
   },
