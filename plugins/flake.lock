@@ -632,11 +632,11 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1773535353,
-        "narHash": "sha256-SJ2fOO4zLKMwhWwdrutc/saun9hoSEkbm5iC8CgT3Ks=",
+        "lastModified": 1774139994,
+        "narHash": "sha256-VlKD3rnONTHZKOWj0XBL1sbgIhfvfx0g3hbg6ug1b+I=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "be9f0a3349d1d9af7f0d2d252227f0b69ebf789d",
+        "rev": "6902e42ef2f8c93c66e856880c42e72108377f0c",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1773970440,
-        "narHash": "sha256-S7DTbNkPA3uG8bYKnc24/cHWPMx8aXvcTP/sJGrGge4=",
+        "lastModified": 1774143223,
+        "narHash": "sha256-X8+uIU07KoltM2kyLo1GVGLl+XFLf4BY07KoHXPf/JE=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "054f28d5f99fc1f32d22fe6b7bb5f56ebb9bf995",
+        "rev": "af6b5e5924356f167bd5af0873f35704b44bb1e6",
         "type": "github"
       },
       "original": {
@@ -1980,11 +1980,11 @@
     "typst-preview.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1773366214,
-        "narHash": "sha256-7jOKLZ7WKBdX1Ljbvuuki4zmuZ86l62jAN8q2kSThDs=",
+        "lastModified": 1774136220,
+        "narHash": "sha256-E26QySwuTWBDDhf2lEh6mbxYWco4acfzHAYgAyuFFek=",
         "owner": "chomosuke",
         "repo": "typst-preview.nvim",
-        "rev": "325036ee145ca51d9efb145c09ac16bce3bc8b7d",
+        "rev": "a42c86ef1875100c2be92e90a637064efb0eab06",
         "type": "github"
       },
       "original": {
