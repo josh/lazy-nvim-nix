@@ -1929,11 +1929,11 @@
     "tokyonight.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1762332530,
-        "narHash": "sha256-4zfkv3egdWJ/GCWUehV0MAIXxsrGT82Wd1Qqj1SCGOk=",
+        "lastModified": 1774334166,
+        "narHash": "sha256-aEOjzZUx+pTG2u7VfvbwK70APc/vCM7d/PvcQxMrHKQ=",
         "owner": "folke",
         "repo": "tokyonight.nvim",
-        "rev": "5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd",
+        "rev": "73822773d5badaeba999206179a9105f9867ac59",
         "type": "github"
       },
       "original": {
