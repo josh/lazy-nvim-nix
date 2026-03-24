@@ -394,11 +394,11 @@
     "copilot.lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1773833856,
-        "narHash": "sha256-PULc9fiFljpomXDBY1HeJDttImQf7lYprpNEx5MZO4Y=",
+        "lastModified": 1774314527,
+        "narHash": "sha256-RzHCniW/n796uYdVA1LtHWBI3XxoPgmdw2N8RpUjPJQ=",
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "rev": "0552b44fceedf0c4cba2cd4953d3976633b2509a",
+        "rev": "538f15c4eaad8661389a4a0d1ace2d6e079fac29",
         "type": "github"
       },
       "original": {
@@ -853,11 +853,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1774312531,
-        "narHash": "sha256-mdL6LHMFfS+W/RAu3gX1s6LQwrjBgotfI34GvdW/s1M=",
+        "lastModified": 1774328833,
+        "narHash": "sha256-D9alpndvSq7m8kmfnfxsqKVBKbgTp96K+soYaps4WgM=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "8bbdb4b86d0c19c38e8953ffec7bf9f92e45d620",
+        "rev": "5a6efd6a55ccb6dcc75aa7de79fc00d1ea86b6fe",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
     "neoconf.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1774229640,
-        "narHash": "sha256-B1qCj6KJLMgANTdBF2LwnyOJqquRz1SJkGuViZHB79Y=",
+        "lastModified": 1774316032,
+        "narHash": "sha256-FyofPNBj2X8WqcB+4zYh011+ilzGX9UoITdEZB3FD/U=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "b349609b77fa5df6cceb887f45cc962e20ff42b6",
+        "rev": "535e184ccbf47e5ae7a52a27251d07b85f2ed739",
         "type": "github"
       },
       "original": {
