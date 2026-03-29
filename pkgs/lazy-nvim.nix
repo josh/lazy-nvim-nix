@@ -4,7 +4,6 @@
   runCommand,
   wrapNeovimUnstable,
   neovim-unwrapped,
-  neovimUtils,
   lazy-nvim-nix,
   bash,
   git,
@@ -39,26 +38,18 @@ let
     require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua opts})
   '';
 
-  config = neovimUtils.makeNeovimConfig {
-    # See pkgs/applications/editors/neovim/utils.nix # makeNeovimConfig
-
+  finalConfig = {
     withPython3 = false;
     withNodeJs = false;
     withRuby = false;
-
-    # Extra config to pass to
-    # pkgs/applications/editors/neovim/wrapper.nix
-
-    inherit customLuaRC;
+    luaRcContent = customLuaRC;
+    wrapperArgs = [
+      "--prefix"
+      "PATH"
+      ":"
+      extrasBinPath
+    ];
   };
-
-  # Unfortunately can't pass extraWrapperArgs to makeNeovimConfig
-  configExtra = {
-    mainProgram = "nvim";
-    wrapperArgs = lib.escapeShellArgs config.wrapperArgs + " '--prefix' 'PATH' : '${extrasBinPath}' ";
-  };
-
-  finalConfig = config // configExtra;
 in
 (wrapNeovimUnstable neovim-unwrapped finalConfig).overrideAttrs (
   finalAttrs: _previousAttrs: {
