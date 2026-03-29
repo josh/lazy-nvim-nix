@@ -77,7 +77,7 @@
     "harpoon".flake = false;
     "harpoon".url = "github:ThePrimeagen/harpoon/master";
     "haskell-snippets.nvim".flake = false;
-    "haskell-snippets.nvim".url = "github:mrcjkb/haskell-snippets.nvim/master";
+    "haskell-snippets.nvim".url = "github:mrcjkb/haskell-snippets.nvim/main";
     "haskell-tools.nvim".flake = false;
     "haskell-tools.nvim".url = "github:mrcjkb/haskell-tools.nvim/master";
     "helm-ls.nvim".flake = false;
