@@ -6,6 +6,7 @@
   neovim-unwrapped,
   lazy-nvim-nix,
   bash,
+  curl,
   git,
   fd,
   lua5_1,
@@ -23,6 +24,7 @@ let
 
   moreExtraPackages = [
     bash
+    curl
     fd
     git
     lua5_1
