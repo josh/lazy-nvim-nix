@@ -22,7 +22,6 @@
   jdk,
   lazygit,
   mermaid-cli,
-  nodePackages,
   nodejs_24,
   php83,
   php83Packages,
@@ -252,7 +251,6 @@ let
           go
           gzip
           jdk
-          nodePackages.npm
           nodejs_24
           php83
           php83Packages.composer
