@@ -12,6 +12,7 @@
   lua5_1,
   luajitPackages,
   ripgrep,
+  xdg-utils,
   spec ? [ ],
   extraPackages ? [ ],
 }:
@@ -30,6 +31,7 @@ let
     lua5_1
     luajitPackages.luarocks
     ripgrep
+    xdg-utils
   ]
   ++ extraPackages;
 
