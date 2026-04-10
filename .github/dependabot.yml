@@ -28,3 +28,4 @@ updates:
     directory: "/plugins"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 100
