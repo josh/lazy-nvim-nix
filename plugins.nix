@@ -144,7 +144,28 @@ let
 
   pluginNodes = builtins.removeAttrs lockfile.nodes [ "root" ];
 
-  plugins = builtins.mapAttrs buildPlugin pluginNodes;
+  # Re-key plugins by canonical plugin name (with dots preserved).
+  # Flake input names use hyphens (e.g. "octo-nvim") since dots are invalid
+  # in flake identifiers, but node.original.repo retains the real name
+  # (e.g. "octo.nvim"). Fall back to the flake input name when the repo
+  # name doesn't match (e.g. catppuccin's repo is just "nvim").
+  pluginName =
+    flakeName: node:
+    let
+      inherit (node.original) repo;
+    in
+    if repo == flakeName || builtins.match ".*[.].*" repo != null then repo else flakeName;
+
+  plugins = lib.mapAttrs' (
+    flakeName: node:
+    let
+      name = pluginName flakeName node;
+    in
+    {
+      inherit name;
+      value = buildPlugin name node;
+    }
+  ) pluginNodes;
 
   LazyVim-deps = builtins.fromJSON (builtins.readFile ./plugins/LazyVim.json);
 

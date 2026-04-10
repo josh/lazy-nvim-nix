@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "CopilotChat.nvim": {
+    "CopilotChat-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775508710,
@@ -51,7 +51,7 @@
         "type": "github"
       }
     },
-    "R.nvim": {
+    "R-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775681967,
@@ -68,7 +68,7 @@
         "type": "github"
       }
     },
-    "SchemaStore.nvim": {
+    "SchemaStore-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775855248,
@@ -85,7 +85,7 @@
         "type": "github"
       }
     },
-    "aerial.nvim": {
+    "aerial-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1772040062,
@@ -119,7 +119,7 @@
         "type": "github"
       }
     },
-    "avante.nvim": {
+    "avante-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774840849,
@@ -136,7 +136,7 @@
         "type": "github"
       }
     },
-    "baleia.nvim": {
+    "baleia-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1770137865,
@@ -153,7 +153,7 @@
         "type": "github"
       }
     },
-    "blink.cmp": {
+    "blink-cmp": {
       "flake": false,
       "locked": {
         "lastModified": 1775669094,
@@ -170,7 +170,7 @@
         "type": "github"
       }
     },
-    "bufferline.nvim": {
+    "bufferline-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1736870559,
@@ -204,7 +204,7 @@
         "type": "github"
       }
     },
-    "chezmoi.nvim": {
+    "chezmoi-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775702165,
@@ -221,7 +221,7 @@
         "type": "github"
       }
     },
-    "chezmoi.vim": {
+    "chezmoi-vim": {
       "flake": false,
       "locked": {
         "lastModified": 1761868736,
@@ -238,7 +238,7 @@
         "type": "github"
       }
     },
-    "clangd_extensions.nvim": {
+    "clangd_extensions-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775470856,
@@ -255,7 +255,7 @@
         "type": "github"
       }
     },
-    "claudecode.nvim": {
+    "claudecode-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1772649360,
@@ -272,7 +272,7 @@
         "type": "github"
       }
     },
-    "cmake-tools.nvim": {
+    "cmake-tools-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775767918,
@@ -340,7 +340,7 @@
         "type": "github"
       }
     },
-    "codeium.nvim": {
+    "codeium-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1746038916,
@@ -357,7 +357,7 @@
         "type": "github"
       }
     },
-    "conform.nvim": {
+    "conform-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1773119871,
@@ -391,7 +391,7 @@
         "type": "github"
       }
     },
-    "copilot.lua": {
+    "copilot-lua": {
       "flake": false,
       "locked": {
         "lastModified": 1775262308,
@@ -408,7 +408,7 @@
         "type": "github"
       }
     },
-    "crates.nvim": {
+    "crates-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775388120,
@@ -442,7 +442,7 @@
         "type": "github"
       }
     },
-    "dial.nvim": {
+    "dial-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1766327587,
@@ -459,7 +459,7 @@
         "type": "github"
       }
     },
-    "edgy.nvim": {
+    "edgy-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1761660730,
@@ -476,7 +476,7 @@
         "type": "github"
       }
     },
-    "flash.nvim": {
+    "flash-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1761664562,
@@ -493,7 +493,7 @@
         "type": "github"
       }
     },
-    "flit.nvim": {
+    "flit-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1760029478,
@@ -544,7 +544,7 @@
         "type": "github"
       }
     },
-    "gh.nvim": {
+    "gh-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1737474491,
@@ -561,7 +561,7 @@
         "type": "github"
       }
     },
-    "gitsigns.nvim": {
+    "gitsigns-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775641936,
@@ -578,7 +578,7 @@
         "type": "github"
       }
     },
-    "grug-far.nvim": {
+    "grug-far-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775766204,
@@ -612,7 +612,7 @@
         "type": "github"
       }
     },
-    "haskell-snippets.nvim": {
+    "haskell-snippets-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774428508,
@@ -629,7 +629,7 @@
         "type": "github"
       }
     },
-    "haskell-tools.nvim": {
+    "haskell-tools-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775780753,
@@ -646,7 +646,7 @@
         "type": "github"
       }
     },
-    "helm-ls.nvim": {
+    "helm-ls-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1773934114,
@@ -663,7 +663,7 @@
         "type": "github"
       }
     },
-    "inc-rename.nvim": {
+    "inc-rename-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1772487541,
@@ -680,7 +680,7 @@
         "type": "github"
       }
     },
-    "indent-blankline.nvim": {
+    "indent-blankline-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1771288550,
@@ -697,7 +697,7 @@
         "type": "github"
       }
     },
-    "kulala.nvim": {
+    "kulala-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1770586837,
@@ -714,7 +714,7 @@
         "type": "github"
       }
     },
-    "lazy.nvim": {
+    "lazy-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1765971162,
@@ -731,7 +731,7 @@
         "type": "github"
       }
     },
-    "lazydev.nvim": {
+    "lazydev-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1773496496,
@@ -748,7 +748,7 @@
         "type": "github"
       }
     },
-    "lean.nvim": {
+    "lean-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775832893,
@@ -765,7 +765,7 @@
         "type": "github"
       }
     },
-    "leap.nvim": {
+    "leap-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774966194,
@@ -782,7 +782,7 @@
         "type": "github"
       }
     },
-    "litee.nvim": {
+    "litee-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1717706633,
@@ -799,7 +799,7 @@
         "type": "github"
       }
     },
-    "lualine.nvim": {
+    "lualine-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775673214,
@@ -816,7 +816,7 @@
         "type": "github"
       }
     },
-    "mason-lspconfig.nvim": {
+    "mason-lspconfig-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775816811,
@@ -833,7 +833,24 @@
         "type": "github"
       }
     },
-    "mason-nvim-dap.nvim": {
+    "mason-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1775498906,
+        "narHash": "sha256-2R31RsqYChWW8nyu0ovryFd8sO9iWeqBnydL6NhRpQ0=",
+        "owner": "mason-org",
+        "repo": "mason.nvim",
+        "rev": "b03fb0f20bc1d43daf558cda981a2be22e73ac42",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mason-org",
+        "ref": "main",
+        "repo": "mason.nvim",
+        "type": "github"
+      }
+    },
+    "mason-nvim-dap-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1760924335,
@@ -867,24 +884,7 @@
         "type": "github"
       }
     },
-    "mason.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775498906,
-        "narHash": "sha256-2R31RsqYChWW8nyu0ovryFd8sO9iWeqBnydL6NhRpQ0=",
-        "owner": "mason-org",
-        "repo": "mason.nvim",
-        "rev": "b03fb0f20bc1d43daf558cda981a2be22e73ac42",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mason-org",
-        "ref": "main",
-        "repo": "mason.nvim",
-        "type": "github"
-      }
-    },
-    "mini.ai": {
+    "mini-ai": {
       "flake": false,
       "locked": {
         "lastModified": 1775224831,
@@ -901,7 +901,7 @@
         "type": "github"
       }
     },
-    "mini.animate": {
+    "mini-animate": {
       "flake": false,
       "locked": {
         "lastModified": 1775224831,
@@ -918,7 +918,7 @@
         "type": "github"
       }
     },
-    "mini.comment": {
+    "mini-comment": {
       "flake": false,
       "locked": {
         "lastModified": 1775224832,
@@ -935,7 +935,7 @@
         "type": "github"
       }
     },
-    "mini.diff": {
+    "mini-diff": {
       "flake": false,
       "locked": {
         "lastModified": 1775224833,
@@ -952,7 +952,7 @@
         "type": "github"
       }
     },
-    "mini.files": {
+    "mini-files": {
       "flake": false,
       "locked": {
         "lastModified": 1775747687,
@@ -969,7 +969,7 @@
         "type": "github"
       }
     },
-    "mini.hipatterns": {
+    "mini-hipatterns": {
       "flake": false,
       "locked": {
         "lastModified": 1775224834,
@@ -986,7 +986,7 @@
         "type": "github"
       }
     },
-    "mini.icons": {
+    "mini-icons": {
       "flake": false,
       "locked": {
         "lastModified": 1775224834,
@@ -1003,7 +1003,7 @@
         "type": "github"
       }
     },
-    "mini.indentscope": {
+    "mini-indentscope": {
       "flake": false,
       "locked": {
         "lastModified": 1775224834,
@@ -1020,7 +1020,7 @@
         "type": "github"
       }
     },
-    "mini.move": {
+    "mini-move": {
       "flake": false,
       "locked": {
         "lastModified": 1775224835,
@@ -1037,7 +1037,7 @@
         "type": "github"
       }
     },
-    "mini.pairs": {
+    "mini-pairs": {
       "flake": false,
       "locked": {
         "lastModified": 1775224835,
@@ -1054,7 +1054,7 @@
         "type": "github"
       }
     },
-    "mini.snippets": {
+    "mini-snippets": {
       "flake": false,
       "locked": {
         "lastModified": 1775224836,
@@ -1071,7 +1071,7 @@
         "type": "github"
       }
     },
-    "mini.starter": {
+    "mini-starter": {
       "flake": false,
       "locked": {
         "lastModified": 1775224836,
@@ -1088,7 +1088,7 @@
         "type": "github"
       }
     },
-    "mini.surround": {
+    "mini-surround": {
       "flake": false,
       "locked": {
         "lastModified": 1775224836,
@@ -1105,7 +1105,7 @@
         "type": "github"
       }
     },
-    "neo-tree.nvim": {
+    "neo-tree-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775291313,
@@ -1122,7 +1122,7 @@
         "type": "github"
       }
     },
-    "neoconf.nvim": {
+    "neoconf-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775784907,
@@ -1139,7 +1139,7 @@
         "type": "github"
       }
     },
-    "neodev.nvim": {
+    "neodev-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1720260306,
@@ -1173,7 +1173,7 @@
         "type": "github"
       }
     },
-    "noice.nvim": {
+    "noice-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1762187624,
@@ -1190,7 +1190,7 @@
         "type": "github"
       }
     },
-    "none-ls.nvim": {
+    "none-ls-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775508426,
@@ -1207,7 +1207,7 @@
         "type": "github"
       }
     },
-    "nui.nvim": {
+    "nui-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1749392788,
@@ -1546,7 +1546,7 @@
         "type": "github"
       }
     },
-    "octo.nvim": {
+    "octo-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775497847,
@@ -1580,7 +1580,7 @@
         "type": "github"
       }
     },
-    "outline.nvim": {
+    "outline-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774765875,
@@ -1597,7 +1597,7 @@
         "type": "github"
       }
     },
-    "overseer.nvim": {
+    "overseer-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775079795,
@@ -1614,7 +1614,7 @@
         "type": "github"
       }
     },
-    "persistence.nvim": {
+    "persistence-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1761664494,
@@ -1631,7 +1631,7 @@
         "type": "github"
       }
     },
-    "plenary.nvim": {
+    "plenary-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775800366,
@@ -1648,7 +1648,7 @@
         "type": "github"
       }
     },
-    "project.nvim": {
+    "project-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1680567592,
@@ -1665,7 +1665,7 @@
         "type": "github"
       }
     },
-    "refactoring.nvim": {
+    "refactoring-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1761078251,
@@ -1684,78 +1684,78 @@
     },
     "root": {
       "inputs": {
-        "CopilotChat.nvim": "CopilotChat.nvim",
+        "CopilotChat-nvim": "CopilotChat-nvim",
         "LazyVim": "LazyVim",
         "LuaSnip": "LuaSnip",
-        "R.nvim": "R.nvim",
-        "SchemaStore.nvim": "SchemaStore.nvim",
-        "aerial.nvim": "aerial.nvim",
+        "R-nvim": "R-nvim",
+        "SchemaStore-nvim": "SchemaStore-nvim",
+        "aerial-nvim": "aerial-nvim",
         "alpha-nvim": "alpha-nvim",
-        "avante.nvim": "avante.nvim",
-        "baleia.nvim": "baleia.nvim",
-        "blink.cmp": "blink.cmp",
-        "bufferline.nvim": "bufferline.nvim",
+        "avante-nvim": "avante-nvim",
+        "baleia-nvim": "baleia-nvim",
+        "blink-cmp": "blink-cmp",
+        "bufferline-nvim": "bufferline-nvim",
         "catppuccin": "catppuccin",
-        "chezmoi.nvim": "chezmoi.nvim",
-        "chezmoi.vim": "chezmoi.vim",
-        "clangd_extensions.nvim": "clangd_extensions.nvim",
-        "claudecode.nvim": "claudecode.nvim",
-        "cmake-tools.nvim": "cmake-tools.nvim",
+        "chezmoi-nvim": "chezmoi-nvim",
+        "chezmoi-vim": "chezmoi-vim",
+        "clangd_extensions-nvim": "clangd_extensions-nvim",
+        "claudecode-nvim": "claudecode-nvim",
+        "cmake-tools-nvim": "cmake-tools-nvim",
         "cmp-buffer": "cmp-buffer",
         "cmp-nvim-lsp": "cmp-nvim-lsp",
         "cmp-path": "cmp-path",
-        "codeium.nvim": "codeium.nvim",
-        "conform.nvim": "conform.nvim",
+        "codeium-nvim": "codeium-nvim",
+        "conform-nvim": "conform-nvim",
         "conjure": "conjure",
-        "copilot.lua": "copilot.lua",
-        "crates.nvim": "crates.nvim",
+        "copilot-lua": "copilot-lua",
+        "crates-nvim": "crates-nvim",
         "dashboard-nvim": "dashboard-nvim",
-        "dial.nvim": "dial.nvim",
-        "edgy.nvim": "edgy.nvim",
-        "flash.nvim": "flash.nvim",
-        "flit.nvim": "flit.nvim",
+        "dial-nvim": "dial-nvim",
+        "edgy-nvim": "edgy-nvim",
+        "flash-nvim": "flash-nvim",
+        "flit-nvim": "flit-nvim",
         "friendly-snippets": "friendly-snippets",
         "fzf-lua": "fzf-lua",
-        "gh.nvim": "gh.nvim",
-        "gitsigns.nvim": "gitsigns.nvim",
-        "grug-far.nvim": "grug-far.nvim",
+        "gh-nvim": "gh-nvim",
+        "gitsigns-nvim": "gitsigns-nvim",
+        "grug-far-nvim": "grug-far-nvim",
         "harpoon": "harpoon",
-        "haskell-snippets.nvim": "haskell-snippets.nvim",
-        "haskell-tools.nvim": "haskell-tools.nvim",
-        "helm-ls.nvim": "helm-ls.nvim",
-        "inc-rename.nvim": "inc-rename.nvim",
-        "indent-blankline.nvim": "indent-blankline.nvim",
-        "kulala.nvim": "kulala.nvim",
-        "lazy.nvim": "lazy.nvim",
-        "lazydev.nvim": "lazydev.nvim",
-        "lean.nvim": "lean.nvim",
-        "leap.nvim": "leap.nvim",
-        "litee.nvim": "litee.nvim",
-        "lualine.nvim": "lualine.nvim",
-        "mason-lspconfig.nvim": "mason-lspconfig.nvim",
-        "mason-nvim-dap.nvim": "mason-nvim-dap.nvim",
+        "haskell-snippets-nvim": "haskell-snippets-nvim",
+        "haskell-tools-nvim": "haskell-tools-nvim",
+        "helm-ls-nvim": "helm-ls-nvim",
+        "inc-rename-nvim": "inc-rename-nvim",
+        "indent-blankline-nvim": "indent-blankline-nvim",
+        "kulala-nvim": "kulala-nvim",
+        "lazy-nvim": "lazy-nvim",
+        "lazydev-nvim": "lazydev-nvim",
+        "lean-nvim": "lean-nvim",
+        "leap-nvim": "leap-nvim",
+        "litee-nvim": "litee-nvim",
+        "lualine-nvim": "lualine-nvim",
+        "mason-lspconfig-nvim": "mason-lspconfig-nvim",
+        "mason-nvim": "mason-nvim",
+        "mason-nvim-dap-nvim": "mason-nvim-dap-nvim",
         "mason-registry": "mason-registry",
-        "mason.nvim": "mason.nvim",
-        "mini.ai": "mini.ai",
-        "mini.animate": "mini.animate",
-        "mini.comment": "mini.comment",
-        "mini.diff": "mini.diff",
-        "mini.files": "mini.files",
-        "mini.hipatterns": "mini.hipatterns",
-        "mini.icons": "mini.icons",
-        "mini.indentscope": "mini.indentscope",
-        "mini.move": "mini.move",
-        "mini.pairs": "mini.pairs",
-        "mini.snippets": "mini.snippets",
-        "mini.starter": "mini.starter",
-        "mini.surround": "mini.surround",
-        "neo-tree.nvim": "neo-tree.nvim",
-        "neoconf.nvim": "neoconf.nvim",
-        "neodev.nvim": "neodev.nvim",
+        "mini-ai": "mini-ai",
+        "mini-animate": "mini-animate",
+        "mini-comment": "mini-comment",
+        "mini-diff": "mini-diff",
+        "mini-files": "mini-files",
+        "mini-hipatterns": "mini-hipatterns",
+        "mini-icons": "mini-icons",
+        "mini-indentscope": "mini-indentscope",
+        "mini-move": "mini-move",
+        "mini-pairs": "mini-pairs",
+        "mini-snippets": "mini-snippets",
+        "mini-starter": "mini-starter",
+        "mini-surround": "mini-surround",
+        "neo-tree-nvim": "neo-tree-nvim",
+        "neoconf-nvim": "neoconf-nvim",
+        "neodev-nvim": "neodev-nvim",
         "neotest": "neotest",
-        "noice.nvim": "noice.nvim",
-        "none-ls.nvim": "none-ls.nvim",
-        "nui.nvim": "nui.nvim",
+        "noice-nvim": "noice-nvim",
+        "none-ls-nvim": "none-ls-nvim",
+        "nui-nvim": "nui-nvim",
         "nvim-ansible": "nvim-ansible",
         "nvim-cmp": "nvim-cmp",
         "nvim-dap": "nvim-dap",
@@ -1775,26 +1775,26 @@
         "nvim-treesitter-textobjects": "nvim-treesitter-textobjects",
         "nvim-ts-autotag": "nvim-ts-autotag",
         "nvim-ts-context-commentstring": "nvim-ts-context-commentstring",
-        "octo.nvim": "octo.nvim",
+        "octo-nvim": "octo-nvim",
         "one-small-step-for-vimkind": "one-small-step-for-vimkind",
-        "outline.nvim": "outline.nvim",
-        "overseer.nvim": "overseer.nvim",
-        "persistence.nvim": "persistence.nvim",
-        "plenary.nvim": "plenary.nvim",
-        "project.nvim": "project.nvim",
-        "refactoring.nvim": "refactoring.nvim",
+        "outline-nvim": "outline-nvim",
+        "overseer-nvim": "overseer-nvim",
+        "persistence-nvim": "persistence-nvim",
+        "plenary-nvim": "plenary-nvim",
+        "project-nvim": "project-nvim",
+        "refactoring-nvim": "refactoring-nvim",
         "rustaceanvim": "rustaceanvim",
-        "smear-cursor.nvim": "smear-cursor.nvim",
-        "snacks.nvim": "snacks.nvim",
+        "smear-cursor-nvim": "smear-cursor-nvim",
+        "snacks-nvim": "snacks-nvim",
         "supermaven-nvim": "supermaven-nvim",
-        "telescope.nvim": "telescope.nvim",
+        "telescope-nvim": "telescope-nvim",
         "telescope_hoogle": "telescope_hoogle",
-        "todo-comments.nvim": "todo-comments.nvim",
-        "tokyonight.nvim": "tokyonight.nvim",
-        "trouble.nvim": "trouble.nvim",
-        "ts-comments.nvim": "ts-comments.nvim",
-        "typst-preview.nvim": "typst-preview.nvim",
-        "venv-selector.nvim": "venv-selector.nvim",
+        "todo-comments-nvim": "todo-comments-nvim",
+        "tokyonight-nvim": "tokyonight-nvim",
+        "trouble-nvim": "trouble-nvim",
+        "ts-comments-nvim": "ts-comments-nvim",
+        "typst-preview-nvim": "typst-preview-nvim",
+        "venv-selector-nvim": "venv-selector-nvim",
         "vim-dadbod": "vim-dadbod",
         "vim-dadbod-completion": "vim-dadbod-completion",
         "vim-dadbod-ui": "vim-dadbod-ui",
@@ -1803,8 +1803,8 @@
         "vim-repeat": "vim-repeat",
         "vim-startuptime": "vim-startuptime",
         "vimtex": "vimtex",
-        "which-key.nvim": "which-key.nvim",
-        "yanky.nvim": "yanky.nvim"
+        "which-key-nvim": "which-key-nvim",
+        "yanky-nvim": "yanky-nvim"
       }
     },
     "rustaceanvim": {
@@ -1824,7 +1824,7 @@
         "type": "github"
       }
     },
-    "smear-cursor.nvim": {
+    "smear-cursor-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1764286602,
@@ -1841,7 +1841,7 @@
         "type": "github"
       }
     },
-    "snacks.nvim": {
+    "snacks-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774083139,
@@ -1875,7 +1875,7 @@
         "type": "github"
       }
     },
-    "telescope.nvim": {
+    "telescope-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1775811923,
@@ -1909,7 +1909,7 @@
         "type": "github"
       }
     },
-    "todo-comments.nvim": {
+    "todo-comments-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1762764922,
@@ -1926,7 +1926,7 @@
         "type": "github"
       }
     },
-    "tokyonight.nvim": {
+    "tokyonight-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774363414,
@@ -1943,7 +1943,7 @@
         "type": "github"
       }
     },
-    "trouble.nvim": {
+    "trouble-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1761919011,
@@ -1960,7 +1960,7 @@
         "type": "github"
       }
     },
-    "ts-comments.nvim": {
+    "ts-comments-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1761664561,
@@ -1977,7 +1977,7 @@
         "type": "github"
       }
     },
-    "typst-preview.nvim": {
+    "typst-preview-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774911187,
@@ -1994,7 +1994,7 @@
         "type": "github"
       }
     },
-    "venv-selector.nvim": {
+    "venv-selector-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1774981628,
@@ -2147,7 +2147,7 @@
         "type": "github"
       }
     },
-    "which-key.nvim": {
+    "which-key-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1761664528,
@@ -2164,7 +2164,7 @@
         "type": "github"
       }
     },
-    "yanky.nvim": {
+    "yanky-nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1773303356,
