@@ -1244,11 +1244,11 @@
     "nvim-cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1769136444,
-        "narHash": "sha256-/jk8pM7VmZ6mr7BspZjslMHNmCGZ8K/csmALo/Cj1hQ=",
+        "lastModified": 1774452539,
+        "narHash": "sha256-uzfM8DLRKshESsYmUAbSfXtos9COWpe/fVkxNJPIUFw=",
         "owner": "hrsh7th",
         "repo": "nvim-cmp",
-        "rev": "da88697d7f45d16852c6b2769dc52387d1ddc45f",
+        "rev": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca",
         "type": "github"
       },
       "original": {
