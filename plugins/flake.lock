@@ -428,11 +428,11 @@
     "dashboard-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1756627730,
-        "narHash": "sha256-0eXKel2IVbDcJqBtr2g8HliqLG8GS3QHqXhH/2CyhkA=",
+        "lastModified": 1775187038,
+        "narHash": "sha256-gT+RSBQmmJb+Z34qG+ibRuzbKsgpiMzxUv76ItEQIEk=",
         "owner": "nvimdev",
         "repo": "dashboard-nvim",
-        "rev": "0775e567b6c0be96d01a61795f7b64c1758262f6",
+        "rev": "62a10d9d55132b338dd742afc3c8a2683f3dd426",
         "type": "github"
       },
       "original": {
