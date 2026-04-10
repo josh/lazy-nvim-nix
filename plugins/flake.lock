@@ -1532,11 +1532,11 @@
     "nvim-ts-context-commentstring": {
       "flake": false,
       "locked": {
-        "lastModified": 1733574156,
-        "narHash": "sha256-AjDM3+n4+lNBQi8P2Yrh0Ab06uYCndBQT9TX36rDbOM=",
+        "lastModified": 1775325282,
+        "narHash": "sha256-UsfhWgOJ+SpqyA8D6Pckq5w1n+qVjK51K0rXYQvjqMw=",
         "owner": "JoosepAlviste",
         "repo": "nvim-ts-context-commentstring",
-        "rev": "1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f",
+        "rev": "6141a40173c6efa98242dc951ed4b6f892c97027",
         "type": "github"
       },
       "original": {
