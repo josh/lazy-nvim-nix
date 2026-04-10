@@ -1363,11 +1363,11 @@
     "nvim-metals": {
       "flake": false,
       "locked": {
-        "lastModified": 1774180367,
-        "narHash": "sha256-FM66C8aK9EKeaThqqxT8nqYciu9hg8ZRqTHkZWY6eZ4=",
+        "lastModified": 1775823645,
+        "narHash": "sha256-RY+UhnwIjWuMU9WOG4a1JvBiJ9RWZ2fUxFDnuzDR+jw=",
         "owner": "scalameta",
         "repo": "nvim-metals",
-        "rev": "48b9d29a4e1370495db4d4b5ccbc17b285bc98eb",
+        "rev": "6970d6036218db6545f3c295d0106cc8de6d7161",
         "type": "github"
       },
       "original": {
