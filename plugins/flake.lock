@@ -190,11 +190,11 @@
     "catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1774177767,
-        "narHash": "sha256-NuwqxzZQ6YWHZdWYnCWDSlFIeagTU+Q4JdIHy25VR3A=",
+        "lastModified": 1775518241,
+        "narHash": "sha256-qs74a/h9nUoI1uZ7Rlh8krgWkTaIh4SaHshhPiDwBis=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "a7788416689dbefea659d9e9415c87926b0ba5d8",
+        "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
         "type": "github"
       },
       "original": {
@@ -632,16 +632,16 @@
     "haskell-tools.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1774299867,
-        "narHash": "sha256-P+HEvNYwzkjxVYK1ZeRho5YEVSMewdfkrQVACr0yYX8=",
+        "lastModified": 1775780753,
+        "narHash": "sha256-tv2P+cFGhLYSq9STVea6L9MO3AsJRgkDqKqpnJf/j+M=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "19dbc9c7ab45289f9864d7cd0022d6fc7d20ab88",
+        "rev": "11e1b231be7536f0d65e2e933d2135dc0bf69718",
         "type": "github"
       },
       "original": {
         "owner": "mrcjkb",
-        "ref": "master",
+        "ref": "main",
         "repo": "haskell-tools.nvim",
         "type": "github"
       }
