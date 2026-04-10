@@ -37,11 +37,11 @@
     "LuaSnip": {
       "flake": false,
       "locked": {
-        "lastModified": 1774090726,
-        "narHash": "sha256-diZO1on0rlSp6XuNGN2lNa85rhkNe1QQOejJD+LKkZk=",
+        "lastModified": 1775425605,
+        "narHash": "sha256-faK+6aY+RDZ3imFfPIDL3ZMurDjq8NIHMPxmp4y6FdI=",
         "owner": "L3MON4D3",
         "repo": "LuaSnip",
-        "rev": "642b0c595e11608b4c18219e93b88d7637af27bc",
+        "rev": "a62e1083a3cfe8b6b206e7d3d33a51091df25357",
         "type": "github"
       },
       "original": {
