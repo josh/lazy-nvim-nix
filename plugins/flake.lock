@@ -530,11 +530,11 @@
     "fzf-lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1775789312,
-        "narHash": "sha256-9j1rCw5UNVSLXK5mzGqWKKCNQ7KF8c74/6MgjVmA9JU=",
+        "lastModified": 1775863183,
+        "narHash": "sha256-LcAXKeUGQ+Lev3bNgJdYGo2sKsMrcdF1hFTAyzR7hpM=",
         "owner": "ibhagwan",
         "repo": "fzf-lua",
-        "rev": "eee072d89ccdc0a4627bf67d0757d2e4981c7292",
+        "rev": "657c1bbb7357c61e26a20d868b53a460b05c18c0",
         "type": "github"
       },
       "original": {
@@ -632,11 +632,11 @@
     "haskell-tools-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775780753,
-        "narHash": "sha256-tv2P+cFGhLYSq9STVea6L9MO3AsJRgkDqKqpnJf/j+M=",
+        "lastModified": 1775867102,
+        "narHash": "sha256-vpyiQr2n70Iwa7IEMsF/RKmS3QnZjDf1glk0v7LuD7k=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "11e1b231be7536f0d65e2e933d2135dc0bf69718",
+        "rev": "d48ce2f652aa2d261972fcb1bfb77dcd51c5d109",
         "type": "github"
       },
       "original": {
@@ -1810,11 +1810,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775781822,
-        "narHash": "sha256-uPyJNzvX0K6zjko0RCh/eGixkcg2H208eV3SAp55HqY=",
+        "lastModified": 1775868111,
+        "narHash": "sha256-qBrv8lqNWYQB7Kzj6RERIfq8vCu/Tt01J+o+UHbyrrs=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "3eca3979c37a55f39119631bbd8a472ea622fc0c",
+        "rev": "58653e9a8b3008e32d38b46165c1dbd1a96763ae",
         "type": "github"
       },
       "original": {
