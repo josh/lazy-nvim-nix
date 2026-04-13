@@ -241,11 +241,11 @@
     "clangd_extensions-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775470856,
-        "narHash": "sha256-IEv6sOa/DFDD+rkBnGM98sJ8aGsazHxrhxt7iWbSTVM=",
+        "lastModified": 1776072526,
+        "narHash": "sha256-KpYGuk+xA2Fk2DrsmGA2U8lsyaDow86Q7cKSx8YLIR8=",
         "owner": "p00f",
         "repo": "clangd_extensions.nvim",
-        "rev": "872893cb061044a4cc7ced59c0f2fe2d70db4382",
+        "rev": "78c2ecd659d54972be17aa6ba2deac3c53223b80",
         "type": "github"
       },
       "original": {
