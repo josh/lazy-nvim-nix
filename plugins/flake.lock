@@ -105,11 +105,11 @@
     "alpha-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1776037454,
-        "narHash": "sha256-1eT69nG1yb0QIwdJyNkX61Kcq3NUlLFNgPBxW6v7qTg=",
+        "lastModified": 1776157179,
+        "narHash": "sha256-LfGIDjFN8jECnKrnOQQPyOsWMPQaFidfkgjYS93srpA=",
         "owner": "goolord",
         "repo": "alpha-nvim",
-        "rev": "fdb675257c7317fd068fe3224465781ad335751d",
+        "rev": "7563da4a861ee6b3ed674d0ee5c5c0bd19383a38",
         "type": "github"
       },
       "original": {
