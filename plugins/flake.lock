@@ -1827,11 +1827,11 @@
     "smear-cursor-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1764286602,
-        "narHash": "sha256-Uz79FiDF1EF/IPj35PImkRuudZBARWDUEEbTdT4/Tbs=",
+        "lastModified": 1776268063,
+        "narHash": "sha256-hL0lXzkFxR7qiXzStrmY+gR+ql/A6PR8eCV310gEaGs=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "c85bdbb25db096fbcf616bc4e1357bd61fe2c199",
+        "rev": "9e9378d6ee34bb3782e0e8c63d9ec8ca618b479b",
         "type": "github"
       },
       "original": {
