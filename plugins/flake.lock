@@ -3,11 +3,11 @@
     "CopilotChat-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775508710,
-        "narHash": "sha256-1dLCHn6XZraVkQhW6ort5oxHuzxcCEnxVY/fONn2pLQ=",
+        "lastModified": 1776328822,
+        "narHash": "sha256-ADf4hYTLUlI9ukHWeZ+nrAVuL0B1Qqh+DYHmnbsmJiU=",
         "owner": "CopilotC-Nvim",
         "repo": "CopilotChat.nvim",
-        "rev": "0b3133ffbb470b1616c47170b544d0b9a3bbcf5b",
+        "rev": "ee142480a5f13226d1d2e6b9bff1642f0b175795",
         "type": "github"
       },
       "original": {
