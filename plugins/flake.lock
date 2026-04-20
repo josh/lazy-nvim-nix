@@ -972,11 +972,11 @@
     "mini-hipatterns": {
       "flake": false,
       "locked": {
-        "lastModified": 1775224834,
-        "narHash": "sha256-mHwVLqyvmt7Cw4qZ+iVHK3ODtsaoZ4XUVcEwiNieTxk=",
+        "lastModified": 1776444941,
+        "narHash": "sha256-As3KIoOPhm/KAVOp0Gw1hPIOB7sI47nu2am+4gpPyo4=",
         "owner": "nvim-mini",
         "repo": "mini.hipatterns",
-        "rev": "a3ffba45e4119917b254c372df82e79f7d8c4aad",
+        "rev": "9eff319bbe66adfaf781a0d0e174baa08ba94909",
         "type": "github"
       },
       "original": {
