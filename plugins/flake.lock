@@ -836,11 +836,11 @@
     "mason-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775498906,
-        "narHash": "sha256-2R31RsqYChWW8nyu0ovryFd8sO9iWeqBnydL6NhRpQ0=",
+        "lastModified": 1776781849,
+        "narHash": "sha256-Oq93aLhK/fowReSAeg9nnXnLrpTpBek0j5uNX1FW1Vs=",
         "owner": "mason-org",
         "repo": "mason.nvim",
-        "rev": "b03fb0f20bc1d43daf558cda981a2be22e73ac42",
+        "rev": "12ddd182d9efbdc848b540f16484a583d52da0fb",
         "type": "github"
       },
       "original": {
