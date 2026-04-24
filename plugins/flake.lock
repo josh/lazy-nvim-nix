@@ -819,11 +819,11 @@
     "mason-lspconfig-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775816811,
-        "narHash": "sha256-2To5AC3lurTK5NklB6ufMRHCbf3mw1D794Kh0UBGJz8=",
+        "lastModified": 1776957268,
+        "narHash": "sha256-wWoRUg2nvmqaEWxjYEOk1q+jQyKupgJi2LubhewcVCw=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "0a3b42c3e503df87aef6d6513e13148381495c3a",
+        "rev": "0c2823e0418f3d9230ff8b201c976e84de1cb401",
         "type": "github"
       },
       "original": {
