@@ -751,11 +751,11 @@
     "lean-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1777034832,
-        "narHash": "sha256-pLJoOGAIkzUtE6Fqob1Fo3egqLbB8OiuSyGM7jezBOU=",
+        "lastModified": 1777243326,
+        "narHash": "sha256-omf0Ufcs7zsOq/Q23iTgfrLmlaZSPJRiWoQ4Hq14FRQ=",
         "owner": "Julian",
         "repo": "lean.nvim",
-        "rev": "b7f567577aff0eb298d5702cf09f2b9ad451277d",
+        "rev": "25b256012e23690392ad9bb4d9defbe5c218835f",
         "type": "github"
       },
       "original": {
