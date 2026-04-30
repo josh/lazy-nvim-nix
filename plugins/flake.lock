@@ -1668,11 +1668,11 @@
     "refactoring-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1777405053,
-        "narHash": "sha256-TE2vnO/TYbqLfxxIASjrVRbU2jsYgglxVrNDpWRSPiM=",
+        "lastModified": 1777515865,
+        "narHash": "sha256-RKQlDZ+RhI4mJdrYv5Pt25ziTF/jSllvVFmUId0RHoo=",
         "owner": "ThePrimeagen",
         "repo": "refactoring.nvim",
-        "rev": "bcd819d06d88fa78e14f49a40f91c849bdf866bf",
+        "rev": "7bcbbda68c4043d1224f0bb49cfaf0b1628bc07e",
         "type": "github"
       },
       "original": {
