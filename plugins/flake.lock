@@ -887,11 +887,11 @@
     "mini-ai": {
       "flake": false,
       "locked": {
-        "lastModified": 1775224831,
-        "narHash": "sha256-vrCIUPR3+oHpXyaYI4qEXcOvQQaE9lexWqB0XGalHYY=",
+        "lastModified": 1777909103,
+        "narHash": "sha256-ZeSFevcispnLP+yWgJ7VzAmCEJz6vIRtyP16fcoGCMI=",
         "owner": "nvim-mini",
         "repo": "mini.ai",
-        "rev": "43eb2074843950a3a25aae56a5f41362ec043bfa",
+        "rev": "7e10ce8468c0fce4f527ae2c0e5c484f7667f73d",
         "type": "github"
       },
       "original": {
