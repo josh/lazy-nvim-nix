@@ -615,11 +615,11 @@
     "haskell-snippets-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1776763094,
-        "narHash": "sha256-Y4ZNYNb7shMQ8lTAx2/8De9KgbYq8Pf+6yQhHX6a4Ck=",
+        "lastModified": 1778517334,
+        "narHash": "sha256-BygC8L0Jau5/7ljHfD9LJO18jhXvIq1SSvtyb7bNv40=",
         "owner": "mrcjkb",
         "repo": "haskell-snippets.nvim",
-        "rev": "11868addce601fdeed56097d48ff42abeec3dfe8",
+        "rev": "f7482c1097007e8bac0502c0644e375a12ae72ba",
         "type": "github"
       },
       "original": {
