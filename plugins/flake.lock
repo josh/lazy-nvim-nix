@@ -921,11 +921,11 @@
     "mini-comment": {
       "flake": false,
       "locked": {
-        "lastModified": 1778413233,
-        "narHash": "sha256-TLs9iambZmCmGZGv739zUKkGQ4fO1UFavpdqbGHfzNY=",
+        "lastModified": 1778587485,
+        "narHash": "sha256-kNELUIgJxiEJHj+evZt0aG4+Nvzdow1NpZOI2M2xTaU=",
         "owner": "nvim-mini",
         "repo": "mini.comment",
-        "rev": "bd086159fd7dd05ec3f86acf7729f130c3ce9673",
+        "rev": "fc87ba6554f182161d9a4bab5017c575571f000f",
         "type": "github"
       },
       "original": {
