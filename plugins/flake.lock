@@ -1023,11 +1023,11 @@
     "mini-move": {
       "flake": false,
       "locked": {
-        "lastModified": 1775224835,
-        "narHash": "sha256-+OTW77wcX1I2Ua5W6O7tX/4J22RLTxZ2YviV1Atr7OI=",
+        "lastModified": 1778587488,
+        "narHash": "sha256-f+MHsSCR9Y2gVV7X/o+HIVzbwZZVG7eL7Q9XILbqAsc=",
         "owner": "nvim-mini",
         "repo": "mini.move",
-        "rev": "74d140143b1bb905c3d0aebcfc2f216fd237080e",
+        "rev": "a776027e68fe763987a0132d59877d651a7c0130",
         "type": "github"
       },
       "original": {
