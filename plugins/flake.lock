@@ -904,11 +904,11 @@
     "mini-animate": {
       "flake": false,
       "locked": {
-        "lastModified": 1778175985,
-        "narHash": "sha256-gEMYmOul5mnPJ3ik4lkxjs01s7FzG4Z5d4TtOlw8LQE=",
+        "lastModified": 1778587484,
+        "narHash": "sha256-bYAIaRB2KpSwTyWVVvK7Yu+1sLPqQ7wMdfI860bGano=",
         "owner": "nvim-mini",
         "repo": "mini.animate",
-        "rev": "552c5d4998678eaffaa0a10cf5105823a6fdfcd4",
+        "rev": "eee9056eecd12933dfb09b710b7f32c10200e9ea",
         "type": "github"
       },
       "original": {
