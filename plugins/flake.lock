@@ -1006,11 +1006,11 @@
     "mini-indentscope": {
       "flake": false,
       "locked": {
-        "lastModified": 1775224834,
-        "narHash": "sha256-kbydWyaslRWTvKJMsuiMgIQi/FroPhBUke4DeRWLmQI=",
+        "lastModified": 1778587487,
+        "narHash": "sha256-VS0/P9xstXtG35BQ3B0AfCFD5yTaJixe9igCZNLZfZU=",
         "owner": "nvim-mini",
         "repo": "mini.indentscope",
-        "rev": "e0601f75aa5137a5a13bb92a988c9a300f5bd3de",
+        "rev": "ace9b4e503cb095b9a3f6442c909d117c4aa8d0e",
         "type": "github"
       },
       "original": {
