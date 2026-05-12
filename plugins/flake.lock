@@ -1193,11 +1193,11 @@
     "none-ls-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1777433273,
-        "narHash": "sha256-tplnARSDuc9dkaai6/rm2kS+5jTWmVQXWvJ+Ij9HmQs=",
+        "lastModified": 1778605154,
+        "narHash": "sha256-gMncplPHwy6MgQQRU/Niqh4YR3vfas34Ehz6p1PUOBQ=",
         "owner": "nvimtools",
         "repo": "none-ls.nvim",
-        "rev": "241ff8214b4ec051eb51e74a61ff729c0271b429",
+        "rev": "f9d557ac7cd28a3a993b5ea49716498bd540b01f",
         "type": "github"
       },
       "original": {
