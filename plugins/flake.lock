@@ -1600,11 +1600,11 @@
     "overseer-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775079795,
-        "narHash": "sha256-f7uEyEAh+iVdtY9OtyfnmsGAN/XeCOFv30p0y493A+g=",
+        "lastModified": 1778775082,
+        "narHash": "sha256-hxVnBKiyIFtb2PkRHOlClVXSJ20Gtg2w7QzuwpiVqsQ=",
         "owner": "stevearc",
         "repo": "overseer.nvim",
-        "rev": "f818eefff81f4b12fb7cf236f1b6c16768a2fcbc",
+        "rev": "3d0c7e7bbfe1a1c6f9bfecd0af8709171a97df71",
         "type": "github"
       },
       "original": {
