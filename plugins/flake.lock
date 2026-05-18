@@ -20,11 +20,11 @@
     "LazyVim": {
       "flake": false,
       "locked": {
-        "lastModified": 1777227427,
-        "narHash": "sha256-SF0u7mGPxNgDXx/K36irU/I3FMCZjHlO52/NBp5gfTU=",
+        "lastModified": 1779100439,
+        "narHash": "sha256-LBd1UrfUnwzLRmIfLCvw0lAF4k62irLCXyKHNTiuxT8=",
         "owner": "LazyVim",
         "repo": "LazyVim",
-        "rev": "7c1301b89563198d1b2a295e673f6a7205adc076",
+        "rev": "2dc527e511c2afeda10049311d44720cb46d80c1",
         "type": "github"
       },
       "original": {
