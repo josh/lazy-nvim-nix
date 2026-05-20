@@ -1312,11 +1312,11 @@
     "nvim-jdtls": {
       "flake": false,
       "locked": {
-        "lastModified": 1770754908,
-        "narHash": "sha256-ySaJ/eKtYmFoTWEKoFiiNWf+B8YIwUEqg/tKUOTcFfI=",
+        "lastModified": 1779278282,
+        "narHash": "sha256-4EQxTo9MQagXCdWGs8oCR153VHhEm745dzgr2FdlS0s=",
         "owner": "mfussenegger",
         "repo": "nvim-jdtls",
-        "rev": "77ccaeb422f8c81b647605da5ddb4a7f725cda90",
+        "rev": "6e9d953f0b82bccdb834cfde0e893f3119c22592",
         "type": "github"
       },
       "original": {
