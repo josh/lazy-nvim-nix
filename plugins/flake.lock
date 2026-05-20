@@ -989,11 +989,11 @@
     "mini-icons": {
       "flake": false,
       "locked": {
-        "lastModified": 1778587487,
-        "narHash": "sha256-DW6CZJXkQJgzH0RpYXHDQ+fGYJKAlodpofVXLTTzoEs=",
+        "lastModified": 1779199206,
+        "narHash": "sha256-Q61iFTDA2groQu3qMNJu0yuVnB6NtsGNihpGD5ppeuI=",
         "owner": "nvim-mini",
         "repo": "mini.icons",
-        "rev": "9c7b1b90b15bdd69c52f6e31889dbc9987c30ec4",
+        "rev": "520995f1d75da0e4cc901ee95080b1ff2bc46b94",
         "type": "github"
       },
       "original": {
