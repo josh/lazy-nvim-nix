@@ -1997,11 +1997,11 @@
     "venv-selector-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1779120714,
-        "narHash": "sha256-dyB/2aPr0XNTi6W1ikRcHQtxaYpe2JiVT5NZhSLpsKg=",
+        "lastModified": 1779292159,
+        "narHash": "sha256-+GRJuvsO4nf+RczyDOojfUc+nfsM9JIENUv43fEZPYU=",
         "owner": "linux-cultist",
         "repo": "venv-selector.nvim",
-        "rev": "a46c77978abc1aa1b3e17918d964bd30287abb42",
+        "rev": "cc4bb3975de8835291f9bb45889e96c6b2795fc4",
         "type": "github"
       },
       "original": {
