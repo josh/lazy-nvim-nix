@@ -1074,11 +1074,11 @@
     "mini-starter": {
       "flake": false,
       "locked": {
-        "lastModified": 1778587489,
-        "narHash": "sha256-ZvWrNiYUTBp2KWkMns1Jpr44RanTO9jd857xfI3KOpQ=",
+        "lastModified": 1779199207,
+        "narHash": "sha256-fzp3maSVIQYh4Gr5FfDiAdrXdK7Z+V9hpqjgftAkG5U=",
         "owner": "nvim-mini",
         "repo": "mini.starter",
-        "rev": "35b018a035794e341ac01cb2091bbd71b3f823d0",
+        "rev": "a7d8b353cf120fee32bb5d88e7a9de5eaec746e7",
         "type": "github"
       },
       "original": {
