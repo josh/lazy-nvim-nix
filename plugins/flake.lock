@@ -700,11 +700,11 @@
     "kulala-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770586837,
-        "narHash": "sha256-e+6kEOW0lCFYgaju6DWeDHkX28wplR0H5O8T7nOWWjU=",
+        "lastModified": 1779314055,
+        "narHash": "sha256-FyiMPOtkqvgp2//B+7Dog+lH1msHclZj6ZlHWXqO7BM=",
         "owner": "mistweaverco",
         "repo": "kulala.nvim",
-        "rev": "6656c9d332735ca6a27725e0fb45a1715c4372d9",
+        "rev": "31e95b278b7e4fce1bbb19983c6221f6bce47c9f",
         "type": "github"
       },
       "original": {
