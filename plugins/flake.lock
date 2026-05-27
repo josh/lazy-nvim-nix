@@ -122,11 +122,11 @@
     "avante-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1779810498,
-        "narHash": "sha256-PSTND69NkFiAejFoBJGWUqbxJSmbZNg3nCw+wV6es0w=",
+        "lastModified": 1779882410,
+        "narHash": "sha256-rWeaiXGETQZV7i7Y8+MW+rBrauRnsA25Jeq7yYpmHhU=",
         "owner": "yetone",
         "repo": "avante.nvim",
-        "rev": "66bc692eb6e93334f8a5600b93cd39b6cff311c3",
+        "rev": "1f34f7b026f6a569626690330b0c166747a3d148",
         "type": "github"
       },
       "original": {
