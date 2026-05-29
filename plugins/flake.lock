@@ -1583,11 +1583,11 @@
     "outline-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1774765875,
-        "narHash": "sha256-xKu05IgOpgtt2W+WqXuTUjX66ffDrU8BDi8z7M6M1q4=",
+        "lastModified": 1780021004,
+        "narHash": "sha256-4kvDnzLYFDDqcnpPWuNv3uXKDOHZjFLFTYtRGmP7rsc=",
         "owner": "hedyhli",
         "repo": "outline.nvim",
-        "rev": "c293eb56db880a0539bf9d85b4a27816960b863e",
+        "rev": "2a132953b944561d45b52e4541ebfff71934a742",
         "type": "github"
       },
       "original": {
