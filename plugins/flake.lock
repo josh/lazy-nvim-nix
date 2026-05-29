@@ -955,11 +955,11 @@
     "mini-files": {
       "flake": false,
       "locked": {
-        "lastModified": 1779199205,
-        "narHash": "sha256-I8M9oFp85jPT8qgEd2Nmel+cVK5LLGekORINwlNUN9Y=",
+        "lastModified": 1780059554,
+        "narHash": "sha256-mskAqEhbqbdqyE6zX9cPZu2YB3+9ii17E4BnoxtFHWU=",
         "owner": "nvim-mini",
         "repo": "mini.files",
-        "rev": "423d6b5afb7a94e658950d470957f830d43dd41e",
+        "rev": "17b58c3227cffe47ded884c234aa61dab492363a",
         "type": "github"
       },
       "original": {
