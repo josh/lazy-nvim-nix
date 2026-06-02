@@ -139,11 +139,11 @@
     "baleia-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1770137865,
-        "narHash": "sha256-LT2mJWR5gzE65OfF09LRRoycAzkcGqRTcMdN+9jciKs=",
+        "lastModified": 1780314783,
+        "narHash": "sha256-oaNJjsC67wqvAtRMXtMOtHBFZCuqXpM5zBELzphcBC0=",
         "owner": "m00qek",
         "repo": "baleia.nvim",
-        "rev": "32617940adb2eea56e85a64883a19961ceac9641",
+        "rev": "710537ff5cd669c5a76c5f5b6a9169fd9b913d18",
         "type": "github"
       },
       "original": {
