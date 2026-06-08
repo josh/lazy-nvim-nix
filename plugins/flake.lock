@@ -2167,11 +2167,11 @@
     "yanky-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1779267140,
-        "narHash": "sha256-6WukBxyEIc9vEay0vN8R0zfxxU54+bkxLAQzsqc6AA8=",
+        "lastModified": 1780833003,
+        "narHash": "sha256-gdOwMMQP3AyP2dQU8QlEc8COfqdK8tzIcVmuQ3xOERM=",
         "owner": "gbprod",
         "repo": "yanky.nvim",
-        "rev": "b13d318dc7c816e2eee626dde61fa0a7237bc77e",
+        "rev": "020c22d0cfa60358569e49d1d7b91630f175aef0",
         "type": "github"
       },
       "original": {
