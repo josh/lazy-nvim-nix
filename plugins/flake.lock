@@ -377,11 +377,11 @@
     "conjure": {
       "flake": false,
       "locked": {
-        "lastModified": 1779620522,
-        "narHash": "sha256-b6tSh3ZHuLDYssPLUNNDJf4mYmgJGiuz7iUDxKcLAYU=",
+        "lastModified": 1780677100,
+        "narHash": "sha256-OfvfNoVHteq9gc6ndosWLFRc25jqXSI+adcWtIBL57I=",
         "owner": "Olical",
         "repo": "conjure",
-        "rev": "c51a9ca7495b36c05686a85e71d888efb81f1e06",
+        "rev": "8a3bb39987357c1ae4d9b267e8481401d904cac4",
         "type": "github"
       },
       "original": {
