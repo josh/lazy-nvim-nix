@@ -1549,11 +1549,11 @@
     "octo-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1780443417,
-        "narHash": "sha256-PXLzZ4+vXIIEbhOaoSowKCmsfDaHlDfpFlYrijamVC8=",
+        "lastModified": 1780670954,
+        "narHash": "sha256-9f8ZKK8OKlQSMjvFW6VY/861IZ/EugKfj5WLDkjg+ac=",
         "owner": "pwntester",
         "repo": "octo.nvim",
-        "rev": "c86a43da3514dbe916eb96ecac4d776890078786",
+        "rev": "7fed87415c401954f73401bbed0fd736b9611e7c",
         "type": "github"
       },
       "original": {
