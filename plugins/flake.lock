@@ -870,11 +870,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1780997709,
-        "narHash": "sha256-EXBXH6G/Y7uHd3f9iPtEiajBN9oXUvOd3M8j+zksTFg=",
+        "lastModified": 1781088485,
+        "narHash": "sha256-ewg/ckU3Y/wPwLE8PwcjhIPHX3G5zLW5kNW/tmREq1g=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "52c3170bb086e82a8e4d94141a80bddd537c57b9",
+        "rev": "6f0edff53db8e06679a620783f00ef80d4b798c1",
         "type": "github"
       },
       "original": {
