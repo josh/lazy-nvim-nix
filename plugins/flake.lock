@@ -632,11 +632,11 @@
     "haskell-tools-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1781138779,
-        "narHash": "sha256-n6hI/RjIg4LXPjzd3XV3E6k/JDyfZJTenLXvpONFmQU=",
+        "lastModified": 1781225794,
+        "narHash": "sha256-ubfJ5fEZldNGVGw2AX7qeMLezTVyyabPQ0G4oOx8m9w=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "3b798daaa0a19401388147ec19081c4949f5fdd5",
+        "rev": "9f52400186d6f9fa9f40527c3815f435061fa73f",
         "type": "github"
       },
       "original": {
