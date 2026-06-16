@@ -1057,11 +1057,11 @@
     "mini-snippets": {
       "flake": false,
       "locked": {
-        "lastModified": 1779199207,
-        "narHash": "sha256-1w8t2ANiBue7mNk5QYhi8aBHGGNvIbrKPQgGqGO0RqI=",
+        "lastModified": 1781529259,
+        "narHash": "sha256-5auuFMTQGO4gSUadW4iSwAZDZYyKBHZVAJCJjXDO1yI=",
         "owner": "nvim-mini",
         "repo": "mini.snippets",
-        "rev": "9a08aa14e02abb790c823a622d7d6c736cbbe65a",
+        "rev": "c59e203fef0de69b8cb67edb07b4fc10d455bb44",
         "type": "github"
       },
       "original": {
