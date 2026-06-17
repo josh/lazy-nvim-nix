@@ -224,11 +224,11 @@
     "chezmoi-vim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761868736,
-        "narHash": "sha256-4gnY60CZUrVgqYhmyBdE4mTD7D4iqphpSgKWxl+UlzA=",
+        "lastModified": 1781688260,
+        "narHash": "sha256-aWzfKmQeFef6JX0RdIjSngMml0qXtQ90Dc8WJZoNLa0=",
         "owner": "alker0",
         "repo": "chezmoi.vim",
-        "rev": "73b30df35c6b645ebd2e6a440eea8463ef3c3f47",
+        "rev": "816cbdbe268e6a32367f012c760dd665bb5aa4d4",
         "type": "github"
       },
       "original": {
