@@ -2048,11 +2048,11 @@
     "vim-dadbod-ui": {
       "flake": false,
       "locked": {
-        "lastModified": 1770806739,
-        "narHash": "sha256-Of/9Ju2pkMEAZdSnDoRGxGSCBbR0e0oSRTts1VXVCf4=",
+        "lastModified": 1781857990,
+        "narHash": "sha256-jyNaKXUM0uWsZO4G0y09hgfq5Ned9bFSjahL/T/V7Fs=",
         "owner": "kristijanhusak",
         "repo": "vim-dadbod-ui",
-        "rev": "07e92e22114cc5b1ba4938d99897d85b58e20475",
+        "rev": "afd07819d8efcefc3317205b855ad4e3513b0011",
         "type": "github"
       },
       "original": {
