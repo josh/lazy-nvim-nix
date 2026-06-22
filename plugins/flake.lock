@@ -938,11 +938,11 @@
     "mini-diff": {
       "flake": false,
       "locked": {
-        "lastModified": 1781529258,
-        "narHash": "sha256-B7Z7rYEnxWTl09oO2fXtRFKdGVYwRCY3B7hsgj5kNzE=",
+        "lastModified": 1781885997,
+        "narHash": "sha256-ZhCsTAzuVRMbVSWWepsA8qrS1GTPNokm0NxXn3hYEoM=",
         "owner": "nvim-mini",
         "repo": "mini.diff",
-        "rev": "05be51814a718e74244829754a2a900a430a8d8b",
+        "rev": "0743d26bd858ebe32efcf5c86a91a422a000f273",
         "type": "github"
       },
       "original": {
