@@ -1091,11 +1091,11 @@
     "mini-surround": {
       "flake": false,
       "locked": {
-        "lastModified": 1781886000,
-        "narHash": "sha256-ILKwZ1+Dh4HH5DNnNwqH7xnDyCIEnxPRjLDCwqWOeXY=",
+        "lastModified": 1782393458,
+        "narHash": "sha256-fWUoAeKZsW1oNcfYxTsPxPm/+KvGFHOvueGvNrVV7BY=",
         "owner": "nvim-mini",
         "repo": "mini.surround",
-        "rev": "580e4cb98c5900d9fe743865fb5a5b2178b4ab18",
+        "rev": "a2f644f3759edd3d3f8b6a6d55378408bfe6d290",
         "type": "github"
       },
       "original": {
