@@ -1963,11 +1963,11 @@
     "ts-comments-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761664561,
-        "narHash": "sha256-ORK3XpHANaqvp1bfMG2GJmAiaOsLoGW82ebL/FJtKaA=",
+        "lastModified": 1782720575,
+        "narHash": "sha256-uqFE+EXQt6+UqwxVRdgk7oY05DPo5sV1q9KvvE1xVGk=",
         "owner": "folke",
         "repo": "ts-comments.nvim",
-        "rev": "123a9fb12e7229342f807ec9e6de478b1102b041",
+        "rev": "a59d6092213447450191122c9346f309161504cb",
         "type": "github"
       },
       "original": {
