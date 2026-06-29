@@ -768,11 +768,11 @@
     "leap-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1775937425,
-        "narHash": "sha256-uCtmqhjzS87242+8g+kjIrfG0+NoN9JiBW/Hm4/1XXk=",
+        "lastModified": 1782722955,
+        "narHash": "sha256-utNs3yT5N7o1OKWV6p0LFYWOFSf5/N8cW1ZlW2y27c8=",
         "owner": "ggandor",
         "repo": "leap.nvim",
-        "rev": "e7ca7b92f996bcbc34beee8b244ea5ef6692b478",
+        "rev": "0e7e69df7df81920ea9064d31c343a5f2e0517cd",
         "type": "github"
       },
       "original": {
