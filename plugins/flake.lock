@@ -1125,11 +1125,11 @@
     "neoconf-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1782438237,
-        "narHash": "sha256-odhIicmF3HEUyWCNXV+0u4MhU3sSoFAw6LbfMZqYJVs=",
+        "lastModified": 1782783688,
+        "narHash": "sha256-elzU4RqO1aUg+jNi3GBCcdOIY430Fn1MJEnHqjS6vQo=",
         "owner": "folke",
         "repo": "neoconf.nvim",
-        "rev": "21fe7bede81cabd3281825c445a0b76b1279e840",
+        "rev": "db306519747f0475e5f30e8b949603b81bee7fb3",
         "type": "github"
       },
       "original": {
