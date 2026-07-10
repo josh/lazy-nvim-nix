@@ -479,11 +479,11 @@
     "flash-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1761664562,
-        "narHash": "sha256-pHh0tJd/ynfjriu8xjnKunKVDHkoXii6ZbikdkIwovY=",
+        "lastModified": 1783684366,
+        "narHash": "sha256-1v2+iq4/TnJq37iiGedIKFf6PxlTHQac8RXECZ2HYdM=",
         "owner": "folke",
         "repo": "flash.nvim",
-        "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
+        "rev": "b6346946d10d07998efee029fb0f7a593806d0cd",
         "type": "github"
       },
       "original": {
