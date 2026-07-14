@@ -1159,11 +1159,11 @@
     "neotest": {
       "flake": false,
       "locked": {
-        "lastModified": 1783063764,
-        "narHash": "sha256-JkWu//XN9445MMymjU+56BUwqL9xqdFk/QlfTfABl44=",
+        "lastModified": 1784010543,
+        "narHash": "sha256-/XdLzaSJhqvy+Inj+tVJAR2qcCRWh7NV8kjGh9DwuNo=",
         "owner": "nvim-neotest",
         "repo": "neotest",
-        "rev": "fb84d87285698f7055f618083c351984449119b8",
+        "rev": "504944bd70ef575315bc72a6aa633ef6ea0a4913",
         "type": "github"
       },
       "original": {
