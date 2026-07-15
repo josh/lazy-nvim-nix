@@ -1980,11 +1980,11 @@
     "typst-preview-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1774911187,
-        "narHash": "sha256-EUYiHzDWJQM9Guk6ZM5GWE/etB+GHM48myRg/BPtOV0=",
+        "lastModified": 1784044626,
+        "narHash": "sha256-UTugVfydwGTmf5RomQ0R72Yf6fSz8gGeY/fg51qW454=",
         "owner": "chomosuke",
         "repo": "typst-preview.nvim",
-        "rev": "87db18b8d19c8b0eed399f52e4c527ce5afe4817",
+        "rev": "1c2e19486397be1c580b560fc50ee36abe329c46",
         "type": "github"
       },
       "original": {
