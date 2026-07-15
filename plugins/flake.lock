@@ -1810,11 +1810,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1783903503,
-        "narHash": "sha256-34+q8CqLM05GCr0gN1bdttFJKyW3HQBkakwEDujtXGU=",
+        "lastModified": 1784075915,
+        "narHash": "sha256-57qFq7HZ2VQ4aYp5rGMMUZIFtZvC6nBpnz3ro0jtNAU=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "313a4c8e5b21d612798b68922a3aaf8c3115dbca",
+        "rev": "614a3e30e6e94c5aee204fe5d5b6a50cdaac4be6",
         "type": "github"
       },
       "original": {
