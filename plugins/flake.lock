@@ -1040,11 +1040,11 @@
     "mini-pairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1783431441,
-        "narHash": "sha256-gAeHaLkPSghE7q6yB0zjtKIX3rVAgW7hjwBlVOraVYA=",
+        "lastModified": 1784799840,
+        "narHash": "sha256-PxtB01LKAZYED4Bb7zEgLy2+DDKZNOWQ5vE1a6Cqb2I=",
         "owner": "nvim-mini",
         "repo": "mini.pairs",
-        "rev": "b1fd9df3bb4a41c8f45778a3859ee80ef6b367e3",
+        "rev": "b1c5a726921b7a8c9321e9a7a208aa0571de5810",
         "type": "github"
       },
       "original": {
