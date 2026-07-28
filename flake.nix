@@ -85,6 +85,7 @@
               '';
 
           blink-cmp-checkhealth = pkgs.callPackage ./pkgs/tests/blink-cmp-checkhealth.nix { };
+          LazyVim-config-hooks = pkgs.callPackage ./pkgs/tests/lazyvim-config-hooks.nix { };
           fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix { };
           luasnip-checkhealth = pkgs.callPackage ./pkgs/tests/luasnip-checkhealth.nix { };
           mason-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/mason-nvim-checkhealth.nix { };

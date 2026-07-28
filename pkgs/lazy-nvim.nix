@@ -13,6 +13,7 @@
   luajitPackages,
   ripgrep,
   xdg-utils,
+  customLuaRC ? "",
   spec ? [ ],
   opts ? { },
   extraPackages ? [ ],
@@ -39,8 +40,10 @@ let
 
   extrasBinPath = lib.makeBinPath moreExtraPackages;
 
-  customLuaRC = ''
+  luaRcContent = ''
     vim.opt.rtp:prepend("${lazypath}");
+
+    ${customLuaRC}
     require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua finalOpts})
   '';
 
@@ -48,8 +51,7 @@ let
     withPython3 = false;
     withNodeJs = false;
     withRuby = false;
-    inherit extraLuaPackages;
-    luaRcContent = customLuaRC;
+    inherit extraLuaPackages luaRcContent;
     wrapperArgs = [
       "--suffix"
       "PATH"
