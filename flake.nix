@@ -33,6 +33,7 @@
           ;
         default = pkgs.lazy-nvim-nix.LazyVim;
         LazyVimPlugins = pkgs.callPackage ./pkgs/lazyvim-plugins.nix { };
+        check-plugin-sources = pkgs.callPackage ./pkgs/check-plugin-sources.nix { };
       });
 
       overlays.default = final: _prev: {
