@@ -58,102 +58,104 @@ in
       neovim-checkhealth = callPackage ./tests/neovim-checkhealth.nix { inherit neovim; };
     in
     {
-      passthru.tests = previousAttrs.passthru.tests // {
-        checkhealth = neovim-checkhealth.override {
-          inherit neovim;
-          checkError = false;
-          checkWarning = false;
-        };
+      passthru = previousAttrs.passthru // {
+        tests = previousAttrs.passthru.tests // {
+          checkhealth = neovim-checkhealth.override {
+            inherit neovim;
+            checkError = false;
+            checkWarning = false;
+          };
 
-        checkhealth-lazyvim = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "lazyvim";
-        };
+          checkhealth-lazyvim = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "lazyvim";
+          };
 
-        checkhealth-blink-cmp = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "blink.cmp";
-          loadLazyPluginName = "blink.cmp";
-          ignoreLines = [
-            # OK: Not fixable, this warning is always shown
-            "WARNING Some providers may show up as \"disabled\" but are enabled dynamically"
-          ];
-        };
+          checkhealth-blink-cmp = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "blink.cmp";
+            loadLazyPluginName = "blink.cmp";
+            ignoreLines = [
+              # OK: Not fixable, this warning is always shown
+              "WARNING Some providers may show up as \"disabled\" but are enabled dynamically"
+            ];
+          };
 
-        checkhealth-conform = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "conform";
-          loadLazyPluginName = "conform.nvim";
-        };
+          checkhealth-conform = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "conform";
+            loadLazyPluginName = "conform.nvim";
+          };
 
-        checkhealth-fzf-lua = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "fzf_lua";
-          loadLazyPluginName = "fzf-lua";
-        };
+          checkhealth-fzf-lua = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "fzf_lua";
+            loadLazyPluginName = "fzf-lua";
+          };
 
-        checkhealth-grug-far = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "grug-far";
-          loadLazyPluginName = "grug-far.nvim";
-        };
+          checkhealth-grug-far = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "grug-far";
+            loadLazyPluginName = "grug-far.nvim";
+          };
 
-        checkhealth-lspconfig = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "lspconfig";
-          loadLazyPluginName = "nvim-lspconfig";
-          checkOk = false;
-        };
+          checkhealth-lspconfig = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "lspconfig";
+            loadLazyPluginName = "nvim-lspconfig";
+            checkOk = false;
+          };
 
-        checkhealth-mason-lspconfig = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "mason-lspconfig";
-          loadLazyPluginName = "mason-lspconfig.nvim";
-        };
+          checkhealth-mason-lspconfig = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "mason-lspconfig";
+            loadLazyPluginName = "mason-lspconfig.nvim";
+          };
 
-        checkhealth-mason = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "mason";
-          loadLazyPluginName = "mason.nvim";
-          ignoreLines = [
-            # OK: julia is intentionally not shipped; its closure is too large
-            "WARNING julia: not available"
-          ];
-        };
+          checkhealth-mason = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "mason";
+            loadLazyPluginName = "mason.nvim";
+            ignoreLines = [
+              # OK: julia is intentionally not shipped; its closure is too large
+              "WARNING julia: not available"
+            ];
+          };
 
-        checkhealth-noice = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "noice";
-          loadLazyPluginName = "noice.nvim";
-          ignoreLines = [
-            # FIXME: These should be fixable if we install treesitter correctly
-            "WARNING {TreeSitter} `regex` parser is not installed"
-            "WARNING {TreeSitter} `bash` parser is not installed"
-          ];
-        };
+          checkhealth-noice = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "noice";
+            loadLazyPluginName = "noice.nvim";
+            ignoreLines = [
+              # FIXME: These should be fixable if we install treesitter correctly
+              "WARNING {TreeSitter} `regex` parser is not installed"
+              "WARNING {TreeSitter} `bash` parser is not installed"
+            ];
+          };
 
-        checkhealth-snacks = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "snacks";
-          loadLazyPluginName = "snacks.nvim";
-          ignoreLines = [
-            # OK: headless nvim has no TTY to answer the kitty graphics query
-            "ERROR is not ready"
-            "ERROR your terminal does not support the kitty graphics protocol"
-            "WARNING dashboard did not open: `headless`"
-            # OK: snacks sub-features intentionally not enabled by this config
-            "WARNING setup {disabled}"
-            # FIXME: These should be fixable if we install treesitter correctly
-            "WARNING Image rendering in docs with missing treesitter parsers won't work"
-            "WARNING Missing Treesitter languages"
-            "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
-          ];
-        };
+          checkhealth-snacks = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "snacks";
+            loadLazyPluginName = "snacks.nvim";
+            ignoreLines = [
+              # OK: headless nvim has no TTY to answer the kitty graphics query
+              "ERROR is not ready"
+              "ERROR your terminal does not support the kitty graphics protocol"
+              "WARNING dashboard did not open: `headless`"
+              # OK: snacks sub-features intentionally not enabled by this config
+              "WARNING setup {disabled}"
+              # FIXME: These should be fixable if we install treesitter correctly
+              "WARNING Image rendering in docs with missing treesitter parsers won't work"
+              "WARNING Missing Treesitter languages"
+              "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
+            ];
+          };
 
-        checkhealth-which-key = neovim-checkhealth.override {
-          inherit neovim;
-          pluginName = "which-key";
-          loadLazyPluginName = "which-key.nvim";
+          checkhealth-which-key = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "which-key";
+            loadLazyPluginName = "which-key.nvim";
+          };
         };
       };
     }
