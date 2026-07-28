@@ -15,7 +15,7 @@ runCommand "lazy-nvim-check-plugins-installed"
     ];
   }
   ''
-    if timeout 10s "$neovimBin" "''${nvimArgs[@]}"; then
+    if timeout --kill-after=10s 10s "$neovimBin" "''${nvimArgs[@]}"; then
       touch $out
     fi
   ''
