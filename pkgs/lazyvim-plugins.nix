@@ -25,9 +25,16 @@ let
         passthru.updateScript = updateScript;
       }
       ''
-        out=out.json timeout --kill-after=10s 120s ${lib.getExe neovim} -l ${./lazyvim-plugins.lua}
-        ${lib.getExe jq} --sort-keys <out.json >out~
-        mv out~ "$out"
+        SCAN_OUT=modules.txt timeout --kill-after=10s 120s ${lib.getExe neovim} -l ${./lazyvim-plugins.lua} list
+
+        mkdir scans
+        i=0
+        while IFS= read -r modname; do
+          SCAN_OUT="scans/$i.json" timeout --kill-after=10s 120s ${lib.getExe neovim} -l ${./lazyvim-plugins.lua} scan "$modname"
+          i=$((i + 1))
+        done <modules.txt
+
+        ${lib.getExe jq} --sort-keys --null-input 'reduce inputs as $mod ({}; . + $mod)' scans/*.json >"$out"
       '';
 in
 pkg
