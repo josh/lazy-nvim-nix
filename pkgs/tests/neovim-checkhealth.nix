@@ -14,12 +14,13 @@
   checkError ? true,
   checkWarning ? true,
   ignoreLines ? [ ],
+  optionalIgnoreLines ? [ ],
 }:
 let
   vim-script-runner = writeText "checkhealth-${pluginName}.vim" ''
     doautocmd UIEnter
     ${if loadLazyPluginName != null then "Lazy! load ${loadLazyPluginName}" else ""}
-    sleep 3
+    lua vim.wait(3000, function() return vim.g.did_very_lazy == true end, 50)
     ${if pluginName == null || pluginName == "all" then "checkhealth" else "checkhealth ${pluginName}"}
     w!out.txt
     qall!
@@ -42,7 +43,7 @@ runCommand "checkhealth-${pluginName}"
       error = checkError;
       warning = checkWarning;
     };
-    inherit ignoreLines;
+    inherit ignoreLines optionalIgnoreLines;
 
     nativeBuildInputs = [
       kitty-binstub
@@ -62,17 +63,33 @@ runCommand "checkhealth-${pluginName}"
     touch .config/nvim/init.lua
 
     exit_code=0
-    HOME="$PWD" timeout --kill-after=10s 300s "$neovimBin" "''${nvimArgs[@]}" || exit_code=$?
+    HOME="$PWD" timeout --kill-after=10s 300s "$neovimBin" "''${nvimArgs[@]}" 2>err.txt || exit_code=$?
 
     echo "-- stdout --"
     cat out.txt || true
-    echo "-- stdout --"
+    echo "-- stderr --"
+    cat err.txt || true
+    echo "--"
 
     if [ "$exit_code" -eq 124 ] || [ "$exit_code" -eq 137 ]; then
       echo "nvim timed out (exit $exit_code)"
       exit 1
     elif [ "$exit_code" -ne 0 ]; then
       echo "nvim exited with code $exit_code"
+      exit 1
+    fi
+
+    for ignoreLine in "''${optionalIgnoreLines[@]}"; do
+      { grep --invert-match --fixed-strings -- "$ignoreLine" out.txt || true; } | sponge out.txt
+      { grep --invert-match --fixed-strings -- "$ignoreLine" err.txt || true; } | sponge err.txt
+    done
+
+    if grep "^E[0-9]\+: " err.txt; then
+      echo "nvim reported errors on stderr"
+      exit 1
+    fi
+    if grep "Failed to run" err.txt; then
+      echo "plugin setup failed"
       exit 1
     fi
 

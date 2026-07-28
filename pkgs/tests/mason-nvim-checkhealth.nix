@@ -13,4 +13,8 @@ callPackage ./neovim-checkhealth.nix {
     # OK: julia is intentionally not shipped; its closure is too large
     "WARNING julia: not available"
   ];
+  optionalIgnoreLines = [
+    # OK: mason's live version probe; only reachable without a sandbox
+    "WARNING mason.nvim version"
+  ];
 }
