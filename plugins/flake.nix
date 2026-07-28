@@ -98,6 +98,8 @@
     leap-nvim.url = "github:ggandor/leap.nvim/main";
     litee-nvim.flake = false;
     litee-nvim.url = "github:ldelossa/litee.nvim/main";
+    lua-utils-nvim.flake = false;
+    lua-utils-nvim.url = "github:nvim-neorg/lua-utils.nvim/main";
     lualine-nvim.flake = false;
     lualine-nvim.url = "github:nvim-lualine/lualine.nvim/master";
     mason-lspconfig-nvim.flake = false;
@@ -140,6 +142,8 @@
     neoconf-nvim.url = "github:folke/neoconf.nvim/main";
     neodev-nvim.flake = false;
     neodev-nvim.url = "github:folke/neodev.nvim/main";
+    neorg.flake = false;
+    neorg.url = "github:nvim-neorg/neorg/main";
     neotest.flake = false;
     neotest.url = "github:nvim-neotest/neotest/master";
     noice-nvim.flake = false;
@@ -194,6 +198,8 @@
     outline-nvim.url = "github:hedyhli/outline.nvim/main";
     overseer-nvim.flake = false;
     overseer-nvim.url = "github:stevearc/overseer.nvim/master";
+    pathlib-nvim.flake = false;
+    pathlib-nvim.url = "github:pysan3/pathlib.nvim/main";
     persistence-nvim.flake = false;
     persistence-nvim.url = "github:folke/persistence.nvim/main";
     plenary-nvim.flake = false;
@@ -218,6 +224,10 @@
     todo-comments-nvim.url = "github:folke/todo-comments.nvim/main";
     tokyonight-nvim.flake = false;
     tokyonight-nvim.url = "github:folke/tokyonight.nvim/main";
+    tree-sitter-norg-meta.flake = false;
+    tree-sitter-norg-meta.url = "github:nvim-neorg/tree-sitter-norg-meta/main";
+    tree-sitter-norg.flake = false;
+    tree-sitter-norg.url = "github:nvim-neorg/tree-sitter-norg/main";
     trouble-nvim.flake = false;
     trouble-nvim.url = "github:folke/trouble.nvim/main";
     ts-comments-nvim.flake = false;

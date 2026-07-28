@@ -799,6 +799,23 @@
         "type": "github"
       }
     },
+    "lua-utils-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708177208,
+        "narHash": "sha256-9ildzQEMkXKZ3LHq+khGFgRQFxlIXQclQ7QU3fcU1C4=",
+        "owner": "nvim-neorg",
+        "repo": "lua-utils.nvim",
+        "rev": "e565749421f4bbb5d2e85e37c3cef9d56553d8bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neorg",
+        "ref": "main",
+        "repo": "lua-utils.nvim",
+        "type": "github"
+      }
+    },
     "lualine-nvim": {
       "flake": false,
       "locked": {
@@ -1153,6 +1170,23 @@
         "owner": "folke",
         "ref": "main",
         "repo": "neodev.nvim",
+        "type": "github"
+      }
+    },
+    "neorg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785080961,
+        "narHash": "sha256-0IdhPXosA5++UfD8M4Gx+1bonEIcFidXfegpUs52uLI=",
+        "owner": "nvim-neorg",
+        "repo": "neorg",
+        "rev": "d4dd8979c1129b5251d5565164f54d1cc258e92a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neorg",
+        "ref": "main",
+        "repo": "neorg",
         "type": "github"
       }
     },
@@ -1614,6 +1648,23 @@
         "type": "github"
       }
     },
+    "pathlib-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724943804,
+        "narHash": "sha256-YhCJeNKlcjgg3q51UWFhuIEPzNueC8YTpeuPPJDndvw=",
+        "owner": "pysan3",
+        "repo": "pathlib.nvim",
+        "rev": "57e5598af6fe253761c1b48e0b59b7cd6699e2c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pysan3",
+        "ref": "main",
+        "repo": "pathlib.nvim",
+        "type": "github"
+      }
+    },
     "persistence-nvim": {
       "flake": false,
       "locked": {
@@ -1731,6 +1782,7 @@
         "lean-nvim": "lean-nvim",
         "leap-nvim": "leap-nvim",
         "litee-nvim": "litee-nvim",
+        "lua-utils-nvim": "lua-utils-nvim",
         "lualine-nvim": "lualine-nvim",
         "mason-lspconfig-nvim": "mason-lspconfig-nvim",
         "mason-nvim": "mason-nvim",
@@ -1752,6 +1804,7 @@
         "neo-tree-nvim": "neo-tree-nvim",
         "neoconf-nvim": "neoconf-nvim",
         "neodev-nvim": "neodev-nvim",
+        "neorg": "neorg",
         "neotest": "neotest",
         "noice-nvim": "noice-nvim",
         "none-ls-nvim": "none-ls-nvim",
@@ -1779,6 +1832,7 @@
         "one-small-step-for-vimkind": "one-small-step-for-vimkind",
         "outline-nvim": "outline-nvim",
         "overseer-nvim": "overseer-nvim",
+        "pathlib-nvim": "pathlib-nvim",
         "persistence-nvim": "persistence-nvim",
         "plenary-nvim": "plenary-nvim",
         "project-nvim": "project-nvim",
@@ -1791,6 +1845,8 @@
         "telescope_hoogle": "telescope_hoogle",
         "todo-comments-nvim": "todo-comments-nvim",
         "tokyonight-nvim": "tokyonight-nvim",
+        "tree-sitter-norg": "tree-sitter-norg",
+        "tree-sitter-norg-meta": "tree-sitter-norg-meta",
         "trouble-nvim": "trouble-nvim",
         "ts-comments-nvim": "ts-comments-nvim",
         "typst-preview-nvim": "typst-preview-nvim",
@@ -1940,6 +1996,40 @@
         "owner": "folke",
         "ref": "main",
         "repo": "tokyonight.nvim",
+        "type": "github"
+      }
+    },
+    "tree-sitter-norg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776776332,
+        "narHash": "sha256-ro80ju8x1B7Mqj7feykaAFgPB8oo/u4PqR6aqMpHoc0=",
+        "owner": "nvim-neorg",
+        "repo": "tree-sitter-norg",
+        "rev": "d7edfaf89198aab652c7a1f0f818196efedaccfb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neorg",
+        "ref": "main",
+        "repo": "tree-sitter-norg",
+        "type": "github"
+      }
+    },
+    "tree-sitter-norg-meta": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1774308801,
+        "narHash": "sha256-joX7VjVeKNWECUz1wIKavd8/4mJgd5W7XkGJkZBLu8o=",
+        "owner": "nvim-neorg",
+        "repo": "tree-sitter-norg-meta",
+        "rev": "729d4e54fb881ba0ddf0f925ec78401354c7c6db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neorg",
+        "ref": "main",
+        "repo": "tree-sitter-norg-meta",
         "type": "github"
       }
     },
