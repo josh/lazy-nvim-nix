@@ -183,9 +183,9 @@
     nvim-treesitter-sexp.flake = false;
     nvim-treesitter-sexp.url = "github:PaterJason/nvim-treesitter-sexp/master";
     nvim-treesitter-textobjects.flake = false;
-    nvim-treesitter-textobjects.url = "github:nvim-treesitter/nvim-treesitter-textobjects/master";
+    nvim-treesitter-textobjects.url = "github:nvim-treesitter/nvim-treesitter-textobjects/main";
     nvim-treesitter.flake = false;
-    nvim-treesitter.url = "github:nvim-treesitter/nvim-treesitter/master";
+    nvim-treesitter.url = "github:nvim-treesitter/nvim-treesitter/main";
     nvim-ts-autotag.flake = false;
     nvim-ts-autotag.url = "github:windwp/nvim-ts-autotag/main";
     nvim-ts-context-commentstring.flake = false;

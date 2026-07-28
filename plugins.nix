@@ -4,6 +4,7 @@
   stdenv,
   stdenvNoCC,
   fetchFromGitHub,
+  symlinkJoin,
   vimPlugins,
   # keep-sorted start
   ast-grep,
@@ -215,6 +216,47 @@ let
       sha256 = node.locked.narHash;
     };
 
+  treesitterGrammars =
+    p: with p; [
+      # keep-sorted start
+      bash
+      c
+      css
+      diff
+      dtd
+      html
+      javascript
+      jsdoc
+      json
+      latex
+      lua
+      luadoc
+      luap
+      markdown
+      markdown_inline
+      printf
+      python
+      query
+      regex
+      scss
+      svelte
+      toml
+      tsx
+      typescript
+      typst
+      vim
+      vimdoc
+      vue
+      xml
+      yaml
+      # keep-sorted end
+    ];
+
+  nvim-treesitter-install-dir = symlinkJoin {
+    name = "nvim-treesitter-install-dir";
+    paths = (vimPlugins.nvim-treesitter.withPlugins treesitterGrammars).dependencies;
+  };
+
   mapNestedAttrs =
     f: attrset:
     lib.recurseIntoAttrs (
@@ -352,10 +394,20 @@ let
         ];
     };
 
-    "nvim-treesitter" = plugins."nvim-treesitter" // {
+    "nvim-treesitter" = vimPlugins.nvim-treesitter // {
+      spec =
+        builtins.removeAttrs plugins."nvim-treesitter".spec [
+          "branch"
+          "commit"
+        ]
+        // {
+          dir = "${vimPlugins.nvim-treesitter}";
+          opts.install_dir = "${nvim-treesitter-install-dir}";
+        };
+      installDir = nvim-treesitter-install-dir;
       extraPackages = [
         gcc
-        nodejs_24
+        gnutar
         tree-sitter
       ];
     };

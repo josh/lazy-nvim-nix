@@ -8,6 +8,11 @@ callPackage ./neovim-checkhealth.nix {
           dependencies = [ (lazy-nvim-nix.plugins."which-key.nvim".spec // { opts = { }; }) ];
         }
       )
+      {
+        name = "nvim-treesitter-parsers";
+        dir = "${lazy-nvim-nix.plugins."nvim-treesitter".installDir}";
+        lazy = false;
+      }
     ];
     inherit (lazy-nvim-nix.plugins."snacks.nvim") extraPackages;
   };
@@ -19,9 +24,8 @@ callPackage ./neovim-checkhealth.nix {
     "ERROR your terminal does not support the kitty graphics protocol"
     # OK: snacks sub-features intentionally not enabled by this config
     "WARNING setup {disabled}"
-    # FIXME: These should be fixable if we install treesitter correctly
-    "WARNING Image rendering in docs with missing treesitter parsers won't work"
+    # OK: only `norg` is missing, no nixpkgs grammar
     "WARNING Missing Treesitter languages"
-    "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
+    "WARNING Image rendering in docs with missing treesitter parsers won't work"
   ];
 }
