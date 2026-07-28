@@ -19,6 +19,8 @@ jobs:
 
     runs-on: [self-hosted, "${{ matrix.system }}"]
 
+    timeout-minutes: 60
+
     steps:
       - name: Check flake
         run: |
