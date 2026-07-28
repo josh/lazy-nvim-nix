@@ -1,5 +1,6 @@
 {
   lib,
+  stdenv,
   callPackage,
   lazy-nvim-nix,
   lazygit,
@@ -120,6 +121,21 @@ in
               # OK: julia is intentionally not shipped; its closure is too large
               "WARNING julia: not available"
             ];
+          };
+
+          checkhealth-neo-tree = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "neo-tree";
+            loadLazyPluginName = "neo-tree.nvim";
+            ignoreLines =
+              lib.lists.optionals stdenv.hostPlatform.isDarwin [
+                # OK: osascript is a macOS system binary, not on the sandbox PATH
+                "WARNING `osascript` not found (built-in)"
+              ]
+              ++ lib.lists.optionals stdenv.hostPlatform.isLinux [
+                # FIXME: should be fixable by adding glib to extraPackages
+                "WARNING `gio` not found (from glib2)"
+              ];
           };
 
           checkhealth-noice = neovim-checkhealth.override {
