@@ -6,6 +6,9 @@ callPackage ./neovim-checkhealth.nix {
         lazy-nvim-nix.plugins."snacks.nvim".spec
         // {
           dependencies = [ (lazy-nvim-nix.plugins."which-key.nvim".spec // { opts = { }; }) ];
+          opts = (lazy-nvim-nix.plugins."snacks.nvim".spec.opts or { }) // {
+            notifier.enabled = true;
+          };
         }
       )
       {
@@ -20,7 +23,6 @@ callPackage ./neovim-checkhealth.nix {
   loadLazyPluginName = "snacks.nvim";
   ignoreLines = [
     # OK: headless nvim has no TTY to answer the kitty graphics query
-    "ERROR is not ready"
     "ERROR your terminal does not support the kitty graphics protocol"
     # OK: snacks sub-features intentionally not enabled by this config
     "WARNING setup {disabled}"

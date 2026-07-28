@@ -172,8 +172,10 @@ in
             pluginName = "snacks";
             loadLazyPluginName = "snacks.nvim";
             ignoreLines = [
-              # OK: headless nvim has no TTY to answer the kitty graphics query
+              # OK: notifier readiness probes vim.notify, which noice routes
+              # asynchronously; the roundtrip never completes headless
               "ERROR is not ready"
+              # OK: headless nvim has no TTY to answer the kitty graphics query
               "ERROR your terminal does not support the kitty graphics protocol"
               "WARNING dashboard did not open: `headless`"
               # OK: snacks sub-features intentionally not enabled by this config
