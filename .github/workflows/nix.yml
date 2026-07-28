@@ -24,4 +24,4 @@ jobs:
     steps:
       - name: Check flake
         run: |
-          nix flake check --keep-going --print-build-logs github:${{ github.repository }}/${{ github.sha }}
+          nix flake check --keep-going --print-build-logs --max-silent-time 1800 github:${{ github.repository }}/${{ github.sha }}
