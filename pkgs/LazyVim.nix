@@ -44,7 +44,9 @@ in
     lazygit
   ]
   ++ plugins."blink.cmp".extraPackages
+  ++ plugins."conform.nvim".extraPackages
   ++ plugins."fzf-lua".extraPackages
+  ++ plugins."grug-far.nvim".extraPackages
   ++ plugins."mason.nvim".extraPackages
   ++ plugins."nvim-treesitter".extraPackages
   ++ plugins."snacks.nvim".extraPackages;
@@ -78,10 +80,35 @@ in
           ];
         };
 
+        checkhealth-conform = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "conform";
+          loadLazyPluginName = "conform.nvim";
+        };
+
         checkhealth-fzf-lua = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "fzf_lua";
           loadLazyPluginName = "fzf-lua";
+        };
+
+        checkhealth-grug-far = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "grug-far";
+          loadLazyPluginName = "grug-far.nvim";
+        };
+
+        checkhealth-lspconfig = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "lspconfig";
+          loadLazyPluginName = "nvim-lspconfig";
+          checkOk = false;
+        };
+
+        checkhealth-mason-lspconfig = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "mason-lspconfig";
+          loadLazyPluginName = "mason-lspconfig.nvim";
         };
 
         checkhealth-mason = neovim-checkhealth.override {

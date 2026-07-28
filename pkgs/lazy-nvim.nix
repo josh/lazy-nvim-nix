@@ -94,6 +94,11 @@ in
           checkOk = false;
         };
 
+        checkhealth-vim-pack = neovim-checkhealth.override {
+          inherit neovim;
+          pluginName = "vim.pack";
+        };
+
         checkhealth-vim-provider = neovim-checkhealth.override {
           inherit neovim;
           pluginName = "vim.provider";
