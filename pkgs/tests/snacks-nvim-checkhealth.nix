@@ -24,8 +24,5 @@ callPackage ./neovim-checkhealth.nix {
   ignoreLines = [
     # OK: snacks sub-features intentionally not enabled by this config
     "WARNING setup {disabled}"
-    # OK: only `norg` is missing, no nixpkgs grammar
-    "WARNING Missing Treesitter languages"
-    "WARNING Image rendering in docs with missing treesitter parsers won't work"
   ];
 }

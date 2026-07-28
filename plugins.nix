@@ -4,6 +4,7 @@
   stdenv,
   stdenvNoCC,
   fetchFromGitHub,
+  neovimUtils,
   symlinkJoin,
   vimPlugins,
   # keep-sorted start
@@ -223,7 +224,6 @@ let
       bash
       c
       css
-      diff
       dtd
       html
       javascript
@@ -251,11 +251,36 @@ let
       xml
       yaml
       # keep-sorted end
+      p."tree-sitter-norg"
     ];
+
+  diffGrammar = neovimUtils.grammarToPlugin (
+    (tree-sitter.buildGrammar {
+      language = "diff";
+      version = "0.0.0+rev=e7e845f";
+      src = fetchFromGitHub {
+        owner = "tree-sitter-grammars";
+        repo = "tree-sitter-diff";
+        rev = "e7e845fc380e8677f9b770dc96d6b7e029daab55";
+        hash = "sha256-IgxX5RqnsPu2Sub5gSY85Gv2Z3h3jXUDundFfhMKGpE=";
+      };
+    }).overrideAttrs
+      (previousAttrs: {
+        postInstall = (previousAttrs.postInstall or "") + ''
+          rm -rf $out/queries
+        '';
+      })
+  );
+
+  transitivePlugins = drv: [ drv ] ++ builtins.concatMap transitivePlugins (drv.dependencies or [ ]);
 
   nvim-treesitter-install-dir = symlinkJoin {
     name = "nvim-treesitter-install-dir";
-    paths = (vimPlugins.nvim-treesitter.withPlugins treesitterGrammars).dependencies;
+    paths = lib.lists.unique (
+      [ diffGrammar ]
+      ++ builtins.concatMap transitivePlugins (vimPlugins.nvim-treesitter.withPlugins treesitterGrammars)
+      .dependencies
+    );
   };
 
   mapNestedAttrs =

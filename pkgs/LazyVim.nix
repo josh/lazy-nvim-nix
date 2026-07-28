@@ -95,20 +95,8 @@ in
               "ERROR is not ready"
               # OK: install_dir is the read-only nix store
               "ERROR is not writable."
-              # FIXME: nixpkgs packages no ecma/jsx/html_tags component grammars
-              "ERROR html(queries):"
-              "ERROR javascript(queries):"
-              "ERROR svelte(queries):"
-              "ERROR tsx(queries):"
-              "ERROR typescript(queries):"
-              "ERROR vue(queries):"
-              # FIXME: nixpkgs diff grammar lags its highlights query
-              "ERROR diff(highlights):"
               # OK: snacks sub-features intentionally not enabled by this config
               "WARNING setup {disabled}"
-              # OK: only `norg` is missing, no nixpkgs grammar
-              "WARNING Missing Treesitter languages"
-              "WARNING Image rendering in docs with missing treesitter parsers won't work"
               # OK: inherent to --headless
               "WARNING dashboard did not open: `headless`"
             ]
@@ -203,15 +191,6 @@ in
             ignoreLines = [
               # OK: install_dir is the read-only nix store
               "ERROR is not writable."
-              # FIXME: nixpkgs packages no ecma/jsx/html_tags component grammars
-              "ERROR html(queries):"
-              "ERROR javascript(queries):"
-              "ERROR svelte(queries):"
-              "ERROR tsx(queries):"
-              "ERROR typescript(queries):"
-              "ERROR vue(queries):"
-              # FIXME: nixpkgs diff grammar lags its highlights query
-              "ERROR diff(highlights):"
             ];
           };
 
@@ -226,9 +205,6 @@ in
               "WARNING dashboard did not open: `headless`"
               # OK: snacks sub-features intentionally not enabled by this config
               "WARNING setup {disabled}"
-              # OK: only `norg` is missing, no nixpkgs grammar
-              "WARNING Missing Treesitter languages"
-              "WARNING Image rendering in docs with missing treesitter parsers won't work"
             ];
           };
 

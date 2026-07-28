@@ -224,10 +224,6 @@
     todo-comments-nvim.url = "github:folke/todo-comments.nvim/main";
     tokyonight-nvim.flake = false;
     tokyonight-nvim.url = "github:folke/tokyonight.nvim/main";
-    tree-sitter-norg-meta.flake = false;
-    tree-sitter-norg-meta.url = "github:nvim-neorg/tree-sitter-norg-meta/main";
-    tree-sitter-norg.flake = false;
-    tree-sitter-norg.url = "github:nvim-neorg/tree-sitter-norg/main";
     trouble-nvim.flake = false;
     trouble-nvim.url = "github:folke/trouble.nvim/main";
     ts-comments-nvim.flake = false;
