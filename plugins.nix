@@ -176,16 +176,28 @@ let
     in
     if repo == flakeName || builtins.match ".*[.].*" repo != null then repo else flakeName;
 
-  plugins = lib.mapAttrs' (
-    flakeName: node:
-    let
-      name = pluginName flakeName node;
-    in
-    {
-      inherit name;
-      value = buildPlugin name node;
-    }
-  ) pluginNodes;
+  duplicatePluginNames = builtins.attrNames (
+    lib.attrsets.filterAttrs (_: count: count > 1) (
+      builtins.foldl' (acc: name: acc // { ${name} = (acc.${name} or 0) + 1; }) { } (
+        map (flakeName: pluginName flakeName pluginNodes.${flakeName}) (builtins.attrNames pluginNodes)
+      )
+    )
+  );
+
+  plugins =
+    assert lib.assertMsg (duplicatePluginNames == [ ]) ''
+      plugin name collision: multiple inputs in plugins/flake.nix map to: ${toString duplicatePluginNames}
+      Rename or remove one of the conflicting inputs.'';
+    lib.mapAttrs' (
+      flakeName: node:
+      let
+        name = pluginName flakeName node;
+      in
+      {
+        inherit name;
+        value = buildPlugin name node;
+      }
+    ) pluginNodes;
 
   LazyVim-deps = builtins.fromJSON (builtins.readFile ./plugins/LazyVim.json);
 
@@ -206,7 +218,7 @@ let
   mapNestedAttrs =
     f: attrset:
     lib.recurseIntoAttrs (
-      builtins.mapAttrs (_a: bs: lib.recurseIntoAttrs (builtins.mapAttrs (b: _c: (f b)) bs)) attrset
+      builtins.mapAttrs (_a: bs: lib.recurseIntoAttrs (builtins.mapAttrs f bs)) attrset
     );
 
   pluginOverrides = {
@@ -221,13 +233,24 @@ let
 
     "LazyVim" = plugins."LazyVim" // {
       extras = mapNestedAttrs (
-        repo:
-        plugins'.${repo} or (throw ''
-          plugin "${repo}" is listed in plugins/LazyVim.json but has no pin in plugins/flake.nix.
-          Add the input there, then run:
-            nix flake update --flake ./plugins
-            nix run .#LazyVimPlugins.updateScript
-        '')
+        repo: slug:
+        let
+          drv =
+            plugins'.${repo} or (throw ''
+              plugin "${repo}" is listed in plugins/LazyVim.json but has no pin in plugins/flake.nix.
+              Add the input there, then run:
+                nix flake update --flake ./plugins
+                nix run .#LazyVimPlugins.updateScript
+            '');
+        in
+        if drv.spec.url == "https://github.com/${slug}" then
+          drv
+        else
+          throw ''
+            plugin "${repo}": plugins/LazyVim.json says upstream is "${slug}" but plugins/flake.nix pins ${drv.spec.url}.
+            The repository has likely moved. Update the input to github:${slug}, then run:
+              nix flake update --flake ./plugins
+              nix run .#LazyVimPlugins.updateScript''
       ) LazyVim-deps;
     };
 
