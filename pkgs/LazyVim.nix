@@ -10,8 +10,6 @@ let
   inherit (lazy-nvim-nix) plugins;
   excludeSpecs = [
     "recurseForDerivations"
-    "nvim-treesitter"
-    "nvim-treesitter-textobjects"
   ];
   extraSpecs =
     name:
@@ -31,9 +29,11 @@ in
     plugins."neo-tree.nvim".spec
     plugins."snacks.nvim".spec
 
-    # FIXME: Tries to write to /nix/store/.../parser directory
-    (plugins."nvim-treesitter".spec // { enabled = false; })
-    (plugins."nvim-treesitter-textobjects".spec // { enabled = false; })
+    {
+      name = "nvim-treesitter-parsers";
+      dir = "${plugins."nvim-treesitter".installDir}";
+      lazy = false;
+    }
 
     # lazy.nvim cannot auto-load store-dir plugins on require(); load eagerly
     # so lualine's statusline gets an initialized trouble
@@ -146,10 +146,24 @@ in
             inherit neovim;
             pluginName = "noice";
             loadLazyPluginName = "noice.nvim";
+          };
+
+          checkhealth-nvim-treesitter = neovim-checkhealth.override {
+            inherit neovim;
+            pluginName = "nvim-treesitter";
+            loadLazyPluginName = "nvim-treesitter";
             ignoreLines = [
-              # FIXME: These should be fixable if we install treesitter correctly
-              "WARNING {TreeSitter} `regex` parser is not installed"
-              "WARNING {TreeSitter} `bash` parser is not installed"
+              # OK: install_dir is the read-only nix store
+              "ERROR is not writable."
+              # FIXME: nixpkgs packages no ecma/jsx/html_tags component grammars
+              "ERROR html(queries):"
+              "ERROR javascript(queries):"
+              "ERROR svelte(queries):"
+              "ERROR tsx(queries):"
+              "ERROR typescript(queries):"
+              "ERROR vue(queries):"
+              # FIXME: nixpkgs diff grammar lags its highlights query
+              "ERROR diff(highlights):"
             ];
           };
 
@@ -164,10 +178,9 @@ in
               "WARNING dashboard did not open: `headless`"
               # OK: snacks sub-features intentionally not enabled by this config
               "WARNING setup {disabled}"
-              # FIXME: These should be fixable if we install treesitter correctly
-              "WARNING Image rendering in docs with missing treesitter parsers won't work"
+              # OK: only `norg` is missing, no nixpkgs grammar
               "WARNING Missing Treesitter languages"
-              "WARNING The `latex` treesitter parser is required to render LaTeX math expressions"
+              "WARNING Image rendering in docs with missing treesitter parsers won't work"
             ];
           };
 
