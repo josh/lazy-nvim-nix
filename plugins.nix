@@ -6,12 +6,14 @@
   fetchFromGitHub,
   vimPlugins,
   # keep-sorted start
+  ast-grep,
   bat,
   cargo,
   chafa,
   curl,
   delta,
   fd,
+  fish,
   fzf,
   gcc,
   ghostscript,
@@ -28,7 +30,9 @@
   python312Packages,
   ripgrep,
   ruby,
+  shfmt,
   sqlite,
+  stylua,
   tectonic,
   tree-sitter,
   ueberzugpp,
@@ -210,6 +214,18 @@ let
         dir = "${vimPlugins.blink-cmp}";
       };
       extraPackages = [ curl ];
+    };
+
+    "conform.nvim" = plugins."conform.nvim" // {
+      extraPackages = [
+        fish
+        shfmt
+        stylua
+      ];
+    };
+
+    "grug-far.nvim" = plugins."grug-far.nvim" // {
+      extraPackages = [ ast-grep ];
     };
 
     "fzf-lua" = plugins."fzf-lua" // {
