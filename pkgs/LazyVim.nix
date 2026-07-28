@@ -100,13 +100,6 @@ in
             loadLazyPluginName = "grug-far.nvim";
           };
 
-          checkhealth-lspconfig = neovim-checkhealth.override {
-            inherit neovim;
-            pluginName = "lspconfig";
-            loadLazyPluginName = "nvim-lspconfig";
-            checkOk = false;
-          };
-
           checkhealth-mason-lspconfig = neovim-checkhealth.override {
             inherit neovim;
             pluginName = "mason-lspconfig";
