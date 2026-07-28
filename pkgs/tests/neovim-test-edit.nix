@@ -35,8 +35,8 @@ runCommand "test-edit-${builtins.baseNameOf editFile}"
     mkdir -p .config/nvim
     touch .config/nvim/init.lua
 
-    HOME="$PWD" timeout --kill-after=10s 30s "$neovimBin" "''${nvimArgs[@]}" 1>out.txt 2>err.txt
-    exit_code=$?
+    exit_code=0
+    HOME="$PWD" timeout --kill-after=10s 30s "$neovimBin" "''${nvimArgs[@]}" 1>out.txt 2>err.txt || exit_code=$?
 
     echo "== stdout =="
     cat out.txt

@@ -2,6 +2,7 @@
   lib,
   stdenv,
   writeText,
+  writeShellScriptBin,
   runCommand,
   neovim,
   moreutils,
@@ -23,11 +24,7 @@ let
     w!out.txt
     qall!
   '';
-  binstubs = runCommand "checkhealth-binstubs" { } ''
-    mkdir -p $out/bin
-    touch $out/bin/kitty
-    chmod +x $out/bin/*
-  '';
+  kitty-binstub = writeShellScriptBin "kitty" "exit 0";
 in
 runCommand "checkhealth-${pluginName}"
   {
@@ -48,7 +45,7 @@ runCommand "checkhealth-${pluginName}"
     inherit ignoreLines;
 
     nativeBuildInputs = [
-      binstubs
+      kitty-binstub
       moreutils
     ]
     ++ lib.lists.optionals stdenv.isLinux [ xclip ];
@@ -64,19 +61,29 @@ runCommand "checkhealth-${pluginName}"
     mkdir -p .config/nvim
     touch .config/nvim/init.lua
 
-    HOME="$PWD" timeout --kill-after=10s 300s "$neovimBin" "''${nvimArgs[@]}"
+    exit_code=0
+    HOME="$PWD" timeout --kill-after=10s 300s "$neovimBin" "''${nvimArgs[@]}" || exit_code=$?
+
     echo "-- stdout --"
-    cat out.txt
+    cat out.txt || true
     echo "-- stdout --"
+
+    if [ "$exit_code" -eq 124 ] || [ "$exit_code" -eq 137 ]; then
+      echo "nvim timed out (exit $exit_code)"
+      exit 1
+    elif [ "$exit_code" -ne 0 ]; then
+      echo "nvim exited with code $exit_code"
+      exit 1
+    fi
 
     for ignoreLine in "''${ignoreLines[@]}"; do
       if grep --fixed-strings --quiet -- "$ignoreLine" out.txt; then
         echo "Found: $ignoreLine"
-        grep --invert-match --fixed-strings -- "$ignoreLine" out.txt | sponge out.txt
+        { grep --invert-match --fixed-strings -- "$ignoreLine" out.txt || true; } | sponge out.txt
       else
         echo "Missing: $ignoreLine"
         echo "not found in stdout, consider removing from 'ignoreLines'"
-        return 1
+        exit 1
       fi
     done
 
@@ -87,13 +94,13 @@ runCommand "checkhealth-${pluginName}"
 
     if [[ -n "''${check[error]}" && "$error_count" -gt 0 ]]; then
       echo "Expected no errors, but were $error_count"
-      return 1
+      exit 1
     elif [[ -n "''${check[warning]}" && "$warning_count" -gt 0 ]]; then
       echo "Expected no warnings, but were $warning_count"
-      return 1
+      exit 1
     elif [[ -n "''${check[ok]}" && "$ok_count" -eq 0 ]]; then
       echo "Expected at least one OK"
-      return 1
+      exit 1
     else
       touch $out
     fi

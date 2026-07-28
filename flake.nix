@@ -72,20 +72,7 @@
         {
           formatting = treefmt-nix.${system}.check self;
 
-          startuptime =
-            pkgs.runCommand "nvim-startuptime"
-              {
-                nativeBuildInputs = [ packages.lazy-nvim ];
-              }
-              ''
-                HOME="$PWD" timeout --kill-after=10s 30s nvim --headless "+Lazy! home" --startuptime out +q 2>&1 | tee err
-                if grep "^E[0-9]\\+: " err; then
-                  cat err
-                  exit 1
-                fi
-                cat out
-                touch $out
-              '';
+          startuptime = packages.lazy-nvim.tests.startuptime;
 
           LazyVimPlugins-outdated =
             pkgs.runCommand "LazyVimPlugins-outdated"
