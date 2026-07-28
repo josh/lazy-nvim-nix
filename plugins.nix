@@ -19,6 +19,7 @@
   fzf,
   gcc,
   ghostscript,
+  glib,
   gnutar,
   go,
   gzip,
@@ -320,6 +321,10 @@ let
 
     "grug-far.nvim" = plugins."grug-far.nvim" // {
       extraPackages = [ ast-grep ];
+    };
+
+    "neo-tree.nvim" = plugins."neo-tree.nvim" // {
+      extraPackages = lib.lists.optionals stdenv.hostPlatform.isLinux [ glib ];
     };
 
     "fzf-lua" = plugins."fzf-lua" // {

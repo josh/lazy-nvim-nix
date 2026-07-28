@@ -49,6 +49,7 @@ in
   ++ plugins."fzf-lua".extraPackages
   ++ plugins."grug-far.nvim".extraPackages
   ++ plugins."mason.nvim".extraPackages
+  ++ plugins."neo-tree.nvim".extraPackages
   ++ plugins."nvim-treesitter".extraPackages
   ++ plugins."snacks.nvim".extraPackages;
 }).overrideAttrs
@@ -137,8 +138,8 @@ in
                 "WARNING `osascript` not found (built-in)"
               ]
               ++ lib.lists.optionals stdenv.hostPlatform.isLinux [
-                # FIXME: should be fixable by adding glib to extraPackages
-                "WARNING `gio` not found (from glib2)"
+                # OK: gio trash needs a DBus session, absent in the sandbox
+                "WARNING `gio trash` --list failed, maybe you need `gvfs` installed?"
               ];
           };
 
