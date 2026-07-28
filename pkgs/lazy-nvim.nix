@@ -16,6 +16,7 @@
   spec ? [ ],
   opts ? { },
   extraPackages ? [ ],
+  extraLuaPackages ? (_: [ ]),
 }:
 let
   lib' = lazy-nvim-nix.lib;
@@ -47,6 +48,7 @@ let
     withPython3 = false;
     withNodeJs = false;
     withRuby = false;
+    inherit extraLuaPackages;
     luaRcContent = customLuaRC;
     wrapperArgs = [
       "--suffix"
