@@ -5,54 +5,79 @@
   lazy-nvim-nix,
   lazygit,
   lazy-nvim ? lazy-nvim-nix.lazy-nvim,
+  customLuaRC ? "",
+  extras ? [ ],
+  extraSpec ? [ ],
+  extraPackages ? [ ],
+  opts ? { },
 }:
 let
   inherit (lazy-nvim-nix) plugins;
   excludeSpecs = [
     "recurseForDerivations"
   ];
-  extraSpecs =
+  moduleSpecs =
     name:
     lib.attrsets.mapAttrsToList (_: drv: drv.spec) (
       builtins.removeAttrs plugins."LazyVim".extras.${name} excludeSpecs
     );
+
+  availableExtras = builtins.filter (lib.strings.hasPrefix "lazyvim.plugins.extras.") (
+    builtins.attrNames plugins."LazyVim".extras
+  );
+  extrasSpec = lib.lists.concatMap (
+    name:
+    if builtins.hasAttr name plugins."LazyVim".extras then
+      [ { "import" = name; } ] ++ moduleSpecs name
+    else
+      throw ''
+        unknown LazyVim extra "${name}", available extras:
+        ${lib.strings.concatMapStringsSep "\n" (n: "  ${n}") availableExtras}''
+  ) extras;
 in
-(lazy-nvim.override {
-  spec = [
-    plugins."LazyVim".spec
-    { "import" = "lazyvim.plugins"; }
+(lazy-nvim.override (
+  {
+    spec = [
+      plugins."LazyVim".spec
+      { "import" = "lazyvim.plugins"; }
 
-    # FIXME: Not being picked up by LazyVim.json dependency scan
-    plugins."blink.cmp".spec
-    plugins."friendly-snippets".spec
-    plugins."fzf-lua".spec
-    plugins."neo-tree.nvim".spec
-    plugins."snacks.nvim".spec
+      # FIXME: Not being picked up by LazyVim.json dependency scan
+      plugins."blink.cmp".spec
+      plugins."friendly-snippets".spec
+      plugins."fzf-lua".spec
+      plugins."neo-tree.nvim".spec
+      plugins."snacks.nvim".spec
 
-    {
-      name = "nvim-treesitter-parsers";
-      dir = "${plugins."nvim-treesitter".installDir}";
-      lazy = false;
-    }
+      {
+        name = "nvim-treesitter-parsers";
+        dir = "${plugins."nvim-treesitter".installDir}";
+        lazy = false;
+      }
 
-    # lazy.nvim cannot auto-load store-dir plugins on require(); load eagerly
-    # so lualine's statusline gets an initialized trouble
-    (plugins."trouble.nvim".spec // { lazy = false; })
-  ]
-  ++ (extraSpecs "lazyvim.plugins");
+      # lazy.nvim cannot auto-load store-dir plugins on require(); load eagerly
+      # so lualine's statusline gets an initialized trouble
+      (plugins."trouble.nvim".spec // { lazy = false; })
+    ]
+    ++ (moduleSpecs "lazyvim.plugins")
+    ++ extrasSpec
+    ++ extraSpec;
 
-  extraPackages = [
-    lazygit
-  ]
-  ++ plugins."blink.cmp".extraPackages
-  ++ plugins."conform.nvim".extraPackages
-  ++ plugins."fzf-lua".extraPackages
-  ++ plugins."grug-far.nvim".extraPackages
-  ++ plugins."mason.nvim".extraPackages
-  ++ plugins."neo-tree.nvim".extraPackages
-  ++ plugins."nvim-treesitter".extraPackages
-  ++ plugins."snacks.nvim".extraPackages;
-}).overrideAttrs
+    extraPackages = [
+      lazygit
+    ]
+    ++ plugins."blink.cmp".extraPackages
+    ++ plugins."conform.nvim".extraPackages
+    ++ plugins."fzf-lua".extraPackages
+    ++ plugins."grug-far.nvim".extraPackages
+    ++ plugins."mason.nvim".extraPackages
+    ++ plugins."neo-tree.nvim".extraPackages
+    ++ plugins."nvim-treesitter".extraPackages
+    ++ plugins."snacks.nvim".extraPackages
+    ++ extraPackages;
+  }
+  // lib.attrsets.optionalAttrs (customLuaRC != "") { inherit customLuaRC; }
+  // lib.attrsets.optionalAttrs (opts != { }) { inherit opts; }
+)).overrideAttrs
   (
     finalAttrs: previousAttrs:
     let
