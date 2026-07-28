@@ -1,4 +1,5 @@
 {
+  lib,
   callPackage,
   writeTextFile,
   lazy-nvim-nix,
@@ -16,7 +17,7 @@ writeTextFile {
     vim.opt.rtp:prepend("${plugins."lazy.nvim"}");
 
     ${customLuaRC}
-    require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua (lib'.defaultLazyOpts // opts)})
+    require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua (lib.recursiveUpdate lib'.defaultLazyOpts opts)})
   '';
 
   passthru.tests = {

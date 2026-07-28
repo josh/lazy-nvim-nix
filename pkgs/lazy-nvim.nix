@@ -14,6 +14,7 @@
   ripgrep,
   xdg-utils,
   spec ? [ ],
+  opts ? { },
   extraPackages ? [ ],
 }:
 let
@@ -21,7 +22,7 @@ let
   inherit (lazy-nvim-nix) plugins;
   lazypath = plugins."lazy.nvim";
 
-  opts = lib'.defaultLazyOpts;
+  finalOpts = lib.recursiveUpdate lib'.defaultLazyOpts opts;
 
   moreExtraPackages = [
     bash
@@ -39,7 +40,7 @@ let
 
   customLuaRC = ''
     vim.opt.rtp:prepend("${lazypath}");
-    require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua opts})
+    require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua finalOpts})
   '';
 
   finalConfig = {
