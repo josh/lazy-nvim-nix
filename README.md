@@ -12,11 +12,11 @@ Add as an input to your flake:
 
   outputs = { self, lazy-nvim-nix }: {
     homeModules.default = {
-      programs.neovim.finalPackage = lazy-nvim-nix.packages.x86_64-linux.LazyVim;
+      home.packages = [ lazy-nvim-nix.packages.x86_64-linux.LazyVim ];
     };
 
     nixosModules.default = {
-      programs.neovim.finalPackage = lazy-nvim-nix.packages.x86_64-linux.default;
+      environment.systemPackages = [ lazy-nvim-nix.packages.x86_64-linux.default ];
     };
   };
 }
@@ -33,7 +33,7 @@ and `lib`:
 ```nix
 {
   nixpkgs.overlays = [ lazy-nvim-nix.overlays.default ];
-  programs.neovim.finalPackage = pkgs.lazy-nvim-nix.LazyVim;
+  environment.systemPackages = [ pkgs.lazy-nvim-nix.LazyVim ];
 }
 ```
 
