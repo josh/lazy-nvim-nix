@@ -364,35 +364,57 @@ let
       ++ lib.lists.optionals stdenv.hostPlatform.isDarwin [ darwin.trash ];
     };
 
-    "mason.nvim" = plugins."mason.nvim" // {
-      spec = plugins."mason.nvim".spec // {
-        opts = {
-          registries = [ "file:${masonRegistry}" ];
+    # Pin the file-registry yq lookup: mason needs Go yq semantics, and the
+    # wrapper's suffixed PATH lets an incompatible user yq win (EPIPE on spawn)
+    "mason.nvim" =
+      let
+        patched = stdenvNoCC.mkDerivation {
+          name = formatDerivationName { inherit (plugins."mason.nvim".meta) name version; };
+          src = plugins."mason.nvim";
+          dontBuild = true;
+          postPatch = ''
+            substituteInPlace lua/mason-registry/sources/file.lua \
+              --replace-fail 'local yq = vim.fn.exepath "yq"' 'local yq = "${lib.getExe yq-go}"'
+          '';
+          installPhase = ''
+            runHook preInstall
+            cp -r . $out
+            runHook postInstall
+          '';
+          inherit (plugins."mason.nvim") meta;
         };
+      in
+      patched
+      // {
+        spec = plugins."mason.nvim".spec // {
+          dir = "${patched}";
+          opts = {
+            registries = [ "file:${masonRegistry}" ];
+          };
+        };
+        extraPackages =
+          let
+            python312WithPip = python312Packages.python.withPackages (ps: with ps; [ pip ]);
+          in
+          [
+            # keep-sorted start
+            cargo
+            curl
+            gnutar
+            go
+            gzip
+            jdk
+            nodejs_24
+            php83
+            php83Packages.composer
+            python312WithPip
+            ruby
+            unzip
+            wget
+            yq-go
+            # keep-sorted end
+          ];
       };
-      extraPackages =
-        let
-          python312WithPip = python312Packages.python.withPackages (ps: with ps; [ pip ]);
-        in
-        [
-          # keep-sorted start
-          cargo
-          curl
-          gnutar
-          go
-          gzip
-          jdk
-          nodejs_24
-          php83
-          php83Packages.composer
-          python312WithPip
-          ruby
-          unzip
-          wget
-          yq-go
-          # keep-sorted end
-        ];
-    };
 
     "nvim-treesitter" = vimPlugins.nvim-treesitter // {
       spec =
