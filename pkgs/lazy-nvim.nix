@@ -64,7 +64,7 @@ in
       in
       {
         help = runCommand "nvim-help" { nativeBuildInputs = [ neovim ]; } ''
-          nvim --help 2>&1
+          timeout --kill-after=10s 30s nvim --help 2>&1
           touch $out
         '';
 
@@ -104,9 +104,18 @@ in
         };
 
         startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ neovim ]; } ''
-          HOME="$PWD" timeout --kill-after=10s 30s nvim --headless "+Lazy! home" --startuptime out +q 2>&1 | tee err
+          exit_code=0
+          HOME="$PWD" timeout --kill-after=10s 30s nvim --headless "+Lazy! home" --startuptime out +q 2>&1 | tee err || exit_code=$?
+
+          if [ "$exit_code" -eq 124 ] || [ "$exit_code" -eq 137 ]; then
+            echo "nvim timed out (exit $exit_code)"
+            exit 1
+          elif [ "$exit_code" -ne 0 ]; then
+            echo "nvim exited with code $exit_code"
+            exit 1
+          fi
+
           if grep "^E[0-9]\\+: " err; then
-            cat err
             exit 1
           fi
           cat out

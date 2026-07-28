@@ -24,7 +24,7 @@ let
         passthru.updateScript = updateScript;
       }
       ''
-        out=out.json ${lib.getExe neovim} -l ${./lazyvim-plugins.lua}
+        out=out.json timeout --kill-after=10s 120s ${lib.getExe neovim} -l ${./lazyvim-plugins.lua}
         ${lib.getExe jq} --sort-keys <out.json >out~
         mv out~ "$out"
       '';
