@@ -96,7 +96,7 @@ let
   */
   applyPatches =
     src: patches:
-    stdenvNoCC.mkDerivation {
+    stdenvNoCC.mkDerivation (finalAttrs: {
       name = formatDerivationName { inherit (src.meta) name version; };
       inherit src patches;
       inherit (src) meta;
@@ -105,7 +105,13 @@ let
         cp -r . $out
         runHook postInstall
       '';
-    };
+      passthru = {
+        spec = src.spec // {
+          dir = "${finalAttrs.finalPackage}";
+        };
+      }
+      // lib.attrsets.optionalAttrs (src ? extraPackages) { inherit (src) extraPackages; };
+    });
 
   /*
     Make a lazy.nvim plugin spec.
@@ -138,11 +144,19 @@ let
       };
       spec = makeLazySpec name node src;
     in
-    src // { inherit meta spec; };
+    src.overrideAttrs (previousAttrs: {
+      inherit meta;
+      passthru = (previousAttrs.passthru or { }) // {
+        inherit spec;
+      };
+    });
 
   lockfile = builtins.fromJSON (builtins.readFile ./plugins/flake.lock);
 
-  pluginNodes = builtins.removeAttrs lockfile.nodes [ "root" ];
+  pluginNodes = builtins.removeAttrs lockfile.nodes [
+    "root"
+    "mason-registry"
+  ];
 
   # Re-key plugins by canonical plugin name (with dots preserved).
   # Flake input names use hyphens (e.g. "octo-nvim") since dots are invalid
@@ -200,15 +214,28 @@ let
     ];
 
     "LazyVim" = plugins."LazyVim" // {
-      extras = mapNestedAttrs (repo: builtins.getAttr repo plugins') LazyVim-deps;
+      extras = mapNestedAttrs (
+        repo:
+        plugins'.${repo} or (throw ''
+          plugin "${repo}" is listed in plugins/LazyVim.json but has no pin in plugins/flake.nix.
+          Add the input there, then run:
+            nix flake update --flake ./plugins
+            nix run .#LazyVimPlugins.updateScript
+        '')
+      ) LazyVim-deps;
     };
 
     # Fixes "blink_cmp_fuzzy lib is not downloaded/built" warning
     # See pkgs/tests/blink-cmp-checkhealth.nix
     "blink.cmp" = vimPlugins.blink-cmp // {
-      spec = plugins."blink.cmp".spec // {
-        dir = "${vimPlugins.blink-cmp}";
-      };
+      spec =
+        builtins.removeAttrs plugins."blink.cmp".spec [
+          "branch"
+          "commit"
+        ]
+        // {
+          dir = "${vimPlugins.blink-cmp}";
+        };
       extraPackages = [ curl ];
     };
 

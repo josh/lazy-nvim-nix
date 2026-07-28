@@ -12,7 +12,8 @@
 let
   updateScript = writeScriptBin "update-LazyVim-json.sh" ''
     #!${stdenv.shell}
-    set -o xtrace
+    set -euo pipefail -o xtrace
+    cd "$(git rev-parse --show-toplevel)"
     install -m 644 ${pkg} plugins/LazyVim.json
   '';
   pkg =

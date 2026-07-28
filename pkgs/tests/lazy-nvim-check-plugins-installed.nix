@@ -2,6 +2,7 @@
   lib,
   runCommand,
   neovim,
+  minPlugins ? 1,
 }:
 runCommand "lazy-nvim-check-plugins-installed"
   {
@@ -13,10 +14,12 @@ runCommand "lazy-nvim-check-plugins-installed"
       "-S"
       "${./lazy-nvim-check-plugins-installed.lua}"
     ];
+
+    env.MIN_PLUGINS = toString minPlugins;
   }
   ''
     exit_code=0
-    timeout --kill-after=10s 120s "$neovimBin" "''${nvimArgs[@]}" || exit_code=$?
+    HOME="$PWD" timeout --kill-after=10s 120s "$neovimBin" "''${nvimArgs[@]}" || exit_code=$?
 
     if [ "$exit_code" -eq 124 ] || [ "$exit_code" -eq 137 ]; then
       echo "Test timed out (exit $exit_code)"

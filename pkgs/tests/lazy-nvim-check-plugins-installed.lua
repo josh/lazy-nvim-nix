@@ -5,6 +5,9 @@ for _, _ in pairs(Config.plugins) do
 	count = count + 1
 end
 
+local min = tonumber(vim.env["MIN_PLUGINS"] or "1")
+assert(count >= min, "expected at least " .. min .. " plugins, found " .. count)
+
 print("1.." .. count)
 
 local idx = 1
