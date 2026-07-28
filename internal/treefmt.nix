@@ -2,7 +2,7 @@ pkgs:
 let
   internal-inputs = builtins.mapAttrs (
     _name: node: builtins.getFlake (builtins.flakeRefToString node.locked)
-  ) (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes;
+  ) (builtins.removeAttrs (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes [ "root" ]);
   treefmtEval = internal-inputs.treefmt-nix.lib.evalModule pkgs treefmtConfig;
 
   treefmtConfig = {
