@@ -99,6 +99,16 @@
           snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix { };
           telescope-checkhealth = pkgs.callPackage ./pkgs/tests/telescope-checkhealth.nix { };
 
+          LazyVim-extras-eval = pkgs.runCommandLocal "LazyVim-extras-eval" {
+            env.extrasHash = builtins.hashString "sha256" (
+              lib.strings.concatMapStringsSep ";" (
+                name:
+                builtins.unsafeDiscardStringContext
+                  (pkgs.lazy-nvim-nix.LazyVim.override { extras = [ name ]; }).drvPath
+              ) pkgs.lazy-nvim-nix.LazyVim.availableExtras
+            );
+          } "touch $out";
+
           LazyVim-extras-catppuccin =
             buildPkg "LazyVim-extras-catppuccin"
               plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
