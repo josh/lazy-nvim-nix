@@ -11,7 +11,6 @@ let
     "recurseForDerivations"
     "nvim-treesitter"
     "nvim-treesitter-textobjects"
-    "trouble.nvim"
   ];
   extraSpecs =
     name:
@@ -35,8 +34,9 @@ in
     (plugins."nvim-treesitter".spec // { enabled = false; })
     (plugins."nvim-treesitter-textobjects".spec // { enabled = false; })
 
-    # FIXME: trouble.nvim doesn't like be loaded from /nix/store
-    (plugins."trouble.nvim".spec // { enabled = false; })
+    # lazy.nvim cannot auto-load store-dir plugins on require(); load eagerly
+    # so lualine's statusline gets an initialized trouble
+    (plugins."trouble.nvim".spec // { lazy = false; })
   ]
   ++ (extraSpecs "lazyvim.plugins");
 
