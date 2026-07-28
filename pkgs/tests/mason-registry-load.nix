@@ -31,6 +31,8 @@ runCommand "mason-registry-load"
     neovimBin = lib.getExe neovim;
     nvimArgs = [
       "--headless"
+      "-i"
+      "NONE"
       "-S"
       "${vim-script-runner}"
     ];
@@ -65,6 +67,9 @@ runCommand "mason-registry-load"
     fi
 
     if grep "EPIPE" err.txt; then
+      exit 1
+    fi
+    if grep "^E[0-9]\+: " err.txt; then
       exit 1
     fi
     grep -q "packages=" out.txt

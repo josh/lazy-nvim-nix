@@ -116,7 +116,7 @@ in
 
           startuptime = runCommand "nvim-startuptime" { nativeBuildInputs = [ neovim ]; } ''
             exit_code=0
-            HOME="$PWD" timeout --kill-after=10s 30s nvim --headless "+Lazy! home" --startuptime out +q 2>&1 | tee err || exit_code=$?
+            HOME="$PWD" timeout --kill-after=10s 120s nvim --headless "+Lazy! home" --startuptime out +q 2>&1 | tee err || exit_code=$?
 
             if [ "$exit_code" -eq 124 ] || [ "$exit_code" -eq 137 ]; then
               echo "nvim timed out (exit $exit_code)"

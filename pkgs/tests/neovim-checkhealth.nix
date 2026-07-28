@@ -34,6 +34,8 @@ runCommand "checkhealth-${pluginName}"
     neovimBin = lib.getExe neovim;
     nvimArgs = [
       "--headless"
+      "-i"
+      "NONE"
       "-S"
       "${vim-script-runner}"
     ];
