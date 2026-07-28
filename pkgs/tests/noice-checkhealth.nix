@@ -1,8 +1,14 @@
 { callPackage, lazy-nvim-nix }:
 callPackage ./neovim-checkhealth.nix {
   neovim = lazy-nvim-nix.lazy-nvim.override {
-    spec = [ lazy-nvim-nix.plugins."noice.nvim".spec ];
-    # inherit (lazy-nvim-nix.plugins."noice.nvim") extraPackages;
+    spec = [
+      (
+        lazy-nvim-nix.plugins."noice.nvim".spec
+        // {
+          dependencies = [ lazy-nvim-nix.plugins."snacks.nvim".spec ];
+        }
+      )
+    ];
   };
   pluginName = "noice";
   loadLazyPluginName = "noice.nvim";
@@ -10,6 +16,5 @@ callPackage ./neovim-checkhealth.nix {
     # FIXME: These should be fixable if we install treesitter correctly
     "WARNING {TreeSitter} `bash` parser is not installed"
     "WARNING {TreeSitter} `regex` parser is not installed"
-    "WARNING Noice needs `snacks.nvim` or `nvim-notify` for routes using the `notify` view"
   ];
 }
