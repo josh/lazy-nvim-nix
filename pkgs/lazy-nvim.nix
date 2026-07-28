@@ -49,7 +49,7 @@ let
     withRuby = false;
     luaRcContent = customLuaRC;
     wrapperArgs = [
-      "--prefix"
+      "--suffix"
       "PATH"
       ":"
       extrasBinPath
