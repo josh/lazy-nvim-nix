@@ -55,7 +55,7 @@ runCommand "checkhealth-${pluginName}"
       DISPLAY = lib.optionalString stdenv.hostPlatform.isLinux ":0";
       LANG = "en_US.UTF-8";
       LOCALE_ARCHIVE = lib.optionalString stdenv.hostPlatform.isLinux "${glibcLocales}/lib/locale/locale-archive";
-      TERM = "xterm-kitty";
+      SNACKS_KITTY = "1";
     };
   }
   ''

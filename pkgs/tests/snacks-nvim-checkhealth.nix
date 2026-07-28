@@ -22,8 +22,6 @@ callPackage ./neovim-checkhealth.nix {
   pluginName = "snacks";
   loadLazyPluginName = "snacks.nvim";
   ignoreLines = [
-    # OK: headless nvim has no TTY to answer the kitty graphics query
-    "ERROR your terminal does not support the kitty graphics protocol"
     # OK: snacks sub-features intentionally not enabled by this config
     "WARNING setup {disabled}"
     # OK: only `norg` is missing, no nixpkgs grammar
