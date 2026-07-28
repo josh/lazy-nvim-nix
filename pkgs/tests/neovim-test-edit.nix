@@ -35,7 +35,7 @@ runCommand "test-edit-${builtins.baseNameOf editFile}"
     mkdir -p .config/nvim
     touch .config/nvim/init.lua
 
-    HOME="$PWD" timeout 30s "$neovimBin" "''${nvimArgs[@]}" 1>out.txt 2>err.txt
+    HOME="$PWD" timeout --kill-after=10s 30s "$neovimBin" "''${nvimArgs[@]}" 1>out.txt 2>err.txt
     exit_code=$?
 
     echo "== stdout =="
@@ -44,8 +44,8 @@ runCommand "test-edit-${builtins.baseNameOf editFile}"
     cat err.txt
     echo "=="
 
-    if [ $exit_code -eq 124 ]; then
-      echo "Test timed out after 30 seconds"
+    if [ $exit_code -eq 124 ] || [ $exit_code -eq 137 ]; then
+      echo "Test timed out after 30 seconds (exit $exit_code)"
       exit 1
     elif [ $exit_code -ne 0 ]; then
       echo "Neovim exited with code $exit_code"

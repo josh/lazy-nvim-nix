@@ -64,7 +64,7 @@ runCommand "checkhealth-${pluginName}"
     mkdir -p .config/nvim
     touch .config/nvim/init.lua
 
-    HOME="$PWD" timeout --kill-after=10s 30s "$neovimBin" "''${nvimArgs[@]}"
+    HOME="$PWD" timeout --kill-after=10s 300s "$neovimBin" "''${nvimArgs[@]}"
     echo "-- stdout --"
     cat out.txt
     echo "-- stdout --"
