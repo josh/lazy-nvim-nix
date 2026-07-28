@@ -88,10 +88,13 @@
 
           blink-cmp-checkhealth = pkgs.callPackage ./pkgs/tests/blink-cmp-checkhealth.nix { };
           fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix { };
+          luasnip-checkhealth = pkgs.callPackage ./pkgs/tests/luasnip-checkhealth.nix { };
           mason-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/mason-nvim-checkhealth.nix { };
           noice-checkhealth = pkgs.callPackage ./pkgs/tests/noice-checkhealth.nix { };
+          nvim-dap-checkhealth = pkgs.callPackage ./pkgs/tests/nvim-dap-checkhealth.nix { };
           nvim-treesitter = pkgs.callPackage ./pkgs/tests/nvim-treesitter.nix { };
           snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix { };
+          telescope-checkhealth = pkgs.callPackage ./pkgs/tests/telescope-checkhealth.nix { };
 
           LazyVim-extras-catppuccin = buildPkg plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
