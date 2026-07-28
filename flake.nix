@@ -88,6 +88,7 @@
           fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix { };
           luasnip-checkhealth = pkgs.callPackage ./pkgs/tests/luasnip-checkhealth.nix { };
           mason-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/mason-nvim-checkhealth.nix { };
+          mason-registry-load = pkgs.callPackage ./pkgs/tests/mason-registry-load.nix { };
           noice-checkhealth = pkgs.callPackage ./pkgs/tests/noice-checkhealth.nix { };
           nvim-dap-checkhealth = pkgs.callPackage ./pkgs/tests/nvim-dap-checkhealth.nix { };
           nvim-treesitter = pkgs.callPackage ./pkgs/tests/nvim-treesitter.nix { };
