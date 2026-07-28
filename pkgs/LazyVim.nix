@@ -64,8 +64,37 @@ in
         tests = previousAttrs.passthru.tests // {
           checkhealth = neovim-checkhealth.override {
             inherit neovim;
-            checkError = false;
-            checkWarning = false;
+            ignoreLines = [
+              # OK: notifier readiness probes vim.notify, which noice routes
+              # asynchronously; the roundtrip never completes headless
+              "ERROR is not ready"
+              # OK: install_dir is the read-only nix store
+              "ERROR is not writable."
+              # FIXME: nixpkgs packages no ecma/jsx/html_tags component grammars
+              "ERROR html(queries):"
+              "ERROR javascript(queries):"
+              "ERROR svelte(queries):"
+              "ERROR tsx(queries):"
+              "ERROR typescript(queries):"
+              "ERROR vue(queries):"
+              # FIXME: nixpkgs diff grammar lags its highlights query
+              "ERROR diff(highlights):"
+              # OK: snacks sub-features intentionally not enabled by this config
+              "WARNING setup {disabled}"
+              # OK: only `norg` is missing, no nixpkgs grammar
+              "WARNING Missing Treesitter languages"
+              "WARNING Image rendering in docs with missing treesitter parsers won't work"
+              # OK: inherent to --headless
+              "WARNING dashboard did not open: `headless`"
+            ]
+            ++ lib.lists.optionals stdenv.hostPlatform.isDarwin [
+              # OK: osascript is a macOS system binary, not on the sandbox PATH
+              "WARNING `osascript` not found (built-in)"
+            ]
+            ++ lib.lists.optionals stdenv.hostPlatform.isLinux [
+              # OK: gio trash needs a DBus session, absent in the sandbox
+              "WARNING `gio trash` --list failed, maybe you need `gvfs` installed?"
+            ];
           };
 
           checkhealth-lazyvim = neovim-checkhealth.override {
