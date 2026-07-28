@@ -56,23 +56,20 @@
         pkgs:
         let
           inherit (pkgs.stdenv.hostPlatform) system;
-          packages = self.packages.${system};
           inherit (pkgs.lazy-nvim-nix) plugins;
 
-          buildPkg = pkg: pkgs.runCommand "${pkg.name}-build" { env.PKG = pkg; } "touch $out";
+          buildPkg = name: pkg: pkgs.runCommand "${name}-build" { env.PKG = pkg; } "touch $out";
           addAttrsetPrefix = prefix: lib.attrsets.concatMapAttrs (n: v: { "${prefix}${n}" = v; });
           localTests = lib.attrsets.concatMapAttrs (
             pkgName: pkg:
             if (builtins.hasAttr "tests" pkg) then
-              ({ "${pkgName}-build" = buildPkg pkg; } // (addAttrsetPrefix "${pkgName}-tests-" pkg.tests))
+              ({ "${pkgName}-build" = buildPkg pkgName pkg; } // (addAttrsetPrefix "${pkgName}-tests-" pkg.tests))
             else
-              { "${pkgName}-build" = buildPkg pkg; }
+              { "${pkgName}-build" = buildPkg pkgName pkg; }
           ) (builtins.removeAttrs self.packages.${system} [ "default" ]);
         in
         {
           formatting = treefmt-nix.${system}.check self;
-
-          startuptime = packages.lazy-nvim.tests.startuptime;
 
           LazyVimPlugins-outdated =
             pkgs.runCommand "LazyVimPlugins-outdated"
@@ -96,7 +93,9 @@
           snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix { };
           telescope-checkhealth = pkgs.callPackage ./pkgs/tests/telescope-checkhealth.nix { };
 
-          LazyVim-extras-catppuccin = buildPkg plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
+          LazyVim-extras-catppuccin =
+            buildPkg "LazyVim-extras-catppuccin"
+              plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
             nativeBuildInputs = lib'.flattenDerivations plugins.LazyVim.extras;
           } "touch $out";
