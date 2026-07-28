@@ -67,7 +67,7 @@
               ({ "${pkgName}-build" = buildPkg pkg; } // (addAttrsetPrefix "${pkgName}-tests-" pkg.tests))
             else
               { "${pkgName}-build" = buildPkg pkg; }
-          ) self.packages.${system};
+          ) (builtins.removeAttrs self.packages.${system} [ "default" ]);
         in
         {
           formatting = treefmt-nix.${system}.check self;
@@ -77,7 +77,7 @@
           LazyVimPlugins-outdated =
             pkgs.runCommand "LazyVimPlugins-outdated"
               {
-                buildInputs = [ pkgs.diffutils ];
+                nativeBuildInputs = [ pkgs.diffutils ];
                 actual = self.packages.${system}.LazyVimPlugins;
                 expected = ./plugins/LazyVim.json;
               }
@@ -95,7 +95,7 @@
 
           LazyVim-extras-catppuccin = buildPkg plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
           LazyVim-extras-all = pkgs.runCommandLocal "LazyVim-extras-all" {
-            buildInputs = lib'.flattenDerivations plugins.LazyVim.extras;
+            nativeBuildInputs = lib'.flattenDerivations plugins.LazyVim.extras;
           } "touch $out";
         }
         // localTests

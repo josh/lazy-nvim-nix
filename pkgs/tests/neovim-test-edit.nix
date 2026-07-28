@@ -26,8 +26,8 @@ runCommand "test-edit-${builtins.baseNameOf editFile}"
     ];
 
     env = {
-      DISPLAY = lib.optionalString stdenv.isLinux ":0";
-      LOCALE_ARCHIVE = lib.optionalString stdenv.isLinux "${glibcLocales}/lib/locale/locale-archive";
+      DISPLAY = lib.optionalString stdenv.hostPlatform.isLinux ":0";
+      LOCALE_ARCHIVE = lib.optionalString stdenv.hostPlatform.isLinux "${glibcLocales}/lib/locale/locale-archive";
       LANG = "en_US.UTF-8";
     };
   }

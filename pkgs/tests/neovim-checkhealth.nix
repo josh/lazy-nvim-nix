@@ -48,12 +48,12 @@ runCommand "checkhealth-${pluginName}"
       kitty-binstub
       moreutils
     ]
-    ++ lib.lists.optionals stdenv.isLinux [ xclip ];
+    ++ lib.lists.optionals stdenv.hostPlatform.isLinux [ xclip ];
 
     env = {
-      DISPLAY = lib.optionalString stdenv.isLinux ":0";
+      DISPLAY = lib.optionalString stdenv.hostPlatform.isLinux ":0";
       LANG = "en_US.UTF-8";
-      LOCALE_ARCHIVE = lib.optionalString stdenv.isLinux "${glibcLocales}/lib/locale/locale-archive";
+      LOCALE_ARCHIVE = lib.optionalString stdenv.hostPlatform.isLinux "${glibcLocales}/lib/locale/locale-archive";
       TERM = "xterm-kitty";
     };
   }

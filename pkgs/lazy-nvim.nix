@@ -125,6 +125,7 @@ in
 
         check-plugins-installed = callPackage ./tests/lazy-nvim-check-plugins-installed.nix {
           inherit neovim;
+          minPlugins = if spec == [ ] then 0 else 1;
         };
 
         edit-txt = callPackage ./tests/neovim-test-edit.nix {
