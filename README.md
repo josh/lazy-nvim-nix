@@ -24,45 +24,50 @@ Add as an input to your flake:
 
 ## Usage
 
+### `overlays.default`
+
+Adds a `lazy-nvim-nix` attribute set to nixpkgs containing `plugins`,
+`lazy-nvim`, `LazyVim`, `lazy-nvim-config`, `lazy-neovide`, `LazyVim-neovide`
+and `lib`:
+
+```nix
+{
+  nixpkgs.overlays = [ lazy-nvim-nix.overlays.default ];
+  programs.neovim.finalPackage = pkgs.lazy-nvim-nix.LazyVim;
+}
+```
+
 ### `packages.${system}.lazy-nvim`
+
+Neovim wrapped with lazy.nvim and a nix-managed plugin spec:
 
 ```nix
 {
   environment.systemPackages = [
-    pkgs.lazy-nvim.override {
-      spec = [ "lualine.nvim" ];
-    };
+    (pkgs.lazy-nvim-nix.lazy-nvim.override {
+      spec = [ pkgs.lazy-nvim-nix.plugins."lualine.nvim".spec ];
+    })
   ];
 }
 ```
 
 ### `packages.${system}.LazyVim`
 
-```nix
-{
-  home.packages = [
-    pkgs.LazyVim.override {
-      lazyVimExtras = [ "lazyvim.plugins.extras.coding.copilot" ];
-    };
-  ];
-}
-```
+Neovim wrapped with the full LazyVim distribution and its default plugins.
 
 ### `packages.${system}.default`
 
-Alias for `packages.${system}.lazy-nvim`.
+Alias for `packages.${system}.LazyVim`.
 
-### `overlays.default`
+### `packages.${system}.lazy-neovide` / `LazyVim-neovide`
 
-```nix
-{
-  nixpkgs.overlays = [ lazy-nvim-nix.overlays.default ];
-  programs.neovim.finalPackage = pkgs.lazynvimPlugins.LazyVim.override {
-    lazyVimExtras = [ "lazyvim.plugins.extras.coding.copilot" ];
-  };
-}
-```
+[Neovide](https://neovide.dev) wrapped around the corresponding Neovim package.
 
 ### `lib.defaultLazyOpts`
 
+Default `require("lazy").setup()` options used by the wrapped packages.
+
 ### `lib.setupLazyLua :: { pkgs, spec, opts } -> string`
+
+Renders a lazy.nvim bootstrap snippet for use in a custom `init.lua`. `opts`
+are passed through as-is; merge `lib.defaultLazyOpts` yourself if wanted.
