@@ -6,8 +6,4 @@ callPackage ./neovim-checkhealth.nix {
   };
   pluginName = "fzf_lua";
   loadLazyPluginName = "fzf-lua";
-  ignoreLines = [
-    # FIXME: I added mini.icons to spec dependencies, not sure why
-    "WARNING `nvim-web-devicons` or `mini.icons` not found"
-  ];
 }

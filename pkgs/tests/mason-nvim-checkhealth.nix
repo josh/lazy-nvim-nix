@@ -10,6 +10,7 @@ callPackage ./neovim-checkhealth.nix {
   pluginName = "mason";
   loadLazyPluginName = "mason.nvim";
   ignoreLines = [
+    # OK: julia is intentionally not shipped; its closure is too large
     "WARNING julia: not available"
   ];
 }

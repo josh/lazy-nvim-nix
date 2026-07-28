@@ -10,6 +10,7 @@
   cargo,
   chafa,
   curl,
+  darwin,
   delta,
   fd,
   fzf,
@@ -30,6 +31,7 @@
   ruby,
   sqlite,
   tectonic,
+  trash-cli,
   tree-sitter,
   ueberzugpp,
   unzip,
@@ -215,9 +217,7 @@ let
     "fzf-lua" = plugins."fzf-lua" // {
       spec = plugins."fzf-lua".spec // {
         dependencies = [
-          # Either
-          # plugins."nvim-web-devicons".spec
-          plugins."mini.icons".spec
+          (plugins."mini.icons".spec // { opts = { }; })
         ];
       };
       extraPackages = [
@@ -251,7 +251,9 @@ let
         lazygit
         mermaid-cli
         tectonic
-      ];
+      ]
+      ++ lib.lists.optionals stdenv.hostPlatform.isLinux [ trash-cli ]
+      ++ lib.lists.optionals stdenv.hostPlatform.isDarwin [ darwin.trash ];
     };
 
     "mason.nvim" = plugins."mason.nvim" // {
