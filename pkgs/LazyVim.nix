@@ -2,6 +2,7 @@
   lib,
   stdenv,
   callPackage,
+  writeText,
   lazy-nvim-nix,
   lazygit,
   lazy-nvim ? lazy-nvim-nix.lazy-nvim,
@@ -14,13 +15,34 @@
 }:
 let
   inherit (lazy-nvim-nix) plugins;
+
+  lazyvimJsonVersion =
+    let
+      parts = builtins.split "M[.]json = [{]\n  version = ([0-9]+)," (
+        builtins.readFile "${plugins."LazyVim"}/lua/lazyvim/config/init.lua"
+      );
+    in
+    assert lib.assertMsg (
+      builtins.length parts == 3
+    ) "could not parse M.json.version from the pinned LazyVim source";
+    lib.strings.toInt (builtins.head (builtins.elemAt parts 1));
+
+  lazyvimJson = writeText "lazyvim.json" (
+    builtins.toJSON {
+      version = lazyvimJsonVersion;
+      install_version = lazyvimJsonVersion;
+      extras = builtins.filter (name: name != "lazyvim.plugins") moduleNames;
+      news = {
+        "NEWS.md" = toString (builtins.stringLength (builtins.readFile "${plugins."LazyVim"}/NEWS.md"));
+      };
+    }
+  );
   excludeSpecs = [
     "recurseForDerivations"
   ];
   availableExtras = builtins.filter (lib.strings.hasPrefix "lazyvim.plugins.extras.") (
     builtins.attrNames plugins."LazyVim".extras
   );
-
   moduleNames = [
     "lazyvim.plugins"
   ]
@@ -33,7 +55,6 @@ let
         unknown LazyVim extra "${name}", available extras:
         ${lib.strings.concatMapStringsSep "\n" (n: "  ${n}") availableExtras}''
   ) extras;
-
   moduleBucket = name: builtins.removeAttrs (plugins."LazyVim".extras.${name} or { }) excludeSpecs;
 
   realPluginAttrs = lib.attrsets.mergeAttrsList (map moduleBucket moduleNames);
@@ -49,6 +70,11 @@ let
 in
 (lazy-nvim.override (
   {
+    customLuaRC = ''
+      vim.g.lazyvim_json = "${lazyvimJson}"
+    ''
+    + customLuaRC;
+
     spec = [
       plugins."LazyVim".spec
       { "import" = "lazyvim.plugins"; }
@@ -88,7 +114,6 @@ in
     ++ plugins."snacks.nvim".extraPackages
     ++ extraPackages;
   }
-  // lib.attrsets.optionalAttrs (customLuaRC != "") { inherit customLuaRC; }
   // lib.attrsets.optionalAttrs (extraLuaPackages != null) { inherit extraLuaPackages; }
   // lib.attrsets.optionalAttrs (opts != { }) { inherit opts; }
 )).overrideAttrs
