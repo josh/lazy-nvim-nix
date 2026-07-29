@@ -267,9 +267,12 @@ let
         builtins.concatMap builtins.attrNames (builtins.attrValues LazyVim-deps)
       );
     in
-    builtins.filter (name: !(builtins.elem name consumed) && !(builtins.elem name nonLazyVimPlugins)) (
-      builtins.attrNames plugins
-    );
+    builtins.filter (
+      name:
+      !(builtins.elem name consumed)
+      && !(builtins.elem name nonLazyVimPlugins)
+      && !(builtins.elem name (builtins.attrValues movedNames))
+    ) (builtins.attrNames plugins);
 
   masonRegistry =
     let
@@ -629,12 +632,29 @@ let
     };
   };
 
+  movedNames = lib.attrsets.filterAttrs (old: new: old != new) (
+    lib.attrsets.mapAttrs' (old: new: {
+      name = baseNameOf old;
+      value = baseNameOf new;
+    }) movedPlugins
+  );
+
   plugins' =
     assert lib.assertMsg (orphanPluginNames == [ ]) ''
       orphaned plugin pins in plugins/flake.nix: ${toString orphanPluginNames}
       Nothing in plugins/LazyVim.json references them. Remove the inputs and run:
         nix flake update --flake ./plugins
       or, if consumed outside LazyVim.json, add them to nonLazyVimPlugins in plugins.nix.'';
-    plugins // pluginOverrides;
+    plugins
+    // pluginOverrides
+    // lib.attrsets.mapAttrs (
+      oldName: newName:
+      plugins.${newName}
+      // {
+        spec = plugins.${newName}.spec // {
+          name = oldName;
+        };
+      }
+    ) movedNames;
 in
 lib.recurseIntoAttrs plugins'

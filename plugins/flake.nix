@@ -66,8 +66,6 @@
     cmp-tabnine.url = "github:tzachar/cmp-tabnine/main";
     cmp_luasnip.flake = false;
     cmp_luasnip.url = "github:saadparwaiz1/cmp_luasnip/master";
-    codeium-nvim.flake = false;
-    codeium-nvim.url = "github:Exafunction/codeium.nvim/main";
     conform-nvim.flake = false;
     conform-nvim.url = "github:stevearc/conform.nvim/master";
     conjure.flake = false;
@@ -316,6 +314,8 @@
     vimtex.url = "github:lervag/vimtex/master";
     which-key-nvim.flake = false;
     which-key-nvim.url = "github:folke/which-key.nvim/main";
+    windsurf-nvim.flake = false;
+    windsurf-nvim.url = "github:Exafunction/windsurf.nvim/main";
     yanky-nvim.flake = false;
     yanky-nvim.url = "github:gbprod/yanky.nvim/main";
     # keep-sorted end
