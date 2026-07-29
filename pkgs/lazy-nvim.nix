@@ -43,6 +43,7 @@ let
   luaRcContent = ''
     vim.opt.rtp:prepend("${lazypath}");
 
+    ${lib'.colorschemePreRC}
     ${customLuaRC}
     require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua finalOpts})
   '';
