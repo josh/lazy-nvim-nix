@@ -13,6 +13,7 @@ writeShellApplication {
     gnused
     jq
   ];
+  excludeShellChecks = [ "SC2001" ];
   text = ''
     fix=0
     if [ "''${1:-}" = "--fix" ]; then
@@ -26,61 +27,92 @@ writeShellApplication {
 
     status=0
 
-    while IFS=$'\t' read -r input owner repo; do
-      status=1
-      echo "$input: github:$owner/$repo has no branch ref pinned"
-    done < <(jq -r '
+    unpinned=$(jq -r '
       .nodes | to_entries[]
       | select(.key != "root" and .value.original.type == "github" and (.value.original.ref | not))
-      | [.key, .value.original.owner, .value.original.repo] | @tsv
+      | "\(.key): github:\(.value.original.owner)/\(.value.original.repo) has no branch ref pinned"
     ' plugins/flake.lock)
+    if [ -n "$unpinned" ]; then
+      status=1
+      printf '%s\n' "$unpinned"
+    fi
 
-    inputs=$(jq -r '
+    jq -r '
       .nodes | to_entries[]
-      | select(.key != "root" and .value.original.type == "github" and .value.original.ref != null)
-      | [.key, .value.original.owner, .value.original.repo, .value.original.ref] | @tsv
+      | select(.key != "root" and .value.original.type != "github")
+      | "\(.key): not a github input, skipped"
+    ' plugins/flake.lock >&2
+
+    pinned=$(jq -c '
+      [ .nodes | to_entries[]
+        | select(.key != "root" and .value.original.type == "github" and .value.original.ref != null)
+        | { input: .key, owner: .value.original.owner, repo: .value.original.repo, ref: .value.original.ref } ]
     ' plugins/flake.lock)
+    if [ "$(jq length <<<"$pinned")" -eq 0 ]; then
+      exit "$status"
+    fi
 
-    query="{"
-    i=0
-    while IFS=$'\t' read -r input owner repo ref; do
-      query+=" q$i: repository(owner: \"$owner\", name: \"$repo\") { nameWithOwner defaultBranchRef { name } }"
-      i=$((i + 1))
-    done <<<"$inputs"
-    query+=" }"
+    query=$(jq -r '
+      to_entries
+      | map("q\(.key): repository(owner: \"\(.value.owner)\", name: \"\(.value.repo)\") { nameWithOwner defaultBranchRef { name } }")
+      | "{ " + join(" ") + " }"
+    ' <<<"$pinned")
 
-    if ! response=$(gh api graphql -f query="$query"); then
+    response=$(gh api graphql -f query="$query" 2>/dev/null) || true
+    if ! jq -e .data <<<"$response" >/dev/null 2>&1; then
       echo "GitHub GraphQL query failed" >&2
       exit 2
     fi
 
-    i=0
-    while IFS=$'\t' read -r input owner repo ref; do
-      node=$(jq -r ".data.q$i // empty" <<<"$response")
-      i=$((i + 1))
-      if [ -z "$node" ]; then
-        status=1
-        echo "$input: github:$owner/$repo not found on GitHub"
-        continue
-      fi
-      slug=$(jq -r .nameWithOwner <<<"$node")
-      default=$(jq -r .defaultBranchRef.name <<<"$node")
-      if [ "$slug" != "$owner/$repo" ]; then
-        status=1
-        echo "$input: github:$owner/$repo has moved to $slug"
-        continue
-      fi
-      if [ "$ref" != "$default" ]; then
-        status=1
-        echo "$input: pinned to $owner/$repo/$ref but default branch is $default"
-        if [ "$fix" = 1 ]; then
-          pattern="github:$owner/$repo/$ref\""
-          replacement="github:$owner/$repo/$default\""
-          sed -i "s|''${pattern//./\\.}|$replacement|" plugins/flake.nix
-          nix flake update "$input" --flake ./plugins
-        fi
-      fi
-    done <<<"$inputs"
+    findings=$(jq -r --argjson pinned "$pinned" '
+      . as $resp
+      | $pinned | to_entries[]
+      | .value as $p
+      | $resp.data["q\(.key)"] as $node
+      | if $node == null then
+          [ "missing", $p.input, $p.owner, $p.repo, $p.ref, "" ]
+        elif ($node.defaultBranchRef.name // "") == "" then
+          [ "nobranch", $p.input, $p.owner, $p.repo, $p.ref, "" ]
+        elif ($node.nameWithOwner | ascii_downcase) != ("\($p.owner)/\($p.repo)" | ascii_downcase) then
+          [ "moved", $p.input, $p.owner, $p.repo, $p.ref, $node.nameWithOwner ]
+        elif $p.ref != $node.defaultBranchRef.name then
+          [ "outdated", $p.input, $p.owner, $p.repo, $p.ref, $node.defaultBranchRef.name ]
+        else
+          empty
+        end
+      | @tsv
+    ' <<<"$response")
+    if [ -z "$findings" ]; then
+      exit "$status"
+    fi
+
+    status=1
+    while IFS=$'\t' read -r kind input owner repo ref extra; do
+      case "$kind" in
+        missing)
+          echo "$input: github:$owner/$repo not found on GitHub"
+          ;;
+        nobranch)
+          echo "$input: github:$owner/$repo has no default branch (empty repository?)"
+          ;;
+        moved)
+          echo "$input: github:$owner/$repo has moved to $extra"
+          ;;
+        outdated)
+          echo "$input: pinned to $owner/$repo/$ref but default branch is $extra"
+          if [ "$fix" = 1 ]; then
+            old="github:$owner/$repo/$ref\""
+            new="github:$owner/$repo/$extra\""
+            sed -i "s|$(sed 's/[][\.*^$|]/\\&/g' <<<"$old")|$(sed 's/[&\|]/\\&/g' <<<"$new")|" plugins/flake.nix
+            if ! grep -qF "$new" plugins/flake.nix; then
+              echo "$input: failed to rewrite plugins/flake.nix" >&2
+              exit 2
+            fi
+            nix flake update "$input" --flake ./plugins
+          fi
+          ;;
+      esac
+    done <<<"$findings"
 
     exit "$status"
   '';
