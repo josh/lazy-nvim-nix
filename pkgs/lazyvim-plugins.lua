@@ -2,8 +2,8 @@
 --   LAZY_PATH=./lazy.nvim
 --   LAZYVIM_PATH=./LazyVim
 --   TMPDIR=/tmp
---   out=/dev/stdout
---   nvim -l lazyvim-plugins.lua
+--   nvim -l lazyvim-plugins.lua list
+--   SCAN_OUT=mod.json nvim -l lazyvim-plugins.lua scan <modname>
 
 local tmpdir = assert(vim.env["TMPDIR"], "TMPDIR is not set")
 vim.env["XDG_CONFIG_HOME"] = tmpdir .. "/config"
@@ -24,41 +24,69 @@ lazy.setup({
 		-- Make GitHub URLs easier to parse
 		url_format = "github:%s",
 	},
+	performance = {
+		rtp = {
+			reset = false,
+		},
+	},
 })
 
 local Plugin = require("lazy.core.plugin")
 local utils = require("lazy.core.util")
 
-local function import_plugins(modname)
-	local spec = Plugin.Spec.new({
-		name = "LazyVim",
-		dir = lazyvimpath,
-		import = modname,
-	})
-	spec:import(spec)
+_G.LazyVim = require("lazyvim.util")
 
-	local plugins = vim.empty_dict()
-	for name, plugin in pairs(spec.plugins) do
-		if name == "LazyVim" then
-			-- skip
-		elseif plugin.url == nil then
-			print(modname .. ":" .. name .. " has no URL")
-		elseif plugin.url:sub(1, 7) == "github:" then
-			plugins[name] = plugin.url:sub(8)
-		else
-			print(modname .. ":" .. name .. " has an invalid URL: " .. plugin.url)
+local mode = assert(_G.arg[1], "usage: lazyvim-plugins.lua list|scan <modname>")
+
+if mode == "list" then
+	local file = assert(io.open(assert(vim.env["SCAN_OUT"], "SCAN_OUT is not set"), "w"))
+	utils.walkmods(lazyvimpath .. "/lua/lazyvim/plugins", function(modname)
+		if modname == "lazyvim.plugins" or vim.startswith(modname, "lazyvim.plugins.extras.") then
+			assert(file:write(modname .. "\n"))
 		end
-	end
-	return plugins
+	end, "lazyvim.plugins")
+	assert(file:close())
+	os.exit(0)
 end
 
-local output = vim.empty_dict()
+assert(mode == "scan", "unknown mode: " .. mode)
+local modname = assert(_G.arg[2], "scan requires a module name")
 
--- Discover plugins
-utils.walkmods(lazyvimpath .. "/lua/lazyvim/plugins", function(modname)
-	output[modname] = import_plugins(modname)
-end, "lazyvim.plugins")
+table.insert(require("lazy.core.config").spec.modules, modname)
+require("lazyvim.config").init()
+LazyVim.config.get_defaults()
 
-local file = assert(io.open(assert(vim.env["out"], "out is not set"), "w"))
-assert(file:write(vim.fn.json_encode(output)))
+local spec = Plugin.Spec.new({
+	name = "LazyVim",
+	dir = lazyvimpath,
+	import = modname,
+})
+
+local failed = false
+for _, notif in ipairs(spec.notifs) do
+	if notif.level >= vim.log.levels.ERROR then
+		io.stderr:write(modname .. ": " .. tostring(notif.msg) .. "\n")
+		failed = true
+	end
+end
+if failed then
+	os.exit(1)
+end
+
+local plugins = vim.empty_dict()
+for name, plugin in pairs(spec.plugins) do
+	if name == "LazyVim" or name == "lazy.nvim" then
+		-- skip
+	elseif plugin.url == nil then
+		io.stderr:write(modname .. ":" .. name .. " has no URL\n")
+	elseif plugin.url:sub(1, 7) == "github:" then
+		plugins[name] = plugin.url:sub(8)
+	else
+		io.stderr:write(modname .. ":" .. name .. " has an invalid URL: " .. plugin.url .. "\n")
+	end
+end
+
+local file = assert(io.open(assert(vim.env["SCAN_OUT"], "SCAN_OUT is not set"), "w"))
+assert(file:write(vim.fn.json_encode({ [modname] = plugins })))
 assert(file:close())
+os.exit(0)

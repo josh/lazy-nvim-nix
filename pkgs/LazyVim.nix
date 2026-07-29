@@ -41,13 +41,6 @@ in
       plugins."LazyVim".spec
       { "import" = "lazyvim.plugins"; }
 
-      # FIXME: Not being picked up by LazyVim.json dependency scan
-      plugins."blink.cmp".spec
-      plugins."friendly-snippets".spec
-      plugins."fzf-lua".spec
-      plugins."neo-tree.nvim".spec
-      plugins."snacks.nvim".spec
-
       {
         name = "nvim-treesitter-parsers";
         dir = "${plugins."nvim-treesitter".installDir}";
@@ -99,14 +92,6 @@ in
               "WARNING setup {disabled}"
               # OK: inherent to --headless
               "WARNING dashboard did not open: `headless`"
-            ]
-            ++ lib.lists.optionals stdenv.hostPlatform.isDarwin [
-              # OK: osascript is a macOS system binary, not on the sandbox PATH
-              "WARNING `osascript` not found (built-in)"
-            ]
-            ++ lib.lists.optionals stdenv.hostPlatform.isLinux [
-              # OK: gio trash needs a DBus session, absent in the sandbox
-              "WARNING `gio trash` --list failed, maybe you need `gvfs` installed?"
             ];
           };
 
@@ -132,7 +117,9 @@ in
           };
 
           checkhealth-fzf-lua = neovim-checkhealth.override {
-            inherit neovim;
+            neovim = lazy-nvim-nix.LazyVim.override {
+              extras = [ "lazyvim.plugins.extras.editor.fzf" ];
+            };
             pluginName = "fzf_lua";
             loadLazyPluginName = "fzf-lua";
           };
@@ -164,7 +151,9 @@ in
           };
 
           checkhealth-neo-tree = neovim-checkhealth.override {
-            inherit neovim;
+            neovim = lazy-nvim-nix.LazyVim.override {
+              extras = [ "lazyvim.plugins.extras.editor.neo-tree" ];
+            };
             pluginName = "neo-tree";
             loadLazyPluginName = "neo-tree.nvim";
             ignoreLines =
