@@ -14,10 +14,17 @@ local idx = 1
 local status = 0
 
 for _, plugin in pairs(Config.plugins) do
-	if plugin._.installed then
-		print("ok " .. idx .. " - " .. plugin.name .. " is installed")
+	if plugin._.installed and (plugin.dir or ""):find("^/nix/store/") then
+		print("ok " .. idx .. " - " .. plugin.name .. " is installed from " .. plugin.dir)
 	else
-		print("not ok " .. idx .. " - " .. plugin.name .. " is not installed")
+		print(
+			"not ok "
+				.. idx
+				.. " - "
+				.. plugin.name
+				.. " is not installed from the nix store, dir="
+				.. tostring(plugin.dir)
+		)
 		status = 1
 	end
 	idx = idx + 1

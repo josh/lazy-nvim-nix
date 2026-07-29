@@ -13,6 +13,7 @@
   checkOk ? true,
   checkError ? true,
   checkWarning ? true,
+  minSections ? 7,
   ignoreLines ? [ ],
   optionalIgnoreLines ? [ ],
 }:
@@ -45,7 +46,12 @@ runCommand "checkhealth-${pluginName}"
       error = checkError;
       warning = checkWarning;
     };
-    inherit ignoreLines optionalIgnoreLines;
+    inherit
+      pluginName
+      minSections
+      ignoreLines
+      optionalIgnoreLines
+      ;
 
     nativeBuildInputs = [
       kitty-binstub
@@ -81,10 +87,22 @@ runCommand "checkhealth-${pluginName}"
       exit 1
     fi
 
-    for ignoreLine in "''${optionalIgnoreLines[@]}"; do
-      { grep --invert-match --fixed-strings -- "$ignoreLine" out.txt || true; } | sponge out.txt
-      { grep --invert-match --fixed-strings -- "$ignoreLine" err.txt || true; } | sponge err.txt
-    done
+    if [ ! -s out.txt ]; then
+      echo "checkhealth produced no output"
+      exit 1
+    fi
+
+    if [ "$pluginName" = "all" ]; then
+      section_count=$(grep --only-matching "^[a-zA-Z0-9_.-]\+: " out.txt | sort --unique | wc -l)
+      echo "$section_count checkhealth sections"
+      if [ "$section_count" -lt "$minSections" ]; then
+        echo "Expected at least $minSections checkhealth sections"
+        exit 1
+      fi
+    elif ! grep --quiet "^''${pluginName//./\\.}: " out.txt; then
+      echo "checkhealth section for $pluginName not found"
+      exit 1
+    fi
 
     if grep "^E[0-9]\+: " err.txt; then
       echo "nvim reported errors on stderr"
@@ -94,6 +112,14 @@ runCommand "checkhealth-${pluginName}"
       echo "plugin setup failed"
       exit 1
     fi
+    if grep -E "Error detected while processing|Error executing|stack traceback" err.txt; then
+      echo "nvim reported errors on stderr"
+      exit 1
+    fi
+
+    for ignoreLine in "''${optionalIgnoreLines[@]}"; do
+      { grep --invert-match --fixed-strings -- "$ignoreLine" out.txt || true; } | sponge out.txt
+    done
 
     for ignoreLine in "''${ignoreLines[@]}"; do
       if grep --fixed-strings --quiet -- "$ignoreLine" out.txt; then
