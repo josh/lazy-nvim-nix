@@ -430,12 +430,20 @@ let
         // {
           priority = 1000;
         }
-        // (lib.attrsets.optionalAttrs stdenv.hostPlatform.isLinux {
-          opts.picker.db.sqlite3_path = "${sqlite.out}/lib/libsqlite3.so";
-        })
-        // (lib.attrsets.optionalAttrs stdenv.hostPlatform.isDarwin {
-          opts.picker.db.sqlite3_path = "${sqlite.out}/lib/libsqlite3.dylib";
-        });
+        // {
+          opts = {
+            image = {
+              enabled = true;
+              math.enabled = false;
+            };
+          }
+          // (lib.attrsets.optionalAttrs stdenv.hostPlatform.isLinux {
+            picker.db.sqlite3_path = "${sqlite.out}/lib/libsqlite3.so";
+          })
+          // (lib.attrsets.optionalAttrs stdenv.hostPlatform.isDarwin {
+            picker.db.sqlite3_path = "${sqlite.out}/lib/libsqlite3.dylib";
+          });
+        };
       extraPackages = [
         ghostscript
         imagemagick
