@@ -481,6 +481,16 @@ let
       extraPackages = [ ast-grep ];
     };
 
+    "mason-nvim-dap.nvim" = plugins."mason-nvim-dap.nvim" // {
+      spec = plugins."mason-nvim-dap.nvim".spec // {
+        opts = lib.generators.mkLuaInline ''
+          function(_, opts)
+            opts.automatic_installation = false
+            opts.ensure_installed = {}
+          end'';
+      };
+    };
+
     "nvim-lspconfig" = plugins."nvim-lspconfig" // {
       extraPackages = [ lua-language-server ];
     };
@@ -585,9 +595,11 @@ let
       // {
         spec = plugins."mason.nvim".spec // {
           dir = wrapDir "mason.nvim" patched;
-          opts = {
-            registries = [ "file:${masonRegistry}" ];
-          };
+          opts = lib.generators.mkLuaInline ''
+            function(_, opts)
+              opts.registries = { "file:${masonRegistry}" }
+              opts.ensure_installed = {}
+            end'';
         };
         extraPackages =
           let

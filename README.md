@@ -64,7 +64,8 @@ Or through the overlay, which adds everything under `pkgs.lazy-nvim-nix`:
 - LazyVim with its default plugins, colorscheme, keymaps, and autocmds.
 - Treesitter parsers and queries pre-installed from nixpkgs — no `:TSInstall`,
   no compiler needed at runtime.
-- mason.nvim pointed at a pinned, offline copy of the mason registry.
+- mason.nvim pointed at a pinned, offline copy of the mason registry, with
+  automatic tool installation disabled — nothing downloads at startup.
 - A working toolchain appended to the editor's `PATH` (suffixed, so tools from
   your project or shell always win over the bundled ones).
 - lazy.nvim configured for immutability: `install.missing = false`, update
@@ -319,9 +320,11 @@ LazyVim.override {
 ```
 
 Language extras usually expect their toolchain (LSP server, formatter,
-debugger) to be installable via mason or already present. Mason cannot install
-anything here — the store is read-only — so upstream `ensure_installed`
-examples are inert; add those tools with `extraPackages` instead.
+debugger) to be installable via mason or already present. This package
+disables mason's automatic `ensure_installed` downloads — they would fetch
+tools at runtime, outside Nix — so add those tools with `extraPackages`
+instead. A manual `:MasonInstall` still works, but installs into your data
+directory unpinned; prefer `extraPackages`.
 `:LazyExtras` itself is read-only in this setup: extras are part of the
 package, not runtime state. The `lazyvim.json` file LazyVim uses for that
 state is generated at build time from the `extras` argument and lives in the
@@ -332,9 +335,8 @@ only until restart, and the packaged editor never reads or rewrites a
 ### LSP servers
 
 LazyVim: enable a language extra; mason downloads the server binary. Here the
-split is the same, except mason cannot install anything into the read-only
-store — **the extra configures the server, `extraPackages` supplies the
-binary.** For most languages that pair is the whole recipe:
+split is the same, except mason's automatic installation is disabled here —
+**the extra configures the server, `extraPackages` supplies the binary.** For most languages that pair is the whole recipe:
 
 ```nix
 LazyVim.override {
