@@ -9,6 +9,7 @@
   extras ? [ ],
   extraSpec ? [ ],
   extraPackages ? [ ],
+  extraLuaPackages ? null,
   opts ? { },
 }:
 let
@@ -69,6 +70,7 @@ in
     ++ extraPackages;
   }
   // lib.attrsets.optionalAttrs (customLuaRC != "") { inherit customLuaRC; }
+  // lib.attrsets.optionalAttrs (extraLuaPackages != null) { inherit extraLuaPackages; }
   // lib.attrsets.optionalAttrs (opts != { }) { inherit opts; }
 )).overrideAttrs
   (
