@@ -17,24 +17,35 @@ let
   excludeSpecs = [
     "recurseForDerivations"
   ];
-  moduleSpecs =
-    name:
-    lib.attrsets.mapAttrsToList (_: drv: drv.spec) (
-      builtins.removeAttrs plugins."LazyVim".extras.${name} excludeSpecs
-    );
-
   availableExtras = builtins.filter (lib.strings.hasPrefix "lazyvim.plugins.extras.") (
     builtins.attrNames plugins."LazyVim".extras
   );
-  extrasSpec = lib.lists.concatMap (
+
+  moduleNames = [
+    "lazyvim.plugins"
+  ]
+  ++ map (
     name:
     if builtins.elem name availableExtras then
-      [ { "import" = name; } ] ++ moduleSpecs name
+      name
     else
       throw ''
         unknown LazyVim extra "${name}", available extras:
         ${lib.strings.concatMapStringsSep "\n" (n: "  ${n}") availableExtras}''
   ) extras;
+
+  moduleBucket = name: builtins.removeAttrs (plugins."LazyVim".extras.${name} or { }) excludeSpecs;
+
+  realPluginAttrs = lib.attrsets.mergeAttrsList (map moduleBucket moduleNames);
+  optionalPluginAttrs = builtins.removeAttrs (moduleBucket "optional") (
+    builtins.attrNames realPluginAttrs
+  );
+
+  moduleSpecs =
+    lib.attrsets.mapAttrsToList (_: drv: drv.spec) realPluginAttrs
+    ++ lib.attrsets.mapAttrsToList (_: drv: drv.spec // { optional = true; }) optionalPluginAttrs;
+
+  extrasSpec = map (name: { "import" = name; }) extras;
 in
 (lazy-nvim.override (
   {
@@ -59,8 +70,8 @@ in
       # so lualine's statusline gets an initialized trouble
       (plugins."trouble.nvim".spec // { lazy = false; })
     ]
-    ++ (moduleSpecs "lazyvim.plugins")
     ++ extrasSpec
+    ++ moduleSpecs
     ++ extraSpec;
 
     extraPackages = [
