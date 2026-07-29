@@ -239,6 +239,20 @@ let
 
   LazyVim-deps = builtins.fromJSON (builtins.readFile ./plugins/LazyVim.json);
 
+  movedPlugins =
+    let
+      moved = builtins.fromJSON (builtins.readFile ./plugins/moved.json);
+      allSlugs = lib.lists.unique (
+        builtins.concatMap builtins.attrValues (builtins.attrValues LazyVim-deps)
+      );
+      stale = builtins.filter (old: !(builtins.elem old allSlugs)) (builtins.attrNames moved);
+    in
+    assert lib.assertMsg (stale == [ ]) ''
+      stale entries in plugins/moved.json: ${toString stale}
+      Upstream LazyVim no longer references these slugs. Delete the entries and repoint
+      any remaining aliases.'';
+    moved;
+
   nonLazyVimPlugins = [
     "LazyVim"
     "lazy.nvim"
@@ -420,7 +434,12 @@ let
                 nix flake update --flake ./plugins
                 nix run .#LazyVimPlugins.updateScript
             '');
-          expectedUrl = if lib.strings.hasInfix "://" slug then slug else "https://github.com/${slug}";
+          canonicalSlug = movedPlugins.${slug} or slug;
+          expectedUrl =
+            if lib.strings.hasInfix "://" canonicalSlug then
+              canonicalSlug
+            else
+              "https://github.com/${canonicalSlug}";
         in
         if drv.spec.url == expectedUrl then
           drv

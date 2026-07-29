@@ -58,13 +58,15 @@ writeShellApplication {
       | "{ " + join(" ") + " }"
     ' <<<"$pinned")
 
+    moved=$(jq -c . plugins/moved.json)
+
     response=$(gh api graphql -f query="$query" 2>/dev/null) || true
     if ! jq -e .data <<<"$response" >/dev/null 2>&1; then
       echo "GitHub GraphQL query failed" >&2
       exit 2
     fi
 
-    findings=$(jq -r --argjson pinned "$pinned" '
+    findings=$(jq -r --argjson pinned "$pinned" --argjson moved "$moved" '
       . as $resp
       | $pinned | to_entries[]
       | .value as $p
@@ -74,7 +76,10 @@ writeShellApplication {
         elif ($node.defaultBranchRef.name // "") == "" then
           [ "nobranch", $p.input, $p.owner, $p.repo, $p.ref, "" ]
         elif ($node.nameWithOwner | ascii_downcase) != ("\($p.owner)/\($p.repo)" | ascii_downcase) then
-          [ "moved", $p.input, $p.owner, $p.repo, $p.ref, $node.nameWithOwner ]
+          [
+            (if $moved["\($p.owner)/\($p.repo)"] == $node.nameWithOwner then "moved-ack" else "moved" end),
+            $p.input, $p.owner, $p.repo, $p.ref, $node.nameWithOwner
+          ]
         elif $p.ref != $node.defaultBranchRef.name then
           [ "outdated", $p.input, $p.owner, $p.repo, $p.ref, $node.defaultBranchRef.name ]
         else
@@ -86,19 +91,25 @@ writeShellApplication {
       exit "$status"
     fi
 
-    status=1
     while IFS=$'\t' read -r kind input owner repo ref extra; do
       case "$kind" in
         missing)
+          status=1
           echo "$input: github:$owner/$repo not found on GitHub"
           ;;
         nobranch)
+          status=1
           echo "$input: github:$owner/$repo has no default branch (empty repository?)"
           ;;
         moved)
+          status=1
           echo "$input: github:$owner/$repo has moved to $extra"
           ;;
+        moved-ack)
+          echo "$input: github:$owner/$repo move to $extra acknowledged in plugins/moved.json" >&2
+          ;;
         outdated)
+          status=1
           echo "$input: pinned to $owner/$repo/$ref but default branch is $extra"
           if [ "$fix" = 1 ]; then
             old="github:$owner/$repo/$ref\""
