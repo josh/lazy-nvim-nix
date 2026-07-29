@@ -25,7 +25,7 @@ let
   unknownKeys = builtins.attrNames (
     builtins.removeAttrs neovide-config (builtins.attrNames envNames)
   );
-  toEnvValue = v: if builtins.isBool v then (if v then "1" else "") else v;
+  toEnvValue = v: if builtins.isBool v then (if v then "1" else "0") else v;
   config = {
     neovim-bin = lib.getExe neovim;
   }
@@ -33,12 +33,15 @@ let
   exportLine = key: value: ''
     if [ -z "''${${envNames.${key}}+x}" ]; then export ${envNames.${key}}=${lib.escapeShellArg (toEnvValue value)}; fi
   '';
-  wrapper = writeShellApplication {
-    name = "neovide";
-    text = lib.concatStrings (lib.mapAttrsToList exportLine config) + ''
-      exec -a "$0" "${lib.getExe neovide}" "$@"
-    '';
-  };
+  mkWrapper =
+    cfg:
+    writeShellApplication {
+      name = "neovide";
+      text = lib.concatStrings (lib.mapAttrsToList exportLine cfg) + ''
+        exec -a "$0" "${lib.getExe neovide}" "$@"
+      '';
+    };
+  wrapper = mkWrapper config;
 in
 assert lib.assertMsg (unknownKeys == [ ]) ''
   lazy-neovide: unknown neovide-config keys: ${toString unknownKeys}
@@ -78,6 +81,8 @@ buildEnv {
     wrapper-env = runCommand "neovide-wrapper-env" { } ''
       grep -q "NEOVIM_BIN" ${wrapper}/bin/neovide
       ! grep -q "NEOVIDE_MAXIMIZED" ${wrapper}/bin/neovide
+      grep -q "NEOVIDE_MAXIMIZED=0" ${mkWrapper (config // { maximized = false; })}/bin/neovide
+      grep -q "NEOVIDE_FRAME=full" ${mkWrapper (config // { frame = "full"; })}/bin/neovide
       touch $out
     '';
   };
