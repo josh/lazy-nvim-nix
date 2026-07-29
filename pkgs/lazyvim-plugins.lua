@@ -38,13 +38,34 @@ _G.LazyVim = require("lazyvim.util")
 
 local mode = assert(_G.arg[1], "usage: lazyvim-plugins.lua list|scan <modname>")
 
+local function isScannedModule(modname)
+	return modname == "lazyvim.plugins" or vim.startswith(modname, "lazyvim.plugins.extras.")
+end
+
 if mode == "list" then
-	local file = assert(io.open(assert(vim.env["SCAN_OUT"], "SCAN_OUT is not set"), "w"))
+	local names = {}
 	utils.walkmods(lazyvimpath .. "/lua/lazyvim/plugins", function(modname)
-		if modname == "lazyvim.plugins" or vim.startswith(modname, "lazyvim.plugins.extras.") then
-			assert(file:write(modname .. "\n"))
+		if isScannedModule(modname) then
+			names[modname] = true
 		end
 	end, "lazyvim.plugins")
+
+	local files = vim.fn.globpath(lazyvimpath .. "/lua/lazyvim/plugins", "**/*.lua", false, true)
+	assert(#files > 0, "no lua files found under lazyvim/plugins")
+	for _, path in ipairs(files) do
+		local rel = path:sub(#lazyvimpath + #"/lua/" + 1)
+		local modname = rel:gsub("%.lua$", ""):gsub("/init$", ""):gsub("/", ".")
+		if isScannedModule(modname) then
+			assert(names[modname], "module file not reached by walkmods: " .. modname .. " (" .. path .. ")")
+		end
+	end
+
+	local sorted = vim.tbl_keys(names)
+	table.sort(sorted)
+	local file = assert(io.open(assert(vim.env["SCAN_OUT"], "SCAN_OUT is not set"), "w"))
+	for _, modname in ipairs(sorted) do
+		assert(file:write(modname .. "\n"))
+	end
 	assert(file:close())
 	os.exit(0)
 end
@@ -60,6 +81,8 @@ vim.notify = function(msg, level, _opts)
 		failed = true
 	end
 end
+
+LazyVim.lazy_notify = function() end
 
 table.insert(require("lazy.core.config").spec.modules, modname)
 require("lazyvim.config").init()
