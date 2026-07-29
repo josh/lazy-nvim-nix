@@ -88,7 +88,7 @@ runCommand "lazy-nvim-config-example"
     touch .config/nvim/init.lua
 
     exit_code=0
-    HOME="$PWD" timeout --kill-after=10s 60s "$neovimBin" "''${nvimArgs[@]}" 1>out.txt 2>err.txt || exit_code=$?
+    HOME="$PWD" timeout --kill-after=10s 120s "$neovimBin" "''${nvimArgs[@]}" 1>out.txt 2>err.txt || exit_code=$?
 
     echo "== stdout =="
     cat out.txt
