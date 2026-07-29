@@ -46,6 +46,13 @@ in
         name = "nvim-treesitter-parsers";
         dir = "${plugins."nvim-treesitter".installDir}";
         lazy = false;
+        config = lazy-nvim-nix.lib.mkLuaInline ''
+          function()
+            vim.treesitter.language.add("jsonc", {
+              path = "${plugins."nvim-treesitter".installDir}/parser/json.so",
+              symbol_name = "json",
+            })
+          end'';
       }
 
       # lazy.nvim cannot auto-load store-dir plugins on require(); load eagerly
@@ -165,7 +172,8 @@ in
                 "WARNING `osascript` not found (built-in)"
               ]
               ++ lib.lists.optionals stdenv.hostPlatform.isLinux [
-                # OK: gio trash needs a DBus session, absent in the sandbox
+                # OK: gio is shipped via glib, but the gvfs trash backend is not;
+                # its closure is too large for a warning-only feature
                 "WARNING `gio trash` --list failed, maybe you need `gvfs` installed?"
               ];
           };

@@ -6,9 +6,8 @@ callPackage ./neovim-checkhealth.nix {
   pluginName = "neoconf";
   loadLazyPluginName = "neoconf.nvim";
   ignoreLines = [
-    # OK: no jsonc grammar exists in nixpkgs or nvim-treesitter
-    "WARNING **jsonc** parser for tree-sitter is not installed. Jsonc highlighting might be broken"
-    # OK: lspconfig servers register on LspAttach, which never fires headless
+    # OK: neoconf reads the legacy lspconfig.util.available_servers table, which
+    # stays empty because LazyVim configures servers through vim.lsp.config
     "WARNING **lspconfig jsonls** is not installed? You won't get any auto completion in your settings files"
     "WARNING **lspconfig lua_ls** is not installed? You won't get any auto completion in your lua settings files"
   ];
