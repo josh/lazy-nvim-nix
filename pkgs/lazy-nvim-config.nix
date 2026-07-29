@@ -16,6 +16,7 @@ writeTextFile {
   text = ''
     vim.opt.rtp:prepend("${plugins."lazy.nvim"}");
 
+    ${lib'.colorschemePreRC}
     ${customLuaRC}
     require("lazy").setup(${lib'.toLua spec}, ${lib'.toLua (lib.recursiveUpdate lib'.defaultLazyOpts opts)})
   '';

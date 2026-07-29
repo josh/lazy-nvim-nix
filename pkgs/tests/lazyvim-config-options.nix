@@ -112,7 +112,9 @@ let
     lua if vim.fn.exists(":Explore") ~= 0 or vim.fn.exists(":Tutor") ~= 0 then io.stderr:write("performance.rtp.disabled_plugins ignored\n") vim.cmd("cquit!") end
     lua if vim.fn.maparg("<Space>ur", "n") ~= "" then io.stderr:write("core keymap not deleted in LazyVimKeymaps hook\n") vim.cmd("cquit!") end
     lua if vim.fn.maparg("s", "n") ~= "" or vim.fn.maparg("S", "n") ~= "" then io.stderr:write("flash keys function did not clear plugin keymaps\n") vim.cmd("cquit!") end
-    lua if vim.g.colors_name ~= "catppuccin" then io.stderr:write("colorscheme not applied\n") vim.cmd("cquit!") end
+    lua if not (vim.g.colors_name or ""):find("^catppuccin") then io.stderr:write("colorscheme not applied, got " .. tostring(vim.g.colors_name) .. "\n") vim.cmd("cquit!") end
+    lua if require("lazy.core.config").plugins["catppuccin"]._.loaded == nil then io.stderr:write("catppuccin plugin did not load for its colorscheme\n") vim.cmd("cquit!") end
+    lua local hl = vim.api.nvim_get_hl(0, { name = "Normal" }) if hl.bg ~= nil then io.stderr:write("transparent_background opts not applied at colorscheme time\n") vim.cmd("cquit!") end
     lua require("tokyonight") if require("lazy.core.config").plugins["tokyonight.nvim"]._.loaded == nil then io.stderr:write("require did not auto-load tokyonight from the store dir\n") vim.cmd("cquit!") end
     lua if require("tokyonight.config").options.style ~= "day" then io.stderr:write("tokyonight opts not applied through auto-load, style=" .. tostring(require("tokyonight.config").options.style) .. "\n") vim.cmd("cquit!") end
     lua require("trouble") if require("lazy.core.config").plugins["trouble.nvim"]._.loaded == nil then io.stderr:write("require did not auto-load trouble from the store dir\n") vim.cmd("cquit!") end

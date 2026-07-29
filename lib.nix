@@ -20,6 +20,29 @@ let
   toLua = lib.generators.toLua { };
   inherit (lib.generators) mkLuaInline;
 
+  colorschemePreRC = ''
+    vim.api.nvim_create_autocmd("ColorSchemePre", {
+      callback = function(ev)
+        local ok, plugins = pcall(function()
+          return require("lazy.core.config").plugins
+        end)
+        if not ok or type(plugins) ~= "table" then
+          return
+        end
+        for _, plugin in pairs(plugins) do
+          if plugin._.loaded == nil and plugin.dir then
+            for _, ext in ipairs({ "lua", "vim" }) do
+              if vim.uv.fs_stat(plugin.dir .. "/colors/" .. ev.match .. "." .. ext) then
+                require("lazy.core.loader").load(plugin, { colorscheme = ev.match })
+                return
+              end
+            end
+          end
+        end
+      end,
+    })
+  '';
+
   defaultLazyOpts = {
     pkg = {
       enabled = false;
@@ -53,6 +76,7 @@ let
 in
 {
   inherit
+    colorschemePreRC
     defaultLazyOpts
     flattenDerivations
     mkLuaInline

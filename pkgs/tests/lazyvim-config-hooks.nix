@@ -108,7 +108,8 @@ let
     lua if vim.fn.executable("hello") ~= 1 then io.stderr:write("extraPackages not on PATH\n") vim.cmd("cquit!") end
     lua if require("lazy.core.config").options.ui.border ~= "double" then io.stderr:write("opts not merged\n") vim.cmd("cquit!") end
     lua local tr = require("lazy.core.plugin").values(require("lazy.core.config").plugins["trouble.nvim"], "opts", false) if tr.use_diagnostic_signs ~= true then io.stderr:write("extraSpec opts not merged into bundled plugin\n") vim.cmd("cquit!") end if (((tr.modes or {}).lsp or {}).win or {}).position ~= "right" then io.stderr:write("LazyVim default opts lost in merge\n") vim.cmd("cquit!") end
-    lua if vim.g.colors_name ~= "catppuccin" then io.stderr:write("colorscheme opt not applied, got " .. tostring(vim.g.colors_name) .. "\n") vim.cmd("cquit!") end
+    lua if not (vim.g.colors_name or ""):find("^catppuccin") then io.stderr:write("colorscheme opt not applied, got " .. tostring(vim.g.colors_name) .. "\n") vim.cmd("cquit!") end
+    lua if require("lazy.core.config").plugins["catppuccin"]._.loaded == nil then io.stderr:write("catppuccin plugin did not load for its colorscheme\n") vim.cmd("cquit!") end
     lua if vim.fn.maparg("<Space>zz", "n") == "" then io.stderr:write("customLuaRC mapping missing\n") vim.cmd("cquit!") end
     lua local m = vim.fn.maparg("<Space>l", "n", false, true) if m.desc ~= "rc-override" then io.stderr:write("LazyVimKeymaps override lost, desc=" .. tostring(m.desc) .. "\n") vim.cmd("cquit!") end
     lua if vim.fn.maparg("<Space>sr", "n") ~= "" then io.stderr:write("keys disable entry ignored\n") vim.cmd("cquit!") end
