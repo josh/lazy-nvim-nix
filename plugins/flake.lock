@@ -311,13 +311,13 @@
       "locked": {
         "lastModified": 1776072526,
         "narHash": "sha256-KpYGuk+xA2Fk2DrsmGA2U8lsyaDow86Q7cKSx8YLIR8=",
-        "owner": "p00f",
+        "owner": "dchinmay2",
         "repo": "clangd_extensions.nvim",
         "rev": "78c2ecd659d54972be17aa6ba2deac3c53223b80",
         "type": "github"
       },
       "original": {
-        "owner": "p00f",
+        "owner": "dchinmay2",
         "ref": "main",
         "repo": "clangd_extensions.nvim",
         "type": "github"
