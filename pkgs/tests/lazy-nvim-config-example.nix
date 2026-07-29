@@ -44,8 +44,6 @@ let
             plugins."nui.nvim".spec
             plugins."nvim-nio".spec
             plugins."pathlib.nvim".spec
-            plugins."tree-sitter-norg".spec
-            plugins."tree-sitter-norg-meta".spec
           ];
         }
       )
