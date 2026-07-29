@@ -27,8 +27,8 @@ let
   };
   vim-script-runner = writeText "lazyvim-config-hooks.vim" ''
     lua if vim.g.rc_before_setup ~= true then io.stderr:write("customLuaRC did not run before setup\n") vim.cmd("cquit!") end
-    lua if require("lazy.core.config").plugins["mini.surround"] == nil then io.stderr:write("extras entry not wired\n") vim.cmd("cquit!") end
-    lua if require("lazy.core.config").plugins["dial.nvim"] == nil then io.stderr:write("extraSpec entry not wired\n") vim.cmd("cquit!") end
+    lua local ms = require("lazy.core.config").plugins["mini.surround"] if ms == nil or not (ms.dir or ""):find("^/nix/store/") then io.stderr:write("extras entry not store-wired\n") vim.cmd("cquit!") end
+    lua local dl = require("lazy.core.config").plugins["dial.nvim"] if dl == nil or not (dl.dir or ""):find("^/nix/store/") then io.stderr:write("extraSpec entry not store-wired\n") vim.cmd("cquit!") end
     lua if require("lazy.core.config").plugins["persistence.nvim"] ~= nil then io.stderr:write("enabled = false fragment ignored\n") vim.cmd("cquit!") end
     lua if vim.fn.executable("hello") ~= 1 then io.stderr:write("extraPackages not on PATH\n") vim.cmd("cquit!") end
     lua if require("lazy.core.config").options.ui.border ~= "double" then io.stderr:write("opts not merged\n") vim.cmd("cquit!") end

@@ -297,7 +297,11 @@ LazyVim.override {
 }
 ```
 
-Lua rocks for plugins that need them are wired through the underlying wrapper:
+Lua rocks for plugins that need them are wired through the underlying wrapper.
+Note that a custom `lazy-nvim` package's `customLuaRC` and `opts` survive unless
+`LazyVim.override` sets them, while its `spec` and `extraPackages` are always
+replaced by the LazyVim wrapper — use `extraSpec`/`extraPackages` on
+`LazyVim.override` instead:
 
 ```nix
 LazyVim.override {

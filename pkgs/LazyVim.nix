@@ -27,7 +27,7 @@ let
   );
   extrasSpec = lib.lists.concatMap (
     name:
-    if builtins.hasAttr name plugins."LazyVim".extras then
+    if builtins.elem name availableExtras then
       [ { "import" = name; } ] ++ moduleSpecs name
     else
       throw ''
@@ -79,6 +79,7 @@ in
     in
     {
       passthru = previousAttrs.passthru // {
+        inherit availableExtras;
         tests = previousAttrs.passthru.tests // {
           checkhealth = neovim-checkhealth.override {
             inherit neovim;
