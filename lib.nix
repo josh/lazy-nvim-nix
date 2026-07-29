@@ -47,27 +47,12 @@ let
     };
   };
 
-  setupLazyLua =
-    {
-      pkgs,
-      spec ? [ ],
-      opts ? { },
-    }:
-    let
-      lazypath = (pkgs.callPackage ./plugins.nix { })."lazy.nvim";
-    in
-    ''
-      vim.opt.rtp:prepend("${lazypath}");
-      require("lazy").setup(${toLua spec}, ${toLua opts})
-    '';
-
 in
 {
   inherit
     defaultLazyOpts
     flattenDerivations
     mkLuaInline
-    setupLazyLua
     toLua
     ;
 }
