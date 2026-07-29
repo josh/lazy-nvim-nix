@@ -527,23 +527,6 @@
         "type": "github"
       }
     },
-    "codeium-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1746038916,
-        "narHash": "sha256-TWezce2+XrkzaiW/V3VgfX3FMdS8qFE8/FfPEK/Ii84=",
-        "owner": "Exafunction",
-        "repo": "codeium.nvim",
-        "rev": "821b570b526dbb05b57aa4ded578b709a704a38a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Exafunction",
-        "ref": "main",
-        "repo": "codeium.nvim",
-        "type": "github"
-      }
-    },
     "conform-nvim": {
       "flake": false,
       "locked": {
@@ -2260,7 +2243,6 @@
         "cmp-r": "cmp-r",
         "cmp-tabnine": "cmp-tabnine",
         "cmp_luasnip": "cmp_luasnip",
-        "codeium-nvim": "codeium-nvim",
         "conform-nvim": "conform-nvim",
         "conjure": "conjure",
         "copilot-cmp": "copilot-cmp",
@@ -2385,6 +2367,7 @@
         "vim-startuptime": "vim-startuptime",
         "vimtex": "vimtex",
         "which-key-nvim": "which-key-nvim",
+        "windsurf-nvim": "windsurf-nvim",
         "yanky-nvim": "yanky-nvim"
       }
     },
@@ -2810,6 +2793,23 @@
         "owner": "folke",
         "ref": "main",
         "repo": "which-key.nvim",
+        "type": "github"
+      }
+    },
+    "windsurf-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1746038916,
+        "narHash": "sha256-TWezce2+XrkzaiW/V3VgfX3FMdS8qFE8/FfPEK/Ii84=",
+        "owner": "Exafunction",
+        "repo": "windsurf.nvim",
+        "rev": "821b570b526dbb05b57aa4ded578b709a704a38a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Exafunction",
+        "ref": "main",
+        "repo": "windsurf.nvim",
         "type": "github"
       }
     },
