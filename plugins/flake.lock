@@ -1542,6 +1542,7 @@
       },
       "original": {
         "owner": "julienvincent",
+        "ref": "master",
         "repo": "nvim-paredit",
         "type": "github"
       }

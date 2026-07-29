@@ -185,7 +185,7 @@
     nvim-nio.flake = false;
     nvim-nio.url = "github:nvim-neotest/nvim-nio/master";
     nvim-paredit.flake = false;
-    nvim-paredit.url = "github:julienvincent/nvim-paredit";
+    nvim-paredit.url = "github:julienvincent/nvim-paredit/master";
     nvim-snippets.flake = false;
     nvim-snippets.url = "github:garymjr/nvim-snippets/main";
     nvim-treesitter-context.flake = false;
