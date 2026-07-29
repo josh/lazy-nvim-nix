@@ -39,15 +39,6 @@ callPackage ./neovim-checkhealth.nix {
     ];
     extraSpec = [
       (
-        lazy-nvim-nix.plugins."mason.nvim".spec
-        // {
-          opts = lazy-nvim-nix.lib.mkLuaInline ''
-            function(_, opts)
-              opts.ensure_installed = {}
-            end'';
-        }
-      )
-      (
         lazy-nvim-nix.plugins."kulala.nvim".spec
         // {
           opts = {
