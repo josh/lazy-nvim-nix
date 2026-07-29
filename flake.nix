@@ -141,6 +141,7 @@
               ) pkgs.lazy-nvim-nix.LazyVim.availableExtras;
             }).tests.check-plugins-installed;
 
+          LazyVim-extras-checkhealth = pkgs.callPackage ./pkgs/tests/lazyvim-extras-checkhealth.nix { };
           LazyVim-extras-catppuccin =
             buildPkg "LazyVim-extras-catppuccin"
               plugins.LazyVim.extras."lazyvim.plugins".catppuccin;
