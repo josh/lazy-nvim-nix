@@ -45,6 +45,14 @@ let
         }
       )
       (
+        plugins."tokyonight.nvim".spec
+        // {
+          opts = {
+            style = "day";
+          };
+        }
+      )
+      (
         plugins."flash.nvim".spec
         // {
           keys = lib'.mkLuaInline "function() return {} end";
@@ -105,6 +113,9 @@ let
     lua if vim.fn.maparg("<Space>ur", "n") ~= "" then io.stderr:write("core keymap not deleted in LazyVimKeymaps hook\n") vim.cmd("cquit!") end
     lua if vim.fn.maparg("s", "n") ~= "" or vim.fn.maparg("S", "n") ~= "" then io.stderr:write("flash keys function did not clear plugin keymaps\n") vim.cmd("cquit!") end
     lua if vim.g.colors_name ~= "catppuccin" then io.stderr:write("colorscheme not applied\n") vim.cmd("cquit!") end
+    lua require("tokyonight") if require("lazy.core.config").plugins["tokyonight.nvim"]._.loaded == nil then io.stderr:write("require did not auto-load tokyonight from the store dir\n") vim.cmd("cquit!") end
+    lua if require("tokyonight.config").options.style ~= "day" then io.stderr:write("tokyonight opts not applied through auto-load, style=" .. tostring(require("tokyonight.config").options.style) .. "\n") vim.cmd("cquit!") end
+    lua require("trouble") if require("lazy.core.config").plugins["trouble.nvim"]._.loaded == nil then io.stderr:write("require did not auto-load trouble from the store dir\n") vim.cmd("cquit!") end
     lua local cv = require("lazy.core.plugin").values(require("lazy.core.config").plugins["catppuccin"], "opts", false) if cv.transparent_background ~= true then io.stderr:write("colorscheme opts fragment not merged\n") vim.cmd("cquit!") end
     lua local o = require("lazy.core.plugin").values(require("lazy.core.config").plugins["nvim-treesitter"], "opts", false) if not (o.install_dir or ""):find("^/nix/store/") then io.stderr:write("install_dir lost through opts fragment\n") vim.cmd("cquit!") end if not vim.tbl_contains(o.ensure_installed or {}, "zig") then io.stderr:write("ensure_installed not extended\n") vim.cmd("cquit!") end
     Lazy! load blink.cmp
