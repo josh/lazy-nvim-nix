@@ -5,6 +5,7 @@
   stdenvNoCC,
   fetchFromGitHub,
   fetchgit,
+  linkFarm,
   neovimUtils,
   symlinkJoin,
   vimPlugins,
@@ -118,7 +119,7 @@ let
       '';
       passthru = {
         spec = src.spec // {
-          dir = "${finalAttrs.finalPackage}";
+          dir = wrapDir src.meta.name finalAttrs.finalPackage;
         };
       }
       // lib.attrsets.optionalAttrs (src ? extraPackages) { inherit (src) extraPackages; };
@@ -130,6 +131,17 @@ let
   */
   gitNodeUrl = node: lib.strings.removeSuffix ".git" node.original.url;
 
+  wrapDir =
+    name: drv:
+    "${
+      linkFarm "${builtins.replaceStrings [ "." ] [ "-" ] name}-dir" [
+        {
+          inherit name;
+          path = drv;
+        }
+      ]
+    }/${name}";
+
   makeLazySpec =
     name: node: drv:
     assert builtins.elem node.original.type [
@@ -138,7 +150,7 @@ let
     ];
     {
       inherit name;
-      dir = "${drv}";
+      dir = wrapDir name drv;
       url =
         if node.original.type == "github" then
           "https://github.com/${node.original.owner}/${node.original.repo}"
@@ -430,7 +442,7 @@ let
           "commit"
         ]
         // {
-          dir = "${vimPlugins.blink-cmp}";
+          dir = wrapDir "blink.cmp" vimPlugins.blink-cmp;
         };
       extraPackages = [ curl ];
     };
@@ -523,7 +535,7 @@ let
       built
       // {
         spec = plugins."telescope-fzf-native.nvim".spec // {
-          dir = "${built}";
+          dir = wrapDir "telescope-fzf-native.nvim" built;
         };
       };
 
@@ -550,7 +562,7 @@ let
       patched
       // {
         spec = plugins."mason.nvim".spec // {
-          dir = "${patched}";
+          dir = wrapDir "mason.nvim" patched;
           opts = {
             registries = [ "file:${masonRegistry}" ];
           };
@@ -586,7 +598,7 @@ let
           "commit"
         ]
         // {
-          dir = "${vimPlugins.nvim-treesitter}";
+          dir = wrapDir "nvim-treesitter" vimPlugins.nvim-treesitter;
           opts.install_dir = "${nvim-treesitter-install-dir}";
         };
       installDir = nvim-treesitter-install-dir;

@@ -114,10 +114,6 @@ in
             })
           end'';
       }
-
-      # lazy.nvim cannot auto-load store-dir plugins on require(); load eagerly
-      # so lualine's statusline gets an initialized trouble
-      (plugins."trouble.nvim".spec // { lazy = false; })
     ]
     ++ extrasSpec
     ++ moduleSpecs
