@@ -64,6 +64,7 @@ in
     ++ plugins."grug-far.nvim".extraPackages
     ++ plugins."mason.nvim".extraPackages
     ++ plugins."neo-tree.nvim".extraPackages
+    ++ plugins."nvim-lspconfig".extraPackages
     ++ plugins."nvim-treesitter".extraPackages
     ++ plugins."snacks.nvim".extraPackages
     ++ extraPackages;
@@ -83,12 +84,21 @@ in
         tests = previousAttrs.passthru.tests // {
           checkhealth = neovim-checkhealth.override {
             inherit neovim;
+            loadAllPlugins = true;
+            minSections = 18;
             ignoreLines = [
               # OK: notifier readiness probes vim.notify, which noice routes
               # asynchronously; the roundtrip never completes headless
               "ERROR is not ready"
               # OK: install_dir is the read-only nix store
               "ERROR is not writable."
+              # OK: unconditional upstream warning, always shown
+              "WARNING Some providers may show up as \"disabled\" but are enabled dynamically"
+              # OK: catppuccin probes vim.pack on load, which mkdirs an empty site/pack/core
+              "WARNING found existing packages"
+              "WARNING Lockfile is absent, plugin directory is present."
+              # OK: julia is intentionally not shipped; its closure is too large
+              "WARNING julia: not available"
               # OK: snacks sub-features intentionally not enabled by this config
               "WARNING setup {disabled}"
               # OK: inherent to --headless

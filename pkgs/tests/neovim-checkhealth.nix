@@ -10,6 +10,7 @@
   glibcLocales,
   pluginName ? "all",
   loadLazyPluginName ? null,
+  loadAllPlugins ? false,
   checkOk ? true,
   checkError ? true,
   checkWarning ? true,
@@ -22,6 +23,10 @@ let
     doautocmd UIEnter
     ${if loadLazyPluginName != null then "Lazy! load ${loadLazyPluginName}" else ""}
     lua vim.wait(3000, function() return vim.g.did_very_lazy == true end, 50)
+    ${lib.strings.optionalString loadAllPlugins ''
+      lua require("lazy").load({ plugins = vim.tbl_keys(require("lazy.core.config").plugins), wait = true })
+      lua vim.wait(1000, function() return false end, 100)
+    ''}
     ${if pluginName == null || pluginName == "all" then "checkhealth" else "checkhealth ${pluginName}"}
     w!out.txt
     qall!
