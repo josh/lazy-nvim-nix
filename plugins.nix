@@ -4,6 +4,7 @@
   stdenv,
   stdenvNoCC,
   fetchFromGitHub,
+  fetchgit,
   neovimUtils,
   symlinkJoin,
   vimPlugins,
@@ -126,13 +127,22 @@ let
     Make a lazy.nvim plugin spec.
     See <https://lazy.folke.io/spec>
   */
+  gitNodeUrl = node: lib.strings.removeSuffix ".git" node.original.url;
+
   makeLazySpec =
     name: node: drv:
-    assert node.original.type == "github";
+    assert builtins.elem node.original.type [
+      "github"
+      "git"
+    ];
     {
       inherit name;
       dir = "${drv}";
-      url = "https://github.com/${node.original.owner}/${node.original.repo}";
+      url =
+        if node.original.type == "github" then
+          "https://github.com/${node.original.owner}/${node.original.repo}"
+        else
+          gitNodeUrl node;
       branch = node.original.ref;
       commit = node.locked.rev;
       pin = true;
@@ -143,12 +153,21 @@ let
     name: node:
     let
       version = dateFromUnix node.locked.lastModified;
-      src = fetchFromGitHub {
-        name = formatDerivationName { inherit name version; };
-        inherit (node.locked) owner repo rev;
-        sha256 = node.locked.narHash;
-      };
-      meta = src.meta // {
+      src =
+        if node.original.type == "github" then
+          fetchFromGitHub {
+            name = formatDerivationName { inherit name version; };
+            inherit (node.locked) owner repo rev;
+            sha256 = node.locked.narHash;
+          }
+        else
+          fetchgit {
+            name = formatDerivationName { inherit name version; };
+            url = node.original.url;
+            rev = node.locked.rev;
+            hash = node.locked.narHash;
+          };
+      meta = (src.meta or { }) // {
         inherit name version;
       };
       spec = makeLazySpec name node src;
@@ -174,10 +193,13 @@ let
   # name doesn't match (e.g. catppuccin's repo is just "nvim").
   pluginName =
     flakeName: node:
-    let
-      inherit (node.original) repo;
-    in
-    if repo == flakeName || builtins.match ".*[.].*" repo != null then repo else flakeName;
+    if node.original.type == "git" then
+      baseNameOf (gitNodeUrl node)
+    else
+      let
+        inherit (node.original) repo;
+      in
+      if repo == flakeName || builtins.match ".*[.].*" repo != null then repo else flakeName;
 
   duplicatePluginNames = builtins.attrNames (
     lib.attrsets.filterAttrs (_: count: count > 1) (
@@ -203,6 +225,24 @@ let
     ) pluginNodes;
 
   LazyVim-deps = builtins.fromJSON (builtins.readFile ./plugins/LazyVim.json);
+
+  nonLazyVimPlugins = [
+    "LazyVim"
+    "lazy.nvim"
+    "lua-utils.nvim"
+    "neorg"
+    "pathlib.nvim"
+  ];
+
+  orphanPluginNames =
+    let
+      consumed = lib.lists.unique (
+        builtins.concatMap builtins.attrNames (builtins.attrValues LazyVim-deps)
+      );
+    in
+    builtins.filter (name: !(builtins.elem name consumed) && !(builtins.elem name nonLazyVimPlugins)) (
+      builtins.attrNames plugins
+    );
 
   masonRegistry =
     let
@@ -310,13 +350,14 @@ let
                 nix flake update --flake ./plugins
                 nix run .#LazyVimPlugins.updateScript
             '');
+          expectedUrl = if lib.strings.hasInfix "://" slug then slug else "https://github.com/${slug}";
         in
-        if drv.spec.url == "https://github.com/${slug}" then
+        if drv.spec.url == expectedUrl then
           drv
         else
           throw ''
             plugin "${repo}": plugins/LazyVim.json says upstream is "${slug}" but plugins/flake.nix pins ${drv.spec.url}.
-            The repository has likely moved. Update the input to github:${slug}, then run:
+            The repository has likely moved. Update the input to match, then run:
               nix flake update --flake ./plugins
               nix run .#LazyVimPlugins.updateScript''
       ) LazyVim-deps;
@@ -465,6 +506,12 @@ let
     };
   };
 
-  plugins' = plugins // pluginOverrides;
+  plugins' =
+    assert lib.assertMsg (orphanPluginNames == [ ]) ''
+      orphaned plugin pins in plugins/flake.nix: ${toString orphanPluginNames}
+      Nothing in plugins/LazyVim.json references them. Remove the inputs and run:
+        nix flake update --flake ./plugins
+      or, if consumed outside LazyVim.json, add them to nonLazyVimPlugins in plugins.nix.'';
+    plugins // pluginOverrides;
 in
 lib.recurseIntoAttrs plugins'

@@ -68,8 +68,6 @@
     edgy-nvim.url = "github:folke/edgy.nvim/main";
     flash-nvim.flake = false;
     flash-nvim.url = "github:folke/flash.nvim/main";
-    flit-nvim.flake = false;
-    flit-nvim.url = "github:ggandor/flit.nvim/main";
     friendly-snippets.flake = false;
     friendly-snippets.url = "github:rafamadriz/friendly-snippets/main";
     fzf-lua.flake = false;
@@ -101,7 +99,7 @@
     lean-nvim.flake = false;
     lean-nvim.url = "github:Julian/lean.nvim/main";
     leap-nvim.flake = false;
-    leap-nvim.url = "github:ggandor/leap.nvim/main";
+    leap-nvim.url = "git+https://codeberg.org/andyg/leap.nvim?ref=main";
     litee-nvim.flake = false;
     litee-nvim.url = "github:ldelossa/litee.nvim/main";
     lua-utils-nvim.flake = false;
@@ -148,8 +146,6 @@
     neo-tree-nvim.url = "github:nvim-neo-tree/neo-tree.nvim/main";
     neoconf-nvim.flake = false;
     neoconf-nvim.url = "github:folke/neoconf.nvim/main";
-    neodev-nvim.flake = false;
-    neodev-nvim.url = "github:folke/neodev.nvim/main";
     neogen.flake = false;
     neogen.url = "github:danymat/neogen/main";
     neorg.flake = false;
@@ -190,8 +186,6 @@
     nvim-snippets.url = "github:garymjr/nvim-snippets/main";
     nvim-treesitter-context.flake = false;
     nvim-treesitter-context.url = "github:nvim-treesitter/nvim-treesitter-context/master";
-    nvim-treesitter-sexp.flake = false;
-    nvim-treesitter-sexp.url = "github:PaterJason/nvim-treesitter-sexp/master";
     nvim-treesitter-textobjects.flake = false;
     nvim-treesitter-textobjects.url = "github:nvim-treesitter/nvim-treesitter-textobjects/main";
     nvim-treesitter.flake = false;
@@ -236,8 +230,6 @@
     telescope-fzf-native-nvim.url = "github:nvim-telescope/telescope-fzf-native.nvim/main";
     telescope-nvim.flake = false;
     telescope-nvim.url = "github:nvim-telescope/telescope.nvim/master";
-    telescope_hoogle.flake = false;
-    telescope_hoogle.url = "github:luc-tielen/telescope_hoogle/master";
     todo-comments-nvim.flake = false;
     todo-comments-nvim.url = "github:folke/todo-comments.nvim/main";
     tokyonight-nvim.flake = false;
@@ -256,8 +248,6 @@
     vim-dadbod-ui.url = "github:kristijanhusak/vim-dadbod-ui/master";
     vim-dadbod.flake = false;
     vim-dadbod.url = "github:tpope/vim-dadbod/master";
-    vim-helm.flake = false;
-    vim-helm.url = "github:towolf/vim-helm/master";
     vim-illuminate.flake = false;
     vim-illuminate.url = "github:RRethy/vim-illuminate/master";
     vim-repeat.flake = false;
