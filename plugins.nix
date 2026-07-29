@@ -505,6 +505,28 @@ let
       ++ lib.lists.optionals stdenv.hostPlatform.isDarwin [ darwin.trash ];
     };
 
+    # Build libfzf at nix build time; the plugin otherwise runs make on load
+    # See pkgs/tests/telescope-extra-checkhealth.nix
+    "telescope-fzf-native.nvim" =
+      let
+        built = stdenv.mkDerivation {
+          name = formatDerivationName { inherit (plugins."telescope-fzf-native.nvim".meta) name version; };
+          src = plugins."telescope-fzf-native.nvim";
+          installPhase = ''
+            runHook preInstall
+            cp -r . $out
+            runHook postInstall
+          '';
+          inherit (plugins."telescope-fzf-native.nvim") meta;
+        };
+      in
+      built
+      // {
+        spec = plugins."telescope-fzf-native.nvim".spec // {
+          dir = "${built}";
+        };
+      };
+
     # Pin the file-registry yq lookup: mason needs Go yq semantics, and the
     # wrapper's suffixed PATH lets an incompatible user yq win (EPIPE on spawn)
     "mason.nvim" =
