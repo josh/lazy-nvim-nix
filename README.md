@@ -303,7 +303,11 @@ debugger) to be installable via mason or already present. Mason cannot install
 anything here — the store is read-only — so upstream `ensure_installed`
 examples are inert; add those tools with `extraPackages` instead.
 `:LazyExtras` itself is read-only in this setup: extras are part of the
-package, not runtime state.
+package, not runtime state. The `lazyvim.json` file LazyVim uses for that
+state is generated at build time from the `extras` argument and lives in the
+Nix store, so `:LazyExtras` shows your enabled extras, toggling one lasts
+only until restart, and the packaged editor never reads or rewrites a
+`~/.config/nvim/lazyvim.json` shared with a stock LazyVim install.
 
 ### lazy.nvim's own options
 
@@ -340,10 +344,10 @@ LazyVim.override {
 ```
 
 Lua rocks for plugins that need them are wired through the underlying wrapper.
-Note that a custom `lazy-nvim` package's `customLuaRC` and `opts` survive unless
-`LazyVim.override` sets them, while its `spec` and `extraPackages` are always
-replaced by the LazyVim wrapper — use `extraSpec`/`extraPackages` on
-`LazyVim.override` instead:
+Note that a custom `lazy-nvim` package's `opts` survives unless
+`LazyVim.override` sets it, while its `customLuaRC`, `spec`, and
+`extraPackages` are always replaced by the LazyVim wrapper — use
+`customLuaRC`/`extraSpec`/`extraPackages` on `LazyVim.override` instead:
 
 ```nix
 LazyVim.override {

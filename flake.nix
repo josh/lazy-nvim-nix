@@ -86,6 +86,7 @@
 
           blink-cmp-checkhealth = pkgs.callPackage ./pkgs/tests/blink-cmp-checkhealth.nix { };
           LazyVim-config-hooks = pkgs.callPackage ./pkgs/tests/lazyvim-config-hooks.nix { };
+          LazyVim-config-json = pkgs.callPackage ./pkgs/tests/lazyvim-config-json.nix { };
           LazyVim-config-pickers = pkgs.callPackage ./pkgs/tests/lazyvim-config-pickers.nix { };
           crates-checkhealth = pkgs.callPackage ./pkgs/tests/crates-checkhealth.nix { };
           fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix { };
