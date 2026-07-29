@@ -21,6 +21,9 @@ let
   inherit (lib.generators) mkLuaInline;
 
   defaultLazyOpts = {
+    pkg = {
+      enabled = false;
+    };
     root = mkLuaInline ''vim.fn.stdpath("data") .. "/lazy"'';
     lockfile = mkLuaInline ''vim.fn.stdpath("config") .. "/lazy-lock.json"'';
     state = mkLuaInline ''vim.fn.stdpath("state") .. "/lazy/state.json"'';
