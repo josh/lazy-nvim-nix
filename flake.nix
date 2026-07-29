@@ -109,6 +109,11 @@
             );
           } "touch $out";
 
+          LazyVim-extras-leap-plugins-installed =
+            (pkgs.lazy-nvim-nix.LazyVim.override {
+              extras = [ "lazyvim.plugins.extras.editor.leap" ];
+            }).tests.check-plugins-installed;
+
           LazyVim-extras-catppuccin =
             buildPkg "LazyVim-extras-catppuccin"
               plugins.LazyVim.extras."lazyvim.plugins".catppuccin;

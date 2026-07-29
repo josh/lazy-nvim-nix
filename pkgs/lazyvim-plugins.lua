@@ -91,9 +91,15 @@ for name, plugin in pairs(spec.plugins) do
 		io.stderr:write(modname .. ":" .. name .. " has no URL\n")
 	elseif plugin.url:sub(1, 7) == "github:" then
 		plugins[name] = plugin.url:sub(8)
+	elseif plugin.url:sub(1, 8) == "https://" then
+		plugins[name] = plugin.url:gsub("%.git$", "")
 	else
-		io.stderr:write(modname .. ":" .. name .. " has an invalid URL: " .. plugin.url .. "\n")
+		io.stderr:write(modname .. ":" .. name .. " has an unsupported URL: " .. plugin.url .. "\n")
+		failed = true
 	end
+end
+if failed then
+	os.exit(1)
 end
 
 local expectedEmpty = {
