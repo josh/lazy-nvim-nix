@@ -102,6 +102,12 @@ in
           checkhealth-vim-pack = neovim-checkhealth.override {
             inherit neovim;
             pluginName = "vim.pack";
+            optionalIgnoreLines = [
+              # OK: appears only when something probes vim.pack.get, which
+              # mkdirs an empty site/pack/core as a side effect
+              "WARNING found existing packages"
+              "WARNING Lockfile is absent, plugin directory is present."
+            ];
           };
 
           checkhealth-vim-provider = neovim-checkhealth.override {

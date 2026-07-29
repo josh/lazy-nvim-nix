@@ -17,6 +17,7 @@
   minSections ? 7,
   ignoreLines ? [ ],
   optionalIgnoreLines ? [ ],
+  stderrIgnoreLines ? [ ],
 }:
 let
   vim-script-runner = writeText "checkhealth-${pluginName}.vim" ''
@@ -56,6 +57,7 @@ runCommand "checkhealth-${pluginName}"
       minSections
       ignoreLines
       optionalIgnoreLines
+      stderrIgnoreLines
       ;
 
     nativeBuildInputs = [
@@ -109,21 +111,26 @@ runCommand "checkhealth-${pluginName}"
       exit 1
     fi
 
-    if grep "^E[0-9]\+: " err.txt; then
-      echo "nvim reported errors on stderr"
-      exit 1
-    fi
-    if grep "Failed to run" err.txt; then
-      echo "plugin setup failed"
-      exit 1
-    fi
-    if grep -E "Error detected while processing|Error executing|stack traceback" err.txt; then
-      echo "nvim reported errors on stderr"
+    tr '\r' '\n' <err.txt | { grep --invert-match -E '^checkhealth: |^"out\.txt"|^$' || true; } >err-lines.txt
+
+    for ignoreLine in "''${stderrIgnoreLines[@]}"; do
+      if grep --fixed-strings --quiet -- "$ignoreLine" err-lines.txt; then
+        echo "Found stderr: $ignoreLine"
+        { grep --invert-match --fixed-strings -- "$ignoreLine" err-lines.txt || true; } | sponge err-lines.txt
+      fi
+    done
+
+    if [ -s err-lines.txt ]; then
+      echo "unexpected stderr:"
+      cat err-lines.txt
       exit 1
     fi
 
     for ignoreLine in "''${optionalIgnoreLines[@]}"; do
-      { grep --invert-match --fixed-strings -- "$ignoreLine" out.txt || true; } | sponge out.txt
+      if grep --fixed-strings --quiet -- "$ignoreLine" out.txt; then
+        echo "Optional: $ignoreLine"
+        { grep --invert-match --fixed-strings -- "$ignoreLine" out.txt || true; } | sponge out.txt
+      fi
     done
 
     for ignoreLine in "''${ignoreLines[@]}"; do

@@ -149,6 +149,10 @@ in
               # OK: inherent to --headless
               "WARNING dashboard did not open: `headless`"
             ];
+            optionalIgnoreLines = [
+              # OK: mason's live version probe; only reachable without a sandbox
+              "WARNING mason.nvim version"
+            ];
           };
 
           checkhealth-lazyvim = neovim-checkhealth.override {
