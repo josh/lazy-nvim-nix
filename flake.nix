@@ -89,7 +89,10 @@
           LazyVim-config-pickers = pkgs.callPackage ./pkgs/tests/lazyvim-config-pickers.nix { };
           crates-checkhealth = pkgs.callPackage ./pkgs/tests/crates-checkhealth.nix { };
           fzf-lua-checkhealth = pkgs.callPackage ./pkgs/tests/fzf-lua-checkhealth.nix { };
+          kulala-checkhealth = pkgs.callPackage ./pkgs/tests/kulala-checkhealth.nix { };
           luasnip-checkhealth = pkgs.callPackage ./pkgs/tests/luasnip-checkhealth.nix { };
+          luasnip-extra-checkhealth = pkgs.callPackage ./pkgs/tests/luasnip-extra-checkhealth.nix { };
+          markdown-preview-checkhealth = pkgs.callPackage ./pkgs/tests/markdown-preview-checkhealth.nix { };
           mason-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/mason-nvim-checkhealth.nix { };
           mason-registry-load = pkgs.callPackage ./pkgs/tests/mason-registry-load.nix { };
           neoconf-checkhealth = pkgs.callPackage ./pkgs/tests/neoconf-checkhealth.nix { };
@@ -97,8 +100,13 @@
           none-ls-checkhealth = pkgs.callPackage ./pkgs/tests/none-ls-checkhealth.nix { };
           nvim-dap-checkhealth = pkgs.callPackage ./pkgs/tests/nvim-dap-checkhealth.nix { };
           nvim-treesitter = pkgs.callPackage ./pkgs/tests/nvim-treesitter.nix { };
+          octo-checkhealth = pkgs.callPackage ./pkgs/tests/octo-checkhealth.nix { };
+          overseer-checkhealth = pkgs.callPackage ./pkgs/tests/overseer-checkhealth.nix { };
+          render-markdown-checkhealth = pkgs.callPackage ./pkgs/tests/render-markdown-checkhealth.nix { };
+          rustaceanvim-checkhealth = pkgs.callPackage ./pkgs/tests/rustaceanvim-checkhealth.nix { };
           snacks-nvim-checkhealth = pkgs.callPackage ./pkgs/tests/snacks-nvim-checkhealth.nix { };
           telescope-checkhealth = pkgs.callPackage ./pkgs/tests/telescope-checkhealth.nix { };
+          telescope-extra-checkhealth = pkgs.callPackage ./pkgs/tests/telescope-extra-checkhealth.nix { };
 
           LazyVim-extras-eval = pkgs.runCommandLocal "LazyVim-extras-eval" {
             env.extrasHash = builtins.hashString "sha256" (

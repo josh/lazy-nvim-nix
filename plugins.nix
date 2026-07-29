@@ -265,6 +265,11 @@ let
       c
       css
       dtd
+      git_config
+      git_rebase
+      gitattributes
+      gitcommit
+      gitignore
       html
       javascript
       jsdoc
@@ -279,6 +284,8 @@ let
       python
       query
       regex
+      ron
+      rust
       scss
       svelte
       toml
