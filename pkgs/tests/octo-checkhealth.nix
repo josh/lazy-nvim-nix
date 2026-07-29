@@ -20,6 +20,6 @@ callPackage ./neovim-checkhealth.nix {
     # scope error with a script-location header on some platforms
     "You are not logged into any GitHub hosts."
     "Cannot request Projects v2: Missing scope"
-    "checkhealth-octo.vim:line"
+    ".vim:line"
   ];
 }

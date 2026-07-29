@@ -7,6 +7,6 @@ callPackage ./neovim-checkhealth.nix {
   pluginName = "nvim-treesitter";
   ignoreLines = [
     # OK: install_dir is the read-only nix store
-    "ERROR is not writable."
+    "nvim-treesitter|ERROR is not writable."
   ];
 }
