@@ -52,6 +52,15 @@ end
 assert(mode == "scan", "unknown mode: " .. mode)
 local modname = assert(_G.arg[2], "scan requires a module name")
 
+local failed = false
+
+vim.notify = function(msg, level, _opts)
+	io.stderr:write(modname .. ": notify: " .. tostring(msg) .. "\n")
+	if (level or vim.log.levels.INFO) >= vim.log.levels.ERROR then
+		failed = true
+	end
+end
+
 table.insert(require("lazy.core.config").spec.modules, modname)
 require("lazyvim.config").init()
 LazyVim.config.get_defaults()
@@ -62,10 +71,11 @@ local spec = Plugin.Spec.new({
 	import = modname,
 })
 
-local failed = false
 for _, notif in ipairs(spec.notifs) do
-	if notif.level >= vim.log.levels.ERROR then
+	if notif.level >= vim.log.levels.WARN then
 		io.stderr:write(modname .. ": " .. tostring(notif.msg) .. "\n")
+	end
+	if notif.level >= vim.log.levels.ERROR then
 		failed = true
 	end
 end
@@ -84,6 +94,15 @@ for name, plugin in pairs(spec.plugins) do
 	else
 		io.stderr:write(modname .. ":" .. name .. " has an invalid URL: " .. plugin.url .. "\n")
 	end
+end
+
+local expectedEmpty = {
+	["lazyvim.plugins.extras.lang.thrift"] = true,
+	["lazyvim.plugins.extras.vscode"] = true,
+}
+if next(plugins) == nil and not expectedEmpty[modname] then
+	io.stderr:write(modname .. ": scanned no plugins\n")
+	os.exit(1)
 end
 
 local file = assert(io.open(assert(vim.env["SCAN_OUT"], "SCAN_OUT is not set"), "w"))
