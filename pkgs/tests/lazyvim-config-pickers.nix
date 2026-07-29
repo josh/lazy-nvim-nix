@@ -8,10 +8,6 @@
 }:
 let
   neovim = lazy-nvim-nix.LazyVim.override {
-    customLuaRC = ''
-      vim.g.lazyvim_picker = "telescope"
-      vim.g.lazyvim_cmp = "nvim-cmp"
-    '';
     extras = [
       "lazyvim.plugins.extras.coding.nvim-cmp"
       "lazyvim.plugins.extras.editor.telescope"
