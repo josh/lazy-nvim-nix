@@ -125,9 +125,26 @@ LazyVim.override {
 }
 ```
 
-Global keymaps and autocmds (LazyVim's `lua/config/keymaps.lua` and
-`lua/config/autocmds.lua`) go in the same string; anything that upstream docs
-put in a `lua/config/*.lua` file works here verbatim.
+Anything upstream docs put in `lua/config/options.lua` works here verbatim.
+Keymaps and autocmds carry one timing caveat: `customLuaRC` runs before
+LazyVim installs its own defaults (those load on the `VeryLazy` event), so a
+mapping meant to _override_ a LazyVim default would itself be overridden
+moments later — and `vim.g.mapleader` isn't set yet, so a `<leader>` mapping
+made directly in `customLuaRC` binds against the wrong leader. New mappings on
+fresh keys work directly if you spell the key out; to override a default,
+hook the `User LazyVimKeymaps` (or `User LazyVimAutocmds`) event LazyVim
+fires after loading its own:
+
+```lua
+vim.keymap.set("n", "<Space>gd", vim.diagnostic.open_float)
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "LazyVimKeymaps",
+  callback = function()
+    vim.keymap.set("n", "<leader>l", my_replacement, { desc = "Mine" })
+  end,
+})
+```
 
 ### Adding a plugin
 
@@ -221,6 +238,29 @@ extraSpec = [
 documents as a Lua function (`config`, `keys` entries with callbacks, `cond`,
 …) is expressible with it.
 
+### Changing the colorscheme (and other LazyVim settings)
+
+LazyVim's own settings — `colorscheme`, `icons`, `news`, `kind_filter` — are
+plugin `opts` on the `LazyVim` spec itself, not lazy.nvim options:
+
+```lua
+return {
+  { "LazyVim/LazyVim", opts = { colorscheme = "catppuccin" } },
+}
+```
+
+Here: the same fragment, through `extraSpec`:
+
+```nix
+extraSpec = [
+  (pkgs.lazy-nvim-nix.plugins."LazyVim".spec // {
+    opts = {
+      colorscheme = "catppuccin";
+    };
+  })
+];
+```
+
 ### Disabling a plugin
 
 LazyVim:
@@ -259,9 +299,11 @@ LazyVim.override {
 ```
 
 Language extras usually expect their toolchain (LSP server, formatter,
-debugger) to be installable via mason or already present — add those tools with
-`extraPackages`. `:LazyExtras` itself is read-only in this setup: extras are
-part of the package, not runtime state.
+debugger) to be installable via mason or already present. Mason cannot install
+anything here — the store is read-only — so upstream `ensure_installed`
+examples are inert; add those tools with `extraPackages` instead.
+`:LazyExtras` itself is read-only in this setup: extras are part of the
+package, not runtime state.
 
 ### lazy.nvim's own options
 
