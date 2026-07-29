@@ -7,6 +7,7 @@
   lazygit,
   lazy-nvim ? lazy-nvim-nix.lazy-nvim,
   customLuaRC ? "",
+  globals ? { },
   extras ? [ ],
   extraSpec ? [ ],
   extraPackages ? [ ],
@@ -15,6 +16,8 @@
 }:
 let
   inherit (lazy-nvim-nix) plugins;
+
+  lib' = lazy-nvim-nix.lib;
 
   lazyvimJsonVersion =
     let
@@ -37,6 +40,25 @@ let
       };
     }
   );
+
+  globalsRC = lib.strings.optionalString (globals != { }) ''
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "LazyVimOptions",
+      callback = function()
+        ${lib.strings.concatStrings (
+          lib.attrsets.mapAttrsToList (
+            name: value:
+            if name == "opt" then
+              lib.strings.concatStrings (
+                lib.attrsets.mapAttrsToList (opt: v: "vim.opt.${opt} = ${lib'.toLua v}\n") value
+              )
+            else
+              "vim.g.${name} = ${lib'.toLua value}\n"
+          ) globals
+        )}
+      end,
+    })
+  '';
   excludeSpecs = [
     "recurseForDerivations"
   ];
@@ -73,6 +95,7 @@ in
     customLuaRC = ''
       vim.g.lazyvim_json = "${lazyvimJson}"
     ''
+    + globalsRC
     + customLuaRC;
 
     spec = [

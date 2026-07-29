@@ -85,10 +85,12 @@ fragments in `lua/plugins/*.lua`, extras via `:LazyExtras`. Each pattern from
 
 ```nix
 pkgs.lazy-nvim-nix.LazyVim.override {
-  customLuaRC = ''
-    vim.g.autoformat = false
-    vim.opt.relativenumber = false
-  '';
+  globals = {
+    autoformat = false;
+    opt = {
+      relativenumber = false;
+    };
+  };
   extras = [ "lazyvim.plugins.extras.lang.go" ];
   extraSpec = [
     (pkgs.lazy-nvim-nix.plugins."dial.nvim".spec // { lazy = false; })
@@ -105,27 +107,45 @@ pkgs.lazy-nvim-nix.LazyVim.override {
 
 ### Options, globals, and the leader key
 
-LazyVim: `lua/config/options.lua`, loaded before lazy.nvim starts.
+LazyVim: `lua/config/options.lua`.
 
 ```lua
-vim.g.mapleader = " "
 vim.g.autoformat = false
 vim.opt.relativenumber = false
 ```
 
-Here: the `customLuaRC` string, injected into the generated init.lua _before_
-`require("lazy").setup()` — the same timing.
+Here: the `globals` argument. A timing subtlety makes the obvious translation
+wrong: LazyVim loads its _own_ options **inside** `require("lazy").setup()`
+and assigns unconditionally, so a `vim.g.autoformat = false` written plainly
+in `customLuaRC` (which runs before setup) is silently overwritten moments
+later. `globals` values are applied on the `User LazyVimOptions` event LazyVim
+fires after loading its options — after LazyVim's defaults, before any plugin
+or extra is imported. Plain keys become `vim.g` variables; the `opt` attrset
+becomes `vim.opt` assignments:
 
 ```nix
 LazyVim.override {
-  customLuaRC = ''
-    vim.g.autoformat = false
-    vim.opt.relativenumber = false
-  '';
+  globals = {
+    autoformat = false;
+    opt = {
+      relativenumber = false;
+    };
+  };
 }
 ```
 
-Anything upstream docs put in `lua/config/options.lua` works here verbatim.
+The equivalent escape hatch in raw Lua, for anything more involved:
+
+```lua
+vim.api.nvim_create_autocmd("User", {
+  pattern = "LazyVimOptions",
+  callback = function()
+    vim.g.autoformat = false
+    vim.opt.relativenumber = false
+  end,
+})
+```
+
 Keymaps and autocmds carry one timing caveat: `customLuaRC` runs before
 LazyVim installs its own defaults (those load on the `VeryLazy` event), so a
 mapping meant to _override_ a LazyVim default would itself be overridden
