@@ -9,6 +9,20 @@ callPackage ./neovim-checkhealth.nix {
   ignoreLines = [
     # OK: workspace and toolchain probes; the sandbox has no project open and
     # ships none of the optional task runners
-    "WARNING {"
+    "WARNING {cargo}:"
+    "WARNING {devenv}:"
+    "WARNING {mage}:"
+    "WARNING {mise}:"
+    "WARNING {cargo-make}:"
+    "WARNING {composer}:"
+    "WARNING {deno}:"
+    "WARNING {just}:"
+    "WARNING {mix}:"
+    "WARNING {npm}:"
+    "WARNING {rake}:"
+    "WARNING {task}:"
+    "WARNING {tox}:"
+    "WARNING {vscode}:"
+    "WARNING {make}:"
   ];
 }
