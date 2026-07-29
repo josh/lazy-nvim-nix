@@ -329,6 +329,103 @@ Nix store, so `:LazyExtras` shows your enabled extras, toggling one lasts
 only until restart, and the packaged editor never reads or rewrites a
 `~/.config/nvim/lazyvim.json` shared with a stock LazyVim install.
 
+### LSP servers
+
+LazyVim: enable a language extra; mason downloads the server binary. Here the
+split is the same, except mason cannot install anything into the read-only
+store — **the extra configures the server, `extraPackages` supplies the
+binary.** For most languages that pair is the whole recipe:
+
+```nix
+LazyVim.override {
+  extras = [ "lazyvim.plugins.extras.lang.python" ];
+  extraPackages = [
+    pkgs.pyright
+    pkgs.ruff
+  ];
+}
+```
+
+The extra already carries the full LSP wiring (`lang.python` configures
+pyright and ruff, keymaps, treesitter, formatting); the only thing missing in
+this environment is the executable. The nixpkgs attribute is usually not the
+lspconfig server name — common pairs:
+
+| language / extra  | lspconfig server | nixpkgs package   |
+| ----------------- | ---------------- | ----------------- |
+| `lang.python`     | `pyright`+`ruff` | `pyright`, `ruff` |
+| `lang.go`         | `gopls`          | `gopls`           |
+| `lang.typescript` | `vtsls`          | `vtsls`           |
+| `lang.clangd`     | `clangd`         | `clang-tools`     |
+| `lang.nix`        | `nil_ls`         | `nil`             |
+| `lang.rust`       | rustaceanvim     | `rust-analyzer`   |
+
+Where an extra offers alternative servers, the selection global goes through
+`globals` (it is read at import time, which the `LazyVimOptions` hook is early
+enough for):
+
+```nix
+LazyVim.override {
+  globals = {
+    lazyvim_python_lsp = "basedpyright";
+  };
+  extras = [ "lazyvim.plugins.extras.lang.python" ];
+  extraPackages = [
+    pkgs.basedpyright
+    pkgs.ruff
+  ];
+}
+```
+
+Tweaking a server the extra already configures uses the standard `opts`
+deep-merge on `nvim-lspconfig` — settings compose with the extra's:
+
+```nix
+LazyVim.override {
+  extras = [ "lazyvim.plugins.extras.lang.python" ];
+  extraSpec = [
+    (pkgs.lazy-nvim-nix.plugins."nvim-lspconfig".spec // {
+      opts = {
+        servers = {
+          pyright = {
+            settings = {
+              python = {
+                analysis = {
+                  typeCheckingMode = "strict";
+                };
+              };
+            };
+          };
+        };
+      };
+    })
+  ];
+  extraPackages = [
+    pkgs.pyright
+    pkgs.ruff
+  ];
+}
+```
+
+And a server no extra covers — upstream's
+`{ "neovim/nvim-lspconfig", opts = { servers = { marksman = {} } } }` — is the
+same fragment plus its binary:
+
+```nix
+LazyVim.override {
+  extraSpec = [
+    (pkgs.lazy-nvim-nix.plugins."nvim-lspconfig".spec // {
+      opts = {
+        servers = {
+          marksman = { };
+        };
+      };
+    })
+  ];
+  extraPackages = [ pkgs.marksman ];
+}
+```
+
 ### lazy.nvim's own options
 
 LazyVim: the `opts` table passed to `require("lazy").setup()` in

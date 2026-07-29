@@ -53,6 +53,34 @@ let
         }
       )
       (
+        plugins."nvim-lspconfig".spec
+        // {
+          opts = {
+            servers = {
+              lua_ls = {
+                mason = false;
+                settings = {
+                  Lua = {
+                    hint = {
+                      enable = true;
+                    };
+                  };
+                };
+              };
+              jsonls = {
+                settings = {
+                  json = {
+                    validate = {
+                      enable = true;
+                    };
+                  };
+                };
+              };
+            };
+          };
+        }
+      )
+      (
         plugins."gitsigns.nvim".spec
         // {
           opts = lib'.mkLuaInline ''
@@ -84,6 +112,12 @@ let
     lua if vim.fn.maparg("<Space>zz", "n") == "" then io.stderr:write("customLuaRC mapping missing\n") vim.cmd("cquit!") end
     lua local m = vim.fn.maparg("<Space>l", "n", false, true) if m.desc ~= "rc-override" then io.stderr:write("LazyVimKeymaps override lost, desc=" .. tostring(m.desc) .. "\n") vim.cmd("cquit!") end
     lua if vim.fn.maparg("<Space>sr", "n") ~= "" then io.stderr:write("keys disable entry ignored\n") vim.cmd("cquit!") end
+    edit t.lua
+    lua vim.wait(2000, function() return package.loaded["lspconfig"] ~= nil or (vim.lsp.config["lua_ls"] or {}).settings ~= nil end, 50)
+    lua local c = vim.lsp.config["lua_ls"] if not c or (((c.settings or {}).Lua or {}).hint or {}).enable ~= true then io.stderr:write("servers opts not applied to vim.lsp.config\n") vim.cmd("cquit!") end
+    lua if not vim.lsp.is_enabled("lua_ls") then io.stderr:write("lua_ls with mason=false not enabled\n") vim.cmd("cquit!") end
+    lua if not vim.lsp.is_enabled("jsonls") then io.stderr:write("mason-known jsonls no longer auto-enabled; README LSP guidance needs revisiting\n") vim.cmd("cquit!") end
+    lua local j = vim.lsp.config["jsonls"] if not j or (((j.settings or {}).json or {}).validate or {}).enable ~= true then io.stderr:write("jsonls settings not applied\n") vim.cmd("cquit!") end
     lua local gs = require("lazy.core.plugin").values(require("lazy.core.config").plugins["gitsigns.nvim"], "opts", false) if gs.rc_sentinel ~= true then io.stderr:write("opts function fragment not applied\n") vim.cmd("cquit!") end if ((gs.signs or {}).add or {}).text == nil then io.stderr:write("gitsigns default opts lost\n") vim.cmd("cquit!") end
     qall!
   '';
