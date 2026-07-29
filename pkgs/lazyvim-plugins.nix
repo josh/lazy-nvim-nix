@@ -46,9 +46,14 @@ let
 
         ${lib.getExe jq} --sort-keys --null-input '
           reduce inputs as $mod ({};
-            ($mod | keys[]) as $k
-            | if has($k) then error("duplicate module: \($k)") else . end
-            | . + $mod)
+            reduce ($mod | to_entries[]) as $e (.;
+              if $e.key == "optional" then
+                .optional = ((.optional // {}) + $e.value)
+              elif has($e.key) then
+                error("duplicate module: \($e.key)")
+              else
+                . + { ($e.key): $e.value }
+              end))
         ' scans/*.json >"$out"
       '';
 in

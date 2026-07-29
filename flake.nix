@@ -123,6 +123,22 @@
               extras = [ "lazyvim.plugins.extras.editor.leap" ];
             }).tests.check-plugins-installed;
 
+          LazyVim-extras-combo-plugins-installed =
+            (pkgs.lazy-nvim-nix.LazyVim.override {
+              extras = builtins.filter (
+                n:
+                n != "lazyvim.plugins.extras.ai.copilot-native"
+                && (
+                  lib.strings.hasPrefix "lazyvim.plugins.extras.lang." n
+                  || lib.strings.hasPrefix "lazyvim.plugins.extras.ai." n
+                  || builtins.elem n [
+                    "lazyvim.plugins.extras.dap.core"
+                    "lazyvim.plugins.extras.test.core"
+                  ]
+                )
+              ) pkgs.lazy-nvim-nix.LazyVim.availableExtras;
+            }).tests.check-plugins-installed;
+
           LazyVim-extras-catppuccin =
             buildPkg "LazyVim-extras-catppuccin"
               plugins.LazyVim.extras."lazyvim.plugins".catppuccin;

@@ -88,53 +88,68 @@ table.insert(require("lazy.core.config").spec.modules, modname)
 require("lazyvim.config").init()
 LazyVim.config.get_defaults()
 
-local spec = Plugin.Spec.new({
-	name = "LazyVim",
-	dir = lazyvimpath,
-	import = modname,
-})
+local function scanModule(opts)
+	local spec = Plugin.Spec.new({
+		name = "LazyVim",
+		dir = lazyvimpath,
+		import = modname,
+	}, opts)
 
-for _, notif in ipairs(spec.notifs) do
-	if notif.level >= vim.log.levels.WARN then
-		io.stderr:write(modname .. ": " .. tostring(notif.msg) .. "\n")
+	for _, notif in ipairs(spec.notifs) do
+		if notif.level >= vim.log.levels.WARN then
+			io.stderr:write(modname .. ": " .. tostring(notif.msg) .. "\n")
+		end
+		if notif.level >= vim.log.levels.ERROR then
+			failed = true
+		end
 	end
-	if notif.level >= vim.log.levels.ERROR then
-		failed = true
+
+	local plugins = vim.empty_dict()
+	for name, plugin in pairs(spec.plugins) do
+		if name == "LazyVim" or name == "lazy.nvim" then
+			-- skip
+		elseif plugin.url == nil then
+			io.stderr:write(modname .. ":" .. name .. " has no URL\n")
+		elseif plugin.url:sub(1, 7) == "github:" then
+			plugins[name] = plugin.url:sub(8)
+		elseif plugin.url:sub(1, 8) == "https://" then
+			plugins[name] = plugin.url:gsub("%.git$", "")
+		else
+			io.stderr:write(modname .. ":" .. name .. " has an unsupported URL: " .. plugin.url .. "\n")
+			failed = true
+		end
 	end
+	return plugins
 end
+
+local plugins = scanModule(nil)
+local withOptional = scanModule({ optional = true })
 if failed then
 	os.exit(1)
 end
 
-local plugins = vim.empty_dict()
-for name, plugin in pairs(spec.plugins) do
-	if name == "LazyVim" or name == "lazy.nvim" then
-		-- skip
-	elseif plugin.url == nil then
-		io.stderr:write(modname .. ":" .. name .. " has no URL\n")
-	elseif plugin.url:sub(1, 7) == "github:" then
-		plugins[name] = plugin.url:sub(8)
-	elseif plugin.url:sub(1, 8) == "https://" then
-		plugins[name] = plugin.url:gsub("%.git$", "")
-	else
-		io.stderr:write(modname .. ":" .. name .. " has an unsupported URL: " .. plugin.url .. "\n")
-		failed = true
+local optional = vim.empty_dict()
+for name, slug in pairs(withOptional) do
+	if plugins[name] == nil then
+		optional[name] = slug
 	end
-end
-if failed then
-	os.exit(1)
 end
 
 local expectedEmpty = {
 	["lazyvim.plugins.extras.lang.thrift"] = true,
 	["lazyvim.plugins.extras.vscode"] = true,
 }
-if next(plugins) == nil and not expectedEmpty[modname] then
+if next(plugins) == nil and next(optional) == nil and not expectedEmpty[modname] then
 	io.stderr:write(modname .. ": scanned no plugins\n")
 	os.exit(1)
 end
 
+local out = { [modname] = plugins }
+if next(optional) ~= nil then
+	out["optional"] = optional
+end
+
 local file = assert(io.open(assert(vim.env["SCAN_OUT"], "SCAN_OUT is not set"), "w"))
-assert(file:write(vim.fn.json_encode({ [modname] = plugins })))
+assert(file:write(vim.fn.json_encode(out)))
 assert(file:close())
 os.exit(0)
