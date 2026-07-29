@@ -28,6 +28,7 @@
   imagemagick,
   jdk,
   lazygit,
+  lua-language-server,
   mermaid-cli,
   nodejs_24,
   php83,
@@ -394,6 +395,10 @@ let
 
     "grug-far.nvim" = plugins."grug-far.nvim" // {
       extraPackages = [ ast-grep ];
+    };
+
+    "nvim-lspconfig" = plugins."nvim-lspconfig" // {
+      extraPackages = [ lua-language-server ];
     };
 
     "neo-tree.nvim" = plugins."neo-tree.nvim" // {
