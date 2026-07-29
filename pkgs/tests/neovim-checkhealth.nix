@@ -126,6 +126,45 @@ runCommand "checkhealth-${pluginName}"
       exit 1
     fi
 
+    mkdir sections
+    awk '
+      /^={10,}$/ {
+        n += 1
+        print > ("sections/" n)
+        getline hdr
+        print hdr > ("sections/" n)
+        split(hdr, a, ": ")
+        print n "\t" a[1] > "sections.map"
+        next
+      }
+      { print > ("sections/" (n + 0)) }
+    ' out.txt
+    touch sections.map
+
+    for ignoreLine in "''${ignoreLines[@]}"; do
+      scope="''${ignoreLine%%|*}"
+      if [ "$scope" = "$ignoreLine" ] || ! [[ "$scope" =~ ^[A-Za-z0-9_.-]+$ ]]; then
+        continue
+      fi
+      line="''${ignoreLine#*|}"
+      idx=$(awk -F'\t' -v s="$scope" '$2 == s { print $1; exit }' sections.map)
+      if [ -z "$idx" ]; then
+        echo "Missing: $ignoreLine"
+        echo "section '$scope' not present in checkhealth output"
+        exit 1
+      fi
+      if grep --fixed-strings --quiet -- "$line" "sections/$idx"; then
+        echo "Found: $ignoreLine"
+        { grep --invert-match --fixed-strings -- "$line" "sections/$idx" || true; } | sponge "sections/$idx"
+      else
+        echo "Missing: $ignoreLine"
+        echo "not found in section '$scope', consider removing from 'ignoreLines'"
+        exit 1
+      fi
+    done
+
+    ls sections | sort --numeric-sort | sed 's|^|sections/|' | xargs cat >out.txt
+
     for ignoreLine in "''${optionalIgnoreLines[@]}"; do
       if grep --fixed-strings --quiet -- "$ignoreLine" out.txt; then
         echo "Optional: $ignoreLine"
@@ -134,6 +173,10 @@ runCommand "checkhealth-${pluginName}"
     done
 
     for ignoreLine in "''${ignoreLines[@]}"; do
+      scope="''${ignoreLine%%|*}"
+      if [ "$scope" != "$ignoreLine" ] && [[ "$scope" =~ ^[A-Za-z0-9_.-]+$ ]]; then
+        continue
+      fi
       if grep --fixed-strings --quiet -- "$ignoreLine" out.txt; then
         echo "Found: $ignoreLine"
         { grep --invert-match --fixed-strings -- "$ignoreLine" out.txt || true; } | sponge out.txt
