@@ -1482,11 +1482,11 @@
     "neotest-haskell": {
       "flake": false,
       "locked": {
-        "lastModified": 1785199113,
-        "narHash": "sha256-wQaDZmMFcd0LTHiyXDUwPzfR9IfLhG+BVRQfEzP4868=",
+        "lastModified": 1785371795,
+        "narHash": "sha256-KoIp2yqWtHD7y5iZfYZ7ZlmxZwJoAYgNIPIeYBYz9cg=",
         "owner": "mrcjkb",
         "repo": "neotest-haskell",
-        "rev": "84a13d70676b2a2e84e3ff19b95931b4c9061669",
+        "rev": "8a351ea5258eb96540a674d97f75906c309d6868",
         "type": "github"
       },
       "original": {
