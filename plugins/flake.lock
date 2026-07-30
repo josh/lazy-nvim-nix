@@ -1176,11 +1176,11 @@
     "mini-diff": {
       "flake": false,
       "locked": {
-        "lastModified": 1784036541,
-        "narHash": "sha256-33IbAqhPsXMhodVm7EumfuybIq7zjXEw5yy47qnOuVg=",
+        "lastModified": 1785416253,
+        "narHash": "sha256-DAsRzWaP116ngHzYFxJYChDlNvt1edMeqXeQeSPXskU=",
         "owner": "nvim-mini",
         "repo": "mini.diff",
-        "rev": "b3d8507929f8df54ab9b08c77564c1afd7d62110",
+        "rev": "626b8a5b93874c4d05ca25aedec56cfff0b378fb",
         "type": "github"
       },
       "original": {
