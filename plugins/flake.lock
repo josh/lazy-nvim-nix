@@ -870,11 +870,11 @@
     "inc-rename-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1772487541,
-        "narHash": "sha256-WDvzCOCWJFNTGl6g0/BF1SLPR+Xc4vGwVLqIdhAShkg=",
+        "lastModified": 1785442018,
+        "narHash": "sha256-EWSmklr8kuv/XlOemHxCh9HGjoHdNK1e2s9gkMZvHZU=",
         "owner": "smjonas",
         "repo": "inc-rename.nvim",
-        "rev": "0074b551a17338ccdcd299bd86687cc651bcb33d",
+        "rev": "ddff8bd3eccedf043bd73f5bf89cf90d2d6d8105",
         "type": "github"
       },
       "original": {
