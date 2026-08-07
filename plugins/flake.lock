@@ -819,11 +819,11 @@
     "haskell-tools-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1785717616,
-        "narHash": "sha256-hmfyxWVpsZ3xVeCRYa6hbNOyj/FAfvLD97OcqQduU6Y=",
+        "lastModified": 1786065660,
+        "narHash": "sha256-6VaAs3ZrNqV1EJp3vscOFFiB5PrmC+M//OsNsAmcvY8=",
         "owner": "mrcjkb",
         "repo": "haskell-tools.nvim",
-        "rev": "d3d9ccba19a020b5e495ecae0ca6638e61f4c9fe",
+        "rev": "993101085ef620e48fe0af97d0629fb1978f3447",
         "type": "github"
       },
       "original": {
