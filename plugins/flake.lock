@@ -2765,11 +2765,11 @@
     "vimtex": {
       "flake": false,
       "locked": {
-        "lastModified": 1784924089,
-        "narHash": "sha256-hpus82iUYVsmKw/cnecd6EjY8/ELmEpx12jhgxICj2c=",
+        "lastModified": 1786094810,
+        "narHash": "sha256-OaHeufW5TfvzD+9P9xduY7aGG3I91byxZBwvQWWTdh8=",
         "owner": "lervag",
         "repo": "vimtex",
-        "rev": "853eb587873a7061a083655578be56dd8027b834",
+        "rev": "2596fb0178ab72cd5fadd53c1d8e58ce1c1a92df",
         "type": "github"
       },
       "original": {
