@@ -1108,11 +1108,11 @@
     "mason-registry": {
       "flake": false,
       "locked": {
-        "lastModified": 1785737005,
-        "narHash": "sha256-pw/w9Q0GxTbhF118FSHcmYdAs9jGAXWgxQd0TQbTRAc=",
+        "lastModified": 1786103223,
+        "narHash": "sha256-hijE48zExiU/DcTCCZ0At7hRxuDnNmt0skdT4z+2H0M=",
         "owner": "mason-org",
         "repo": "mason-registry",
-        "rev": "5b04a835cadf8a8a7b2d006eb5ec758275152462",
+        "rev": "433eb6c0bb85e88ad9a973456609522ba709e31b",
         "type": "github"
       },
       "original": {
