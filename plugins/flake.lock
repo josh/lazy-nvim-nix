@@ -1465,11 +1465,11 @@
     "neotest-golang": {
       "flake": false,
       "locked": {
-        "lastModified": 1784408963,
-        "narHash": "sha256-ku7weCjjz9eVDUtW62wNo502WV6BA4hNZZKcgdxOUm8=",
+        "lastModified": 1786017795,
+        "narHash": "sha256-EZG10y2ZLi0D33czCP3hv5azbWwBz3xEtNS5KdTk844=",
         "owner": "fredrikaverpil",
         "repo": "neotest-golang",
-        "rev": "61726ad54b6b94c73d130b65c33575d13a61fc11",
+        "rev": "65b2be63c3de00e6f15c05388ebdc8d603dbd727",
         "type": "github"
       },
       "original": {
