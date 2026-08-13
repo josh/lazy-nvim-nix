@@ -972,11 +972,11 @@
     "leap-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1786088283,
-        "narHash": "sha256-aVUTZdclWzIKYTnbmX/c4uttKy71SeGGPxO0ZVVn/8E=",
+        "lastModified": 1786546885,
+        "narHash": "sha256-z4tRbqmW950OqC84zuz9rOpFqX+yvxvfYFe5ppQ80O4=",
         "ref": "main",
-        "rev": "0d0549b13428855c063468a6935c18e933599a18",
-        "revCount": 759,
+        "rev": "b41c342a67d0fb36694c506ca369761dd5b60b6c",
+        "revCount": 761,
         "type": "git",
         "url": "https://codeberg.org/andyg/leap.nvim"
       },
