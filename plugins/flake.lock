@@ -530,11 +530,11 @@
     "conform-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1779644945,
-        "narHash": "sha256-pMWvC7sqOFjsMUhxTzMcoSifn7E5CVindvQVl9dEfB8=",
+        "lastModified": 1786458409,
+        "narHash": "sha256-7VkQLpkDak/O5tphT/EWX/rE9r0Dd2UCF5CFbl4rK+A=",
         "owner": "stevearc",
         "repo": "conform.nvim",
-        "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
+        "rev": "016802de402556da54c36bd7359b441266b01cdd",
         "type": "github"
       },
       "original": {
