@@ -2111,11 +2111,11 @@
     "pathlib-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1724943804,
-        "narHash": "sha256-YhCJeNKlcjgg3q51UWFhuIEPzNueC8YTpeuPPJDndvw=",
+        "lastModified": 1786575466,
+        "narHash": "sha256-dbM22qAF9jOUMYBaMbyzD79Ac5v3VPhJNJ58oIo2+0w=",
         "owner": "pysan3",
         "repo": "pathlib.nvim",
-        "rev": "57e5598af6fe253761c1b48e0b59b7cd6699e2c1",
+        "rev": "a0d3dbbe00ce6a546426b1aed3838a82fe6bfc42",
         "type": "github"
       },
       "original": {
