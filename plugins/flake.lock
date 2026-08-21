@@ -1822,11 +1822,11 @@
     "nvim-lint": {
       "flake": false,
       "locked": {
-        "lastModified": 1786599161,
-        "narHash": "sha256-SUSYWLoTEo/l+hHJWl4XvT6QMsOeCf0ckAMakmgLEIA=",
+        "lastModified": 1787228053,
+        "narHash": "sha256-MhQOZe4/FxcZUudadSRl7tfyxE8lazUq7RekhJT28rE=",
         "owner": "mfussenegger",
         "repo": "nvim-lint",
-        "rev": "9b99aad869102ac01775187abd8d49017b148612",
+        "rev": "0370fe965697aa8f04252a1562441bdc13723cd1",
         "type": "github"
       },
       "original": {
