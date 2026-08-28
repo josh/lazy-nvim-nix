@@ -2714,11 +2714,11 @@
     "vim-illuminate": {
       "flake": false,
       "locked": {
-        "lastModified": 1783804290,
-        "narHash": "sha256-3HM1aqFasEWXHaLQbJnax6Spw71TVd23BjsmH8jdTtQ=",
+        "lastModified": 1787624072,
+        "narHash": "sha256-OezN45HvyZ711ovFw6f2CgvH+4QcUywc2ZsabIhNi6s=",
         "owner": "RRethy",
         "repo": "vim-illuminate",
-        "rev": "91313e598ca62e110bc71535c49069b66b9883c9",
+        "rev": "1cc33d347c574c3bd21a4852fc9ffed677c1c58c",
         "type": "github"
       },
       "original": {
