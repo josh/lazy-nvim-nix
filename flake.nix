@@ -80,7 +80,23 @@
                 expected = ./plugins/LazyVim.json;
               }
               ''
-                diff --unified $expected $actual
+                diff --unified $expected $actual/LazyVim.json
+                touch $out
+              '';
+
+          LazyVim-sources-outdated =
+            pkgs.runCommand "LazyVim-sources-outdated"
+              {
+                nativeBuildInputs = [
+                  pkgs.diffutils
+                  pkgs.jq
+                ];
+                actual = self.packages.${system}.LazyVimPlugins;
+                expected = ./plugins/sources.json;
+              }
+              ''
+                jq --sort-keys 'with_entries(select(.value.ref)) | map_values(.ref)' $expected >expected.json
+                diff --unified --label plugins/sources.json --label LazyVim expected.json $actual/branches.json
                 touch $out
               '';
 

@@ -139,15 +139,15 @@
     "avante-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1787662629,
-        "narHash": "sha256-s/DWFz7RLBBhMbwfishif5SUGI1s6W/Yw8Mr3AndNxY=",
-        "owner": "yetone",
+        "lastModified": 1787929758,
+        "narHash": "sha256-bJGvuJ52Wp7UY4iwCYu4sM+n8yRt0UaJR0/lVXAuseY=",
+        "owner": "avante-corp",
         "repo": "avante.nvim",
-        "rev": "cd66452e94d43e45b6a8b089559a4cfa0c2aaa84",
+        "rev": "14b8aed48c0b3f23e88b82e7b5959bd66d6be773",
         "type": "github"
       },
       "original": {
-        "owner": "yetone",
+        "owner": "avante-corp",
         "ref": "main",
         "repo": "avante.nvim",
         "type": "github"
@@ -785,16 +785,16 @@
     "harpoon": {
       "flake": false,
       "locked": {
-        "lastModified": 1724948422,
-        "narHash": "sha256-ksPNAYnaFbq7N5ifF+RFbLexLW2Lm1ey0agHLzhn9GA=",
+        "lastModified": 1761924951,
+        "narHash": "sha256-qQSPVMdldksNZDPZvnTiXxty+GSUqMGz8nYEFDRezrQ=",
         "owner": "ThePrimeagen",
         "repo": "harpoon",
-        "rev": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3",
+        "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
         "type": "github"
       },
       "original": {
         "owner": "ThePrimeagen",
-        "ref": "master",
+        "ref": "harpoon2",
         "repo": "harpoon",
         "type": "github"
       }

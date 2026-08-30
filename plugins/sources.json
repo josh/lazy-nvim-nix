@@ -1,0 +1,23 @@
+{
+  "CopilotC-Nvim/CopilotChat.nvim": {
+    "ref": "main"
+  },
+  "Exafunction/codeium.nvim": {
+    "repo": "Exafunction/windsurf.nvim"
+  },
+  "ThePrimeagen/harpoon": {
+    "ref": "harpoon2"
+  },
+  "nvim-treesitter/nvim-treesitter": {
+    "ref": "main"
+  },
+  "nvim-treesitter/nvim-treesitter-textobjects": {
+    "ref": "main"
+  },
+  "p00f/clangd_extensions.nvim": {
+    "repo": "dchinmay2/clangd_extensions.nvim"
+  },
+  "yetone/avante.nvim": {
+    "repo": "avante-corp/avante.nvim"
+  }
+}

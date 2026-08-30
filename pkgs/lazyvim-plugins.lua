@@ -105,27 +105,39 @@ local function scanModule(opts)
 	end
 
 	local plugins = vim.empty_dict()
+	local branches = vim.empty_dict()
 	for name, plugin in pairs(spec.plugins) do
+		local slug = nil
 		if name == "LazyVim" or name == "lazy.nvim" then
 			-- skip
 		elseif plugin.url == nil then
 			io.stderr:write(modname .. ":" .. name .. " has no URL\n")
 		elseif plugin.url:sub(1, 7) == "github:" then
-			plugins[name] = plugin.url:sub(8)
+			slug = plugin.url:sub(8)
 		elseif plugin.url:sub(1, 8) == "https://" then
-			plugins[name] = plugin.url:gsub("%.git$", "")
+			slug = plugin.url:gsub("%.git$", "")
 		else
 			io.stderr:write(modname .. ":" .. name .. " has an unsupported URL: " .. plugin.url .. "\n")
 			failed = true
 		end
+		if slug ~= nil then
+			plugins[name] = slug
+			if plugin.branch ~= nil then
+				branches[slug] = plugin.branch
+			end
+		end
 	end
-	return plugins
+	return plugins, branches
 end
 
-local plugins = scanModule(nil)
-local withOptional = scanModule({ optional = true })
+local plugins, branches = scanModule(nil)
+local withOptional, optionalBranches = scanModule({ optional = true })
 if failed then
 	os.exit(1)
+end
+
+for slug, branch in pairs(optionalBranches) do
+	branches[slug] = branch
 end
 
 local optional = vim.empty_dict()
@@ -147,6 +159,9 @@ end
 local out = { [modname] = plugins }
 if next(optional) ~= nil then
 	out["optional"] = optional
+end
+if next(branches) ~= nil then
+	out["branches"] = branches
 end
 
 local file = assert(io.open(assert(vim.env["SCAN_OUT"], "SCAN_OUT is not set"), "w"))

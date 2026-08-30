@@ -239,19 +239,52 @@ let
 
   LazyVim-deps = builtins.fromJSON (builtins.readFile ./plugins/LazyVim.json);
 
-  movedPlugins =
+  pluginSources =
     let
-      moved = builtins.fromJSON (builtins.readFile ./plugins/moved.json);
+      sources = builtins.fromJSON (builtins.readFile ./plugins/sources.json);
       allSlugs = lib.lists.unique (
         builtins.concatMap builtins.attrValues (builtins.attrValues LazyVim-deps)
       );
-      stale = builtins.filter (old: !(builtins.elem old allSlugs)) (builtins.attrNames moved);
+      stale = builtins.filter (slug: !(builtins.elem slug allSlugs)) (builtins.attrNames sources);
+      blank = builtins.attrNames (
+        lib.attrsets.filterAttrs (_: entry: !(entry ? repo) && !(entry ? ref)) sources
+      );
     in
     assert lib.assertMsg (stale == [ ]) ''
-      stale entries in plugins/moved.json: ${toString stale}
+      stale entries in plugins/sources.json: ${toString stale}
       Upstream LazyVim no longer references these slugs. Delete the entries and repoint
       any remaining aliases.'';
-    moved;
+    assert lib.assertMsg (blank == [ ]) ''
+      entries in plugins/sources.json with neither "repo" nor "ref": ${toString blank}
+      Every entry states how the plugins/flake.nix pin deviates from LazyVim's slug on its
+      default branch. Fill the entries in or delete them.'';
+    sources;
+
+  movedPlugins = builtins.mapAttrs (_: entry: entry.repo) (
+    lib.attrsets.filterAttrs (_: entry: entry ? repo) pluginSources
+  );
+
+  pinnedRefs = builtins.listToAttrs (
+    builtins.concatMap (
+      node:
+      lib.lists.optional (node.original.type == "github") {
+        name = "${node.original.owner}/${node.original.repo}";
+        value = node.original.ref or null;
+      }
+    ) (builtins.attrValues pluginNodes)
+  );
+
+  refMismatches = builtins.concatMap (
+    slug:
+    let
+      entry = pluginSources.${slug};
+      canonicalSlug = entry.repo or slug;
+      pinned = pinnedRefs.${canonicalSlug} or null;
+    in
+    lib.lists.optional (
+      pinned != null && pinned != entry.ref
+    ) "github:${canonicalSlug} is pinned to ${pinned} but LazyVim requires ${entry.ref}"
+  ) (builtins.attrNames (lib.attrsets.filterAttrs (_: entry: entry ? ref) pluginSources));
 
   nonLazyVimPlugins = [
     "LazyVim"
@@ -652,6 +685,11 @@ let
   );
 
   plugins' =
+    assert lib.assertMsg (refMismatches == [ ]) ''
+      plugins/flake.nix pins a branch LazyVim does not ask for:
+      ${lib.strings.concatMapStringsSep "\n" (mismatch: "  ${mismatch}") refMismatches}
+      Update the input URLs to match plugins/sources.json, then run:
+        nix flake update --flake ./plugins'';
     assert lib.assertMsg (orphanPluginNames == [ ]) ''
       orphaned plugin pins in plugins/flake.nix: ${toString orphanPluginNames}
       Nothing in plugins/LazyVim.json references them. Remove the inputs and run:
