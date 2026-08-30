@@ -43,10 +43,21 @@ writeShellApplication {
       | "\(.key): not a github input, skipped"
     ' plugins/flake.lock >&2
 
-    pinned=$(jq -c '
+    sources=$(jq -c . plugins/sources.json)
+
+    moved=$(jq -c '
+      [ to_entries[] | select(.value.repo) | { key: .key, value: .value.repo } ] | from_entries
+    ' <<<"$sources")
+
+    want=$(jq -c '
+      [ to_entries[] | select(.value.ref) | { key: (.value.repo // .key), value: .value.ref } ] | from_entries
+    ' <<<"$sources")
+
+    pinned=$(jq -c --argjson want "$want" '
       [ .nodes | to_entries[]
         | select(.key != "root" and .value.original.type == "github" and .value.original.ref != null)
-        | { input: .key, owner: .value.original.owner, repo: .value.original.repo, ref: .value.original.ref } ]
+        | { input: .key, owner: .value.original.owner, repo: .value.original.repo, ref: .value.original.ref }
+        | . + { want: $want["\(.owner)/\(.repo)"] } ]
     ' plugins/flake.lock)
     if [ "$(jq length <<<"$pinned")" -eq 0 ]; then
       exit "$status"
@@ -54,11 +65,11 @@ writeShellApplication {
 
     query=$(jq -r '
       to_entries
-      | map("q\(.key): repository(owner: \"\(.value.owner)\", name: \"\(.value.repo)\") { nameWithOwner defaultBranchRef { name } }")
+      | map("q\(.key): repository(owner: \"\(.value.owner)\", name: \"\(.value.repo)\") { nameWithOwner defaultBranchRef { name }"
+            + (if .value.want then " wantRef: ref(qualifiedName: \"refs/heads/\(.value.want)\") { name }" else "" end)
+            + " }")
       | "{ " + join(" ") + " }"
     ' <<<"$pinned")
-
-    moved=$(jq -c . plugins/moved.json)
 
     response=$(gh api graphql -f query="$query" 2>/dev/null) || true
     if ! jq -e .data <<<"$response" >/dev/null 2>&1; then
@@ -80,7 +91,11 @@ writeShellApplication {
             (if $moved["\($p.owner)/\($p.repo)"] == $node.nameWithOwner then "moved-ack" else "moved" end),
             $p.input, $p.owner, $p.repo, $p.ref, $node.nameWithOwner
           ]
-        elif $p.ref != $node.defaultBranchRef.name then
+        elif $p.want != null and $node.wantRef == null then
+          [ "gonebranch", $p.input, $p.owner, $p.repo, $p.ref, $p.want ]
+        elif $p.want != null and $p.ref != $p.want then
+          [ "wrongbranch", $p.input, $p.owner, $p.repo, $p.ref, $p.want ]
+        elif $p.want == null and $p.ref != $node.defaultBranchRef.name then
           [ "outdated", $p.input, $p.owner, $p.repo, $p.ref, $node.defaultBranchRef.name ]
         else
           empty
@@ -106,11 +121,19 @@ writeShellApplication {
           echo "$input: github:$owner/$repo has moved to $extra"
           ;;
         moved-ack)
-          echo "$input: github:$owner/$repo move to $extra acknowledged in plugins/moved.json" >&2
+          echo "$input: github:$owner/$repo move to $extra stated in plugins/sources.json" >&2
           ;;
-        outdated)
+        gonebranch)
           status=1
-          echo "$input: pinned to $owner/$repo/$ref but default branch is $extra"
+          echo "$input: plugins/sources.json requires branch $extra but github:$owner/$repo no longer has it"
+          ;;
+        outdated | wrongbranch)
+          status=1
+          if [ "$kind" = wrongbranch ]; then
+            echo "$input: pinned to $owner/$repo/$ref but LazyVim requires $extra"
+          else
+            echo "$input: pinned to $owner/$repo/$ref but default branch is $extra"
+          fi
           if [ "$fix" = 1 ]; then
             old="github:$owner/$repo/$ref\""
             new="github:$owner/$repo/$extra\""

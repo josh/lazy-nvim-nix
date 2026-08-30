@@ -21,7 +21,7 @@
     async-nvim.flake = false;
     async-nvim.url = "github:lewis6991/async.nvim/main";
     avante-nvim.flake = false;
-    avante-nvim.url = "github:yetone/avante.nvim/main";
+    avante-nvim.url = "github:avante-corp/avante.nvim/main";
     baleia-nvim.flake = false;
     baleia-nvim.url = "github:m00qek/baleia.nvim/main";
     blink-cmp-avante.flake = false;
@@ -97,7 +97,7 @@
     grug-far-nvim.flake = false;
     grug-far-nvim.url = "github:MagicDuck/grug-far.nvim/main";
     harpoon.flake = false;
-    harpoon.url = "github:ThePrimeagen/harpoon/master";
+    harpoon.url = "github:ThePrimeagen/harpoon/harpoon2";
     haskell-snippets-nvim.flake = false;
     haskell-snippets-nvim.url = "github:mrcjkb/haskell-snippets.nvim/main";
     haskell-tools-nvim.flake = false;
