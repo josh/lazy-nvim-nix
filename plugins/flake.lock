@@ -2374,11 +2374,11 @@
     "rustaceanvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1787617296,
-        "narHash": "sha256-qq7/SntwJo/Ty/5AZ3aD8QarbWv8OwEXe+ueNMW2aJo=",
+        "lastModified": 1787886634,
+        "narHash": "sha256-/oZYG6NhB5OPyZzbUZvr3XREWucCMPwI/BL1hunWwfM=",
         "owner": "mrcjkb",
         "repo": "rustaceanvim",
-        "rev": "ab1b168f314d864c26b0658935416531587b5c7c",
+        "rev": "09f108e983e6ed89d737a5b60597b921bc2249ff",
         "type": "github"
       },
       "original": {
