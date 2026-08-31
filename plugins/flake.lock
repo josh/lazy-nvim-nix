@@ -122,11 +122,11 @@
     "async-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1786968066,
-        "narHash": "sha256-YiWQLDofI25pTuNMhMH1WDVwNmxfTptvzMvS5VkDHyo=",
+        "lastModified": 1787675481,
+        "narHash": "sha256-/D4ndwW4Pc/6o6fiMOCHhEqF+NDAZVVQySzdrb9STOM=",
         "owner": "lewis6991",
         "repo": "async.nvim",
-        "rev": "99aed904ae1253c27fac60b862b6d73ef1380e54",
+        "rev": "10a16178cdace61d3416a5652121ba70a2e4103c",
         "type": "github"
       },
       "original": {
