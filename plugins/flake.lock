@@ -2544,11 +2544,11 @@
     "telescope_hoogle": {
       "flake": false,
       "locked": {
-        "lastModified": 1760339418,
-        "narHash": "sha256-Z7GSENbICkM0q1ojZXOxFEQiytiCrXCiUE/18b20b1Q=",
+        "lastModified": 1788255338,
+        "narHash": "sha256-AkYLMawe9dfNyBkVAKPZ9tYj96aeBGiX2CvpP5MQv4o=",
         "owner": "luc-tielen",
         "repo": "telescope_hoogle",
-        "rev": "14be34fd5c464e3da0992ad094f157b0b8b098f9",
+        "rev": "5cef29de23066d75549c73c9936eb8afef6be1c7",
         "type": "github"
       },
       "original": {
