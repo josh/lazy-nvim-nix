@@ -853,11 +853,11 @@
     "img-clip-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1766132289,
-        "narHash": "sha256-LDh5xzIqNrxeGY6+cnB923uSuo8/uEms4NUdFhSDmlg=",
+        "lastModified": 1788364130,
+        "narHash": "sha256-C6IBrdo9J4u/sP5dgEZKrg48fGcIWuBKMyE4shfVsrU=",
         "owner": "HakonHarnes",
         "repo": "img-clip.nvim",
-        "rev": "b6ddfb97b5600d99afe3452d707444afda658aca",
+        "rev": "99848daf801789dbebe2192b475eb887d375002c",
         "type": "github"
       },
       "original": {
