@@ -1873,11 +1873,11 @@
     "nvim-navic": {
       "flake": false,
       "locked": {
-        "lastModified": 1767024532,
-        "narHash": "sha256-rRUlGtClq4NmyDqg0NhytnxFDMVpQhuF5cPKKRJHl88=",
+        "lastModified": 1788310134,
+        "narHash": "sha256-5wyC0cWuWBHg0xPFQpunOKc5wEoI5wW6pXU6i1uED6k=",
         "owner": "SmiteshP",
         "repo": "nvim-navic",
-        "rev": "f5eba192f39b453675d115351808bd51276d9de5",
+        "rev": "455808fd0fae06e6d70fadfd61432275db8f34ce",
         "type": "github"
       },
       "original": {
