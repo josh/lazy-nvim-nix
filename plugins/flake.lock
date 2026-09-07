@@ -1584,11 +1584,11 @@
     "neotest-vstest": {
       "flake": false,
       "locked": {
-        "lastModified": 1774470989,
-        "narHash": "sha256-Bqs3yK5OGkOJUv7lJKpUPyIH74x3SudflEIEbWb8i0o=",
+        "lastModified": 1788463364,
+        "narHash": "sha256-/keFBE17+jjbyLor60CjxwYvcUHfyA/Bod1Lel9dRps=",
         "owner": "Nsidorenco",
         "repo": "neotest-vstest",
-        "rev": "8588c3c988c7ed49879dddf937b42681cfa7ce30",
+        "rev": "de30c7978937d07e6d29ab7807a00fad1c61120b",
         "type": "github"
       },
       "original": {
