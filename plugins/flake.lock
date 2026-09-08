@@ -54,11 +54,11 @@
     "R-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1788522948,
-        "narHash": "sha256-vg282kXRYi9ixGmoUEN21u0EgQ/fCfAzIDW51WpiWI0=",
+        "lastModified": 1788538362,
+        "narHash": "sha256-HWo3vdrELExRRC1nyeXB0Y6X/QG1JQBb59IN0KESZ6Y=",
         "owner": "R-nvim",
         "repo": "R.nvim",
-        "rev": "c5ac6ca18ba0d26fd217173822bd16de8b61c964",
+        "rev": "f4b8d7e09c1b8aea11e7066e83c8592717dad5c3",
         "type": "github"
       },
       "original": {
