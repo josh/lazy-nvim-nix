@@ -390,7 +390,7 @@
     "mason.nvim": "mason-org/mason.nvim",
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
-  "lazyvim.plugins.extras.lang.typescript.tsgo": {
+  "lazyvim.plugins.extras.lang.typescript.tsc": {
     "nvim-lspconfig": "neovim/nvim-lspconfig"
   },
   "lazyvim.plugins.extras.lang.typescript.vtsls": {
