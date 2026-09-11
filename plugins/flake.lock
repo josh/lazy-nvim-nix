@@ -1057,11 +1057,11 @@
     "mason-lspconfig-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1787837669,
-        "narHash": "sha256-aGoKGJJHs2Fdp+2Q0D5aZymqp5FiqsYD5meN89+lLPc=",
+        "lastModified": 1788862598,
+        "narHash": "sha256-xAAtmsu3PdPaXcNIZBmXJdOdDsPDY6Ky7Fk/7lia+Ps=",
         "owner": "mason-org",
         "repo": "mason-lspconfig.nvim",
-        "rev": "40276c4df7e6bdce6801d6c035c6227f9115a855",
+        "rev": "5d32a9b8de9f90466797a740edb0fb4b3c27e423",
         "type": "github"
       },
       "original": {
