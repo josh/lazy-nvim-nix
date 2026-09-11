@@ -700,11 +700,11 @@
     "friendly-snippets": {
       "flake": false,
       "locked": {
-        "lastModified": 1769182131,
-        "narHash": "sha256-FzApcTbWfFkBD9WsYMhaCyn6ky8UmpUC2io/co/eByM=",
+        "lastModified": 1788842855,
+        "narHash": "sha256-g8HYnvH1BE+cm+Y0Gte7T+TVBm+MdHfVUdQ2MzwyYq8=",
         "owner": "rafamadriz",
         "repo": "friendly-snippets",
-        "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
+        "rev": "bb548e5ae4550a5e318b7e398a93b9af456b65e1",
         "type": "github"
       },
       "original": {
