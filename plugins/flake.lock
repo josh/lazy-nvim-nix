@@ -2196,11 +2196,11 @@
     "render-markdown-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1789350573,
-        "narHash": "sha256-HW8Pj4fX5LR/sTB22AYOAilwG0QyynxgvNqMqsbJzWM=",
+        "lastModified": 1789451921,
+        "narHash": "sha256-pG8lAo4qucIu+gAwrEaK79VkDFTLcuuPBYhq3sg951E=",
         "owner": "MeanderingProgrammer",
         "repo": "render-markdown.nvim",
-        "rev": "a778444a73080301a50c4a6f58c90d7e094dd59e",
+        "rev": "640a3ec6d538bad17c328be373c7cad0293d9589",
         "type": "github"
       },
       "original": {
