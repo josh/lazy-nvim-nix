@@ -2408,11 +2408,11 @@
     "smear-cursor-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1776268063,
-        "narHash": "sha256-hL0lXzkFxR7qiXzStrmY+gR+ql/A6PR8eCV310gEaGs=",
+        "lastModified": 1789722541,
+        "narHash": "sha256-EVYx9PVGjh81O1LchNg2wQ/fPbd6zTakSEBJNkKTJXg=",
         "owner": "sphamba",
         "repo": "smear-cursor.nvim",
-        "rev": "9e9378d6ee34bb3782e0e8c63d9ec8ca618b479b",
+        "rev": "1f7f6775c188ff87fa48c857d13a919738af2366",
         "type": "github"
       },
       "original": {
