@@ -2816,11 +2816,11 @@
     "yanky-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1784708876,
-        "narHash": "sha256-2uNKHtFfIokuZ8AcPP5LXuStxPzQGP2Jcq04DsYM9s4=",
+        "lastModified": 1789994234,
+        "narHash": "sha256-UcW2WSMz21gfE6u0ZNYsFhHipbwxK5XxTjg+ZtginEE=",
         "owner": "gbprod",
         "repo": "yanky.nvim",
-        "rev": "dd6689fdda85f66cab7d9b1a1664625f3be0920d",
+        "rev": "4b4ddd196526fd3d6fd091d931810f9743e936d3",
         "type": "github"
       },
       "original": {
