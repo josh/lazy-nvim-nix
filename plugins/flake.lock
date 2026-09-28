@@ -1227,11 +1227,11 @@
     "mini-icons": {
       "flake": false,
       "locked": {
-        "lastModified": 1783431439,
-        "narHash": "sha256-LgtNmg81TypobCLgdzU6C9c0ENIAHhYQE4znoSOrhVs=",
+        "lastModified": 1790091495,
+        "narHash": "sha256-QRs3Bq44fPRk8Nnx8tzvVvWVUty57AY2cjRx/8ZsCas=",
         "owner": "nvim-mini",
         "repo": "mini.icons",
-        "rev": "98faae31e9be1cc054ae63485e58ceb185efcad0",
+        "rev": "f642e3ba8c12afbc8f32f6d77ef6597eac56786f",
         "type": "github"
       },
       "original": {
