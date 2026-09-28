@@ -1329,11 +1329,11 @@
     "mini-surround": {
       "flake": false,
       "locked": {
-        "lastModified": 1784209931,
-        "narHash": "sha256-rcaJnt7ty+XGH5zb/f8v84sHLS7HX3Qnpf4NPetxR5k=",
+        "lastModified": 1790087755,
+        "narHash": "sha256-xvZ8CFpuWzm849um/ZCv1uOFkvaOR7Nxx21R+LfIOXY=",
         "owner": "nvim-mini",
         "repo": "mini.surround",
-        "rev": "8d5d0c5aa92449368ac251e85451d79d8f69d296",
+        "rev": "33a2ebe5df8eb4751828fcba133e18ed0fbbdfab",
         "type": "github"
       },
       "original": {
