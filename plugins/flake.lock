@@ -1346,11 +1346,11 @@
     "neo-tree-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1789628251,
-        "narHash": "sha256-R5o7htB4gdgCCyBGEx6XaOwzfFTwpEAL87PBKDudlxQ=",
+        "lastModified": 1790504335,
+        "narHash": "sha256-Cy6euR2FURn7AjB1EVe5k/tJI2ZYt0iiMyEUNgEwC/w=",
         "owner": "nvim-neo-tree",
         "repo": "neo-tree.nvim",
-        "rev": "162f9b953a692b559afe43e38d60afee81e8e79b",
+        "rev": "020e50ff7fdaa0d76de23cfe5c485504729483b0",
         "type": "github"
       },
       "original": {
