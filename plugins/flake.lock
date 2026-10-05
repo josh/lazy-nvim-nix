@@ -71,11 +71,11 @@
     "SchemaStore-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1790558627,
-        "narHash": "sha256-x+nym6jprfHZSUH8qT+1JHmV/nG66BAhwMENxTah2pI=",
+        "lastModified": 1790895688,
+        "narHash": "sha256-EBgK4HuMjJa71tDV3dgH60XgQ7Z1GRrWlaoHmMDwU+Q=",
         "owner": "b0o",
         "repo": "SchemaStore.nvim",
-        "rev": "411163b2be396495c76788a016cb1354f1e8acd0",
+        "rev": "ec1b50c7fb9638e0a7b35e0182a54343b45f8d0d",
         "type": "github"
       },
       "original": {
